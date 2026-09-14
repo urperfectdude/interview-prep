@@ -27,32 +27,39 @@ Rules:
 - After covering the question plan, thank the candidate and let them know the interview is complete.`;
 }
 
-interface RealtimeSessionResponse {
-  client_secret: { value: string; expires_at: number };
+interface RealtimeClientSecretResponse {
+  value: string;
+  expires_at: number;
   [key: string]: unknown;
 }
 
-export async function createRealtimeEphemeralSession(instructions: string): Promise<RealtimeSessionResponse> {
-  const response = await fetch("https://api.openai.com/v1/realtime/sessions", {
+export async function createRealtimeEphemeralSession(instructions: string): Promise<RealtimeClientSecretResponse> {
+  const response = await fetch("https://api.openai.com/v1/realtime/client_secrets", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${env.openaiApiKey}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model: REALTIME_MODEL,
-      voice: "alloy",
-      instructions,
-      modalities: ["audio", "text"],
-      input_audio_transcription: { model: "whisper-1" },
-      turn_detection: { type: "server_vad" },
+      session: {
+        type: "realtime",
+        model: REALTIME_MODEL,
+        instructions,
+        audio: {
+          input: {
+            transcription: { model: "whisper-1" },
+            turn_detection: { type: "server_vad" },
+          },
+          output: { voice: "alloy" },
+        },
+      },
     }),
   });
 
   if (!response.ok) {
     const errorText = await response.text();
-    throw new Error(`Failed to create Realtime session: ${response.status} ${errorText}`);
+    throw new Error(`Failed to create Realtime client secret: ${response.status} ${errorText}`);
   }
 
-  return (await response.json()) as RealtimeSessionResponse;
+  return (await response.json()) as RealtimeClientSecretResponse;
 }

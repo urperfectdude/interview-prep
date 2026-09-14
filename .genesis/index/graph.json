@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "project": "interview-prep",
-  "revision": null,
-  "sourceHash": "cbd2ae05369c73d61d8ce49a514392d3624dcd85bdddff96646f7edff7d684d2",
+  "revision": "f1a20b2a23c425d1edd5539ad710d490f7f73084",
+  "sourceHash": "0945f6af4df2bac212a7f0b0e4f11ac88c59f03feffa0997cad28e913809b3e2",
   "provenance": {
     "tool": "genesis-graphizer",
     "method": "static-analysis",
@@ -57,7 +57,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "a4fa5f79581177b2429232524a3a1bc7084dd0f2773537d56adc9126e454bd61"
+      "contentHash": "ac8b3222afd36fd6086818d2de4f3a164e2fa3dcb4586014f444ca589f19d867"
     },
     {
       "id": "file:apps/server/src/lib/prisma.ts",
@@ -77,7 +77,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "8893e5fa06e6ee9a5980069d826d3d70c8ede00a02f4edb6daf36b8761136b08"
+      "contentHash": "48f899ab28509bd05963fedca1c037d86529b59bdbb5c400e904b0b7f39c9c82"
     },
     {
       "id": "file:apps/server/src/routes/complete.ts",
@@ -107,7 +107,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "cd3396180e394dcd01b1ae14cd23dcf0a32e59aac67ce6b6ce1f455b4e29c2c2"
+      "contentHash": "86d5c1be1f447c8c90b47001a562b8e9cf4ef5d04d9be38a0c194e1358c7e88d"
     },
     {
       "id": "file:apps/server/src/routes/sessions.ts",
@@ -147,7 +147,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "1862ac4bbbc5192d4bf562161df66ea547ed3e67173100656ab606ae9797db2b"
+      "contentHash": "0f70629890b72a0a82e91972cc032c04b658b26c265373cb711cf576bfbf8fcc"
     },
     {
       "id": "file:apps/web/next.config.ts",
@@ -207,7 +207,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "a33a6e9f44c626cbb8fb0665f217ee9735abdee62e3a95e34a32b92b5afacee4"
+      "contentHash": "24a5887db6d763706a7c8740779612cf13913b0ee88777ff2efa1ffaafba2a4b"
     },
     {
       "id": "file:apps/web/src/app/session/[id]/permissions/page.tsx",
@@ -733,22 +733,22 @@
       "name": "createRealtimeEphemeralSession",
       "label": "createRealtimeEphemeralSession",
       "path": "apps/server/src/lib/realtime.ts",
-      "line": 35,
+      "line": 36,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "057bfdcf755de6e29a42c8cd78e833928cfa6682f21f8270fedc04245baeea1e"
     },
     {
-      "id": "symbol:apps/server/src/lib/realtime.ts#interface:RealtimeSessionResponse",
+      "id": "symbol:apps/server/src/lib/realtime.ts#interface:RealtimeClientSecretResponse",
       "type": "symbol",
       "kind": "interface",
-      "name": "RealtimeSessionResponse",
-      "label": "RealtimeSessionResponse",
+      "name": "RealtimeClientSecretResponse",
+      "label": "RealtimeClientSecretResponse",
       "path": "apps/server/src/lib/realtime.ts",
       "line": 30,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
-      "contentHash": "0b658277a2040c79cb8bd6732bec0bfe20859176068180189108ef626016bde9"
+      "contentHash": "c2a8580de654e902ec75137c8ecb69c96815061223e445640c1364362a263683"
     },
     {
       "id": "symbol:apps/server/src/routes/complete.ts#variable:completeRouter",
@@ -1471,20 +1471,20 @@
       "contentHash": "b57bc0d2788d198b10daf466d4178516412c416c52c8accaa6cb6cc4528b738a"
     },
     {
-      "id": "unresolved:apps/web/next-env.d.ts:./.next/types/root-params.d.ts",
+      "id": "unresolved:apps/web/next-env.d.ts:./.next/dev/types/root-params.d.ts",
       "type": "unresolved",
-      "label": "./.next/types/root-params.d.ts",
+      "label": "./.next/dev/types/root-params.d.ts",
       "confidence": 0.4,
       "extractor": "import",
-      "contentHash": "3754fb2bc42d60cdc0a1e86d5e0116349d514ccd03e951675251677f7cc6b665"
+      "contentHash": "830b7cf1fca05cc7f357231a0a56918fc66e61b685f42aaa2d2e924fe235ebb3"
     },
     {
-      "id": "unresolved:apps/web/next-env.d.ts:./.next/types/routes.d.ts",
+      "id": "unresolved:apps/web/next-env.d.ts:./.next/dev/types/routes.d.ts",
       "type": "unresolved",
-      "label": "./.next/types/routes.d.ts",
+      "label": "./.next/dev/types/routes.d.ts",
       "confidence": 0.4,
       "extractor": "import",
-      "contentHash": "1379fb4e4fd8505e93e87b2da929d6706ded70ee558cf69ac1e06cb405a4a86c"
+      "contentHash": "d1d6b95088fe7e476a97de9d565603fd6a60f685290be58f12ca5dd4cb637220"
     },
     {
       "id": "unresolved:apps/web/src/app/layout.tsx:./globals.css",
@@ -1842,7 +1842,7 @@
       "type": "defines",
       "source": "file:apps/server/src/lib/realtime.ts",
       "target": "symbol:apps/server/src/lib/realtime.ts#function:createRealtimeEphemeralSession",
-      "line": 35,
+      "line": 36,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -1850,7 +1850,7 @@
     {
       "type": "defines",
       "source": "file:apps/server/src/lib/realtime.ts",
-      "target": "symbol:apps/server/src/lib/realtime.ts#interface:RealtimeSessionResponse",
+      "target": "symbol:apps/server/src/lib/realtime.ts#interface:RealtimeClientSecretResponse",
       "line": 30,
       "resolved": true,
       "confidence": 0.8,
@@ -2889,8 +2889,8 @@
     {
       "type": "imports",
       "source": "file:apps/web/next-env.d.ts",
-      "target": "unresolved:apps/web/next-env.d.ts:./.next/types/root-params.d.ts",
-      "specifier": "./.next/types/root-params.d.ts",
+      "target": "unresolved:apps/web/next-env.d.ts:./.next/dev/types/root-params.d.ts",
+      "specifier": "./.next/dev/types/root-params.d.ts",
       "line": 4,
       "resolved": false,
       "confidence": 0.4,
@@ -2899,8 +2899,8 @@
     {
       "type": "imports",
       "source": "file:apps/web/next-env.d.ts",
-      "target": "unresolved:apps/web/next-env.d.ts:./.next/types/routes.d.ts",
-      "specifier": "./.next/types/routes.d.ts",
+      "target": "unresolved:apps/web/next-env.d.ts:./.next/dev/types/routes.d.ts",
+      "specifier": "./.next/dev/types/routes.d.ts",
       "line": 3,
       "resolved": false,
       "confidence": 0.4,

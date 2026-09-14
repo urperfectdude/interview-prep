@@ -9,7 +9,7 @@
     "non_goals": [],
     "trust_boundary": "local repository",
     "created_at": "2026-09-10T19:32:17.553Z",
-    "updated_at": "2026-09-14T03:16:33.094Z"
+    "updated_at": "2026-09-14T03:37:26.868Z"
   },
   "policy": {
     "ponytail": "full",
@@ -113,6 +113,16 @@
       "status": "accepted",
       "source": "apps/server/src/lib/extractText.ts",
       "recorded_at": "2026-09-14T03:13:34.460Z",
+      "paths": [],
+      "tags": []
+    },
+    {
+      "id": "DECISION-1fa5183e",
+      "title": "Migrate to GA OpenAI Realtime API (client_secrets + calls)",
+      "text": "OpenAI retired the beta /v1/realtime/sessions endpoint on 2026-05-12 (OpenAI-Beta: realtime=v1 removed), which broke the interview flow (404 Invalid URL, surfaced to users as 'Failed to start the interview session.'). Migrated: apps/server/src/lib/realtime.ts now calls POST /v1/realtime/client_secrets with the new nested session.audio.input/output body and reads value/expires_at (no more client_secret wrapper); apps/server/src/lib/openai.ts REALTIME_MODEL changed from deprecated gpt-4o-realtime-preview to gpt-realtime; apps/web/.../interview/page.tsx SDP offer now POSTs to /v1/realtime/calls (no ?model= query param) instead of the retired /v1/realtime. Verified live: POST /api/sessions/:id/realtime-token now returns a valid ek_... client secret.",
+      "status": "accepted",
+      "source": "apps/server/src/lib/realtime.ts",
+      "recorded_at": "2026-09-14T03:37:18.288Z",
       "paths": [],
       "tags": []
     }
@@ -1923,11 +1933,11 @@
   "incidents": [],
   "discovery": null,
   "checkpoint": {
-    "at": "2026-09-14T03:16:33.073Z",
+    "at": "2026-09-14T03:37:26.827Z",
     "revision": {
-      "commit": null,
-      "dirty": null,
-      "source_hash": "8ba09fa70081900c8d5052b93f36c2a19ad13ead0b82fac271ab1384046472e2"
+      "commit": "f1a20b2a23c425d1edd5539ad710d490f7f73084",
+      "dirty": true,
+      "source_hash": "76c5ab0aebde18f60a01f3afdd9e22eb91ebe8e80372febf3b6670aee95c61ae"
     },
     "active_task": null,
     "next_action": "Review completed work and choose the next bounded outcome."

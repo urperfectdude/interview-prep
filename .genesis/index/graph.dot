@@ -71,7 +71,7 @@ digraph genesis {
   "symbol:apps/server/src/lib/prisma.ts#variable:prisma" [label="prisma",class="symbol"];
   "symbol:apps/server/src/lib/realtime.ts#function:buildInterviewerInstructions" [label="buildInterviewerInstructions",class="symbol"];
   "symbol:apps/server/src/lib/realtime.ts#function:createRealtimeEphemeralSession" [label="createRealtimeEphemeralSession",class="symbol"];
-  "symbol:apps/server/src/lib/realtime.ts#interface:RealtimeSessionResponse" [label="RealtimeSessionResponse",class="symbol"];
+  "symbol:apps/server/src/lib/realtime.ts#interface:RealtimeClientSecretResponse" [label="RealtimeClientSecretResponse",class="symbol"];
   "symbol:apps/server/src/routes/complete.ts#variable:completeRouter" [label="completeRouter",class="symbol"];
   "symbol:apps/server/src/routes/frame.ts#function:rejectUnsafeId" [label="rejectUnsafeId",class="symbol"];
   "symbol:apps/server/src/routes/frame.ts#variable:__dirname" [label="__dirname",class="symbol"];
@@ -132,8 +132,8 @@ digraph genesis {
   "symbol:packages/shared/src/index.ts#interface:SessionSummary" [label="SessionSummary",class="symbol"];
   "symbol:packages/shared/src/index.ts#interface:TranscriptEntryDTO" [label="TranscriptEntryDTO",class="symbol"];
   "symbol:packages/shared/src/index.ts#type:SessionStatus" [label="SessionStatus",class="symbol"];
-  "unresolved:apps/web/next-env.d.ts:./.next/types/root-params.d.ts" [label="./.next/types/root-params.d.ts",class="unresolved"];
-  "unresolved:apps/web/next-env.d.ts:./.next/types/routes.d.ts" [label="./.next/types/routes.d.ts",class="unresolved"];
+  "unresolved:apps/web/next-env.d.ts:./.next/dev/types/root-params.d.ts" [label="./.next/dev/types/root-params.d.ts",class="unresolved"];
+  "unresolved:apps/web/next-env.d.ts:./.next/dev/types/routes.d.ts" [label="./.next/dev/types/routes.d.ts",class="unresolved"];
   "unresolved:apps/web/src/app/layout.tsx:./globals.css" [label="./globals.css",class="unresolved"];
   "symbol:apps/server/src/lib/env.ts#variable:env" -> "symbol:apps/server/src/lib/env.ts#function:required" [label="calls"];
   "symbol:apps/server/src/lib/extractText.ts#function:assertPublicHttpUrl" -> "symbol:apps/server/src/lib/extractText.ts#function:isPrivateOrReservedIPv4" [label="calls"];
@@ -174,7 +174,7 @@ digraph genesis {
   "file:apps/server/src/lib/prisma.ts" -> "symbol:apps/server/src/lib/prisma.ts#variable:prisma" [label="defines"];
   "file:apps/server/src/lib/realtime.ts" -> "symbol:apps/server/src/lib/realtime.ts#function:buildInterviewerInstructions" [label="defines"];
   "file:apps/server/src/lib/realtime.ts" -> "symbol:apps/server/src/lib/realtime.ts#function:createRealtimeEphemeralSession" [label="defines"];
-  "file:apps/server/src/lib/realtime.ts" -> "symbol:apps/server/src/lib/realtime.ts#interface:RealtimeSessionResponse" [label="defines"];
+  "file:apps/server/src/lib/realtime.ts" -> "symbol:apps/server/src/lib/realtime.ts#interface:RealtimeClientSecretResponse" [label="defines"];
   "file:apps/server/src/routes/complete.ts" -> "symbol:apps/server/src/routes/complete.ts#variable:completeRouter" [label="defines"];
   "file:apps/server/src/routes/frame.ts" -> "symbol:apps/server/src/routes/frame.ts#function:rejectUnsafeId" [label="defines"];
   "file:apps/server/src/routes/frame.ts" -> "symbol:apps/server/src/routes/frame.ts#variable:__dirname" [label="defines"];
@@ -284,8 +284,8 @@ digraph genesis {
   "file:apps/web/eslint.config.mjs" -> "package:npm:eslint-config-next" [label="imports"];
   "file:apps/web/eslint.config.mjs" -> "package:npm:eslint-config-next" [label="imports"];
   "file:apps/web/eslint.config.mjs" -> "package:npm:eslint" [label="imports"];
-  "file:apps/web/next-env.d.ts" -> "unresolved:apps/web/next-env.d.ts:./.next/types/root-params.d.ts" [label="imports"];
-  "file:apps/web/next-env.d.ts" -> "unresolved:apps/web/next-env.d.ts:./.next/types/routes.d.ts" [label="imports"];
+  "file:apps/web/next-env.d.ts" -> "unresolved:apps/web/next-env.d.ts:./.next/dev/types/root-params.d.ts" [label="imports"];
+  "file:apps/web/next-env.d.ts" -> "unresolved:apps/web/next-env.d.ts:./.next/dev/types/routes.d.ts" [label="imports"];
   "file:apps/web/next.config.ts" -> "package:npm:next" [label="imports"];
   "file:apps/web/src/app/dashboard/page.tsx" -> "file:apps/web/src/components/ui/index.ts" [label="imports"];
   "file:apps/web/src/app/dashboard/page.tsx" -> "file:apps/web/src/lib/api.ts" [label="imports"];

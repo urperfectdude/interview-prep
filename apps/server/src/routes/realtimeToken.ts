@@ -28,8 +28,8 @@ realtimeTokenRouter.post("/:id/realtime-token", async (req, res) => {
     });
 
     res.json({
-      clientSecret: realtimeSession.client_secret.value,
-      expiresAt: realtimeSession.client_secret.expires_at,
+      clientSecret: realtimeSession.value,
+      expiresAt: realtimeSession.expires_at,
       model: REALTIME_MODEL,
       openingQuestion: plan.openingQuestion,
     });

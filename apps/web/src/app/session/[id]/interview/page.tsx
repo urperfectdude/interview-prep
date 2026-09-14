@@ -82,7 +82,7 @@ export default function InterviewPage() {
 
         const tokenResponse = await fetch(apiUrl(`/api/sessions/${id}/realtime-token`), { method: "POST" });
         if (!tokenResponse.ok) throw new Error("Failed to start the interview session.");
-        const { clientSecret, model } = (await tokenResponse.json()) as RealtimeTokenResponse;
+        const { clientSecret } = (await tokenResponse.json()) as RealtimeTokenResponse;
 
         const pc = new RTCPeerConnection();
         pcRef.current = pc;
@@ -129,7 +129,7 @@ export default function InterviewPage() {
         const offer = await pc.createOffer();
         await pc.setLocalDescription(offer);
 
-        const sdpResponse = await fetch(`https://api.openai.com/v1/realtime?model=${model}`, {
+        const sdpResponse = await fetch(`https://api.openai.com/v1/realtime/calls`, {
           method: "POST",
           body: offer.sdp,
           headers: {
