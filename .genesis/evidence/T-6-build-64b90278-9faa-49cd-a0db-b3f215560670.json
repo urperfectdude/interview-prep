@@ -1,0 +1,30 @@
+{
+  "task": "T-6",
+  "gate": "build",
+  "kind": "command",
+  "attempt": "64b90278-9faa-49cd-a0db-b3f215560670",
+  "command": "npm run build -w apps/web",
+  "started_at": "2026-09-10T20:10:12.292Z",
+  "observed_at": "2026-09-10T20:10:16.926Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "\n> web@0.1.0 build\n> next build\n\n▲ Next.js 16.3.4 (Turbopack)\n- Environments: .env.local\n✓ Running next.config.ts took 83ms\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 477ms\n  Running TypeScript ...\n  Finished TypeScript in 982ms ...\n  Collecting page data using 5 workers ...\n  Generating static pages using 5 workers (0/4) ...\n  Generating static pages using 5 workers (1/4) \r\n  Generating static pages using 5 workers (2/4) \r\n  Generating static pages using 5 workers (3/4) \r\n✓ Generating static pages using 5 workers (4/4) in 386ms\n  Finalizing page optimization ...\n\nRoute (app)\n┌ ○ /\n└ ○ /_not-found\n\n\n○  (Static)  prerendered as static content\n\n",
+  "stderr": "",
+  "failure": null,
+  "receipt": null,
+  "revision": {
+    "commit": null,
+    "dirty": null
+  },
+  "source_hash": "b948c8327b47cc1b57891ff11f009018a2a2571fc360463861e3366af1a82a0f",
+  "before_hash": "b948c8327b47cc1b57891ff11f009018a2a2571fc360463861e3366af1a82a0f",
+  "config_hash": "426e5b0e9eaf64f6e941c0545d4e5bbd8e9fa9f7dcb40fa82e79376958edb3a9",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "verifier": "358371454f03eb4fdfd3eda3cb1d18cb1dd8fe9445404bb3d3047267b3977eb9",
+    "variables": {}
+  },
+  "hash": "acaf65a94f78a3b9400e0c5815b8f7277e632b38f7b20901fb99a93f6443cd93"
+}

@@ -1,0 +1,30 @@
+{
+  "task": "T-5",
+  "gate": "typecheck",
+  "kind": "command",
+  "attempt": "6c9d0b0e-c97a-4bf1-b672-7cb95027bd10",
+  "command": "npm run typecheck -w apps/server",
+  "started_at": "2026-09-10T20:05:26.538Z",
+  "observed_at": "2026-09-10T20:05:28.134Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "\n> typecheck\n> tsc -p tsconfig.json --noEmit\n\n",
+  "stderr": "",
+  "failure": null,
+  "receipt": null,
+  "revision": {
+    "commit": null,
+    "dirty": null
+  },
+  "source_hash": "dc69cce531441bf02510644e62f01ef0188152b025a2008477a9149fd2f48c1e",
+  "before_hash": "dc69cce531441bf02510644e62f01ef0188152b025a2008477a9149fd2f48c1e",
+  "config_hash": "3f6a0cd4c5e1dee77e6f567cc59c2a2f039741d52b77ed495aededba74ff864a",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "verifier": "358371454f03eb4fdfd3eda3cb1d18cb1dd8fe9445404bb3d3047267b3977eb9",
+    "variables": {}
+  },
+  "hash": "b5078e976299a246dee2d9f9d39bb46263f702af33605bf723a2892bb180ccbc"
+}

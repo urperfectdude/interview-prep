@@ -1,0 +1,13 @@
+{
+  "task": "T-7",
+  "gate": "independent-review",
+  "kind": "review",
+  "attempt": "328d545a-e935-41ad-ae45-b22077f85513",
+  "human": "yourerpcoach@gmail.com",
+  "reason": "Reviewed onboarding wizard (apps/web/src/app/page.tsx) - correct as-is, relies on server-side JD link validation added in T-5.",
+  "observed_at": "2026-09-14T03:15:04.882Z",
+  "source_hash": "8ba09fa70081900c8d5052b93f36c2a19ad13ead0b82fac271ab1384046472e2",
+  "config_hash": "e6b730bf6cfa54f131ca832d1106e8149322b0072f73af2460c03884a3be59df",
+  "reviewed_proofs": "813dc0f89285bcf17382a7b10561eebd55ef4c2351aedebd0bea8e6815c1977d",
+  "hash": "bd99fd028bcebdcd5955b574c305ee910328fdcb2508f26974faf212f5b1ff06"
+}

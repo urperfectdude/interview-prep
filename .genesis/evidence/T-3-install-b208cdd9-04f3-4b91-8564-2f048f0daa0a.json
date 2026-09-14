@@ -1,0 +1,30 @@
+{
+  "task": "T-3",
+  "gate": "install",
+  "kind": "command",
+  "attempt": "b208cdd9-04f3-4b91-8564-2f048f0daa0a",
+  "command": "npm install",
+  "started_at": "2026-09-10T19:58:55.309Z",
+  "observed_at": "2026-09-10T19:58:57.218Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "\nup to date, audited 535 packages in 2s\n\n176 packages are looking for funding\n  run `npm fund` for details\n\n2 moderate severity vulnerabilities\n\nTo address all issues, run:\n  npm audit fix\n\nRun `npm audit` for details.\n",
+  "stderr": "",
+  "failure": null,
+  "receipt": null,
+  "revision": {
+    "commit": null,
+    "dirty": null
+  },
+  "source_hash": "484a80bb9cc8ab3387a58ea6886174fa3f3d4f6d74b744b0a7f45ced5c7b784b",
+  "before_hash": "484a80bb9cc8ab3387a58ea6886174fa3f3d4f6d74b744b0a7f45ced5c7b784b",
+  "config_hash": "24c969493e750169d40fd0f1003623858949ff9ba3889879d7f5a056156bdc57",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "verifier": "358371454f03eb4fdfd3eda3cb1d18cb1dd8fe9445404bb3d3047267b3977eb9",
+    "variables": {}
+  },
+  "hash": "079a039c8713c7a35bc0d07239c7288065c6dc050ea21f5a3c20e5738b89a09e"
+}

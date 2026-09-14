@@ -1,0 +1,13 @@
+{
+  "task": "T-5",
+  "gate": "independent-review",
+  "kind": "review",
+  "attempt": "3c2e72ad-b6b9-43c2-aa35-f259d0759231",
+  "human": "yourerpcoach@gmail.com",
+  "reason": "Reviewed all 4 T-5 items: fixed SSRF in JD link fetch, fixed path traversal in frame upload, approved realtime-token/transcript routes and session routes as-is (no-auth consistent with current SPEC).",
+  "observed_at": "2026-09-14T03:13:40.623Z",
+  "source_hash": "8ba09fa70081900c8d5052b93f36c2a19ad13ead0b82fac271ab1384046472e2",
+  "config_hash": "3f6a0cd4c5e1dee77e6f567cc59c2a2f039741d52b77ed495aededba74ff864a",
+  "reviewed_proofs": "b8d7f0b3743c73e3357560b420497324f79764df0c603eec952c31483a683575",
+  "hash": "b9ca404ec355d6dd64779ebbf9d4d4f9901319c6c415dcd9e463470838defede"
+}

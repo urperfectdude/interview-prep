@@ -1,0 +1,30 @@
+{
+  "task": "T-4",
+  "gate": "validate",
+  "kind": "command",
+  "attempt": "fdf98e44-c95f-45b4-b41c-f7aa647b8d65",
+  "command": "npx --prefix apps/server prisma validate",
+  "started_at": "2026-09-10T19:58:59.865Z",
+  "observed_at": "2026-09-10T19:59:00.824Z",
+  "exit_code": 1,
+  "signal": null,
+  "stdout": "",
+  "stderr": "Error: Could not find Prisma Schema that is required for this command.\nYou can either provide it with `--schema` argument, set it as `prisma.schema` in your package.json or put it into the default location.\nChecked following paths:\n\nschema.prisma: file not found\nprisma/schema.prisma: file not found\nprisma/schema: directory not found\n\nSee also https://pris.ly/d/prisma-schema-location\n",
+  "failure": "command-failed",
+  "receipt": null,
+  "revision": {
+    "commit": null,
+    "dirty": null
+  },
+  "source_hash": "484a80bb9cc8ab3387a58ea6886174fa3f3d4f6d74b744b0a7f45ced5c7b784b",
+  "before_hash": "484a80bb9cc8ab3387a58ea6886174fa3f3d4f6d74b744b0a7f45ced5c7b784b",
+  "config_hash": "dc6b2da641b13b0cbd5d65899ad6fee122452588e1f6f32e855965b132be83da",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "verifier": "358371454f03eb4fdfd3eda3cb1d18cb1dd8fe9445404bb3d3047267b3977eb9",
+    "variables": {}
+  },
+  "hash": "dba8c581a01c2a6939625fb23370d5b1e0dea4f629b956d2b31ce5d9809c90f5"
+}

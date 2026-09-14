@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Session {
+  id                String   @id @default(cuid())
+  status            String   @default("intake")
+  roleTitle         String?
+  roleDescriptionRaw String?
+  jdText            String?
+  resumeText        String?
+  candidateProfile  String?
+  questionPlan      String?
+  summary           String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  transcriptEntries TranscriptEntry[]
+  frameCaptures     FrameCapture[]
+}
+
+model TranscriptEntry {
+  id        String   @id @default(cuid())
+  sessionId String
+  role      String
+  text      String
+  createdAt DateTime @default(now())
+
+  session Session @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@index([sessionId])
+}
+
+model FrameCapture {
+  id          String   @id @default(cuid())
+  sessionId   String
+  filePath    String
+  capturedAt  DateTime @default(now())
+  note        String?
+
+  session Session @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@index([sessionId])
+}

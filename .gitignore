@@ -1,0 +1,18 @@
+node_modules/
+.env
+.env.local
+dist/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+
+# server local data
+apps/server/prisma/dev.db
+apps/server/prisma/dev.db-journal
+apps/server/uploads/*
+!apps/server/uploads/.gitkeep
+
+# genesis local raw traces
+.genesis/local/

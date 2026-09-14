@@ -1,0 +1,16 @@
+{
+  "name": "interview-prep",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w apps/server & npm run dev -w apps/web & wait",
+    "build": "npm run build -w apps/server && npm run build -w apps/web",
+    "typecheck": "npm run typecheck -w apps/server && npm run typecheck -w apps/web"
+  },
+  "prisma": {
+    "schema": "apps/server/prisma/schema.prisma"
+  }
+}

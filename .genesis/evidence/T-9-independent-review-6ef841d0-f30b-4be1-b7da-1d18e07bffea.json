@@ -1,0 +1,13 @@
+{
+  "task": "T-9",
+  "gate": "independent-review",
+  "kind": "review",
+  "attempt": "6ef841d0-f30b-4be1-b7da-1d18e07bffea",
+  "human": "yourerpcoach@gmail.com",
+  "reason": "Reviewed all 3 T-9 items: WebRTC connection setup (NFR-1 compliant ephemeral token flow), live transcript relay (fire-and-forget persistence, acceptable), randomized frame capture (matches SPEC risk mitigation, consent stated on permissions page).",
+  "observed_at": "2026-09-14T03:16:27.443Z",
+  "source_hash": "8ba09fa70081900c8d5052b93f36c2a19ad13ead0b82fac271ab1384046472e2",
+  "config_hash": "ab8c6b74bc971855ebca0b43d64ad88457ad0b65529f595064058571f1768e14",
+  "reviewed_proofs": "a3f19f417d2441f5c8a9e57d0ccb8d3cf4323f83ce9f072d6376f6a596ad065c",
+  "hash": "57a5cfe54d744820685fa8b8c0f4de31222bf69bae77fffa7129f58b6ba7c648"
+}
