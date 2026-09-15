@@ -6,7 +6,7 @@ interface AvatarProps {
 }
 
 export function Avatar({ name, email, picture, size = "sm" }: AvatarProps) {
-  const sizeClass = size === "lg" ? "h-14 w-14 text-lg" : "h-8 w-8 text-sm";
+  const sizeClass = size === "lg" ? "size-14 text-lg" : "size-8 text-sm";
   if (picture) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
@@ -14,13 +14,13 @@ export function Avatar({ name, email, picture, size = "sm" }: AvatarProps) {
         src={picture}
         alt=""
         referrerPolicy="no-referrer"
-        className={`${sizeClass} flex-none rounded-full object-cover`}
+        className={`${sizeClass} flex-none rounded-full object-cover ring-1 ring-border`}
       />
     );
   }
   return (
     <span
-      className={`${sizeClass} inline-flex flex-none items-center justify-center rounded-full bg-accent-soft font-semibold text-accent`}
+      className={`${sizeClass} inline-flex flex-none items-center justify-center rounded-full bg-accent font-medium text-accent-foreground`}
     >
       {(name ?? email).charAt(0).toUpperCase()}
     </span>

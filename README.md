@@ -55,9 +55,10 @@ Open `http://localhost:3000`, sign in (or create an email account), and start th
 
 ## How it works
 
-0. **Sign in** (`/login`) — Google, or an email + password account. The backend sets an httpOnly
+0. **Landing** (`/`) — a public page describing the product, linking to sign-in and a new interview.
+1. **Sign in** (`/login`) — Google, or an email + password account. The backend sets an httpOnly
    signed cookie, and every session route only returns sessions owned by the signed-in user.
-1. **Intake** (`/`) — a 3-step wizard: Welcome → Role & JD (JD file/link/free text, all optional)
+1. **Intake** (`/new`) — a 3-step wizard: Welcome → Role & JD (JD file/link/free text, all optional)
    → Resume (mandatory unless one is saved in Settings). Submitting sends everything to the backend, which extracts text and
    makes one OpenAI call to build a candidate profile and a tailored question plan.
 2. **Permissions** (`/session/[id]/permissions`) — requests camera/mic access with a live preview.

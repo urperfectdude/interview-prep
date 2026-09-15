@@ -15,9 +15,9 @@ Load Genesis and official Ponytail full, then run `genesis brief .` for the curr
 Fetch full records with `genesis context . --id ID` only when needed. Do not load project.json or historical proof wholesale.
 Ask the index before reading code: `genesis query . search|scope|callers|callees|impact|path` (`--json` for parsing). Run `genesis query . impact PATH` before editing shared code. Answers are advisory static analysis; `ambiguous` means candidates were not ruled out, so confirm in source.
 Run `genesis serve .` for a live map of the repository when structure is unclear; it reindexes on save and is read-only. Run `genesis index .` if the index is stale and nothing is watching.
-Context fingerprint: 5196e70b7d35bb9065a5b2de9c22a0f97075961dcaf7429a9f8697b5cd326335. Use --since only after receiving that full packet; kickoff is not the packet.
+Context fingerprint: 7de53d350db4073d733c78589e32f091127a893726088d65692c5345860f9626. Use --since only after receiving that full packet; kickoff is not the packet.
+- DECISION-56c68880: Wizard resume upload replaces the saved resume
+- DECISION-96c0fe80: shadcn-style design system without Radix; violet primary; class-free token theming
 - DECISION-ea8afae7: Google sign-in, per-user data, and Settings page
-- DECISION-1fa5183e: Migrate to GA OpenAI Realtime API (client_secrets + calls)
-- DECISION-9fb8dd2b: SSRF and path-traversal fixes in T-5 backend routes
 Applicable invariants, active rules, authorization and proof references are in the packet. Truncated summaries are retrieval pointers, not the full evidence.
 Reuse fresh gates with --reuse. Reconcile interrupted attempts before replaying commands. Report state → evidence → blocker → next action; checkpoint before stopping.

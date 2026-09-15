@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "project": "interview-prep",
-  "revision": "ea30c857e531468b5d4204f9f44b9f0d76c583b2",
-  "sourceHash": "e6415a0ad6f371f44c06f85b0d6793269570531b50f3a3b5062e47252f547708",
+  "revision": "439f5290f9c3bc2cee30916aa14ab9ae07ca8818",
+  "sourceHash": "c6a7163541b2b872cde20c88ccc45bf8847723b48a739e26f45870f2f571008d",
   "provenance": {
     "tool": "genesis-graphizer",
     "method": "static-analysis",
@@ -57,7 +57,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "1f833a55675e9280abd73f7f4544efb076bc4a811e933ae3674a771c9be94885"
+      "contentHash": "3844af875fb0ced6fb411a32c7a8307eebd20429633cff66614d862a5441f56e"
     },
     {
       "id": "file:apps/server/src/lib/openai.ts",
@@ -87,7 +87,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "9d9743aea2ea78c4530c6d86bd1e11afb8574b281345798cdc8fe48bb5d24395"
+      "contentHash": "f1dd41f77260e712b24656debf8e13e095dba302a676c98bebd0dc3d2d202503"
     },
     {
       "id": "file:apps/server/src/routes/auth.ts",
@@ -137,7 +137,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "1ca7a47a39adb06868086fce1b0b4a105e0e0ef69517d06f057b6921b9fd4ce4"
+      "contentHash": "aa13c9eb91d0002b44bd705888f722c8d2165e0e10eb2233aa73dbe1141eaed8"
     },
     {
       "id": "file:apps/server/src/routes/transcript.ts",
@@ -197,7 +197,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "afe90ac7c6e45dfe117174a70d2874bb883834d0363a16fb36d0685d78f3744b"
+      "contentHash": "f800692b1af1e9fadbe4d19e9b8c0fc4aa8c2f5a452e2ed796e2128df4040f8f"
     },
     {
       "id": "file:apps/web/src/app/layout.tsx",
@@ -207,7 +207,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "2229d68c40f4dd75fb65fba67b1a544711fd29fbf2a698d32560527f079acf2b"
+      "contentHash": "b9353e1cecffec3445187e3a86d2e4a93f0720fdf78c7d68fd9188bc90b9a380"
     },
     {
       "id": "file:apps/web/src/app/login/page.tsx",
@@ -217,7 +217,17 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "e252d710c0d653e510f10f76ce64befb42e35e734d3ea2063ba287d0fc634299"
+      "contentHash": "f6ca435e1ad675b193fa282f0382bb3f51f332da89e80746cc4b0d041dd8e349"
+    },
+    {
+      "id": "file:apps/web/src/app/new/page.tsx",
+      "type": "file",
+      "label": "apps/web/src/app/new/page.tsx",
+      "path": "apps/web/src/app/new/page.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "49f3b99578510fcdecfbcddfacb856e51e72cc3762182f01255ff936026d369f"
     },
     {
       "id": "file:apps/web/src/app/page.tsx",
@@ -227,7 +237,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "ebec28e0c5c3269f40f3b2b5d6d1ba1efd7d138843a43d473d087438da25abfb"
+      "contentHash": "9a757ecd29196fc65346c33e61097d248af0946443ae65400ad2112e36770855"
     },
     {
       "id": "file:apps/web/src/app/session/[id]/interview/page.tsx",
@@ -237,7 +247,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "872feaa0b7f7b007be041898f35331f6f1928ca4ad7e87b428b3cfcc505c9ac4"
+      "contentHash": "518a42cce4e53dd02a3160f9ac6cfa867e8aa38e0e2b6ba8c4a96e1fcc1885fc"
     },
     {
       "id": "file:apps/web/src/app/session/[id]/permissions/page.tsx",
@@ -247,7 +257,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "3dacb09df4e0f3db8a3df580f54a5b93615bc85202f31616e18fd9ece34a51fb"
+      "contentHash": "3bc21edaf6565a1bf6569ebe69b695976c333c74a7349991fa6458d1e9b3527c"
     },
     {
       "id": "file:apps/web/src/app/session/[id]/results/page.tsx",
@@ -257,7 +267,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "55a4ffe84da54b589402c91280b5a19e51012e8918df2abc3a190882704265ab"
+      "contentHash": "da13ca9f3e89e526e3f5b5df5e5456dcaad7b659467f99338e0ee95a2cf12aa4"
     },
     {
       "id": "file:apps/web/src/app/settings/page.tsx",
@@ -267,7 +277,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "ac40ca08d7b3428a7d49826e43aa3ff00023555a6f562c852373bdc1b2ec8cae"
+      "contentHash": "bd5d4b44981b461bfac2df8072fa86e7b3d24c7979eb3e1a8705d81e6ee64f88"
     },
     {
       "id": "file:apps/web/src/components/AppHeader.tsx",
@@ -277,7 +287,27 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "a66231077e96fe9e631b39689abeecca8571818afd0e3254e3a52a25635bc255"
+      "contentHash": "e2f427e399b97fb64354179dafa791c2e1ae6d6a8f42ac47764903c3384083df"
+    },
+    {
+      "id": "file:apps/web/src/components/Logo.tsx",
+      "type": "file",
+      "label": "apps/web/src/components/Logo.tsx",
+      "path": "apps/web/src/components/Logo.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "f013f69bdecc4b88d394eb02c66166d16ed7c03ce891d6b881e77e9f0eba72fd"
+    },
+    {
+      "id": "file:apps/web/src/components/ThemeToggle.tsx",
+      "type": "file",
+      "label": "apps/web/src/components/ThemeToggle.tsx",
+      "path": "apps/web/src/components/ThemeToggle.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "dcc1937e1239af23d6c7ce3bf31d6b130a12f67ca04fefcf79378d31c77626e8"
     },
     {
       "id": "file:apps/web/src/components/ui/Avatar.tsx",
@@ -287,7 +317,17 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "382eb28a8842086d0f1adb1f92411e71126133f56bdd197637c6b870b2f68c32"
+      "contentHash": "6683777aae514dde930b0cf3e64e712259a2b797d5ce9c6a0f91864d0c9402f6"
+    },
+    {
+      "id": "file:apps/web/src/components/ui/Badge.tsx",
+      "type": "file",
+      "label": "apps/web/src/components/ui/Badge.tsx",
+      "path": "apps/web/src/components/ui/Badge.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "c7a6478c8903c41983a18730faf13d9c0f6635a014144e6709baaa7a700e229e"
     },
     {
       "id": "file:apps/web/src/components/ui/Button.tsx",
@@ -297,7 +337,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "6b59be4a7d6d5eb76a98ef346eb1915ce2095c72c28ff5467d747869d22aba4c"
+      "contentHash": "b9edb9663c75d2615fcca48aa3405e608644ae70cde4074086dae09f687b41bf"
     },
     {
       "id": "file:apps/web/src/components/ui/Card.tsx",
@@ -307,7 +347,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "c47b8a3c1e9f5fa05c74518e191ba5514fd4770d8de30f1e71c95ec5fee4f8ae"
+      "contentHash": "35a8781d6a1a75633d11d1b16dce5186767f1a0f3ac599c023a9dc1c4d050f52"
     },
     {
       "id": "file:apps/web/src/components/ui/FileDropzone.tsx",
@@ -317,7 +357,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "adc6e10473bff71eb3bec01c5e7fad6b4625859828568ea3012bf9c4dd74f515"
+      "contentHash": "76215b4bb14b3629879b6a993392b01de575ad0198ea3cbd0be5f315c67cf767"
     },
     {
       "id": "file:apps/web/src/components/ui/index.ts",
@@ -327,7 +367,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "99d8cbcbe0c6d1b92aa95b8beceb2811dd3f7ef929fa517c8d7f2ef8f94b0040"
+      "contentHash": "c7fed03a4e5c44868bfc467b7b74b89d09b16f96e99bc65ecd27252920985c37"
     },
     {
       "id": "file:apps/web/src/components/ui/Input.tsx",
@@ -337,7 +377,27 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "a8d0a4ad5f01540f3393df88d2f2766f250174006cf1c3c218950e27114cbf45"
+      "contentHash": "32ee7d9fce422caa6813becfc893fb12b8a680e4f26abfbf303e244118c69db6"
+    },
+    {
+      "id": "file:apps/web/src/components/ui/Label.tsx",
+      "type": "file",
+      "label": "apps/web/src/components/ui/Label.tsx",
+      "path": "apps/web/src/components/ui/Label.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "f26f4c251de275b1bf7e5e8d16f24c558ce90cb8b6f0b465ad660b1ec1151772"
+    },
+    {
+      "id": "file:apps/web/src/components/ui/Notice.tsx",
+      "type": "file",
+      "label": "apps/web/src/components/ui/Notice.tsx",
+      "path": "apps/web/src/components/ui/Notice.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "b263df2c954aae1fdc309677f388ffbeba79eee534111649338f31ca80b441ac"
     },
     {
       "id": "file:apps/web/src/components/ui/ScoreRadar.tsx",
@@ -347,7 +407,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "28dd73150587abc6a09e1fad98011600d4de36c1ba11a30490d5a44476651bca"
+      "contentHash": "1e8a8c5d8fd1d4540fd7e63c6b107dc98e0d43ab4177c4389e4e3c9b84bf6296"
     },
     {
       "id": "file:apps/web/src/components/ui/Select.tsx",
@@ -357,7 +417,17 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "bbaab31d06e6be65a812c47131608ad62f9a7abe5c40ba63108bbf19ae06225f"
+      "contentHash": "b1ea480e8989a49a77e8d3419992f7876c7ddba21872fc46087f56b814772cb8"
+    },
+    {
+      "id": "file:apps/web/src/components/ui/Spinner.tsx",
+      "type": "file",
+      "label": "apps/web/src/components/ui/Spinner.tsx",
+      "path": "apps/web/src/components/ui/Spinner.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "e09d408e674ee37f5431498029a0e0ac4c5b98736722673b869c783fb7b9b287"
     },
     {
       "id": "file:apps/web/src/components/ui/StepIndicator.tsx",
@@ -367,7 +437,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "b76c9fffdfadc7613c834ce9e36e6d5e9565bb8dac09e00c6e083ebd32185881"
+      "contentHash": "dc0afea9d9891fecb9c3da7e1b6d9a267f67787d122820158bd4fc52b617d3fe"
     },
     {
       "id": "file:apps/web/src/components/ui/Textarea.tsx",
@@ -377,7 +447,17 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "ba141da85cf2f5efc3839f5c6bc2e7569455a59aa67eb2b0151bba42b0f25b21"
+      "contentHash": "adf902584cc0f219ac79469ffec852e0f4ad84635a34eee4304b4eaf3dd20eab"
+    },
+    {
+      "id": "file:apps/web/src/components/UserMenu.tsx",
+      "type": "file",
+      "label": "apps/web/src/components/UserMenu.tsx",
+      "path": "apps/web/src/components/UserMenu.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "79a0db2e6534c6bd07c4146623fe77625e38b8bf4fb7a7abc91e6338df62dcb7"
     },
     {
       "id": "file:apps/web/src/lib/api.ts",
@@ -387,7 +467,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "03110c290a30d898074481d48606073aab1f87f8452225a2107458b612505f0a"
+      "contentHash": "bdf7e9d284b6d64ab63ca79ae4c2d0a810370e2bd31ec41d4fedf0cdda4af6ca"
     },
     {
       "id": "file:apps/web/src/lib/frameCapture.ts",
@@ -480,6 +560,15 @@
       "confidence": 0.85,
       "extractor": "import",
       "contentHash": "e9865bd81aa7cf58f4b54d47cac8f9c9e6954a89ba4af48104c71f5fbad39383"
+    },
+    {
+      "id": "package:npm:lucide-react",
+      "type": "package",
+      "label": "lucide-react",
+      "ecosystem": "npm",
+      "confidence": 0.85,
+      "extractor": "import",
+      "contentHash": "7f6affdcd002044dd1bba8f1b0965f5fc33a67c90f2afbe455e419bebbcd2a85"
     },
     {
       "id": "package:npm:multer",
@@ -878,7 +967,7 @@
       "name": "generateFrameInsight",
       "label": "generateFrameInsight",
       "path": "apps/server/src/lib/interviewPlanning.ts",
-      "line": 110,
+      "line": 112,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "6f31ff3092d91ef46b542b1f96c37c96286836949f49a07b356b002613f7b529"
@@ -890,7 +979,7 @@
       "name": "generateSessionSummary",
       "label": "generateSessionSummary",
       "path": "apps/server/src/lib/interviewPlanning.ts",
-      "line": 64,
+      "line": 65,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "ff1a9b329e7b1f1f2f0296af8139f6d5028591816fb53039482e8bafc71db88c"
@@ -1010,7 +1099,7 @@
       "name": "createRealtimeEphemeralSession",
       "label": "createRealtimeEphemeralSession",
       "path": "apps/server/src/lib/realtime.ts",
-      "line": 36,
+      "line": 37,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "057bfdcf755de6e29a42c8cd78e833928cfa6682f21f8270fedc04245baeea1e"
@@ -1022,7 +1111,7 @@
       "name": "RealtimeClientSecretResponse",
       "label": "RealtimeClientSecretResponse",
       "path": "apps/server/src/lib/realtime.ts",
-      "line": 30,
+      "line": 31,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "c2a8580de654e902ec75137c8ecb69c96815061223e445640c1364362a263683"
@@ -1310,7 +1399,7 @@
       "name": "computeMilestones",
       "label": "computeMilestones",
       "path": "apps/web/src/app/dashboard/page.tsx",
-      "line": 32,
+      "line": 33,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "f42f84a3c7bec054e6925af1c046caf3caec6e099bd744beb24ac85f2c49bcf4"
@@ -1322,7 +1411,7 @@
       "name": "DashboardPage",
       "label": "DashboardPage",
       "path": "apps/web/src/app/dashboard/page.tsx",
-      "line": 53,
+      "line": 54,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "1c70b785f096cd4d803fef52a4bfa6c7969260aaa3a9466e67647595588f68b0"
@@ -1334,7 +1423,7 @@
       "name": "formatDate",
       "label": "formatDate",
       "path": "apps/web/src/app/dashboard/page.tsx",
-      "line": 9,
+      "line": 10,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "1cd7b55d1c149a15028e53026e6eb2c87b63553da93dffb9d77ab818acd72da4"
@@ -1346,7 +1435,7 @@
       "name": "longestDayStreak",
       "label": "longestDayStreak",
       "path": "apps/web/src/app/dashboard/page.tsx",
-      "line": 13,
+      "line": 14,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "6f35b350ef8c4333780de57273fa647518d9603eeb9e9ec93aa3bd540f0072e4"
@@ -1358,7 +1447,7 @@
       "name": "SCORE_CHIP_CATEGORIES",
       "label": "SCORE_CHIP_CATEGORIES",
       "path": "apps/web/src/app/dashboard/page.tsx",
-      "line": 46,
+      "line": 47,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "481e8388b54d2ea41673d9fcd192d7b519272f0d3896ccf9c7ca4a23c3000fe9"
@@ -1370,7 +1459,7 @@
       "name": "SCORE_CHIP_LABELS",
       "label": "SCORE_CHIP_LABELS",
       "path": "apps/web/src/app/dashboard/page.tsx",
-      "line": 47,
+      "line": 48,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "99991654f3726c3edf2888994889c661d706331c12be70fbfda03bc9a0513d79"
@@ -1382,7 +1471,7 @@
       "name": "RootLayout",
       "label": "RootLayout",
       "path": "apps/web/src/app/layout.tsx",
-      "line": 16,
+      "line": 20,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "b3f96339ba215ebd6ba503ea8fca4a7c61b3c35014e0d8f3c377caed0cbc1890"
@@ -1412,13 +1501,25 @@
       "contentHash": "1c4009dcdeca39fd5c9228279837d6284c5aefaa467126841e57afc26ba65eec"
     },
     {
+      "id": "symbol:apps/web/src/app/layout.tsx#variable:THEME_SCRIPT",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "THEME_SCRIPT",
+      "label": "THEME_SCRIPT",
+      "path": "apps/web/src/app/layout.tsx",
+      "line": 18,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "39fdb1b47d90c9d8c71e7a56fca7e60ae3ced9ea5be03d836986e87da628f4ce"
+    },
+    {
       "id": "symbol:apps/web/src/app/login/page.tsx#function:LoginPage",
       "type": "symbol",
       "kind": "function",
       "name": "LoginPage",
       "label": "LoginPage",
       "path": "apps/web/src/app/login/page.tsx",
-      "line": 27,
+      "line": 29,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "81771f9428fdf29de423bffeb1f01e0ee2ec6079eef3c28dd56b18fd8426ff94"
@@ -1430,7 +1531,7 @@
       "name": "readError",
       "label": "readError",
       "path": "apps/web/src/app/login/page.tsx",
-      "line": 22,
+      "line": 24,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "6bad5fa95ab7e185d89b14baf82c69ece4325489a65d21b686a1cdd2ce8630ab"
@@ -1442,7 +1543,7 @@
       "name": "GoogleIdentity",
       "label": "GoogleIdentity",
       "path": "apps/web/src/app/login/page.tsx",
-      "line": 11,
+      "line": 13,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "2378f900098ba52bb8ea4b391057a7d8aa42574ccb944b77695f9edf83d2c392"
@@ -1454,34 +1555,70 @@
       "name": "GOOGLE_CLIENT_ID",
       "label": "GOOGLE_CLIENT_ID",
       "path": "apps/web/src/app/login/page.tsx",
-      "line": 9,
+      "line": 11,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "f4898f0cf11fcc9d25105ba4c7dd06cba43afac117e791dd8adc82073bc94611"
     },
     {
-      "id": "symbol:apps/web/src/app/page.tsx#function:Home",
+      "id": "symbol:apps/web/src/app/new/page.tsx#function:NewInterviewPage",
       "type": "symbol",
       "kind": "function",
-      "name": "Home",
-      "label": "Home",
-      "path": "apps/web/src/app/page.tsx",
-      "line": 11,
+      "name": "NewInterviewPage",
+      "label": "NewInterviewPage",
+      "path": "apps/web/src/app/new/page.tsx",
+      "line": 37,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
-      "contentHash": "e1a106fbcc131f9a29bfcc7ca368c0c2e8175b30674f7f2c893aff7089d9e886"
+      "contentHash": "37c3d3ac33fc0e937d7acbd801cc7321910ce44e5db971cfb6c6e5ec9d2509c2"
     },
     {
-      "id": "symbol:apps/web/src/app/page.tsx#variable:STEPS",
+      "id": "symbol:apps/web/src/app/new/page.tsx#variable:CHECKLIST",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "CHECKLIST",
+      "label": "CHECKLIST",
+      "path": "apps/web/src/app/new/page.tsx",
+      "line": 31,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "beed9a37ef0796f778ac482bbc341568f61ebbd95c0c1606485cb0edcf050a5d"
+    },
+    {
+      "id": "symbol:apps/web/src/app/new/page.tsx#variable:STEPS",
       "type": "symbol",
       "kind": "variable",
       "name": "STEPS",
       "label": "STEPS",
-      "path": "apps/web/src/app/page.tsx",
-      "line": 9,
+      "path": "apps/web/src/app/new/page.tsx",
+      "line": 25,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "77a7e5643707ae6f3fef7f6b3d6494aa118c6219df147e0b944a1c7acffdf1fc"
+    },
+    {
+      "id": "symbol:apps/web/src/app/page.tsx#function:LandingPage",
+      "type": "symbol",
+      "kind": "function",
+      "name": "LandingPage",
+      "label": "LandingPage",
+      "path": "apps/web/src/app/page.tsx",
+      "line": 13,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "b7428cf7304f6cf9c0fb96bd27381830924f9af6e9432483d7f19185c34121b4"
+    },
+    {
+      "id": "symbol:apps/web/src/app/page.tsx#variable:FEATURES",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "FEATURES",
+      "label": "FEATURES",
+      "path": "apps/web/src/app/page.tsx",
+      "line": 7,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "6b2a442b819e47d88faf9aaead041779705259623f4f9d156218e3f390597404"
     },
     {
       "id": "symbol:apps/web/src/app/session/[id]/interview/page.tsx#function:InterviewPage",
@@ -1490,7 +1627,7 @@
       "name": "InterviewPage",
       "label": "InterviewPage",
       "path": "apps/web/src/app/session/[id]/interview/page.tsx",
-      "line": 23,
+      "line": 24,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "90ed9ef3865506c58226d44c87048950fccd149ffe9a6b765aab2c64b18f002a"
@@ -1502,7 +1639,7 @@
       "name": "RealtimeTokenResponse",
       "label": "RealtimeTokenResponse",
       "path": "apps/web/src/app/session/[id]/interview/page.tsx",
-      "line": 17,
+      "line": 18,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "8b32f3f092351fb7d2fbb6fad1c752a730b981635f380e188b77c51368382bb3"
@@ -1514,7 +1651,7 @@
       "name": "TranscriptLine",
       "label": "TranscriptLine",
       "path": "apps/web/src/app/session/[id]/interview/page.tsx",
-      "line": 11,
+      "line": 12,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "219b15c64529a996ad247c058d0e33f0791e00d0671b0ef800562b9fa36280d8"
@@ -1526,7 +1663,7 @@
       "name": "ConnectionState",
       "label": "ConnectionState",
       "path": "apps/web/src/app/session/[id]/interview/page.tsx",
-      "line": 9,
+      "line": 10,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "5ba6a34d74156bdfe3c042a40b61a327dd393b6522494694d86a4a0ed3e94522"
@@ -1538,7 +1675,7 @@
       "name": "PermissionsPage",
       "label": "PermissionsPage",
       "path": "apps/web/src/app/session/[id]/permissions/page.tsx",
-      "line": 9,
+      "line": 15,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "9e6eb357977a60d760f6a75d65947c1167410d1b5abe297bc795f0defb0333e4"
@@ -1550,10 +1687,22 @@
       "name": "PermissionState",
       "label": "PermissionState",
       "path": "apps/web/src/app/session/[id]/permissions/page.tsx",
-      "line": 7,
+      "line": 8,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "37b3edf5330af4e244212c81cb42546bac0795916a912b8d52859d27f1fd9f8e"
+    },
+    {
+      "id": "symbol:apps/web/src/app/session/[id]/permissions/page.tsx#variable:DEVICES",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "DEVICES",
+      "label": "DEVICES",
+      "path": "apps/web/src/app/session/[id]/permissions/page.tsx",
+      "line": 10,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "459da5065707bdea5d23771e5dac91aec61c2c50b4658c04ccfb6752b37aff23"
     },
     {
       "id": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:computeChips",
@@ -1562,7 +1711,7 @@
       "name": "computeChips",
       "label": "computeChips",
       "path": "apps/web/src/app/session/[id]/results/page.tsx",
-      "line": 35,
+      "line": 39,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "60c4fa2ee439ad4da21a480bde0c53f6e437f36ef295cb8517d7f4a5d9eea14c"
@@ -1574,7 +1723,7 @@
       "name": "formatTimestamp",
       "label": "formatTimestamp",
       "path": "apps/web/src/app/session/[id]/results/page.tsx",
-      "line": 11,
+      "line": 13,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "3a565c2871914d3612e918ff0bc348c48d37db91cce856a3e9cac742a4129d50"
@@ -1586,7 +1735,7 @@
       "name": "highlightSpans",
       "label": "highlightSpans",
       "path": "apps/web/src/app/session/[id]/results/page.tsx",
-      "line": 60,
+      "line": 64,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "e7558cea126b20a5cccf51a68f5e243d5d340f89387eb49c8b28696829678c04"
@@ -1598,7 +1747,7 @@
       "name": "ResultsPage",
       "label": "ResultsPage",
       "path": "apps/web/src/app/session/[id]/results/page.tsx",
-      "line": 92,
+      "line": 96,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "511e01e2be44cf8e85f7b593112b1cfab7cc2e5bf7b6b013d30ab29e4af8c919"
@@ -1610,7 +1759,7 @@
       "name": "Chip",
       "label": "Chip",
       "path": "apps/web/src/app/session/[id]/results/page.tsx",
-      "line": 33,
+      "line": 37,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "854e76402e900802a0c734b4095bdb74905bfc6e55a2b6b8c1a5b136a1601227"
@@ -1622,7 +1771,7 @@
       "name": "HighlightFilter",
       "label": "HighlightFilter",
       "path": "apps/web/src/app/session/[id]/results/page.tsx",
-      "line": 9,
+      "line": 11,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "b0cbc2f02bcca36dce4210ef59e4a0b86ad77a2e0a58251d7a7e21df176e62fd"
@@ -1634,10 +1783,22 @@
       "name": "CATEGORY_LABELS",
       "label": "CATEGORY_LABELS",
       "path": "apps/web/src/app/session/[id]/results/page.tsx",
-      "line": 17,
+      "line": 19,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "24568c2229a2affd9d45dbaa04b0bee1140122a303e20c2ecadff760929d579d"
+    },
+    {
+      "id": "symbol:apps/web/src/app/session/[id]/results/page.tsx#variable:FILTER_LABELS",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "FILTER_LABELS",
+      "label": "FILTER_LABELS",
+      "path": "apps/web/src/app/session/[id]/results/page.tsx",
+      "line": 35,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "daabc5a05f2d90b004bc5f0bbbe8a5063931692a59289c4e22f0b3f1862607e7"
     },
     {
       "id": "symbol:apps/web/src/app/session/[id]/results/page.tsx#variable:ISSUE_HINTS",
@@ -1646,7 +1807,7 @@
       "name": "ISSUE_HINTS",
       "label": "ISSUE_HINTS",
       "path": "apps/web/src/app/session/[id]/results/page.tsx",
-      "line": 25,
+      "line": 27,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "53f8295d689156fda91b6da95c23dd7cf6c595d0a0e3a39dd5046832249aa1a9"
@@ -1658,22 +1819,10 @@
       "name": "capitalize",
       "label": "capitalize",
       "path": "apps/web/src/app/settings/page.tsx",
-      "line": 12,
+      "line": 29,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "0aca0587452b663c3fecc8fc09d50856de2430e0f76d95419115dad853c272c7"
-    },
-    {
-      "id": "symbol:apps/web/src/app/settings/page.tsx#function:NoticeText",
-      "type": "symbol",
-      "kind": "function",
-      "name": "NoticeText",
-      "label": "NoticeText",
-      "path": "apps/web/src/app/settings/page.tsx",
-      "line": 16,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "fa1dd6b86fb0b8331f54968beddf8f3f3e124c9dd28b191233b84831294c1e59"
     },
     {
       "id": "symbol:apps/web/src/app/settings/page.tsx#function:SettingsPage",
@@ -1682,22 +1831,22 @@
       "name": "SettingsPage",
       "label": "SettingsPage",
       "path": "apps/web/src/app/settings/page.tsx",
-      "line": 23,
+      "line": 33,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "4551cd8a2d421b0d2f2abc31a6baaf59c94b9bfae857eecb300ee5c47cd73c92"
     },
     {
-      "id": "symbol:apps/web/src/app/settings/page.tsx#type:Notice",
+      "id": "symbol:apps/web/src/app/settings/page.tsx#type:NoticeState",
       "type": "symbol",
       "kind": "type",
-      "name": "Notice",
-      "label": "Notice",
+      "name": "NoticeState",
+      "label": "NoticeState",
       "path": "apps/web/src/app/settings/page.tsx",
-      "line": 10,
+      "line": 27,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
-      "contentHash": "c6850a0c0e56dd96802d2a31c79f9e116ff9e2e05760c25deb781b278528bfdc"
+      "contentHash": "46be82cafb7b05186e71c3140afbf3b25e6be40fc0e74d5c78ba89a3b740e32b"
     },
     {
       "id": "symbol:apps/web/src/app/settings/page.tsx#variable:SENIORITY_LEVELS",
@@ -1706,7 +1855,7 @@
       "name": "SENIORITY_LEVELS",
       "label": "SENIORITY_LEVELS",
       "path": "apps/web/src/app/settings/page.tsx",
-      "line": 8,
+      "line": 25,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "a64222c1ce39330972b49883f0fa756ba485f8e580975fd5d6a3b0cf3efd92a6"
@@ -1718,22 +1867,58 @@
       "name": "AppHeader",
       "label": "AppHeader",
       "path": "apps/web/src/components/AppHeader.tsx",
-      "line": 15,
+      "line": 16,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "886806e3bfb1c0210df3734c810b020f6adee0a653b90ffd2a3022d2f8caae9f"
     },
     {
-      "id": "symbol:apps/web/src/components/AppHeader.tsx#variable:NAV_LINKS",
+      "id": "symbol:apps/web/src/components/AppHeader.tsx#variable:PUBLIC_PATHS",
       "type": "symbol",
       "kind": "variable",
-      "name": "NAV_LINKS",
-      "label": "NAV_LINKS",
+      "name": "PUBLIC_PATHS",
+      "label": "PUBLIC_PATHS",
       "path": "apps/web/src/components/AppHeader.tsx",
-      "line": 10,
+      "line": 14,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
-      "contentHash": "9162e42d3f380192694a9a65baa9d219ed686a517b9b45a0d9762c6f49b702bd"
+      "contentHash": "9cc4b08f000157dd651c9af0bbcb2aeb5778b83f33ca48a500596071dc4f7742"
+    },
+    {
+      "id": "symbol:apps/web/src/components/Logo.tsx#function:Logo",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Logo",
+      "label": "Logo",
+      "path": "apps/web/src/components/Logo.tsx",
+      "line": 3,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "7e672d31f5f42cdb7d5ed6434dac2c400875dbb5fc5785d5aeebed6d4cbc538b"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ThemeToggle.tsx#function:ThemeToggle",
+      "type": "symbol",
+      "kind": "function",
+      "name": "ThemeToggle",
+      "label": "ThemeToggle",
+      "path": "apps/web/src/components/ThemeToggle.tsx",
+      "line": 15,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "226a87982e0adf89d7a503fc909ae558030df8b1e25376e68510bb7f03cd0538"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ThemeToggle.tsx#function:toggleTheme",
+      "type": "symbol",
+      "kind": "function",
+      "name": "toggleTheme",
+      "label": "toggleTheme",
+      "path": "apps/web/src/components/ThemeToggle.tsx",
+      "line": 7,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "72af5efd4ec6e2517b1f48d2bb6b0c6263b35ba6332bba7cba3e0f96146e9e3b"
     },
     {
       "id": "symbol:apps/web/src/components/ui/Avatar.tsx#function:Avatar",
@@ -1760,16 +1945,88 @@
       "contentHash": "791fd05c3264af5bdacbad33856d25b5f60c67c55b15420bc660b47a5b8a37e8"
     },
     {
+      "id": "symbol:apps/web/src/components/ui/Badge.tsx#function:Badge",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Badge",
+      "label": "Badge",
+      "path": "apps/web/src/components/ui/Badge.tsx",
+      "line": 17,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "bdc409d5c6a477fbb3422476775e4f28416a8639bbc7d32fddef01783f7dc274"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Badge.tsx#interface:BadgeProps",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "BadgeProps",
+      "label": "BadgeProps",
+      "path": "apps/web/src/components/ui/Badge.tsx",
+      "line": 13,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "5e6a023a1cb93b969318137ee28c4d4db5e634fed324e84ad5854c87fcdeba91"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Badge.tsx#type:Variant",
+      "type": "symbol",
+      "kind": "type",
+      "name": "Variant",
+      "label": "Variant",
+      "path": "apps/web/src/components/ui/Badge.tsx",
+      "line": 3,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "180da5cb6dae92d2937e3739ae152349154d8d5339ebc155c6cea8082026e537"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Badge.tsx#variable:variantClasses",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "variantClasses",
+      "label": "variantClasses",
+      "path": "apps/web/src/components/ui/Badge.tsx",
+      "line": 5,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "94605034cd873c5693417a9f010c75219a19510d640d49ce1cd7c51f9d31c623"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Button.tsx#function:buttonVariants",
+      "type": "symbol",
+      "kind": "function",
+      "name": "buttonVariants",
+      "label": "buttonVariants",
+      "path": "apps/web/src/components/ui/Button.tsx",
+      "line": 21,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "532bb8d64f0467c53b84d25c739a209774f8c87e269b124e001ba6cef979784d"
+    },
+    {
       "id": "symbol:apps/web/src/components/ui/Button.tsx#interface:ButtonProps",
       "type": "symbol",
       "kind": "interface",
       "name": "ButtonProps",
       "label": "ButtonProps",
       "path": "apps/web/src/components/ui/Button.tsx",
-      "line": 5,
+      "line": 25,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "d9e6314585948964684c65550627a30914179704f02b02ae65d00d66f5c38261"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Button.tsx#type:Size",
+      "type": "symbol",
+      "kind": "type",
+      "name": "Size",
+      "label": "Size",
+      "path": "apps/web/src/components/ui/Button.tsx",
+      "line": 4,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "7c2349581a7af539805f1bcc954de9d87b943c7e2fd93e3601f5aa8772f4f38d"
     },
     {
       "id": "symbol:apps/web/src/components/ui/Button.tsx#type:Variant",
@@ -1790,10 +2047,22 @@
       "name": "Button",
       "label": "Button",
       "path": "apps/web/src/components/ui/Button.tsx",
-      "line": 17,
+      "line": 30,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "8fdd4972578b60f7158848bf176803c72bb15579de7dc337e70ce1f808e05e8e"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Button.tsx#variable:sizeClasses",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "sizeClasses",
+      "label": "sizeClasses",
+      "path": "apps/web/src/components/ui/Button.tsx",
+      "line": 13,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "4ea51229844614e1a0a511bbe38bf764e220b71932b6c31949b46bf01b3d2986"
     },
     {
       "id": "symbol:apps/web/src/components/ui/Button.tsx#variable:variantClasses",
@@ -1802,7 +2071,7 @@
       "name": "variantClasses",
       "label": "variantClasses",
       "path": "apps/web/src/components/ui/Button.tsx",
-      "line": 9,
+      "line": 6,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "94605034cd873c5693417a9f010c75219a19510d640d49ce1cd7c51f9d31c623"
@@ -1814,10 +2083,82 @@
       "name": "Card",
       "label": "Card",
       "path": "apps/web/src/components/ui/Card.tsx",
-      "line": 3,
+      "line": 5,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "2b931a9e98d25354247ba9a53cac49ab3c0c6c97db7af63de47c7879c245ce44"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Card.tsx#function:CardContent",
+      "type": "symbol",
+      "kind": "function",
+      "name": "CardContent",
+      "label": "CardContent",
+      "path": "apps/web/src/components/ui/Card.tsx",
+      "line": 21,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "182617d3c71831de7794a54ec5a50f0253e8aa46c12131c69b85d51fa6fc5d61"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Card.tsx#function:CardDescription",
+      "type": "symbol",
+      "kind": "function",
+      "name": "CardDescription",
+      "label": "CardDescription",
+      "path": "apps/web/src/components/ui/Card.tsx",
+      "line": 17,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "6ed78be1df38d0348fedb7ac18b4f22633d3f4a16506d4699250a192f003c37a"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Card.tsx#function:CardFooter",
+      "type": "symbol",
+      "kind": "function",
+      "name": "CardFooter",
+      "label": "CardFooter",
+      "path": "apps/web/src/components/ui/Card.tsx",
+      "line": 25,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "1739f3bb9a683c29e0277cf9aa2c65c47ecc03b9428338e1ddc08efe76d80886"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Card.tsx#function:CardHeader",
+      "type": "symbol",
+      "kind": "function",
+      "name": "CardHeader",
+      "label": "CardHeader",
+      "path": "apps/web/src/components/ui/Card.tsx",
+      "line": 9,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "e229e78c5dadeaa33dbaf2dd14ec1e610fef6b403be7584a1cbd1ef829294903"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Card.tsx#function:CardTitle",
+      "type": "symbol",
+      "kind": "function",
+      "name": "CardTitle",
+      "label": "CardTitle",
+      "path": "apps/web/src/components/ui/Card.tsx",
+      "line": 13,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "34bba4b7a47af196fc8d9b873ece932070dd6d135445dc86fcce702ae8e6c2af"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Card.tsx#type:DivProps",
+      "type": "symbol",
+      "kind": "type",
+      "name": "DivProps",
+      "label": "DivProps",
+      "path": "apps/web/src/components/ui/Card.tsx",
+      "line": 3,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "5794648a76b2ced54456b3c16b351603a855eded5bf558357c8cdf0430df864d"
     },
     {
       "id": "symbol:apps/web/src/components/ui/FileDropzone.tsx#function:FileDropzone",
@@ -1826,10 +2167,22 @@
       "name": "FileDropzone",
       "label": "FileDropzone",
       "path": "apps/web/src/components/ui/FileDropzone.tsx",
-      "line": 13,
+      "line": 19,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "31269786ea83ed17c1fa6cf5eb83234558911f42a01965a23250a93252fd2502"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/FileDropzone.tsx#function:formatSize",
+      "type": "symbol",
+      "kind": "function",
+      "name": "formatSize",
+      "label": "formatSize",
+      "path": "apps/web/src/components/ui/FileDropzone.tsx",
+      "line": 15,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "ab9458b5b68a8477c5cf43b2f161045165c7384f8d0d366b3999d31c41c7740e"
     },
     {
       "id": "symbol:apps/web/src/components/ui/FileDropzone.tsx#interface:FileDropzoneProps",
@@ -1838,10 +2191,22 @@
       "name": "FileDropzoneProps",
       "label": "FileDropzoneProps",
       "path": "apps/web/src/components/ui/FileDropzone.tsx",
-      "line": 5,
+      "line": 7,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "d932610272152bd072d244d7306190921e2872f573425ef348e8db77973a3e0a"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Input.tsx#variable:fieldClass",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "fieldClass",
+      "label": "fieldClass",
+      "path": "apps/web/src/components/ui/Input.tsx",
+      "line": 4,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "cacc371fbd3607a322df1584ddc7991045e2523103d1d93ceb35bdd6610d040e"
     },
     {
       "id": "symbol:apps/web/src/components/ui/Input.tsx#variable:Input",
@@ -1850,10 +2215,46 @@
       "name": "Input",
       "label": "Input",
       "path": "apps/web/src/components/ui/Input.tsx",
-      "line": 3,
+      "line": 7,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "d05760b28b8c21794ded06acc2e093a15b363bd79df63002cd831b90d569e28c"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Label.tsx#function:Label",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Label",
+      "label": "Label",
+      "path": "apps/web/src/components/ui/Label.tsx",
+      "line": 3,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "ec3248198da8ccf6cb054d65611bb83a9fd3bccb5a74958c49851095f5781ebb"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Notice.tsx#function:Notice",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Notice",
+      "label": "Notice",
+      "path": "apps/web/src/components/ui/Notice.tsx",
+      "line": 10,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "7a241a4ba548cd12cff99bcb47ec3430b5dea9415781c9dd399ad1df69e2b2a2"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Notice.tsx#interface:NoticeProps",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "NoticeProps",
+      "label": "NoticeProps",
+      "path": "apps/web/src/components/ui/Notice.tsx",
+      "line": 4,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "5bf89de464c28f2f0de379eb6188d3bcdc979ce912ecc7868a90fd43ffdb8b5a"
     },
     {
       "id": "symbol:apps/web/src/components/ui/ScoreRadar.tsx#function:ScoreRadar",
@@ -1886,10 +2287,22 @@
       "name": "Select",
       "label": "Select",
       "path": "apps/web/src/components/ui/Select.tsx",
-      "line": 3,
+      "line": 5,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "19152229a3caf7f8a0624c420f1aaa3bcc01dde553231b83b6ad56df6b78f8f6"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Spinner.tsx#function:Spinner",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Spinner",
+      "label": "Spinner",
+      "path": "apps/web/src/components/ui/Spinner.tsx",
+      "line": 3,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "8a2dbea74518526b902a1679cacc7b3c89cb0f7d34d10f54917728013e5b6553"
     },
     {
       "id": "symbol:apps/web/src/components/ui/StepIndicator.tsx#function:StepIndicator",
@@ -1898,7 +2311,7 @@
       "name": "StepIndicator",
       "label": "StepIndicator",
       "path": "apps/web/src/components/ui/StepIndicator.tsx",
-      "line": 10,
+      "line": 13,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "7954c6a655eec648e85fee83abb17dd65b0c0b58c4f545a2e2461b021f202745"
@@ -1910,7 +2323,7 @@
       "name": "Step",
       "label": "Step",
       "path": "apps/web/src/components/ui/StepIndicator.tsx",
-      "line": 1,
+      "line": 3,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "479c56bb4a780e260ee5938dee6c80b0a8bfe2672ed3227e8168143b35434968"
@@ -1922,7 +2335,7 @@
       "name": "StepIndicatorProps",
       "label": "StepIndicatorProps",
       "path": "apps/web/src/components/ui/StepIndicator.tsx",
-      "line": 5,
+      "line": 8,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "16166f8d21472d70d5767156829625eec1c11af89655414d1971540e325deab4"
@@ -1934,10 +2347,34 @@
       "name": "Textarea",
       "label": "Textarea",
       "path": "apps/web/src/components/ui/Textarea.tsx",
-      "line": 3,
+      "line": 4,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "f452ae315e204dc2be36ef0e630693ff366aaa17c70a67ba223f2b5f0e8bf44d"
+    },
+    {
+      "id": "symbol:apps/web/src/components/UserMenu.tsx#function:UserMenu",
+      "type": "symbol",
+      "kind": "function",
+      "name": "UserMenu",
+      "label": "UserMenu",
+      "path": "apps/web/src/components/UserMenu.tsx",
+      "line": 14,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "f3752139769854757626a89d678673485cf849e6c5cc9285dc83e233d5fa2ae5"
+    },
+    {
+      "id": "symbol:apps/web/src/components/UserMenu.tsx#variable:itemClass",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "itemClass",
+      "label": "itemClass",
+      "path": "apps/web/src/components/UserMenu.tsx",
+      "line": 11,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "00a3fe35de0df8ee2311f0da2d03d2b3864fb13caee4017035963dc990c5474b"
     },
     {
       "id": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
@@ -1962,6 +2399,18 @@
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "798e8e3561bde4e058d0aba697c3632a4db432b9dd515ffb6305d346cc2abc20"
+    },
+    {
+      "id": "symbol:apps/web/src/lib/api.ts#function:signOut",
+      "type": "symbol",
+      "kind": "function",
+      "name": "signOut",
+      "label": "signOut",
+      "path": "apps/web/src/lib/api.ts",
+      "line": 15,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "18ecca3930ba750d3608f6c7967dc4ccc5615013851931931d05e5267c7b09cb"
     },
     {
       "id": "symbol:apps/web/src/lib/api.ts#variable:API_BASE_URL",
@@ -2436,6 +2885,18 @@
     {
       "type": "calls",
       "source": "symbol:apps/web/src/app/dashboard/page.tsx#function:DashboardPage",
+      "target": "symbol:apps/web/src/components/ui/Button.tsx#function:buttonVariants",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:apps/web/src/components/ui/Button.tsx#function:buttonVariants"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/dashboard/page.tsx#function:DashboardPage",
       "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
       "tier": "proven",
       "resolved": true,
@@ -2471,11 +2932,23 @@
     },
     {
       "type": "calls",
-      "source": "symbol:apps/web/src/app/page.tsx#function:Home",
+      "source": "symbol:apps/web/src/app/new/page.tsx#function:NewInterviewPage",
       "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
       "tier": "proven",
       "resolved": true,
       "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/page.tsx#function:LandingPage",
+      "target": "symbol:apps/web/src/components/ui/Button.tsx#function:buttonVariants",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:apps/web/src/components/ui/Button.tsx#function:buttonVariants"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
       "extractor": "conservative-js-calls"
     },
     {
@@ -2491,15 +2964,6 @@
       "type": "calls",
       "source": "symbol:apps/web/src/app/session/[id]/interview/page.tsx#function:InterviewPage",
       "target": "symbol:apps/web/src/lib/frameCapture.ts#function:captureFrameBlob",
-      "tier": "proven",
-      "resolved": true,
-      "confidence": 0.7,
-      "extractor": "conservative-js-calls"
-    },
-    {
-      "type": "calls",
-      "source": "symbol:apps/web/src/app/session/[id]/interview/page.tsx#function:InterviewPage",
-      "target": "symbol:apps/web/src/lib/frameCapture.ts#function:randomJitterMs",
       "tier": "proven",
       "resolved": true,
       "confidence": 0.7,
@@ -2571,10 +3035,49 @@
     {
       "type": "calls",
       "source": "symbol:apps/web/src/components/AppHeader.tsx#function:AppHeader",
+      "target": "symbol:apps/web/src/components/ui/Button.tsx#function:buttonVariants",
+      "tier": "ambiguous",
+      "candidates": [
+        "symbol:apps/web/src/components/ui/Button.tsx#function:buttonVariants"
+      ],
+      "resolved": false,
+      "confidence": 0.3,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/components/AppHeader.tsx#function:AppHeader",
       "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
       "tier": "proven",
       "resolved": true,
       "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/components/ui/Button.tsx#variable:Button",
+      "target": "symbol:apps/web/src/components/ui/Button.tsx#function:buttonVariants",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.75,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/components/ui/FileDropzone.tsx#function:FileDropzone",
+      "target": "symbol:apps/web/src/components/ui/FileDropzone.tsx#function:formatSize",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.75,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/lib/api.ts#function:signOut",
+      "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.75,
       "extractor": "conservative-js-calls"
     },
     {
@@ -2806,7 +3309,7 @@
       "type": "defines",
       "source": "file:apps/server/src/lib/interviewPlanning.ts",
       "target": "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateFrameInsight",
-      "line": 110,
+      "line": 112,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2815,7 +3318,7 @@
       "type": "defines",
       "source": "file:apps/server/src/lib/interviewPlanning.ts",
       "target": "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateSessionSummary",
-      "line": 64,
+      "line": 65,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2905,7 +3408,7 @@
       "type": "defines",
       "source": "file:apps/server/src/lib/realtime.ts",
       "target": "symbol:apps/server/src/lib/realtime.ts#function:createRealtimeEphemeralSession",
-      "line": 36,
+      "line": 37,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2914,7 +3417,7 @@
       "type": "defines",
       "source": "file:apps/server/src/lib/realtime.ts",
       "target": "symbol:apps/server/src/lib/realtime.ts#interface:RealtimeClientSecretResponse",
-      "line": 30,
+      "line": 31,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3130,7 +3633,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/dashboard/page.tsx",
       "target": "symbol:apps/web/src/app/dashboard/page.tsx#function:computeMilestones",
-      "line": 32,
+      "line": 33,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3139,7 +3642,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/dashboard/page.tsx",
       "target": "symbol:apps/web/src/app/dashboard/page.tsx#function:DashboardPage",
-      "line": 53,
+      "line": 54,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3148,7 +3651,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/dashboard/page.tsx",
       "target": "symbol:apps/web/src/app/dashboard/page.tsx#function:formatDate",
-      "line": 9,
+      "line": 10,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3157,7 +3660,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/dashboard/page.tsx",
       "target": "symbol:apps/web/src/app/dashboard/page.tsx#function:longestDayStreak",
-      "line": 13,
+      "line": 14,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3166,7 +3669,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/dashboard/page.tsx",
       "target": "symbol:apps/web/src/app/dashboard/page.tsx#variable:SCORE_CHIP_CATEGORIES",
-      "line": 46,
+      "line": 47,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3175,7 +3678,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/dashboard/page.tsx",
       "target": "symbol:apps/web/src/app/dashboard/page.tsx#variable:SCORE_CHIP_LABELS",
-      "line": 47,
+      "line": 48,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3184,7 +3687,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/layout.tsx",
       "target": "symbol:apps/web/src/app/layout.tsx#function:RootLayout",
-      "line": 16,
+      "line": 20,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3209,9 +3712,18 @@
     },
     {
       "type": "defines",
+      "source": "file:apps/web/src/app/layout.tsx",
+      "target": "symbol:apps/web/src/app/layout.tsx#variable:THEME_SCRIPT",
+      "line": 18,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
       "source": "file:apps/web/src/app/login/page.tsx",
       "target": "symbol:apps/web/src/app/login/page.tsx#function:LoginPage",
-      "line": 27,
+      "line": 29,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3220,7 +3732,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/login/page.tsx",
       "target": "symbol:apps/web/src/app/login/page.tsx#function:readError",
-      "line": 22,
+      "line": 24,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3229,7 +3741,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/login/page.tsx",
       "target": "symbol:apps/web/src/app/login/page.tsx#interface:GoogleIdentity",
-      "line": 11,
+      "line": 13,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3238,15 +3750,6 @@
       "type": "defines",
       "source": "file:apps/web/src/app/login/page.tsx",
       "target": "symbol:apps/web/src/app/login/page.tsx#variable:GOOGLE_CLIENT_ID",
-      "line": 9,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/web/src/app/page.tsx",
-      "target": "symbol:apps/web/src/app/page.tsx#function:Home",
       "line": 11,
       "resolved": true,
       "confidence": 0.8,
@@ -3254,9 +3757,45 @@
     },
     {
       "type": "defines",
+      "source": "file:apps/web/src/app/new/page.tsx",
+      "target": "symbol:apps/web/src/app/new/page.tsx#function:NewInterviewPage",
+      "line": 37,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/new/page.tsx",
+      "target": "symbol:apps/web/src/app/new/page.tsx#variable:CHECKLIST",
+      "line": 31,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/new/page.tsx",
+      "target": "symbol:apps/web/src/app/new/page.tsx#variable:STEPS",
+      "line": 25,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
       "source": "file:apps/web/src/app/page.tsx",
-      "target": "symbol:apps/web/src/app/page.tsx#variable:STEPS",
-      "line": 9,
+      "target": "symbol:apps/web/src/app/page.tsx#function:LandingPage",
+      "line": 13,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/page.tsx",
+      "target": "symbol:apps/web/src/app/page.tsx#variable:FEATURES",
+      "line": 7,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3265,7 +3804,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/interview/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/interview/page.tsx#function:InterviewPage",
-      "line": 23,
+      "line": 24,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3274,7 +3813,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/interview/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/interview/page.tsx#interface:RealtimeTokenResponse",
-      "line": 17,
+      "line": 18,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3283,7 +3822,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/interview/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/interview/page.tsx#interface:TranscriptLine",
-      "line": 11,
+      "line": 12,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3292,7 +3831,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/interview/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/interview/page.tsx#type:ConnectionState",
-      "line": 9,
+      "line": 10,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3301,7 +3840,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/permissions/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/permissions/page.tsx#function:PermissionsPage",
-      "line": 9,
+      "line": 15,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3310,7 +3849,16 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/permissions/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/permissions/page.tsx#type:PermissionState",
-      "line": 7,
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/session/[id]/permissions/page.tsx",
+      "target": "symbol:apps/web/src/app/session/[id]/permissions/page.tsx#variable:DEVICES",
+      "line": 10,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3319,7 +3867,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:computeChips",
-      "line": 35,
+      "line": 39,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3328,7 +3876,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:formatTimestamp",
-      "line": 11,
+      "line": 13,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3337,7 +3885,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:highlightSpans",
-      "line": 60,
+      "line": 64,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3346,7 +3894,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:ResultsPage",
-      "line": 92,
+      "line": 96,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3355,7 +3903,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#type:Chip",
-      "line": 33,
+      "line": 37,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3364,7 +3912,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#type:HighlightFilter",
-      "line": 9,
+      "line": 11,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3373,7 +3921,16 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#variable:CATEGORY_LABELS",
-      "line": 17,
+      "line": 19,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
+      "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#variable:FILTER_LABELS",
+      "line": 35,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3382,7 +3939,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#variable:ISSUE_HINTS",
-      "line": 25,
+      "line": 27,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3391,16 +3948,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/settings/page.tsx",
       "target": "symbol:apps/web/src/app/settings/page.tsx#function:capitalize",
-      "line": 12,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/web/src/app/settings/page.tsx",
-      "target": "symbol:apps/web/src/app/settings/page.tsx#function:NoticeText",
-      "line": 16,
+      "line": 29,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3409,7 +3957,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/settings/page.tsx",
       "target": "symbol:apps/web/src/app/settings/page.tsx#function:SettingsPage",
-      "line": 23,
+      "line": 33,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3417,8 +3965,8 @@
     {
       "type": "defines",
       "source": "file:apps/web/src/app/settings/page.tsx",
-      "target": "symbol:apps/web/src/app/settings/page.tsx#type:Notice",
-      "line": 10,
+      "target": "symbol:apps/web/src/app/settings/page.tsx#type:NoticeState",
+      "line": 27,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3427,7 +3975,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/settings/page.tsx",
       "target": "symbol:apps/web/src/app/settings/page.tsx#variable:SENIORITY_LEVELS",
-      "line": 8,
+      "line": 25,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3436,7 +3984,7 @@
       "type": "defines",
       "source": "file:apps/web/src/components/AppHeader.tsx",
       "target": "symbol:apps/web/src/components/AppHeader.tsx#function:AppHeader",
-      "line": 15,
+      "line": 16,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3444,8 +3992,35 @@
     {
       "type": "defines",
       "source": "file:apps/web/src/components/AppHeader.tsx",
-      "target": "symbol:apps/web/src/components/AppHeader.tsx#variable:NAV_LINKS",
-      "line": 10,
+      "target": "symbol:apps/web/src/components/AppHeader.tsx#variable:PUBLIC_PATHS",
+      "line": 14,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/Logo.tsx",
+      "target": "symbol:apps/web/src/components/Logo.tsx#function:Logo",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ThemeToggle.tsx",
+      "target": "symbol:apps/web/src/components/ThemeToggle.tsx#function:ThemeToggle",
+      "line": 15,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ThemeToggle.tsx",
+      "target": "symbol:apps/web/src/components/ThemeToggle.tsx#function:toggleTheme",
+      "line": 7,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3470,9 +4045,63 @@
     },
     {
       "type": "defines",
+      "source": "file:apps/web/src/components/ui/Badge.tsx",
+      "target": "symbol:apps/web/src/components/ui/Badge.tsx#function:Badge",
+      "line": 17,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Badge.tsx",
+      "target": "symbol:apps/web/src/components/ui/Badge.tsx#interface:BadgeProps",
+      "line": 13,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Badge.tsx",
+      "target": "symbol:apps/web/src/components/ui/Badge.tsx#type:Variant",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Badge.tsx",
+      "target": "symbol:apps/web/src/components/ui/Badge.tsx#variable:variantClasses",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Button.tsx",
+      "target": "symbol:apps/web/src/components/ui/Button.tsx#function:buttonVariants",
+      "line": 21,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
       "source": "file:apps/web/src/components/ui/Button.tsx",
       "target": "symbol:apps/web/src/components/ui/Button.tsx#interface:ButtonProps",
-      "line": 5,
+      "line": 25,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Button.tsx",
+      "target": "symbol:apps/web/src/components/ui/Button.tsx#type:Size",
+      "line": 4,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3490,7 +4119,16 @@
       "type": "defines",
       "source": "file:apps/web/src/components/ui/Button.tsx",
       "target": "symbol:apps/web/src/components/ui/Button.tsx#variable:Button",
-      "line": 17,
+      "line": 30,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Button.tsx",
+      "target": "symbol:apps/web/src/components/ui/Button.tsx#variable:sizeClasses",
+      "line": 13,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3499,7 +4137,7 @@
       "type": "defines",
       "source": "file:apps/web/src/components/ui/Button.tsx",
       "target": "symbol:apps/web/src/components/ui/Button.tsx#variable:variantClasses",
-      "line": 9,
+      "line": 6,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3508,6 +4146,60 @@
       "type": "defines",
       "source": "file:apps/web/src/components/ui/Card.tsx",
       "target": "symbol:apps/web/src/components/ui/Card.tsx#function:Card",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Card.tsx",
+      "target": "symbol:apps/web/src/components/ui/Card.tsx#function:CardContent",
+      "line": 21,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Card.tsx",
+      "target": "symbol:apps/web/src/components/ui/Card.tsx#function:CardDescription",
+      "line": 17,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Card.tsx",
+      "target": "symbol:apps/web/src/components/ui/Card.tsx#function:CardFooter",
+      "line": 25,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Card.tsx",
+      "target": "symbol:apps/web/src/components/ui/Card.tsx#function:CardHeader",
+      "line": 9,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Card.tsx",
+      "target": "symbol:apps/web/src/components/ui/Card.tsx#function:CardTitle",
+      "line": 13,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Card.tsx",
+      "target": "symbol:apps/web/src/components/ui/Card.tsx#type:DivProps",
       "line": 3,
       "resolved": true,
       "confidence": 0.8,
@@ -3517,7 +4209,16 @@
       "type": "defines",
       "source": "file:apps/web/src/components/ui/FileDropzone.tsx",
       "target": "symbol:apps/web/src/components/ui/FileDropzone.tsx#function:FileDropzone",
-      "line": 13,
+      "line": 19,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/FileDropzone.tsx",
+      "target": "symbol:apps/web/src/components/ui/FileDropzone.tsx#function:formatSize",
+      "line": 15,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3526,7 +4227,16 @@
       "type": "defines",
       "source": "file:apps/web/src/components/ui/FileDropzone.tsx",
       "target": "symbol:apps/web/src/components/ui/FileDropzone.tsx#interface:FileDropzoneProps",
-      "line": 5,
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Input.tsx",
+      "target": "symbol:apps/web/src/components/ui/Input.tsx#variable:fieldClass",
+      "line": 4,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3535,7 +4245,34 @@
       "type": "defines",
       "source": "file:apps/web/src/components/ui/Input.tsx",
       "target": "symbol:apps/web/src/components/ui/Input.tsx#variable:Input",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Label.tsx",
+      "target": "symbol:apps/web/src/components/ui/Label.tsx#function:Label",
       "line": 3,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Notice.tsx",
+      "target": "symbol:apps/web/src/components/ui/Notice.tsx#function:Notice",
+      "line": 10,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Notice.tsx",
+      "target": "symbol:apps/web/src/components/ui/Notice.tsx#interface:NoticeProps",
+      "line": 4,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3562,6 +4299,15 @@
       "type": "defines",
       "source": "file:apps/web/src/components/ui/Select.tsx",
       "target": "symbol:apps/web/src/components/ui/Select.tsx#variable:Select",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Spinner.tsx",
+      "target": "symbol:apps/web/src/components/ui/Spinner.tsx#function:Spinner",
       "line": 3,
       "resolved": true,
       "confidence": 0.8,
@@ -3571,7 +4317,7 @@
       "type": "defines",
       "source": "file:apps/web/src/components/ui/StepIndicator.tsx",
       "target": "symbol:apps/web/src/components/ui/StepIndicator.tsx#function:StepIndicator",
-      "line": 10,
+      "line": 13,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3580,7 +4326,7 @@
       "type": "defines",
       "source": "file:apps/web/src/components/ui/StepIndicator.tsx",
       "target": "symbol:apps/web/src/components/ui/StepIndicator.tsx#interface:Step",
-      "line": 1,
+      "line": 3,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3589,7 +4335,7 @@
       "type": "defines",
       "source": "file:apps/web/src/components/ui/StepIndicator.tsx",
       "target": "symbol:apps/web/src/components/ui/StepIndicator.tsx#interface:StepIndicatorProps",
-      "line": 5,
+      "line": 8,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3598,7 +4344,25 @@
       "type": "defines",
       "source": "file:apps/web/src/components/ui/Textarea.tsx",
       "target": "symbol:apps/web/src/components/ui/Textarea.tsx#variable:Textarea",
-      "line": 3,
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/UserMenu.tsx",
+      "target": "symbol:apps/web/src/components/UserMenu.tsx#function:UserMenu",
+      "line": 14,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/UserMenu.tsx",
+      "target": "symbol:apps/web/src/components/UserMenu.tsx#variable:itemClass",
+      "line": 11,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3617,6 +4381,15 @@
       "source": "file:apps/web/src/lib/api.ts",
       "target": "symbol:apps/web/src/lib/api.ts#function:apiUrl",
       "line": 3,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/lib/api.ts",
+      "target": "symbol:apps/web/src/lib/api.ts#function:signOut",
+      "line": 15,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -4550,7 +5323,7 @@
       "source": "file:apps/web/src/app/dashboard/page.tsx",
       "target": "file:apps/web/src/components/ui/index.ts",
       "specifier": "@/components/ui",
-      "line": 6,
+      "line": 7,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4560,7 +5333,7 @@
       "source": "file:apps/web/src/app/dashboard/page.tsx",
       "target": "file:apps/web/src/lib/api.ts",
       "specifier": "@/lib/api",
-      "line": 7,
+      "line": 8,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4570,9 +5343,19 @@
       "source": "file:apps/web/src/app/dashboard/page.tsx",
       "target": "file:packages/shared/src/index.ts",
       "specifier": "@interview-prep/shared",
-      "line": 5,
+      "line": 6,
       "resolved": true,
       "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/dashboard/page.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 5,
+      "resolved": false,
+      "confidence": 0.5,
       "extractor": "javascript-imports"
     },
     {
@@ -4638,9 +5421,19 @@
     {
       "type": "imports",
       "source": "file:apps/web/src/app/login/page.tsx",
+      "target": "file:apps/web/src/components/Logo.tsx",
+      "specifier": "@/components/Logo",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/login/page.tsx",
       "target": "file:apps/web/src/components/ui/index.ts",
       "specifier": "@/components/ui",
-      "line": 6,
+      "line": 8,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4650,9 +5443,19 @@
       "source": "file:apps/web/src/app/login/page.tsx",
       "target": "file:apps/web/src/lib/api.ts",
       "specifier": "@/lib/api",
-      "line": 7,
+      "line": 9,
       "resolved": true,
       "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/login/page.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 6,
+      "resolved": false,
+      "confidence": 0.5,
       "extractor": "javascript-imports"
     },
     {
@@ -4687,19 +5490,9 @@
     },
     {
       "type": "imports",
-      "source": "file:apps/web/src/app/page.tsx",
+      "source": "file:apps/web/src/app/new/page.tsx",
       "target": "file:apps/web/src/components/ui/index.ts",
       "specifier": "@/components/ui",
-      "line": 6,
-      "resolved": true,
-      "confidence": 0.85,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/app/page.tsx",
-      "target": "file:apps/web/src/lib/api.ts",
-      "specifier": "@/lib/api",
       "line": 7,
       "resolved": true,
       "confidence": 0.85,
@@ -4707,17 +5500,37 @@
     },
     {
       "type": "imports",
-      "source": "file:apps/web/src/app/page.tsx",
-      "target": "file:packages/shared/src/index.ts",
-      "specifier": "@interview-prep/shared",
-      "line": 5,
+      "source": "file:apps/web/src/app/new/page.tsx",
+      "target": "file:apps/web/src/lib/api.ts",
+      "specifier": "@/lib/api",
+      "line": 23,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
     },
     {
       "type": "imports",
-      "source": "file:apps/web/src/app/page.tsx",
+      "source": "file:apps/web/src/app/new/page.tsx",
+      "target": "file:packages/shared/src/index.ts",
+      "specifier": "@interview-prep/shared",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/new/page.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 5,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/new/page.tsx",
       "target": "package:npm:next",
       "specifier": "next/navigation",
       "line": 2,
@@ -4727,7 +5540,7 @@
     },
     {
       "type": "imports",
-      "source": "file:apps/web/src/app/page.tsx",
+      "source": "file:apps/web/src/app/new/page.tsx",
       "target": "package:npm:react",
       "specifier": "react",
       "line": 4,
@@ -4737,10 +5550,60 @@
     },
     {
       "type": "imports",
+      "source": "file:apps/web/src/app/page.tsx",
+      "target": "file:apps/web/src/components/Logo.tsx",
+      "specifier": "@/components/Logo",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/page.tsx",
+      "target": "file:apps/web/src/components/ThemeToggle.tsx",
+      "specifier": "@/components/ThemeToggle",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/page.tsx",
+      "target": "file:apps/web/src/components/ui/index.ts",
+      "specifier": "@/components/ui",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/page.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/page.tsx",
+      "target": "package:npm:next",
+      "specifier": "next/link",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
       "source": "file:apps/web/src/app/session/[id]/interview/page.tsx",
       "target": "file:apps/web/src/components/ui/index.ts",
       "specifier": "@/components/ui",
-      "line": 5,
+      "line": 6,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4750,7 +5613,7 @@
       "source": "file:apps/web/src/app/session/[id]/interview/page.tsx",
       "target": "file:apps/web/src/lib/api.ts",
       "specifier": "@/lib/api",
-      "line": 6,
+      "line": 7,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4760,9 +5623,19 @@
       "source": "file:apps/web/src/app/session/[id]/interview/page.tsx",
       "target": "file:apps/web/src/lib/frameCapture.ts",
       "specifier": "@/lib/frameCapture",
-      "line": 7,
+      "line": 8,
       "resolved": true,
       "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/session/[id]/interview/page.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 5,
+      "resolved": false,
+      "confidence": 0.5,
       "extractor": "javascript-imports"
     },
     {
@@ -4790,9 +5663,19 @@
       "source": "file:apps/web/src/app/session/[id]/permissions/page.tsx",
       "target": "file:apps/web/src/components/ui/index.ts",
       "specifier": "@/components/ui",
-      "line": 5,
+      "line": 6,
       "resolved": true,
       "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/session/[id]/permissions/page.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 5,
+      "resolved": false,
+      "confidence": 0.5,
       "extractor": "javascript-imports"
     },
     {
@@ -4820,7 +5703,7 @@
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "file:apps/web/src/components/ui/index.ts",
       "specifier": "@/components/ui",
-      "line": 6,
+      "line": 8,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4830,7 +5713,7 @@
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "file:apps/web/src/lib/api.ts",
       "specifier": "@/lib/api",
-      "line": 7,
+      "line": 9,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4840,9 +5723,29 @@
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "file:packages/shared/src/index.ts",
       "specifier": "@interview-prep/shared",
-      "line": 5,
+      "line": 7,
       "resolved": true,
       "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 6,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
+      "target": "package:npm:next",
+      "specifier": "next/link",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
       "extractor": "javascript-imports"
     },
     {
@@ -4850,7 +5753,7 @@
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "package:npm:next",
       "specifier": "next/navigation",
-      "line": 2,
+      "line": 4,
       "resolved": false,
       "confidence": 0.5,
       "extractor": "javascript-imports"
@@ -4860,7 +5763,7 @@
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "package:npm:react",
       "specifier": "react",
-      "line": 4,
+      "line": 5,
       "resolved": false,
       "confidence": 0.5,
       "extractor": "javascript-imports"
@@ -4870,7 +5773,7 @@
       "source": "file:apps/web/src/app/settings/page.tsx",
       "target": "file:apps/web/src/components/ui/index.ts",
       "specifier": "@/components/ui",
-      "line": 5,
+      "line": 6,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4880,7 +5783,7 @@
       "source": "file:apps/web/src/app/settings/page.tsx",
       "target": "file:apps/web/src/lib/api.ts",
       "specifier": "@/lib/api",
-      "line": 6,
+      "line": 23,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4890,9 +5793,19 @@
       "source": "file:apps/web/src/app/settings/page.tsx",
       "target": "file:packages/shared/src/index.ts",
       "specifier": "@interview-prep/shared",
-      "line": 4,
+      "line": 5,
       "resolved": true,
       "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/settings/page.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 4,
+      "resolved": false,
+      "confidence": 0.5,
       "extractor": "javascript-imports"
     },
     {
@@ -4908,9 +5821,9 @@
     {
       "type": "imports",
       "source": "file:apps/web/src/components/AppHeader.tsx",
-      "target": "file:apps/web/src/components/ui/index.ts",
-      "specifier": "@/components/ui",
-      "line": 7,
+      "target": "file:apps/web/src/components/Logo.tsx",
+      "specifier": "@/components/Logo",
+      "line": 9,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4918,8 +5831,8 @@
     {
       "type": "imports",
       "source": "file:apps/web/src/components/AppHeader.tsx",
-      "target": "file:apps/web/src/lib/api.ts",
-      "specifier": "@/lib/api",
+      "target": "file:apps/web/src/components/ui/index.ts",
+      "specifier": "@/components/ui",
       "line": 8,
       "resolved": true,
       "confidence": 0.85,
@@ -4928,11 +5841,41 @@
     {
       "type": "imports",
       "source": "file:apps/web/src/components/AppHeader.tsx",
-      "target": "file:packages/shared/src/index.ts",
-      "specifier": "@interview-prep/shared",
-      "line": 6,
+      "target": "file:apps/web/src/components/UserMenu.tsx",
+      "specifier": "@/components/UserMenu",
+      "line": 10,
       "resolved": true,
       "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/AppHeader.tsx",
+      "target": "file:apps/web/src/lib/api.ts",
+      "specifier": "@/lib/api",
+      "line": 11,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/AppHeader.tsx",
+      "target": "file:packages/shared/src/index.ts",
+      "specifier": "@interview-prep/shared",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/AppHeader.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 6,
+      "resolved": false,
+      "confidence": 0.5,
       "extractor": "javascript-imports"
     },
     {
@@ -4967,6 +5910,46 @@
     },
     {
       "type": "imports",
+      "source": "file:apps/web/src/components/Logo.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ThemeToggle.tsx",
+      "target": "file:apps/web/src/components/ui/index.ts",
+      "specifier": "@/components/ui",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ThemeToggle.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/Badge.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
       "source": "file:apps/web/src/components/ui/Button.tsx",
       "target": "package:npm:react",
       "specifier": "react",
@@ -4988,6 +5971,26 @@
     {
       "type": "imports",
       "source": "file:apps/web/src/components/ui/FileDropzone.tsx",
+      "target": "file:apps/web/src/components/ui/Button.tsx",
+      "specifier": "./Button",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/FileDropzone.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 4,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/FileDropzone.tsx",
       "target": "package:npm:react",
       "specifier": "react",
       "line": 2,
@@ -5000,7 +6003,17 @@
       "source": "file:apps/web/src/components/ui/index.ts",
       "target": "file:apps/web/src/components/ui/Avatar.tsx",
       "specifier": "./Avatar",
-      "line": 9,
+      "line": 13,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/index.ts",
+      "target": "file:apps/web/src/components/ui/Badge.tsx",
+      "specifier": "./Badge",
+      "line": 7,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -5030,7 +6043,7 @@
       "source": "file:apps/web/src/components/ui/index.ts",
       "target": "file:apps/web/src/components/ui/FileDropzone.tsx",
       "specifier": "./FileDropzone",
-      "line": 6,
+      "line": 11,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -5048,9 +6061,29 @@
     {
       "type": "imports",
       "source": "file:apps/web/src/components/ui/index.ts",
+      "target": "file:apps/web/src/components/ui/Label.tsx",
+      "specifier": "./Label",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/index.ts",
+      "target": "file:apps/web/src/components/ui/Notice.tsx",
+      "specifier": "./Notice",
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/index.ts",
       "target": "file:apps/web/src/components/ui/ScoreRadar.tsx",
       "specifier": "./ScoreRadar",
-      "line": 7,
+      "line": 12,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -5060,7 +6093,17 @@
       "source": "file:apps/web/src/components/ui/index.ts",
       "target": "file:apps/web/src/components/ui/Select.tsx",
       "specifier": "./Select",
-      "line": 8,
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/index.ts",
+      "target": "file:apps/web/src/components/ui/Spinner.tsx",
+      "specifier": "./Spinner",
+      "line": 9,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -5070,7 +6113,7 @@
       "source": "file:apps/web/src/components/ui/index.ts",
       "target": "file:apps/web/src/components/ui/StepIndicator.tsx",
       "specifier": "./StepIndicator",
-      "line": 5,
+      "line": 10,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -5097,12 +6140,92 @@
     },
     {
       "type": "imports",
+      "source": "file:apps/web/src/components/ui/Label.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/Notice.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/Notice.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/Select.tsx",
+      "target": "file:apps/web/src/components/ui/Input.tsx",
+      "specifier": "./Input",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/Select.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
       "source": "file:apps/web/src/components/ui/Select.tsx",
       "target": "package:npm:react",
       "specifier": "react",
       "line": 1,
       "resolved": false,
       "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/Spinner.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/StepIndicator.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/Textarea.tsx",
+      "target": "file:apps/web/src/components/ui/Input.tsx",
+      "specifier": "./Input",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
       "extractor": "javascript-imports"
     },
     {
@@ -5114,10 +6237,80 @@
       "resolved": false,
       "confidence": 0.5,
       "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/UserMenu.tsx",
+      "target": "file:apps/web/src/components/ThemeToggle.tsx",
+      "specifier": "@/components/ThemeToggle",
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/UserMenu.tsx",
+      "target": "file:apps/web/src/components/ui/index.ts",
+      "specifier": "@/components/ui",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/UserMenu.tsx",
+      "target": "file:apps/web/src/lib/api.ts",
+      "specifier": "@/lib/api",
+      "line": 9,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/UserMenu.tsx",
+      "target": "file:packages/shared/src/index.ts",
+      "specifier": "@interview-prep/shared",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/UserMenu.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 5,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/UserMenu.tsx",
+      "target": "package:npm:next",
+      "specifier": "next/link",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/UserMenu.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 4,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
     }
   ],
   "warnings": [],
   "stats": {
-    "unresolvedCalls": 159
+    "unresolvedCalls": 170
   }
 }

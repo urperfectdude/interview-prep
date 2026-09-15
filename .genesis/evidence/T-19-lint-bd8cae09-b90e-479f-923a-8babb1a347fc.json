@@ -1,0 +1,30 @@
+{
+  "task": "T-19",
+  "gate": "lint",
+  "kind": "command",
+  "attempt": "bd8cae09-b90e-479f-923a-8babb1a347fc",
+  "command": "npm run lint -w apps/web",
+  "started_at": "2026-09-15T15:01:17.569Z",
+  "observed_at": "2026-09-15T15:01:20.726Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "\n> web@0.1.0 lint\n> eslint\n\n\n/Users/urperfectdude/interview-prep/apps/web/src/lib/api.ts\n  10:5  warning  Do not use `window.location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination  @next/next/no-location-assign-relative-destination\n  17:3  warning  Do not use `window.location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination  @next/next/no-location-assign-relative-destination\n\n✖ 2 problems (0 errors, 2 warnings)\n\n",
+  "stderr": "",
+  "failure": null,
+  "receipt": null,
+  "revision": {
+    "commit": "439f5290f9c3bc2cee30916aa14ab9ae07ca8818",
+    "dirty": true
+  },
+  "source_hash": "04832e1f40b0202fbfcc047ab93701820448346db24b0e5aa55eaf8a4c84f562",
+  "before_hash": "04832e1f40b0202fbfcc047ab93701820448346db24b0e5aa55eaf8a4c84f562",
+  "config_hash": "a1d4cb7ab9f8a4a1668971e32d4671e57e7dc8980a7257b79f66468b1f78221a",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "verifier": "358371454f03eb4fdfd3eda3cb1d18cb1dd8fe9445404bb3d3047267b3977eb9",
+    "variables": {}
+  },
+  "hash": "3d7e5480b36de684c5530a985e3ff1532fb633934e2d899f2dc0b5498332c938"
+}

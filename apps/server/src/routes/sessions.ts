@@ -91,6 +91,13 @@ sessionsRouter.post(
         },
       });
 
+      if (resumeFile) {
+        await prisma.user.update({
+          where: { id: user.id },
+          data: { resumeText, resumeFileName: resumeFile.originalname.slice(0, 200) },
+        });
+      }
+
       res.status(201).json({ sessionId: session.id });
     } catch (err) {
       console.error("Failed to create session:", err);

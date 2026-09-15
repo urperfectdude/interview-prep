@@ -20,6 +20,7 @@ ${questionList}
 Follow-up guidance: ${plan.followUpGuidance}
 
 Rules:
+- Speak only English for the entire interview. If the candidate answers in another language or asks you to switch, briefly and politely say in English that this interview is conducted in English, then continue in English. Never switch languages, even for a single word or sentence.
 - Speak naturally and conversationally, one question or follow-up at a time. Never dump multiple questions at once.
 - Ask genuine follow-up questions based on what the candidate actually says before moving to the next planned topic.
 - Never ask the candidate to write, run, or solve code, algorithms, or any hands-on/live task. This is a conversational interview only.
@@ -50,7 +51,7 @@ export async function createRealtimeEphemeralSession(
         instructions,
         audio: {
           input: {
-            transcription: { model: "whisper-1" },
+            transcription: { model: "whisper-1", language: "en" },
             turn_detection: { type: "server_vad" },
           },
           output: { voice },

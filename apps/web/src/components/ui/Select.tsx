@@ -1,16 +1,20 @@
 import { SelectHTMLAttributes, forwardRef } from "react";
+import { ChevronDown } from "lucide-react";
+import { fieldClass } from "./Input";
 
 export const Select = forwardRef<HTMLSelectElement, SelectHTMLAttributes<HTMLSelectElement>>(function Select(
   { className = "", children, ...props },
   ref
 ) {
   return (
-    <select
-      ref={ref}
-      className={`w-full rounded-xl border border-border bg-surface px-4 py-2.5 text-sm text-foreground outline-none transition-colors focus:border-accent focus:ring-2 focus:ring-accent-soft ${className}`}
-      {...props}
-    >
-      {children}
-    </select>
+    <div className="relative">
+      <select ref={ref} className={`${fieldClass} h-9 cursor-pointer appearance-none pl-3 pr-9 ${className}`} {...props}>
+        {children}
+      </select>
+      <ChevronDown
+        aria-hidden
+        className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
+      />
+    </div>
   );
 });

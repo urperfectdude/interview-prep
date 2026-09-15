@@ -3,57 +3,59 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { LayoutDashboard, Plus } from "lucide-react";
 import type { UserDTO } from "@interview-prep/shared";
-import { Avatar, Button } from "@/components/ui";
+import { buttonVariants } from "@/components/ui";
+import { Logo } from "@/components/Logo";
+import { UserMenu } from "@/components/UserMenu";
 import { apiFetch } from "@/lib/api";
 
-const NAV_LINKS = [
-  { href: "/dashboard", label: "Dashboard" },
-  { href: "/settings", label: "Settings" },
-];
+// Landing and login are public and bring their own minimal chrome; /api/me would 401-redirect them.
+const PUBLIC_PATHS = ["/", "/login"];
 
 export function AppHeader() {
   const pathname = usePathname();
-  const isLoginPage = pathname === "/login";
+  const isPublicPage = PUBLIC_PATHS.includes(pathname);
   const [user, setUser] = useState<UserDTO | null>(null);
 
   useEffect(() => {
-    if (isLoginPage) return;
+    if (isPublicPage) return;
     apiFetch("/api/me")
       .then((res) => (res.ok ? (res.json() as Promise<UserDTO>) : null))
       .then(setUser)
       .catch((err) => console.warn("Failed to load profile:", err));
-  }, [isLoginPage]);
+  }, [isPublicPage]);
 
-  if (isLoginPage) return null;
+  if (isPublicPage) return null;
+
+  const isDashboard = pathname === "/dashboard";
 
   return (
-    <header className="border-b border-border bg-surface">
-      <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-3">
-        <Link href="/dashboard" className="text-lg font-semibold tracking-tight">
-          Interview<span className="text-accent">Prep</span>
+    <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur-lg">
+      <div className="mx-auto flex h-14 w-full max-w-6xl items-center gap-4 px-4">
+        <Link href="/dashboard">
+          <Logo />
         </Link>
-        <nav className="flex items-center gap-1 text-sm">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`rounded-full px-3 py-1.5 font-medium transition-colors ${
-                pathname === link.href ? "bg-accent-soft text-accent" : "text-muted hover:text-foreground"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-        <div className="flex items-center gap-3">
-          <Link href="/">
-            <Button className="px-4 py-2">+ New Interview</Button>
+        <Link
+          href="/dashboard"
+          aria-label="Dashboard"
+          aria-current={isDashboard ? "page" : undefined}
+          className={`${buttonVariants({ variant: "ghost", size: "sm" })} ${
+            isDashboard ? "bg-accent text-accent-foreground" : "text-muted-foreground"
+          }`}
+        >
+          <LayoutDashboard />
+          <span className="hidden sm:inline">Dashboard</span>
+        </Link>
+        <div className="ml-auto flex items-center gap-3">
+          <Link href="/new" aria-label="New interview" className={buttonVariants({ size: "sm" })}>
+            <Plus />
+            <span className="hidden sm:inline">New interview</span>
           </Link>
-          {user && (
-            <Link href="/settings" aria-label="Open settings">
-              <Avatar name={user.name} email={user.email} picture={user.picture} />
-            </Link>
+          {user ? (
+            <UserMenu user={user} />
+          ) : (
+            <span aria-hidden className="size-8 animate-pulse rounded-full bg-muted" />
           )}
         </div>
       </div>

@@ -1,23 +1,33 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { FileText, LogOut } from "lucide-react";
 import { INTERVIEWER_VOICES, type UserDTO } from "@interview-prep/shared";
-import { Avatar, Button, Card, FileDropzone, Input, Select } from "@/components/ui";
-import { apiFetch } from "@/lib/api";
+import {
+  Avatar,
+  Badge,
+  Button,
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+  FileDropzone,
+  Input,
+  Label,
+  Notice,
+  Select,
+  Spinner,
+} from "@/components/ui";
+import { apiFetch, signOut } from "@/lib/api";
 
 const SENIORITY_LEVELS = ["Intern", "Entry level", "Mid level", "Senior", "Staff / Principal", "Manager", "Director or above"];
 
-type Notice = { tone: "success" | "danger"; message: string } | null;
+type NoticeState = { tone: "success" | "error"; message: string } | null;
 
 function capitalize(value: string): string {
   return value.charAt(0).toUpperCase() + value.slice(1);
-}
-
-function NoticeText({ notice }: { notice: Notice }) {
-  if (!notice) return null;
-  return (
-    <p className={`mt-3 text-sm ${notice.tone === "success" ? "text-success" : "text-danger"}`}>{notice.message}</p>
-  );
 }
 
 export default function SettingsPage() {
@@ -27,8 +37,8 @@ export default function SettingsPage() {
   const [seniority, setSeniority] = useState("");
   const [voice, setVoice] = useState("alloy");
   const [resumeFile, setResumeFile] = useState<File | null>(null);
-  const [resumeNotice, setResumeNotice] = useState<Notice>(null);
-  const [preferencesNotice, setPreferencesNotice] = useState<Notice>(null);
+  const [resumeNotice, setResumeNotice] = useState<NoticeState>(null);
+  const [preferencesNotice, setPreferencesNotice] = useState<NoticeState>(null);
   const [isUploading, setIsUploading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
 
@@ -63,7 +73,7 @@ export default function SettingsPage() {
       setResumeFile(null);
       setResumeNotice({ tone: "success", message: "Resume saved. New interviews will use it by default." });
     } catch (err) {
-      setResumeNotice({ tone: "danger", message: err instanceof Error ? err.message : "Couldn't save your resume." });
+      setResumeNotice({ tone: "error", message: err instanceof Error ? err.message : "Couldn't save your resume." });
     } finally {
       setIsUploading(false);
     }
@@ -92,7 +102,7 @@ export default function SettingsPage() {
       setPreferencesNotice({ tone: "success", message: "Preferences saved." });
     } catch (err) {
       setPreferencesNotice({
-        tone: "danger",
+        tone: "error",
         message: err instanceof Error ? err.message : "Couldn't save your preferences.",
       });
     } finally {
@@ -100,52 +110,57 @@ export default function SettingsPage() {
     }
   }
 
-  async function signOut() {
-    await apiFetch("/api/auth/logout", { method: "POST" });
-    window.location.href = "/login";
-  }
-
   if (!user) {
     return (
-      <div className="flex flex-1 items-center justify-center px-4 py-10 text-sm text-muted">Loading your settings...</div>
+      <main className="flex flex-1 items-center justify-center gap-2 px-4 py-10 text-sm text-muted-foreground">
+        <Spinner /> Loading your settings…
+      </main>
     );
   }
 
   return (
-    <div className="mx-auto w-full max-w-3xl space-y-6 px-4 py-10">
-      <h1 className="text-2xl font-semibold tracking-tight">Settings</h1>
+    <main className="mx-auto w-full max-w-2xl animate-enter space-y-6 px-4 py-10">
+      <div>
+        <h1 className="text-2xl font-semibold tracking-tight">Settings</h1>
+        <p className="mt-1 text-sm text-muted-foreground">Manage your profile, resume, and interview defaults.</p>
+      </div>
 
-      <Card className="p-6">
-        <h2 className="text-sm font-semibold text-muted">Profile</h2>
-        <div className="mt-4 flex flex-wrap items-center gap-4">
+      <Card>
+        <CardHeader>
+          <CardTitle>Profile</CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-wrap items-center gap-4">
           <Avatar name={user.name} email={user.email} picture={user.picture} size="lg" />
           <div className="min-w-0 flex-1">
             <p className="font-medium">{user.name ?? "No name set"}</p>
-            <p className="truncate text-sm text-muted">{user.email}</p>
-            <p className="mt-1 text-xs text-muted">
+            <p className="truncate text-sm text-muted-foreground">{user.email}</p>
+            <Badge variant="secondary" className="mt-2">
               {user.googleLinked ? "Signed in with Google" : "Email and password account"}
-            </p>
+            </Badge>
           </div>
-          <Button variant="secondary" onClick={signOut}>
-            Sign out
+          <Button variant="outline" onClick={signOut}>
+            <LogOut /> Sign out
           </Button>
-        </div>
+        </CardContent>
       </Card>
 
-      <Card className="p-6">
-        <h2 className="text-sm font-semibold text-muted">Saved resume</h2>
-        <p className="mt-1 text-sm text-muted">
-          New interviews use this automatically unless you upload a different resume in the wizard.
-        </p>
-        {user.resumeFileName && (
-          <div className="mt-4 flex items-center justify-between gap-3 rounded-xl border border-border px-4 py-3 text-sm">
-            <span className="truncate font-medium">{user.resumeFileName}</span>
-            <button type="button" onClick={removeResume} className="flex-none text-xs text-danger underline">
-              Remove
-            </button>
-          </div>
-        )}
-        <div className="mt-4">
+      <Card>
+        <CardHeader>
+          <CardTitle>Saved resume</CardTitle>
+          <CardDescription>
+            New interviews use this automatically. Uploading a different resume in the wizard replaces it.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          {user.resumeFileName && (
+            <div className="flex items-center gap-3 rounded-lg border bg-muted/40 py-1.5 pl-3 pr-1.5">
+              <FileText className="size-4 flex-none text-muted-foreground" />
+              <span className="min-w-0 flex-1 truncate text-sm font-medium">{user.resumeFileName}</span>
+              <Button variant="ghost" size="sm" onClick={removeResume}>
+                Remove
+              </Button>
+            </div>
+          )}
           <FileDropzone
             label={user.resumeFileName ? "Drop a new resume to replace it" : "Drop your resume here, or click to browse"}
             hint="PDF, DOCX, or TXT"
@@ -153,26 +168,32 @@ export default function SettingsPage() {
             file={resumeFile}
             onFileChange={setResumeFile}
           />
-        </div>
-        <NoticeText notice={resumeNotice} />
-        <Button className="mt-4" onClick={uploadResume} disabled={!resumeFile || isUploading}>
-          {isUploading ? "Saving..." : "Save resume"}
-        </Button>
+        </CardContent>
+        <CardFooter className="flex-wrap justify-between">
+          <div className="min-w-0">
+            {resumeNotice && <Notice tone={resumeNotice.tone}>{resumeNotice.message}</Notice>}
+          </div>
+          <Button onClick={uploadResume} disabled={!resumeFile || isUploading}>
+            {isUploading && <Spinner />}
+            {isUploading ? "Saving…" : "Save resume"}
+          </Button>
+        </CardFooter>
       </Card>
 
-      <Card className="p-6">
-        <h2 className="text-sm font-semibold text-muted">Interview preferences</h2>
-        <div className="mt-4 grid gap-5 sm:grid-cols-2">
+      <Card>
+        <CardHeader>
+          <CardTitle>Interview preferences</CardTitle>
+          <CardDescription>
+            Target role and seniority are used when you leave the role description blank in the wizard.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="grid gap-5 sm:grid-cols-2">
           <div className="sm:col-span-2">
-            <label htmlFor="name" className="mb-1.5 block text-sm font-medium">
-              Display name
-            </label>
+            <Label htmlFor="name">Display name</Label>
             <Input id="name" value={name} maxLength={120} onChange={(e) => setName(e.target.value)} />
           </div>
           <div>
-            <label htmlFor="targetRole" className="mb-1.5 block text-sm font-medium">
-              Target role
-            </label>
+            <Label htmlFor="targetRole">Target role</Label>
             <Input
               id="targetRole"
               placeholder="e.g. Product Manager"
@@ -182,9 +203,7 @@ export default function SettingsPage() {
             />
           </div>
           <div>
-            <label htmlFor="seniority" className="mb-1.5 block text-sm font-medium">
-              Seniority
-            </label>
+            <Label htmlFor="seniority">Seniority</Label>
             <Select id="seniority" value={seniority} onChange={(e) => setSeniority(e.target.value)}>
               <option value="">Not set</option>
               {SENIORITY_LEVELS.map((level) => (
@@ -195,9 +214,7 @@ export default function SettingsPage() {
             </Select>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="voice" className="mb-1.5 block text-sm font-medium">
-              Interviewer voice
-            </label>
+            <Label htmlFor="voice">Interviewer voice</Label>
             <Select id="voice" value={voice} onChange={(e) => setVoice(e.target.value)}>
               {INTERVIEWER_VOICES.map((option) => (
                 <option key={option} value={option}>
@@ -206,15 +223,17 @@ export default function SettingsPage() {
               ))}
             </Select>
           </div>
-        </div>
-        <p className="mt-3 text-xs text-muted">
-          Target role and seniority are used when you leave the role description blank in the wizard.
-        </p>
-        <NoticeText notice={preferencesNotice} />
-        <Button className="mt-4" onClick={savePreferences} disabled={isSaving}>
-          {isSaving ? "Saving..." : "Save preferences"}
-        </Button>
+        </CardContent>
+        <CardFooter className="flex-wrap justify-between">
+          <div className="min-w-0">
+            {preferencesNotice && <Notice tone={preferencesNotice.tone}>{preferencesNotice.message}</Notice>}
+          </div>
+          <Button onClick={savePreferences} disabled={isSaving}>
+            {isSaving && <Spinner />}
+            {isSaving ? "Saving…" : "Save preferences"}
+          </Button>
+        </CardFooter>
       </Card>
-    </div>
+    </main>
   );
 }

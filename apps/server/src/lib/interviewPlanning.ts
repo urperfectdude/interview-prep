@@ -30,6 +30,7 @@ Strict rules:
 - Never include coding, algorithm/DSA, whiteboard, or any hands-on task-based questions.
 - Base questions on the actual resume/JD/role content provided, not generic filler.
 - If information is missing, make reasonable, clearly-labeled assumptions rather than leaving fields blank.
+- Write every field in English, even if the resume, job description, or role description is in another language.
 
 Respond with strict JSON matching this shape:
 {
@@ -86,7 +87,8 @@ Respond with strict JSON matching this shape:
     }
   ]
 }
-Base every "spokenQuote" on text that actually appears verbatim in the transcript's "user" turns, since it is used to highlight that span in the displayed transcript. Include a mix of "strong" and "weak" items. Produce 4-8 feedback items.`;
+Base every "spokenQuote" on text that actually appears verbatim in the transcript's "user" turns, since it is used to highlight that span in the displayed transcript. Include a mix of "strong" and "weak" items. Produce 4-8 feedback items.
+Write "headline", "note", and "suggestion" in English regardless of the transcript's language; keep "spokenQuote" verbatim.`;
 
   const transcriptText = transcript
     .map((entry) => `[${entry.role}] ${entry.text}`)
@@ -117,7 +119,8 @@ export async function generateFrameInsight(imageBase64: string, mimeType: string
           "You are giving a candidate a brief, kind, informational note about their visible environment and posture " +
           "from a single still frame taken during a mock interview. This is never a score or pass/fail judgment - " +
           "just a soft, practical observation (e.g. lighting, framing, posture, background) in 1-2 short sentences. " +
-          "Never comment on appearance, identity, or anything unrelated to environment/posture/presence.",
+          "Never comment on appearance, identity, or anything unrelated to environment/posture/presence. " +
+          "Always respond in English.",
       },
       {
         role: "user",

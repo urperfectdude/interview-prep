@@ -11,3 +11,8 @@ export async function apiFetch(path: string, init?: RequestInit): Promise<Respon
   }
   return response;
 }
+
+export async function signOut(): Promise<void> {
+  await apiFetch("/api/auth/logout", { method: "POST" });
+  window.location.href = "/login";
+}

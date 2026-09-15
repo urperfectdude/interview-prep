@@ -1,176 +1,108 @@
-"use client";
+import Link from "next/link";
+import { ArrowRight, ChartColumn, FileText, Mic, ShieldCheck } from "lucide-react";
+import { Badge, Card, buttonVariants } from "@/components/ui";
+import { Logo } from "@/components/Logo";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import type { UserDTO } from "@interview-prep/shared";
-import { Button, Card, FileDropzone, Input, StepIndicator, Textarea } from "@/components/ui";
-import { apiFetch } from "@/lib/api";
+const FEATURES = [
+  { icon: FileText, title: "Tailored to the role", text: "Questions built from the job description and your resume." },
+  { icon: Mic, title: "A real voice conversation", text: "Answer out loud while the interviewer follows up on what you say." },
+  { icon: ChartColumn, title: "Feedback you can act on", text: "Scores, highlighted moments, and suggested rewrites of your answers." },
+];
 
-const STEPS = [{ label: "Welcome" }, { label: "Role & JD" }, { label: "Resume" }];
-
-export default function Home() {
-  const router = useRouter();
-  const [step, setStep] = useState(0);
-  const [jdFile, setJdFile] = useState<File | null>(null);
-  const [jdLink, setJdLink] = useState("");
-  const [roleDescription, setRoleDescription] = useState("");
-  const [resumeFile, setResumeFile] = useState<File | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [savedResumeName, setSavedResumeName] = useState<string | null>(null);
-
-  useEffect(() => {
-    apiFetch("/api/me")
-      .then((res) => (res.ok ? (res.json() as Promise<UserDTO>) : null))
-      .then((user) => setSavedResumeName(user?.resumeFileName ?? null))
-      .catch((err) => console.warn("Failed to load profile:", err));
-  }, []);
-
-  async function handleSubmit() {
-    if (!resumeFile && !savedResumeName) {
-      setError("Please upload your resume to continue.");
-      return;
-    }
-    setError(null);
-    setIsSubmitting(true);
-
-    try {
-      const formData = new FormData();
-      if (resumeFile) formData.append("resume", resumeFile);
-      if (jdFile) formData.append("jdFile", jdFile);
-      if (jdLink.trim()) formData.append("jdLink", jdLink.trim());
-      if (roleDescription.trim()) formData.append("roleDescription", roleDescription.trim());
-
-      const response = await apiFetch("/api/sessions", {
-        method: "POST",
-        body: formData,
-      });
-
-      if (!response.ok) {
-        const body = await response.json().catch(() => ({}));
-        throw new Error(body.error ?? "Something went wrong creating your session.");
-      }
-
-      const { sessionId } = (await response.json()) as { sessionId: string };
-      router.push(`/session/${sessionId}/permissions`);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
-      setIsSubmitting(false);
-    }
-  }
-
+export default function LandingPage() {
   return (
-    <div className="flex flex-1 items-center justify-center px-4 py-10">
-      <Card className="w-full max-w-3xl p-8 sm:p-10">
-        <div className="mb-8">
-          <StepIndicator steps={STEPS} currentIndex={step} />
+    <div className="relative flex flex-1 flex-col">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-[32rem]"
+        style={{
+          background: "radial-gradient(60% 60% at 50% 0%, color-mix(in oklab, var(--primary) 14%, transparent), transparent)",
+        }}
+      />
+
+      <header className="relative mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4">
+        <Logo />
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <Link href="/login" className={buttonVariants({ variant: "ghost", size: "sm" })}>
+            Sign in
+          </Link>
+          <Link href="/new" className={buttonVariants({ size: "sm" })}>
+            Get started
+          </Link>
         </div>
+      </header>
 
-        {step === 0 && (
-          <div className="grid items-center gap-8 sm:grid-cols-2">
-            <div>
-              <span className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent-soft text-xl">
-                🎙️
+      <main className="relative mx-auto w-full max-w-6xl flex-1 px-4">
+        <section className="mx-auto max-w-3xl animate-enter pb-16 pt-20 text-center sm:pt-28">
+          <Badge variant="outline" className="bg-card">
+            <span className="size-1.5 rounded-full bg-primary" /> AI mock interviews, by voice
+          </Badge>
+          <h1 className="mt-6 text-balance text-4xl font-semibold tracking-tight sm:text-6xl">
+            Practice the interview <span className="text-primary">before</span> the interview.
+          </h1>
+          <p className="mx-auto mt-5 max-w-xl text-balance text-lg leading-relaxed text-muted-foreground">
+            Share a job description and your resume, then rehearse a realistic voice interview with tailored
+            questions and honest feedback.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/new" className={buttonVariants({ size: "lg" })}>
+              Start practicing <ArrowRight />
+            </Link>
+            <Link href="/login" className={buttonVariants({ variant: "outline", size: "lg" })}>
+              Sign in
+            </Link>
+          </div>
+          <p className="mt-5 flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
+            <ShieldCheck className="size-3.5" /> Private, secure, and built for you
+          </p>
+        </section>
+
+        {/* A still of the live interview screen, drawn with the same components. */}
+        <Card aria-hidden className="mx-auto max-w-2xl animate-enter p-6 [animation-delay:120ms] sm:p-8">
+          <div className="flex items-center justify-between">
+            <Badge>
+              <span className="size-1.5 animate-pulse rounded-full bg-destructive" /> Live
+            </Badge>
+            <span className="font-mono text-xs tabular-nums text-muted-foreground">04:12</span>
+          </div>
+          <p className="mt-5 text-balance text-lg font-medium leading-snug sm:text-xl">
+            &ldquo;Tell me about a time you had to make a call with incomplete data. What did you do next?&rdquo;
+          </p>
+          <div className="mt-6 flex items-center gap-3 rounded-lg bg-muted/60 px-4 py-3">
+            <span className="flex h-4 items-center gap-0.5">
+              {[0, 150, 300, 450, 600].map((delay) => (
+                <span
+                  key={delay}
+                  className="h-full w-0.5 animate-bars rounded-full bg-primary"
+                  style={{ animationDelay: `${delay}ms` }}
+                />
+              ))}
+            </span>
+            <span className="text-sm text-muted-foreground">Interviewer is speaking</span>
+          </div>
+        </Card>
+
+        <section className="mx-auto grid max-w-5xl gap-10 py-24 sm:grid-cols-3">
+          {FEATURES.map(({ icon: Icon, title, text }) => (
+            <div key={title}>
+              <span className="flex size-10 items-center justify-center rounded-lg bg-accent text-accent-foreground">
+                <Icon className="size-5" />
               </span>
-              <h1 className="text-3xl font-semibold tracking-tight">
-                Welcome to <span className="text-accent">InterviewPrep</span>
-              </h1>
-              <p className="mt-3 text-sm leading-6 text-muted">
-                Your AI mock interview coach. Share a job description and your resume, then practice a
-                realistic voice interview with tailored questions and honest feedback.
-              </p>
-              <Button className="mt-6" onClick={() => setStep(1)}>
-                Let&apos;s get started →
-              </Button>
-              <p className="mt-3 flex items-center gap-1.5 text-xs text-muted">🔒 Private, secure, and built for you</p>
+              <h2 className="mt-4 font-semibold">{title}</h2>
+              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{text}</p>
             </div>
-            <div className="flex h-56 items-center justify-center rounded-2xl bg-accent-soft sm:h-full">
-              <span className="text-6xl">💬</span>
-            </div>
-          </div>
-        )}
+          ))}
+        </section>
+      </main>
 
-        {step === 1 && (
-          <div>
-            <h2 className="text-2xl font-semibold tracking-tight">Tell us about the role</h2>
-            <p className="mt-2 text-sm text-muted">
-              Everything here is optional — add whatever you have and we&apos;ll tailor your interview to it.
-            </p>
-
-            <div className="mt-6 space-y-5">
-              <div>
-                <label className="mb-1.5 block text-sm font-medium">Job description file</label>
-                <FileDropzone
-                  label="Drop a JD file here, or click to browse"
-                  hint="PDF, DOCX, or TXT"
-                  accept=".pdf,.docx,.txt"
-                  file={jdFile}
-                  onFileChange={setJdFile}
-                />
-              </div>
-
-              <div>
-                <label className="mb-1.5 block text-sm font-medium">Job description link</label>
-                <Input
-                  type="url"
-                  placeholder="https://company.com/careers/role"
-                  value={jdLink}
-                  onChange={(e) => setJdLink(e.target.value)}
-                />
-              </div>
-
-              <div>
-                <label className="mb-1.5 block text-sm font-medium">Describe the role in your own words</label>
-                <Textarea
-                  rows={4}
-                  placeholder="e.g. Senior product manager role focused on growth and B2B SaaS..."
-                  value={roleDescription}
-                  onChange={(e) => setRoleDescription(e.target.value)}
-                />
-              </div>
-            </div>
-
-            <div className="mt-8 flex items-center justify-between">
-              <Button variant="ghost" onClick={() => setStep(0)}>
-                Back
-              </Button>
-              <Button onClick={() => setStep(2)}>Continue to resume →</Button>
-            </div>
-          </div>
-        )}
-
-        {step === 2 && (
-          <div>
-            <h2 className="text-2xl font-semibold tracking-tight">Upload your resume</h2>
-            <p className="mt-2 text-sm text-muted">
-              {savedResumeName
-                ? `We'll use your saved resume (${savedResumeName}) unless you upload a different one.`
-                : "This is the one thing we need from you — it's how we personalize your questions."}
-            </p>
-
-            <div className="mt-6">
-              <FileDropzone
-                label={savedResumeName ? "Drop a different resume to use instead" : "Drop your resume here, or click to browse"}
-                hint="PDF or DOCX"
-                accept=".pdf,.docx,.txt"
-                file={resumeFile}
-                onFileChange={setResumeFile}
-              />
-            </div>
-
-            {error && <p className="mt-3 text-sm text-danger">{error}</p>}
-
-            <div className="mt-8 flex items-center justify-between">
-              <Button variant="ghost" onClick={() => setStep(1)} disabled={isSubmitting}>
-                Back
-              </Button>
-              <Button onClick={handleSubmit} disabled={isSubmitting}>
-                {isSubmitting ? "Analyzing your background..." : "Start Interview Prep →"}
-              </Button>
-            </div>
-          </div>
-        )}
-      </Card>
+      <footer className="relative border-t">
+        <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 text-sm text-muted-foreground">
+          <Logo />
+          <span className="hidden sm:inline">Mock interviews that sound like the real thing.</span>
+        </div>
+      </footer>
     </div>
   );
 }

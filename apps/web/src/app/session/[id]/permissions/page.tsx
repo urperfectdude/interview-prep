@@ -2,9 +2,15 @@
 
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { Button, Card } from "@/components/ui";
+import { ArrowRight, Camera, Check, Mic, ShieldCheck } from "lucide-react";
+import { Badge, Button, Card, Notice, Spinner } from "@/components/ui";
 
 type PermissionState = "idle" | "requesting" | "granted" | "denied";
+
+const DEVICES = [
+  { icon: Mic, label: "Microphone" },
+  { icon: Camera, label: "Camera" },
+];
 
 export default function PermissionsPage() {
   const { id } = useParams<{ id: string }>();
@@ -41,37 +47,64 @@ export default function PermissionsPage() {
     router.push(`/session/${id}/interview`);
   }
 
-  return (
-    <div className="flex flex-1 items-center justify-center px-4 py-10">
-      <Card className="w-full max-w-xl p-8 text-center sm:p-10">
-        <h1 className="text-2xl font-semibold tracking-tight">Get ready for your interview</h1>
-        <p className="mt-2 text-sm text-muted">
-          We&apos;ll ask a few tailored questions by voice, like a real call. We also take the occasional
-          still frame to give you a soft read on your environment and posture — never a live feed to
-          anyone, never a pass/fail.
-        </p>
+  const isGranted = state === "granted";
 
-        <div className="mx-auto mt-6 flex aspect-video max-w-md items-center justify-center overflow-hidden rounded-xl bg-foreground/90">
-          {state === "granted" ? (
-            <video ref={videoRef} autoPlay muted playsInline className="h-full w-full object-cover" />
-          ) : (
-            <span className="text-sm text-white/60">Camera preview will appear here</span>
+  return (
+    <main className="flex flex-1 items-center justify-center px-4 py-10">
+      <Card className="w-full max-w-lg animate-enter p-6 sm:p-8">
+        <div className="text-center">
+          <h1 className="text-2xl font-semibold tracking-tight">Get ready for your interview</h1>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            We&apos;ll ask a few tailored questions by voice, like a real call. We also take the occasional
+            still frame to give you a soft read on your environment and posture — never a live feed to
+            anyone, never a pass/fail.
+          </p>
+        </div>
+
+        <div className="mt-6 flex aspect-video items-center justify-center overflow-hidden rounded-lg border bg-muted">
+          {/* Always mounted so requestPermissions can attach the stream before the preview is shown. */}
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            playsInline
+            className={isGranted ? "h-full w-full -scale-x-100 object-cover" : "hidden"}
+          />
+          {!isGranted && (
+            <div className="flex flex-col items-center gap-2 text-muted-foreground">
+              <Camera className="size-6" />
+              <span className="text-sm">Camera preview will appear here</span>
+            </div>
           )}
         </div>
 
-        {errorMessage && <p className="mt-4 text-sm text-danger">{errorMessage}</p>}
+        <div className="mt-4 flex justify-center gap-2">
+          {DEVICES.map(({ icon: Icon, label }) => (
+            <Badge key={label} variant={isGranted ? "success" : "secondary"}>
+              {isGranted ? <Check /> : <Icon />}
+              {label}
+            </Badge>
+          ))}
+        </div>
+
+        {errorMessage && <Notice className="mt-4 justify-center">{errorMessage}</Notice>}
 
         <div className="mt-6 flex flex-col items-center gap-3">
-          {state !== "granted" ? (
-            <Button onClick={requestPermissions} disabled={state === "requesting"}>
-              {state === "requesting" ? "Requesting access..." : "Enable camera & microphone"}
+          {!isGranted ? (
+            <Button size="lg" onClick={requestPermissions} disabled={state === "requesting"}>
+              {state === "requesting" ? <Spinner /> : <Camera />}
+              {state === "requesting" ? "Requesting access…" : "Enable camera & microphone"}
             </Button>
           ) : (
-            <Button onClick={handleStart}>Start Interview</Button>
+            <Button size="lg" onClick={handleStart}>
+              Start interview <ArrowRight />
+            </Button>
           )}
-          <p className="text-xs text-muted">Camera &amp; mic access required to continue</p>
+          <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
+            <ShieldCheck className="size-3.5" /> Camera &amp; mic access required to continue
+          </p>
         </div>
       </Card>
-    </div>
+    </main>
   );
 }

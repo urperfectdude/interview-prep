@@ -1,66 +1,120 @@
 @import "tailwindcss";
 
+/* Only data-theme drives dark mode: the inline script in layout.tsx always sets it before first paint. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* shadcn/ui token names, so future shadcn components drop in unchanged. */
 @theme inline {
   --color-background: var(--background);
-  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
   --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
   --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
-  --color-accent-soft: var(--accent-soft);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
   --color-success: var(--success);
-  --color-danger: var(--danger);
-  --font-sans: var(--font-inter);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
-:root {
-  --background: #f6f5fb;
-  --surface: #ffffff;
-  --foreground: #14121f;
-  --muted: #6b6b7b;
-  --border: #e6e4f0;
-  --accent: #6d5ef1;
-  --accent-hover: #5a4be0;
-  --accent-soft: #ece9fd;
-  --success: #16a34a;
-  --danger: #dc2626;
-  --radius-lg: 1rem;
-  --radius-md: 0.75rem;
-}
+@theme {
+  --shadow-soft: 0 1px 2px 0 rgb(0 0 0 / 0.03), 0 2px 8px -2px rgb(0 0 0 / 0.06);
+  --animate-enter: enter 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-bars: bars 0.9s ease-in-out infinite;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f0e17;
-    --surface: #17151f;
-    --foreground: #f4f3fb;
-    --muted: #9895ab;
-    --border: #2a2735;
-    --accent: #8577f7;
-    --accent-hover: #9a8dff;
-    --accent-soft: #241f3d;
+  @keyframes enter {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+  }
+
+  @keyframes bars {
+    0%,
+    100% {
+      transform: scaleY(0.35);
+    }
+    50% {
+      transform: scaleY(1);
+    }
   }
 }
 
-* {
-  box-sizing: border-box;
+:root {
+  color-scheme: light;
+  --radius: 0.625rem;
+  --background: oklch(0.985 0.003 286);
+  --foreground: oklch(0.21 0.02 286);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.21 0.02 286);
+  --muted: oklch(0.965 0.005 286);
+  --muted-foreground: oklch(0.53 0.02 286);
+  --border: oklch(0.925 0.006 286);
+  --input: oklch(0.9 0.008 286);
+  --ring: oklch(0.56 0.2 285);
+  --primary: oklch(0.55 0.2 285);
+  --primary-foreground: oklch(0.99 0.005 286);
+  --secondary: oklch(0.96 0.006 286);
+  --secondary-foreground: oklch(0.27 0.02 286);
+  --accent: oklch(0.955 0.02 286);
+  --accent-foreground: oklch(0.42 0.17 285);
+  --destructive: oklch(0.577 0.215 27);
+  --success: oklch(0.56 0.14 155);
 }
 
-html,
-body {
-  padding: 0;
-  margin: 0;
+[data-theme="dark"] {
+  color-scheme: dark;
+  --background: oklch(0.15 0.008 286);
+  --foreground: oklch(0.97 0.004 286);
+  --card: oklch(0.185 0.01 286);
+  --card-foreground: oklch(0.97 0.004 286);
+  --muted: oklch(0.24 0.012 286);
+  --muted-foreground: oklch(0.7 0.015 286);
+  --border: oklch(1 0 0 / 9%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.68 0.16 285);
+  --primary: oklch(0.62 0.19 285);
+  --primary-foreground: oklch(0.99 0.005 286);
+  --secondary: oklch(0.25 0.012 286);
+  --secondary-foreground: oklch(0.95 0.005 286);
+  --accent: oklch(0.26 0.04 286);
+  --accent-foreground: oklch(0.88 0.06 286);
+  --destructive: oklch(0.7 0.19 22);
+  --success: oklch(0.74 0.15 155);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family:
-    "Inter",
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    sans-serif;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--primary) 25%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

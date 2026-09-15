@@ -1,0 +1,30 @@
+{
+  "task": "T-18",
+  "gate": "typecheck",
+  "kind": "command",
+  "attempt": "63426d0a-7373-4ec0-8b2d-cf0abf08795c",
+  "command": "npm run typecheck",
+  "started_at": "2026-09-15T15:00:28.953Z",
+  "observed_at": "2026-09-15T15:00:31.845Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "\n> typecheck\n> npm run typecheck -w apps/server && npm run typecheck -w apps/web\n\n\n> typecheck\n> tsc -p tsconfig.json --noEmit\n\n\n> web@0.1.0 typecheck\n> tsc --noEmit\n\n",
+  "stderr": "",
+  "failure": null,
+  "receipt": null,
+  "revision": {
+    "commit": "439f5290f9c3bc2cee30916aa14ab9ae07ca8818",
+    "dirty": true
+  },
+  "source_hash": "da0bdad2ae8ddf52ecc59c5efbe908493b2efb565b121b66c3f13ab801dd2593",
+  "before_hash": "da0bdad2ae8ddf52ecc59c5efbe908493b2efb565b121b66c3f13ab801dd2593",
+  "config_hash": "5c5f4093e451e2059f4ba86b733ce08b3caa87603b2f942b167685d407f3765c",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "verifier": "358371454f03eb4fdfd3eda3cb1d18cb1dd8fe9445404bb3d3047267b3977eb9",
+    "variables": {}
+  },
+  "hash": "bc8adb7bbbb0c6e28e096502c1e12dc5d99d2955365515774a45372d67cdd30b"
+}

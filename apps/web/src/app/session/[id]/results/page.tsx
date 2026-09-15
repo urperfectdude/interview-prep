@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState, type ReactNode } from "react";
+import { ArrowLeft, Check, CircleAlert, Lightbulb } from "lucide-react";
 import type { FrameCaptureDTO, SessionSummary, TranscriptEntryDTO } from "@interview-prep/shared";
-import { Card, ScoreRadar } from "@/components/ui";
+import { Badge, Card, CardContent, CardDescription, CardHeader, CardTitle, Notice, ScoreRadar, Spinner } from "@/components/ui";
 import { apiFetch, apiUrl } from "@/lib/api";
 
 type HighlightFilter = "all" | "weak" | "strong";
@@ -29,6 +31,8 @@ const ISSUE_HINTS: Record<string, string> = {
   confidence: "Build confidence",
   content: "Add specifics",
 };
+
+const FILTER_LABELS: Record<HighlightFilter, string> = { all: "All", weak: "Issues", strong: "Good Parts" };
 
 type Chip = { key: string; label: string; hint: string; count: number; tone: "danger" | "success" };
 
@@ -76,8 +80,8 @@ function highlightSpans(text: string, feedback: SessionSummary["feedback"]) {
         key={i}
         className={
           item.strength === "strong"
-            ? "rounded bg-success/15 text-success"
-            : "rounded bg-danger/15 text-danger"
+            ? "rounded-sm bg-success/15 px-0.5 text-success"
+            : "rounded-sm bg-destructive/15 px-0.5 text-destructive"
         }
       >
         {text.slice(start, end)}
@@ -134,17 +138,18 @@ export default function ResultsPage() {
 
   if (status === "loading") {
     return (
-      <div className="flex flex-1 items-center justify-center px-4 py-10 text-sm text-muted">
-        Generating your feedback...
-      </div>
+      <main className="flex flex-1 flex-col items-center justify-center gap-3 px-4 py-10 text-sm text-muted-foreground">
+        <Spinner className="size-5 text-primary" />
+        Generating your feedback…
+      </main>
     );
   }
 
   if (status === "error" || !summary) {
     return (
-      <div className="flex flex-1 items-center justify-center px-4 py-10 text-sm text-danger">
-        We couldn&apos;t load your results. Please try again shortly.
-      </div>
+      <main className="flex flex-1 items-center justify-center px-4 py-10">
+        <Notice>We couldn&apos;t load your results. Please try again shortly.</Notice>
+      </main>
     );
   }
 
@@ -155,116 +160,150 @@ export default function ResultsPage() {
   const latestFrame = frames.length > 0 ? frames[frames.length - 1] : null;
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-4 py-10">
-      <h1 className="text-2xl font-semibold tracking-tight">Your interview feedback</h1>
-      <p className="mt-1 text-sm text-muted">{summary.headline}</p>
+    <main className="mx-auto w-full max-w-6xl animate-enter px-4 py-10">
+      <Link
+        href="/dashboard"
+        className="inline-flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
+      >
+        <ArrowLeft className="size-4" /> Dashboard
+      </Link>
+      <h1 className="mt-4 text-2xl font-semibold tracking-tight">Your interview feedback</h1>
+      <p className="mt-1 max-w-2xl text-sm text-muted-foreground">{summary.headline}</p>
 
-      <div className="mt-6 grid items-start gap-6 lg:grid-cols-[1.3fr_1fr]">
-        <Card className="p-6">
-          <h2 className="text-sm font-semibold text-muted">Transcript</h2>
-
-          <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
-            {chips.map((chip) => (
-              <div
-                key={chip.key}
-                className={`rounded-xl p-3 ${chip.tone === "success" ? "bg-success/10" : "bg-danger/10"}`}
-              >
-                <p className={`text-lg font-semibold ${chip.tone === "success" ? "text-success" : "text-danger"}`}>
-                  {chip.count}
-                </p>
-                <p className="text-xs font-medium">{chip.label}</p>
-                <p className="text-xs text-muted">{chip.hint}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-4 flex items-center justify-between border-b border-border pb-3">
-            <span className="text-xs font-medium text-muted">Highlight:</span>
-            <div className="flex gap-1">
-              {(["all", "weak", "strong"] as const).map((filter) => (
-                <button
-                  key={filter}
-                  type="button"
-                  onClick={() => setHighlightFilter(filter)}
-                  className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
-                    highlightFilter === filter ? "bg-accent text-white" : "bg-accent-soft text-muted"
-                  }`}
-                >
-                  {filter === "all" ? "All" : filter === "weak" ? "Issues" : "Good Parts"}
-                </button>
+      {/* On large screens both columns share one height; transcript and feedback scroll inside their cards. */}
+      <div className="mt-8 grid gap-6 lg:h-[56rem] lg:grid-cols-[1.3fr_1fr]">
+        <Card className="flex flex-col lg:min-h-0">
+          <CardHeader>
+            <CardTitle>Transcript</CardTitle>
+          </CardHeader>
+          <CardContent className="flex min-h-0 flex-1 flex-col">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {chips.map((chip) => (
+                <div key={chip.key} className="rounded-lg border p-3">
+                  <p
+                    className={`text-xl font-semibold tabular-nums ${
+                      chip.tone === "success" ? "text-success" : "text-destructive"
+                    }`}
+                  >
+                    {chip.count}
+                  </p>
+                  <p className="mt-1 text-xs font-medium">{chip.label}</p>
+                  <p className="text-xs text-muted-foreground">{chip.hint}</p>
+                </div>
               ))}
             </div>
-          </div>
 
-          <div className="mt-4 max-h-[28rem] snap-y snap-proximity space-y-3 overflow-y-auto pr-1 text-sm">
-            {transcript.map((entry) => (
-              <p key={entry.id} className="snap-start">
-                <span className={`font-semibold ${entry.role === "assistant" ? "text-accent" : "text-foreground"}`}>
-                  {entry.role === "assistant" ? "Interviewer: " : "You: "}
-                </span>
-                {entry.role === "user" ? highlightSpans(entry.text, highlightedFeedback) : entry.text}
-              </p>
-            ))}
-            {transcript.length === 0 && <p className="text-muted">No transcript recorded for this session.</p>}
-          </div>
+            <div className="mt-6 flex items-center justify-between gap-3 border-b pb-4">
+              <span className="text-xs font-medium text-muted-foreground">Highlight</span>
+              <div role="group" aria-label="Highlight filter" className="inline-flex rounded-lg bg-muted p-0.5">
+                {(["all", "weak", "strong"] as const).map((filter) => (
+                  <button
+                    key={filter}
+                    type="button"
+                    aria-pressed={highlightFilter === filter}
+                    onClick={() => setHighlightFilter(filter)}
+                    className={`h-7 cursor-pointer rounded-md px-3 text-xs font-medium transition-all ${
+                      highlightFilter === filter
+                        ? "bg-card text-foreground shadow-xs"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {FILTER_LABELS[filter]}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-4 max-h-[28rem] snap-y snap-proximity space-y-4 overflow-y-auto pr-1 text-sm lg:max-h-none lg:min-h-0 lg:flex-1">
+              {transcript.map((entry) => (
+                <div key={entry.id} className="snap-start">
+                  <p
+                    className={`text-xs font-medium ${
+                      entry.role === "assistant" ? "text-primary" : "text-muted-foreground"
+                    }`}
+                  >
+                    {entry.role === "assistant" ? "Interviewer" : "You"}
+                  </p>
+                  <p className="mt-0.5 leading-relaxed">
+                    {entry.role === "user" ? highlightSpans(entry.text, highlightedFeedback) : entry.text}
+                  </p>
+                </div>
+              ))}
+              {transcript.length === 0 && (
+                <p className="text-muted-foreground">No transcript recorded for this session.</p>
+              )}
+            </div>
+          </CardContent>
         </Card>
 
-        <div className="space-y-6">
-          <Card className="p-6 text-center">
-            <h2 className="text-sm font-semibold text-muted">Overall Score</h2>
-            <p className="mt-1 text-3xl font-semibold text-accent">{summary.overallScore}/100</p>
-            <ScoreRadar scores={summary.scoreBreakdown} />
+        <div className="flex flex-col gap-6 lg:min-h-0">
+          <Card className="shrink-0">
+            <CardHeader>
+              <CardTitle>Overall score</CardTitle>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-5xl font-semibold tracking-tight tabular-nums text-primary">
+                {summary.overallScore}
+                <span className="text-lg font-medium text-muted-foreground">/100</span>
+              </p>
+              <ScoreRadar scores={summary.scoreBreakdown} />
+            </CardContent>
           </Card>
 
           {latestFrame && (
-            <Card className="p-6">
-              <h2 className="text-sm font-semibold text-muted">Environment &amp; Presence</h2>
-              <div className="mt-3 flex gap-3">
+            <Card className="shrink-0">
+              <CardHeader>
+                <CardTitle>Environment &amp; presence</CardTitle>
+                <CardDescription>
+                  A soft, informational read from a single still frame — never a score or pass/fail signal.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex gap-4">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={apiUrl(latestFrame.imageUrl)}
                   alt="A still frame captured during your interview"
-                  className="h-20 w-28 flex-none rounded-lg object-cover"
+                  className="h-20 w-28 flex-none rounded-md object-cover ring-1 ring-border"
                 />
-                <p className="text-sm text-muted">
+                <p className="text-sm text-muted-foreground">
                   {latestFrame.note ?? "No environment note generated for this session."}
                 </p>
-              </div>
-              <p className="mt-3 text-xs text-muted">
-                A soft, informational read from a single still frame — never a score or pass/fail signal.
-              </p>
+              </CardContent>
             </Card>
           )}
 
-          <Card className="p-6">
-            <h2 className="text-sm font-semibold text-muted">AI Feedback</h2>
-            <div className="mt-3 space-y-4">
+          <Card className="flex flex-col lg:min-h-0 lg:flex-1">
+            <CardHeader>
+              <CardTitle>AI feedback</CardTitle>
+            </CardHeader>
+            <CardContent className="divide-y lg:min-h-0 lg:flex-1 lg:overflow-y-auto">
               {summary.feedback.map((item, index) => (
-                <div key={index} className="border-b border-border pb-4 last:border-0 last:pb-0">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="flex items-center gap-1.5 rounded-full bg-accent-soft px-2 py-0.5 font-medium text-accent">
-                      <span
-                        className={`h-1.5 w-1.5 rounded-full ${
-                          item.strength === "strong" ? "bg-success" : "bg-danger"
-                        }`}
-                      />
+                <div key={index} className="py-4 first:pt-0 last:pb-0">
+                  <div className="flex items-center justify-between">
+                    <Badge variant={item.strength === "strong" ? "success" : "destructive"}>
+                      {item.strength === "strong" ? <Check /> : <CircleAlert />}
+                      <span className="sr-only">{item.strength === "strong" ? "Strength:" : "Issue:"}</span>
                       {CATEGORY_LABELS[item.category] ?? item.category}
+                    </Badge>
+                    <span className="font-mono text-xs tabular-nums text-muted-foreground">
+                      {formatTimestamp(item.timestampSeconds)}
                     </span>
-                    <span className="text-muted">{formatTimestamp(item.timestampSeconds)}</span>
                   </div>
-                  <p className="mt-2 text-sm">{item.note}</p>
-                  <p className="mt-1 text-sm italic text-muted">&ldquo;{item.spokenQuote}&rdquo;</p>
-                  <p className="mt-1 text-sm text-foreground">
-                    <span className="font-medium text-accent">Suggestion: </span>
-                    {item.suggestion}
+                  <p className="mt-3 text-sm">{item.note}</p>
+                  <blockquote className="mt-2 border-l-2 pl-3 text-sm italic text-muted-foreground">
+                    &ldquo;{item.spokenQuote}&rdquo;
+                  </blockquote>
+                  <p className="mt-2 flex gap-2 text-sm">
+                    <Lightbulb className="mt-0.5 size-4 flex-none text-primary" />
+                    <span>{item.suggestion}</span>
                   </p>
                 </div>
               ))}
-              {summary.feedback.length === 0 && <p className="text-sm text-muted">No feedback generated.</p>}
-            </div>
+              {summary.feedback.length === 0 && <p className="text-sm text-muted-foreground">No feedback generated.</p>}
+            </CardContent>
           </Card>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

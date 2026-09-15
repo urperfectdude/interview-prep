@@ -4,7 +4,7 @@
 
 - workflow: new-product
 - phase: verify
-- plan approval: Prashanta Nayak at 2026-09-15T06:37:01.888Z
+- plan approval: Prashanta Nayak at 2026-09-15T15:59:53.253Z
 
 ## Tasks
 
@@ -94,5 +94,69 @@
 - requirements: FR-7, FR-8, AC-6, AC-7, AC-8
 - scope: not bounded
 - gates: typecheck: npm run typecheck, build: npm run build -w apps/web, independent-review: pass
+- next: Run the task pre-flight.
+
+### T-14 — Redesign all web UI components and pages into a minimalist shadcn-style design system (semantic tokens, variant/size components, lucide icons) with light and dark themes and a persistent theme toggle; presentation only, plus fixing the pre-existing react-hooks lint error in the interview page self-scheduling frame-capture callback (same behavior)
+
+- state/risk: done / low
+- requirements: NFR-2
+- scope: not bounded
+- gates: typecheck: npm run typecheck, lint: npm run lint -w apps/web, build: npm run build -w apps/web
+- next: Run the task pre-flight.
+
+### T-15 — Simple minimalist public landing page at / built from the shared UI kit (hero, how-it-works, call to action, light/dark aware); intake wizard moved from / to /new with its links updated
+
+- state/risk: done / low
+- requirements: NFR-2, FR-1
+- scope: not bounded
+- gates: typecheck: npm run typecheck, lint: npm run lint -w apps/web, build: npm run build -w apps/web
+- next: Run the task pre-flight.
+
+### T-16 — Redesign the /new intake wizard into a focused onboarding layout: vertical step rail (compact progress bar on mobile), a single card per step with header, content and Back/Continue footer, and a practical Welcome checklist instead of repeated marketing; same three FR-1 steps and same submission behavior
+
+- state/risk: done / low
+- requirements: FR-1, NFR-2
+- scope: not bounded
+- gates: typecheck: npm run typecheck, lint: npm run lint -w apps/web, build: npm run build -w apps/web
+- next: Run the task pre-flight.
+
+### T-17 — App header shows only logo, Dashboard and New interview; Settings, theme toggle and Sign out move into a native-popover account menu opened from the profile avatar; shared signOut helper
+
+- state/risk: done / low
+- requirements: FR-8, NFR-2
+- scope: not bounded
+- gates: typecheck: npm run typecheck, lint: npm run lint -w apps/web, build: npm run build -w apps/web
+- next: Run the task pre-flight.
+
+### T-18 — AI stays in English at all times: interviewer instructions forbid switching languages even if the candidate does, input transcription is pinned to English, and question-plan and feedback generation always write English regardless of resume/JD language
+
+- state/risk: done / low
+- requirements: FR-3, FR-5
+- scope: not bounded
+- gates: typecheck: npm run typecheck, build-server: npm run build -w apps/server
+- next: Run the task pre-flight.
+
+### T-19 — Results page: on large screens both columns share one fixed height so the AI feedback card ends level with the transcript card, with transcript and feedback lists scrolling inside their cards; mobile layout unchanged
+
+- state/risk: done / low
+- requirements: FR-5, NFR-2
+- scope: not bounded
+- gates: typecheck: npm run typecheck, lint: npm run lint -w apps/web, build: npm run build -w apps/web
+- next: Run the task pre-flight.
+
+### T-20 — Intake wizard asks for a resume only when the user has none saved; with a saved resume the Resume step shows it with a Replace option (dropzone hidden until Replace). A resume uploaded in the wizard becomes the user's saved resume, so it is not asked for again.
+
+- state/risk: done / low
+- requirements: FR-1, FR-8
+- scope: not bounded
+- gates: typecheck: npm run typecheck, lint: npm run lint -w apps/web, build: npm run build -w apps/web
+- next: Run the task pre-flight.
+
+### T-21 — Interview frame capture works in dev and prod: endingRef is reset when the interview page (re)mounts so React Strict Mode's simulated unmount no longer disables capture, and the first frame is captured ~2s after the voice connection opens (then every 20-45s), so every session gets a dashboard thumbnail and results frame note.
+
+- state/risk: done / low
+- requirements: FR-4
+- scope: not bounded
+- gates: typecheck: npm run typecheck, lint: npm run lint -w apps/web, build: npm run build -w apps/web
 - next: Run the task pre-flight.
 
