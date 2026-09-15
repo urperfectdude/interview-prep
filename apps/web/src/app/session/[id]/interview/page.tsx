@@ -3,7 +3,7 @@
 import { useParams, useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Button, Card } from "@/components/ui";
-import { apiUrl } from "@/lib/api";
+import { apiFetch } from "@/lib/api";
 import { captureFrameBlob, randomJitterMs } from "@/lib/frameCapture";
 
 type ConnectionState = "connecting" | "connected" | "ending" | "ended" | "error";
@@ -41,7 +41,7 @@ export default function InterviewPage() {
     (role: "assistant" | "user", text: string) => {
       if (!text.trim()) return;
       setTranscript((prev) => [...prev, { id: `${role}-${Date.now()}-${Math.random()}`, role, text }]);
-      fetch(apiUrl(`/api/sessions/${id}/transcript`), {
+      apiFetch(`/api/sessions/${id}/transcript`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ role, text }),
@@ -58,7 +58,7 @@ export default function InterviewPage() {
         if (blob) {
           const formData = new FormData();
           formData.append("frame", blob, "frame.jpg");
-          fetch(apiUrl(`/api/sessions/${id}/frame`), { method: "POST", body: formData }).catch((err) =>
+          apiFetch(`/api/sessions/${id}/frame`, { method: "POST", body: formData }).catch((err) =>
             console.warn("Failed to upload frame capture:", err)
           );
         }
@@ -80,7 +80,7 @@ export default function InterviewPage() {
         localStreamRef.current = stream;
         if (videoRef.current) videoRef.current.srcObject = stream;
 
-        const tokenResponse = await fetch(apiUrl(`/api/sessions/${id}/realtime-token`), { method: "POST" });
+        const tokenResponse = await apiFetch(`/api/sessions/${id}/realtime-token`, { method: "POST" });
         if (!tokenResponse.ok) throw new Error("Failed to start the interview session.");
         const { clientSecret } = (await tokenResponse.json()) as RealtimeTokenResponse;
 
@@ -110,7 +110,7 @@ export default function InterviewPage() {
             const payload = JSON.parse(event.data as string) as { type: string; transcript?: string };
             if (payload.type === "response.created") {
               setIsAssistantSpeaking(true);
-            } else if (payload.type === "response.audio_transcript.done" && payload.transcript) {
+            } else if (payload.type === "response.output_audio_transcript.done" && payload.transcript) {
               setIsAssistantSpeaking(false);
               postTranscript("assistant", payload.transcript);
             } else if (
@@ -173,7 +173,7 @@ export default function InterviewPage() {
     setState("ending");
     cleanup();
     try {
-      await fetch(apiUrl(`/api/sessions/${id}/complete`), { method: "POST" });
+      await apiFetch(`/api/sessions/${id}/complete`, { method: "POST" });
     } catch (err) {
       console.warn("Failed to finalize session:", err);
     }
@@ -202,9 +202,9 @@ export default function InterviewPage() {
         <audio ref={remoteAudioRef} autoPlay />
 
         {transcript.length > 0 && (
-          <div className="mx-auto mt-6 max-h-40 max-w-lg space-y-2 overflow-y-auto rounded-xl border border-border bg-background p-3 text-left text-sm">
+          <div className="mx-auto mt-6 max-h-40 max-w-lg snap-y snap-proximity space-y-2 overflow-y-auto rounded-xl border border-border bg-background p-3 text-left text-sm">
             {transcript.map((line) => (
-              <p key={line.id}>
+              <p key={line.id} className="snap-start">
                 <span className={`font-semibold ${line.role === "assistant" ? "text-accent" : "text-foreground"}`}>
                   {line.role === "assistant" ? "Interviewer: " : "You: "}
                 </span>

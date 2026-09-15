@@ -1,0 +1,13 @@
+{
+  "task": "T-13",
+  "gate": "independent-review",
+  "kind": "review",
+  "attempt": "fdf98f83-608f-4d17-8451-a2acbb82e368",
+  "human": "Prashanta Nayak",
+  "reason": "Reviewed 4 items: sign-in mechanics, per-user ownership (AC-6), Google/email account linking, login + settings pages and app shell; curl suite verified AC-6/7/8",
+  "observed_at": "2026-09-15T09:22:14.652Z",
+  "source_hash": "362bbffe733547e6d9ac030ab0edae79d65998a25c15e21e453a53ba882dcaf5",
+  "config_hash": "1cff17eb31419d37675d59857bcdd97c216c1b8d7848c154997882adfec765a1",
+  "reviewed_proofs": "a218da180aa13a1d2e5e5c9b9d32a85a9db1dbb5a0711fde122f247126beebce",
+  "hash": "af56b0da8ddb7b6302b69b05a21625f134afd427fa2566bd2752eb3b4b08f9c0"
+}

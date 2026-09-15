@@ -9,7 +9,7 @@
     "non_goals": [],
     "trust_boundary": "local repository",
     "created_at": "2026-09-10T19:32:17.553Z",
-    "updated_at": "2026-09-14T03:37:26.868Z"
+    "updated_at": "2026-09-15T09:22:16.057Z"
   },
   "policy": {
     "ponytail": "full",
@@ -34,33 +34,38 @@
     "type": "new-product",
     "started_at": "2026-09-10T19:32:17.561Z",
     "spec_check": {
-      "at": "2026-09-10T19:33:32.002Z",
-      "source_hash": "20b5e612c8630bbed4d9b85143c1db9dc42025288e96a3b82bfb628cf0c6cfa3",
+      "at": "2026-09-15T06:32:35.221Z",
+      "source_hash": "1881a4577a68341445ab3fa2e79e978015293d5abca0cce1f9044f6a3d276775",
       "requirements": [
         "AC-1",
         "AC-2",
         "AC-3",
         "AC-4",
         "AC-5",
+        "AC-6",
+        "AC-7",
+        "AC-8",
         "FR-1",
         "FR-2",
         "FR-3",
         "FR-4",
         "FR-5",
+        "FR-7",
+        "FR-8",
         "NFR-1",
         "NFR-2",
         "NFR-3"
       ]
     },
     "plan_check": {
-      "at": "2026-09-14T03:15:17.603Z",
-      "source_hash": "a79c7624573d4e7762ed046f3f05e222b718626cddabf2755d0eacdeda01a85a"
+      "at": "2026-09-15T06:37:01.540Z",
+      "source_hash": "a204f988e7cafc34fabe0184d1c1ac076903249c157691828bc65cc227885cd1"
     },
     "plan_approval": {
-      "human": "yourerpcoach@gmail.com",
-      "reason": "Re-approving unchanged plan against current source hash after T-7 review approval, to resume T-9.",
-      "at": "2026-09-14T03:15:28.291Z",
-      "source_hash": "a79c7624573d4e7762ed046f3f05e222b718626cddabf2755d0eacdeda01a85a"
+      "human": "Prashanta Nayak",
+      "reason": "Approved plan with T-13 (auth + settings)",
+      "at": "2026-09-15T06:37:01.888Z",
+      "source_hash": "a204f988e7cafc34fabe0184d1c1ac076903249c157691828bc65cc227885cd1"
     }
   },
   "artifacts": [
@@ -75,21 +80,26 @@
         "AC-3",
         "AC-4",
         "AC-5",
+        "AC-6",
+        "AC-7",
+        "AC-8",
         "FR-1",
         "FR-2",
         "FR-3",
         "FR-4",
         "FR-5",
+        "FR-7",
+        "FR-8",
         "NFR-1",
         "NFR-2",
         "NFR-3"
       ],
-      "source_hash": "20b5e612c8630bbed4d9b85143c1db9dc42025288e96a3b82bfb628cf0c6cfa3",
+      "source_hash": "1881a4577a68341445ab3fa2e79e978015293d5abca0cce1f9044f6a3d276775",
       "approval": {
-        "human": "connect@smallworld.co",
-        "reason": "User directed: build it, test it locally, keep it ready",
-        "at": "2026-09-10T19:47:54.821Z",
-        "source_hash": "20b5e612c8630bbed4d9b85143c1db9dc42025288e96a3b82bfb628cf0c6cfa3"
+        "human": "Prashanta Nayak",
+        "reason": "Approved FR-7 (Google sign-in + email/password backup), FR-8 (Settings page), AC-6/7/8",
+        "at": "2026-09-15T06:37:00.809Z",
+        "source_hash": "1881a4577a68341445ab3fa2e79e978015293d5abca0cce1f9044f6a3d276775"
       }
     }
   ],
@@ -125,6 +135,16 @@
       "recorded_at": "2026-09-14T03:37:18.288Z",
       "paths": [],
       "tags": []
+    },
+    {
+      "id": "DECISION-ea8afae7",
+      "title": "Google sign-in, per-user data, and Settings page",
+      "text": "User directed (2026-09-14) a scope expansion beyond SPEC-1's no-auth design: require Google sign-in for all /api/sessions routes, give sessions an owning userId with ownership checks on every per-session route, and add a Settings page storing profile (from Google), a saved resume, default target role and seniority, and the Realtime interviewer voice. Chosen mechanism: Google Identity Services ID token verified server-side with google-auth-library, then an httpOnly SameSite=Lax HMAC-signed session cookie (no OAuth redirect flow, no client secret). Pre-existing ownerless sessions are hidden rather than migrated.",
+      "status": "accepted",
+      "source": "user chat 2026-09-14",
+      "recorded_at": "2026-09-14T10:04:55.282Z",
+      "paths": [],
+      "tags": []
     }
   ],
   "knowledge": [],
@@ -147,10 +167,10 @@
           "mandatory": true,
           "status": "pass",
           "evidence": {
-            "human": "connect@smallworld.co",
-            "reason": "User directed: build it, test it locally, keep it ready",
-            "source_hash": "89b3780e726396c8670f6bba4a980ecfdaefa1a2422a26cbf647ca1c3c4ca518",
-            "observed_at": "2026-09-10T19:47:54.821Z"
+            "human": "Prashanta Nayak",
+            "reason": "Approved FR-7 (Google sign-in + email/password backup), FR-8 (Settings page), AC-6/7/8",
+            "source_hash": "8881abbc664ac7a93868258e9e019406718e8d371752193fb0aa6df3de027e72",
+            "observed_at": "2026-09-15T06:37:00.809Z"
           },
           "kind": "review"
         }
@@ -161,7 +181,7 @@
       "failures": [],
       "limitations": [],
       "created_at": "2026-09-10T19:32:17.561Z",
-      "updated_at": "2026-09-10T19:47:54.821Z"
+      "updated_at": "2026-09-15T06:37:00.809Z"
     },
     {
       "id": "T-3",
@@ -1182,6 +1202,146 @@
         "packages/shared/package.json": "b672f634ca9d206ff2647565edef91c31214b3799b2326ae0c13a24ada5e2528",
         "packages/shared/src/index.ts": "77880b3294dd45920a986cf32c0677923f2805ca0f2f27ea37e1d1c3164d33c0"
       }
+    },
+    {
+      "id": "T-13",
+      "outcome": "Sign-in (Google + email/password backup) with per-user session ownership and a Settings page (profile, saved resume, default role/seniority, interviewer voice)",
+      "state": "done",
+      "risk": "high",
+      "owner": null,
+      "scope": [],
+      "dependencies": [],
+      "requirements": [
+        "FR-7",
+        "FR-8",
+        "AC-6",
+        "AC-7",
+        "AC-8"
+      ],
+      "inputs": [],
+      "environment": [],
+      "scenarios": [],
+      "gates": [
+        {
+          "id": "typecheck",
+          "kind": "command",
+          "command": "npm run typecheck",
+          "mandatory": true,
+          "status": "pass",
+          "evidence": {
+            "path": ".genesis/evidence/T-13-typecheck-ae357930-5b8a-409d-9aaa-2a3c16995ce3.json",
+            "hash": "9e7c13ee0d7daacec087f2caa520d73ba6f35a48a1b9b89d90ce2ff927d39192",
+            "source_hash": "362bbffe733547e6d9ac030ab0edae79d65998a25c15e21e453a53ba882dcaf5",
+            "config_hash": "1cff17eb31419d37675d59857bcdd97c216c1b8d7848c154997882adfec765a1",
+            "observed_at": "2026-09-15T06:51:45.791Z"
+          }
+        },
+        {
+          "id": "build",
+          "kind": "command",
+          "command": "npm run build -w apps/web",
+          "mandatory": true,
+          "status": "pass",
+          "evidence": {
+            "path": ".genesis/evidence/T-13-build-e483e41b-6d44-4f9b-9760-4ce2a9d83bbb.json",
+            "hash": "dbce0537b02d96157971b3f2b3df4377bb85c84d10173947a81b4eaa19222bff",
+            "source_hash": "362bbffe733547e6d9ac030ab0edae79d65998a25c15e21e453a53ba882dcaf5",
+            "config_hash": "1cff17eb31419d37675d59857bcdd97c216c1b8d7848c154997882adfec765a1",
+            "observed_at": "2026-09-15T06:51:51.041Z"
+          }
+        },
+        {
+          "id": "independent-review",
+          "kind": "review",
+          "command": "",
+          "mandatory": true,
+          "status": "pass",
+          "evidence": {
+            "path": ".genesis/evidence/T-13-independent-review-fdf98f83-608f-4d17-8451-a2acbb82e368.json",
+            "hash": "af56b0da8ddb7b6302b69b05a21625f134afd427fa2566bd2752eb3b4b08f9c0",
+            "source_hash": "362bbffe733547e6d9ac030ab0edae79d65998a25c15e21e453a53ba882dcaf5",
+            "config_hash": "1cff17eb31419d37675d59857bcdd97c216c1b8d7848c154997882adfec765a1",
+            "observed_at": "2026-09-15T09:22:14.652Z"
+          }
+        }
+      ],
+      "next_action": "Run the task pre-flight.",
+      "blocker": null,
+      "notes": [],
+      "failures": [],
+      "limitations": [],
+      "created_at": "2026-09-15T06:37:01.188Z",
+      "updated_at": "2026-09-15T09:22:15.284Z",
+      "base_manifest": {
+        ".gitignore": "ef4f4dd9b55080f488f3229131efe47b8b2b70798d050ba845dc93e8e933b032",
+        "CLAUDE.md": "a67615d8ed1ed3dd1b0d2cbf874ceb8d4a285c3335cdfc2d785ec80a06daecc1",
+        "README.md": "d2f58124887911306b3e542df0c50018557d5e6888eedc62ebe81d478cbfd1b5",
+        "SPEC.md": "8992eb74ada90191f77ce8ec93eea1201585217259e9bce01c2c0dca1e6dddeb",
+        "apps/server/.env.example": "917617765bb4b4746e6dc8b169104e6460aee848842d978a983c212785bc0fce",
+        "apps/server/package.json": "d6ec0390d7c301b585499a1db1fe700b056f5d0933d974d35fb7baf2e88d6b8a",
+        "apps/server/prisma/migrations/20260910195654_init/migration.sql": "14341ce42c4ec356183d58a16600c54bf17df5958816c8345e3f936e9a11a260",
+        "apps/server/prisma/migrations/migration_lock.toml": "a7cb305b5940f8da33c25fa6531ae61a04d30c05cf6009a0c62f3ca4cfaa7ea7",
+        "apps/server/prisma/schema.prisma": "c26e8290a06574f586e97c33bdaa498cb28c6574025f00bc0fe4982fd0d45218",
+        "apps/server/src/index.ts": "a768539d2ed62f3a5a7d62d5a6756b0615346ca97c737d851001ee9406798452",
+        "apps/server/src/lib/env.ts": "2ea196e3adf811336457d0b515e4635af126572a35e33f0555df6571cb88152c",
+        "apps/server/src/lib/extractText.ts": "5b44fcb600fcb438c28afeb0f021f85501615e54be3357f4ae7940f22129faad",
+        "apps/server/src/lib/interviewPlanning.ts": "3bd7be276b6bd45e98d7bbcce234cd8d3f158ab1eb83b4848e8dbafa1da565b5",
+        "apps/server/src/lib/openai.ts": "6e333969f0dbcb892eea64cdcfeae2abe12df24ea1ebb0a489229641068cf9c5",
+        "apps/server/src/lib/prisma.ts": "70cd5725cc87fb591b07677755a02ba5bc3ac7eff3bfe8353f766a496ce11491",
+        "apps/server/src/lib/realtime.ts": "a00d7e8c8679b29cfb7a5e1c1339ee4110272dd674bc0aa46736c2f380ce2d3a",
+        "apps/server/src/routes/complete.ts": "db6bd50016b9aa3ac4cc5dfa1ae08f56520865a3b76577b991836b566c3a486c",
+        "apps/server/src/routes/frame.ts": "d2e44318894c6070a7b832631f7142069695e1a2d6fe9c5f0b2ce8b6c8a5e02a",
+        "apps/server/src/routes/realtimeToken.ts": "91612f49afebb7d47b1139fcc24e822d8512eaf39fe9eda8e8a604ed76e7676d",
+        "apps/server/src/routes/sessions.ts": "56d026dabd38e3a131db239e13e86030c6dca0a167141664bfb03ae3c7b81835",
+        "apps/server/src/routes/transcript.ts": "7672240571fca79291fe401c8c1bc05c6ccf98326ebc12f91dcab65a61d6da1b",
+        "apps/server/tsconfig.json": "e2e9961fb1df2631ea54980abd9fb7776b5c9ac1b7c95fc878ab25f6a76269d7",
+        "apps/server/uploads/.gitkeep": "78fb5f112b9e331e6d45cc7ba20c364344137c40dce44296fbdbe7854ba5bea2",
+        "apps/web/.gitignore": "c5fdfdf5603609b30d4fef37a1bdd51429de42e33aa9a2431e6438e86cc47c02",
+        "apps/web/AGENTS.md": "cf1a0dc78ae386580d390812d8fc60beb4239249716dcdbc9ba0898251103675",
+        "apps/web/CLAUDE.md": "a9985c87a80c4473c4bc6f2bf809d450f22fad3d3cb47a5e399940afcb6c9f72",
+        "apps/web/README.md": "c63a3ff4d1765ab0c74281026ad719a8a6b3d4dc0a93c74449a7dc0a1353e863",
+        "apps/web/eslint.config.mjs": "90385e9ca3d64e82952714eff5f492ef6294f1fc1f59c02fe030458cff8211f9",
+        "apps/web/next.config.ts": "b49ae229bb153d14ad97488693abfef5d882c7b023529fe3eca08530a239d519",
+        "apps/web/package.json": "11115d62057a947df2041b2b77e78771a3e33ad2aa58cc420f9a7b24fb231870",
+        "apps/web/postcss.config.mjs": "7bd7b736ec27b1d4b395b37e493d2068c2b4ad56cc04ffccd456d980996e2885",
+        "apps/web/public/file.svg": "1928c6b2ea04c1904c977cb4c5b95dd2c701aa201c1afe9dfdc9b4c7845c31b3",
+        "apps/web/public/globe.svg": "58aa29b8da5e4d9fe4d3ac9ba1c741baf8da83e85041b0a2318e8ea6c5e20999",
+        "apps/web/public/next.svg": "e2f86041532d90d8d414d9c9451f74a3706a7e3b9f84974bb62bc3922e674f84",
+        "apps/web/public/vercel.svg": "996dce41054df464885bcfe85c8a83f7a09c0bb45300fffb92ff7c7f328cc352",
+        "apps/web/public/window.svg": "1e2eca457e34f573cd9ffde1061ab43731c19df8efed3a5685f95fc78243f529",
+        "apps/web/src/app/dashboard/page.tsx": "aae9e3afbed7e9332421f77e22ed000d9a3daaf9e21b623268b6f5fb688bcd78",
+        "apps/web/src/app/favicon.ico": "e101e755b67c5974ede08e1de05a040066775ac46ca1a043586938be200d54f7",
+        "apps/web/src/app/globals.css": "b443bac3a156b56059952add1a0e0b1822580202d542d8c6fb7f3119ad819412",
+        "apps/web/src/app/layout.tsx": "d8a078a9df342dc17ab0c33a250aa9b8d74f216ce040e9d309f0f62db10245dc",
+        "apps/web/src/app/page.tsx": "9a042b6b0ce071d2e6fa5433028fde8ce93a9cccaff154b489eed761202d0cd7",
+        "apps/web/src/app/session/[id]/interview/page.tsx": "199a831be09e61ffa8e9138a5cb8c5ed4b3142a7ff91394519c282053041c53a",
+        "apps/web/src/app/session/[id]/permissions/page.tsx": "864548b1da63c027742e8cd47ae29680c02fcce96bb4e5ce8caf822a6fde1871",
+        "apps/web/src/app/session/[id]/results/page.tsx": "39de2789c411ac0f790eeb6d1f00644b3c268a00b38b8bb2986be4de1eeec310",
+        "apps/web/src/components/ui/Button.tsx": "a18a2a8bde81bd2f680ee3a927460f7bdc9d9e394cec421814cf0129f57dcde0",
+        "apps/web/src/components/ui/Card.tsx": "8a3fc693ad48ce01919903febcd767e497b8e169d89ad951a51f8f539966f3a3",
+        "apps/web/src/components/ui/FileDropzone.tsx": "dfef725198820a693fa7b59d05f395f096d78b525041b1ebc2c57e64650f9f5f",
+        "apps/web/src/components/ui/Input.tsx": "ef55e56ceedfec9e9961636d78408bb20c95e8ed1a670a50e3796cda1c65d1f4",
+        "apps/web/src/components/ui/ScoreRadar.tsx": "6a357ed31d539c044f808613c7ee703ffe928e5b63821d98e7201f60c394f0a7",
+        "apps/web/src/components/ui/StepIndicator.tsx": "03562adfaa361effb3297b10599df63bc2c1572074959c7f9b7575baaabe2f55",
+        "apps/web/src/components/ui/Textarea.tsx": "2f31c4efb2fa8498b9330c5b9cb7e8f84d23fca8a3b9fc9f7a4830cbcd3f62bf",
+        "apps/web/src/components/ui/index.ts": "fdca74859f18ec40fcfaebd867e301d0fc0198a1df565be352024dd808344fb3",
+        "apps/web/src/lib/api.ts": "64e06231e0735fe88653e212997e8358bb0ac17681f3de326ae4d0ca44e37ed8",
+        "apps/web/src/lib/frameCapture.ts": "16227634c5f07564fa617eb8efbba23a586b6a7004298f46d028a2351effce44",
+        "apps/web/tsconfig.json": "225a7d68d1e35e70ebe714cc92ce421b1276e9ccf74056fc16d90f5388915453",
+        "design-reference/image 520.jpg": "3db3cdadc1ef09362726402244de9f88993f8f271a60424fc837ea0aff51de1c",
+        "design-reference/image 521.jpg": "24b37904079daba34d056b1a034db9e3ef15494d6df929c88c685616b9c2adaa",
+        "design-reference/image 522.jpg": "15a5931be6a90f809eb8c7378e2b95906a5c5a118c5f92afb266bf9ec2726ee2",
+        "design-reference/image 523.jpg": "9a9d17522838bbae8d1cd94cf15913186ac7d7f11229d38a178da04733d86aba",
+        "design-reference/image 524.jpg": "13f0e49bdb73ec39d6f647b74c61242508d1f96fafd869bed91f38ae90714574",
+        "design-reference/image 525.jpg": "c6e0e6ec1ca682d41dab25f284e2adf4f09732975a0c2d5c30e1ecd7ff4e2ca6",
+        "design-reference/image 526.jpg": "f288a3ece8b0f08c7d79e4d4b6ce3d33e06b044f43674035f0ba6a574f1af495",
+        "design-reference/image 527.jpg": "1dc2f6c5835840c485c9196db085fa8e47af2fe176bba83e45969242438a78bf",
+        "design-reference/image 528.jpg": "e87f2de9db46535caa83849375f67d445412711851559d3215eb1a7fe24e52da",
+        "package-lock.json": "ca54b5c79a7a6b495a0246251c8ac978652a11acd0f477627ce505442eb65060",
+        "package.json": "a3398151270d7d83cbaf8882dd7575009c47bf29f5c86ca389c861d07b32b1f2",
+        "packages/shared/package.json": "b672f634ca9d206ff2647565edef91c31214b3799b2326ae0c13a24ada5e2528",
+        "packages/shared/src/index.ts": "732b45014376d3cebaa193605cfad4efc7f35d36e43cc9f9cceb418405df0792"
+      }
     }
   ],
   "learning_proposals": [],
@@ -1419,6 +1579,15 @@
       "task": "T-9",
       "human": "yourerpcoach@gmail.com",
       "reason": "Reviewed all 3 T-9 items: WebRTC connection setup (NFR-1 compliant ephemeral token flow), live transcript relay (fire-and-forget persistence, acceptable), randomized frame capture (matches SPEC risk mitigation, consent stated on permissions page).",
+      "revision": null
+    },
+    {
+      "id": "fdf98f83-608f-4d17-8451-a2acbb82e368",
+      "at": "2026-09-15T09:22:14.652Z",
+      "action": "approve",
+      "task": "T-13",
+      "human": "Prashanta Nayak",
+      "reason": "Reviewed 4 items: sign-in mechanics, per-user ownership (AC-6), Google/email account linking, login + settings pages and app shell; curl suite verified AC-6/7/8",
       "revision": null
     }
   ],
@@ -1926,6 +2095,54 @@
       "cost": null,
       "stop_reason": null,
       "ended_at": "2026-09-14T03:15:32.837Z"
+    },
+    {
+      "id": "ae357930-5b8a-409d-9aaa-2a3c16995ce3",
+      "task": "T-13",
+      "kind": "gate",
+      "command": "npm run typecheck",
+      "timeout": 120000,
+      "authorization": null,
+      "pid": 33927,
+      "child_pid": 34029,
+      "started_at": "2026-09-15T06:51:43.303Z",
+      "status": "passed",
+      "before_hash": "362bbffe733547e6d9ac030ab0edae79d65998a25c15e21e453a53ba882dcaf5",
+      "config_hash": "1cff17eb31419d37675d59857bcdd97c216c1b8d7848c154997882adfec765a1",
+      "environment": {
+        "node": "v24.14.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "verifier": "358371454f03eb4fdfd3eda3cb1d18cb1dd8fe9445404bb3d3047267b3977eb9",
+        "variables": {}
+      },
+      "cost": null,
+      "stop_reason": null,
+      "ended_at": "2026-09-15T06:51:45.791Z"
+    },
+    {
+      "id": "e483e41b-6d44-4f9b-9760-4ce2a9d83bbb",
+      "task": "T-13",
+      "kind": "gate",
+      "command": "npm run build -w apps/web",
+      "timeout": 120000,
+      "authorization": null,
+      "pid": 33927,
+      "child_pid": 34440,
+      "started_at": "2026-09-15T06:51:46.084Z",
+      "status": "passed",
+      "before_hash": "362bbffe733547e6d9ac030ab0edae79d65998a25c15e21e453a53ba882dcaf5",
+      "config_hash": "1cff17eb31419d37675d59857bcdd97c216c1b8d7848c154997882adfec765a1",
+      "environment": {
+        "node": "v24.14.0",
+        "platform": "darwin",
+        "arch": "arm64",
+        "verifier": "358371454f03eb4fdfd3eda3cb1d18cb1dd8fe9445404bb3d3047267b3977eb9",
+        "variables": {}
+      },
+      "cost": null,
+      "stop_reason": null,
+      "ended_at": "2026-09-15T06:51:51.041Z"
     }
   ],
   "authorizations": [],
@@ -1933,11 +2150,11 @@
   "incidents": [],
   "discovery": null,
   "checkpoint": {
-    "at": "2026-09-14T03:37:26.827Z",
+    "at": "2026-09-15T09:22:16.025Z",
     "revision": {
-      "commit": "f1a20b2a23c425d1edd5539ad710d490f7f73084",
+      "commit": "ea30c857e531468b5d4204f9f44b9f0d76c583b2",
       "dirty": true,
-      "source_hash": "76c5ab0aebde18f60a01f3afdd9e22eb91ebe8e80372febf3b6670aee95c61ae"
+      "source_hash": "362bbffe733547e6d9ac030ab0edae79d65998a25c15e21e453a53ba882dcaf5"
     },
     "active_task": null,
     "next_action": "Review completed work and choose the next bounded outcome."

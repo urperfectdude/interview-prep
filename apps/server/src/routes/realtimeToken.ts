@@ -1,26 +1,26 @@
 import { Router } from "express";
+import type { Session } from "@prisma/client";
 import type { CandidateProfile, QuestionPlan } from "@interview-prep/shared";
 import { prisma } from "../lib/prisma.js";
+import { requireOwnedSession } from "../lib/auth.js";
 import { buildInterviewerInstructions, createRealtimeEphemeralSession } from "../lib/realtime.js";
 import { REALTIME_MODEL } from "../lib/openai.js";
 
 export const realtimeTokenRouter = Router();
 
-realtimeTokenRouter.post("/:id/realtime-token", async (req, res) => {
-  try {
-    const session = await prisma.session.findUnique({ where: { id: req.params.id } });
-    if (!session) {
-      return res.status(404).json({ error: "Session not found." });
-    }
-    if (!session.candidateProfile || !session.questionPlan) {
-      return res.status(400).json({ error: "Session has no question plan yet." });
-    }
+realtimeTokenRouter.post("/:id/realtime-token", requireOwnedSession, async (_req, res) => {
+  const session = res.locals.session as Session;
+  if (!session.candidateProfile || !session.questionPlan) {
+    return res.status(400).json({ error: "Session has no question plan yet." });
+  }
 
+  try {
+    const user = await prisma.user.findUnique({ where: { id: res.locals.userId } });
     const profile = JSON.parse(session.candidateProfile) as CandidateProfile;
     const plan = JSON.parse(session.questionPlan) as QuestionPlan;
     const instructions = buildInterviewerInstructions(profile, plan);
 
-    const realtimeSession = await createRealtimeEphemeralSession(instructions);
+    const realtimeSession = await createRealtimeEphemeralSession(instructions, user?.interviewerVoice ?? "alloy");
 
     await prisma.session.update({
       where: { id: session.id },

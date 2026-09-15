@@ -33,7 +33,10 @@ interface RealtimeClientSecretResponse {
   [key: string]: unknown;
 }
 
-export async function createRealtimeEphemeralSession(instructions: string): Promise<RealtimeClientSecretResponse> {
+export async function createRealtimeEphemeralSession(
+  instructions: string,
+  voice: string
+): Promise<RealtimeClientSecretResponse> {
   const response = await fetch("https://api.openai.com/v1/realtime/client_secrets", {
     method: "POST",
     headers: {
@@ -50,7 +53,7 @@ export async function createRealtimeEphemeralSession(instructions: string): Prom
             transcription: { model: "whisper-1" },
             turn_detection: { type: "server_vad" },
           },
-          output: { voice: "alloy" },
+          output: { voice },
         },
       },
     }),

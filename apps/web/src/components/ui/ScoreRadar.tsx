@@ -23,9 +23,15 @@ export function ScoreRadar({ scores, size = 220 }: ScoreRadarProps) {
     .join(" ");
 
   const gridLevels = [0.25, 0.5, 0.75, 1];
+  const labelPad = 30;
 
   return (
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="mx-auto">
+    <svg
+      width={size}
+      height={size}
+      viewBox={`${-labelPad} ${-labelPad} ${size + labelPad * 2} ${size + labelPad * 2}`}
+      className="mx-auto"
+    >
       {gridLevels.map((level) => (
         <polygon
           key={level}

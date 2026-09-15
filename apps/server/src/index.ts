@@ -4,6 +4,8 @@ import { fileURLToPath } from "node:url";
 import cors from "cors";
 import express from "express";
 import { env } from "./lib/env.js";
+import { requireUser } from "./lib/auth.js";
+import { authRouter } from "./routes/auth.js";
 import { sessionsRouter } from "./routes/sessions.js";
 import { realtimeTokenRouter } from "./routes/realtimeToken.js";
 import { transcriptRouter } from "./routes/transcript.js";
@@ -15,11 +17,13 @@ const uploadsRoot = path.resolve(__dirname, "../uploads");
 fs.mkdirSync(uploadsRoot, { recursive: true });
 
 const app = express();
-app.use(cors({ origin: env.corsOrigin }));
+app.use(cors({ origin: env.corsOrigin, credentials: true }));
 app.use(express.json({ limit: "1mb" }));
 
 app.get("/health", (_req, res) => res.json({ ok: true }));
 
+app.use("/api", authRouter);
+app.use("/api/sessions", requireUser);
 app.use("/api/sessions", sessionsRouter);
 app.use("/api/sessions", realtimeTokenRouter);
 app.use("/api/sessions", transcriptRouter);

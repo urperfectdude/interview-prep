@@ -1,9 +1,10 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import type { UserDTO } from "@interview-prep/shared";
 import { Button, Card, FileDropzone, Input, StepIndicator, Textarea } from "@/components/ui";
-import { apiUrl } from "@/lib/api";
+import { apiFetch } from "@/lib/api";
 
 const STEPS = [{ label: "Welcome" }, { label: "Role & JD" }, { label: "Resume" }];
 
@@ -16,9 +17,17 @@ export default function Home() {
   const [resumeFile, setResumeFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [savedResumeName, setSavedResumeName] = useState<string | null>(null);
+
+  useEffect(() => {
+    apiFetch("/api/me")
+      .then((res) => (res.ok ? (res.json() as Promise<UserDTO>) : null))
+      .then((user) => setSavedResumeName(user?.resumeFileName ?? null))
+      .catch((err) => console.warn("Failed to load profile:", err));
+  }, []);
 
   async function handleSubmit() {
-    if (!resumeFile) {
+    if (!resumeFile && !savedResumeName) {
       setError("Please upload your resume to continue.");
       return;
     }
@@ -27,12 +36,12 @@ export default function Home() {
 
     try {
       const formData = new FormData();
-      formData.append("resume", resumeFile);
+      if (resumeFile) formData.append("resume", resumeFile);
       if (jdFile) formData.append("jdFile", jdFile);
       if (jdLink.trim()) formData.append("jdLink", jdLink.trim());
       if (roleDescription.trim()) formData.append("roleDescription", roleDescription.trim());
 
-      const response = await fetch(apiUrl("/api/sessions"), {
+      const response = await apiFetch("/api/sessions", {
         method: "POST",
         body: formData,
       });
@@ -134,12 +143,14 @@ export default function Home() {
           <div>
             <h2 className="text-2xl font-semibold tracking-tight">Upload your resume</h2>
             <p className="mt-2 text-sm text-muted">
-              This is the one thing we need from you — it&apos;s how we personalize your questions.
+              {savedResumeName
+                ? `We'll use your saved resume (${savedResumeName}) unless you upload a different one.`
+                : "This is the one thing we need from you — it's how we personalize your questions."}
             </p>
 
             <div className="mt-6">
               <FileDropzone
-                label="Drop your resume here, or click to browse"
+                label={savedResumeName ? "Drop a different resume to use instead" : "Drop your resume here, or click to browse"}
                 hint="PDF or DOCX"
                 accept=".pdf,.docx,.txt"
                 file={resumeFile}

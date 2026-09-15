@@ -5,3 +5,5 @@ export { Textarea } from "./Textarea";
 export { StepIndicator } from "./StepIndicator";
 export { FileDropzone } from "./FileDropzone";
 export { ScoreRadar } from "./ScoreRadar";
+export { Select } from "./Select";
+export { Avatar } from "./Avatar";

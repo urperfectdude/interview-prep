@@ -2,6 +2,7 @@ import { Router } from "express";
 import multer from "multer";
 import type { CandidateProfile, QuestionPlan, SessionDTO, SessionListItemDTO, SessionSummary } from "@interview-prep/shared";
 import { prisma } from "../lib/prisma.js";
+import { requireOwnedSession } from "../lib/auth.js";
 import { extractTextFromFile, extractTextFromUrl } from "../lib/extractText.js";
 import { generateCandidateProfileAndPlan } from "../lib/interviewPlanning.js";
 
@@ -38,16 +39,22 @@ sessionsRouter.post(
   ]),
   async (req, res) => {
     try {
+      const user = await prisma.user.findUnique({ where: { id: res.locals.userId } });
+      if (!user) {
+        return res.status(401).json({ error: "Sign in required." });
+      }
+
       const files = req.files as { [field: string]: Express.Multer.File[] } | undefined;
       const resumeFile = files?.resume?.[0];
       const jdFile = files?.jdFile?.[0];
       const { jdLink, roleDescription } = req.body as { jdLink?: string; roleDescription?: string };
 
-      if (!resumeFile) {
-        return res.status(400).json({ error: "Resume file is required." });
+      const resumeText = resumeFile
+        ? await extractTextFromFile(resumeFile.buffer, resumeFile.originalname)
+        : user.resumeText;
+      if (!resumeText) {
+        return res.status(400).json({ error: "Upload a resume, or save one in Settings." });
       }
-
-      const resumeText = await extractTextFromFile(resumeFile.buffer, resumeFile.originalname);
 
       let jdText = "";
       if (jdFile) {
@@ -62,7 +69,8 @@ sessionsRouter.post(
         }
       }
 
-      const roleDescriptionRaw = roleDescription ?? "";
+      const roleDescriptionRaw =
+        roleDescription?.trim() || [user.seniority, user.targetRole].filter(Boolean).join(" ");
 
       const { candidateProfile, questionPlan } = await generateCandidateProfileAndPlan({
         resumeText,
@@ -72,6 +80,7 @@ sessionsRouter.post(
 
       const session = await prisma.session.create({
         data: {
+          userId: user.id,
           status: "ready",
           roleTitle: candidateProfile.roleTitle,
           roleDescriptionRaw,
@@ -92,28 +101,38 @@ sessionsRouter.post(
 
 sessionsRouter.get("/", async (_req, res) => {
   const sessions = await prisma.session.findMany({
+    where: { userId: res.locals.userId },
     orderBy: { createdAt: "desc" },
     take: 50,
   });
 
+  const frames = await prisma.frameCapture.findMany({
+    where: { sessionId: { in: sessions.map((s) => s.id) } },
+    orderBy: { capturedAt: "desc" },
+  });
+  const latestFrameBySession = new Map<string, (typeof frames)[number]>();
+  for (const frame of frames) {
+    if (!latestFrameBySession.has(frame.sessionId)) latestFrameBySession.set(frame.sessionId, frame);
+  }
+
   const dto: SessionListItemDTO[] = sessions.map((session) => {
     const summary = session.summary ? (JSON.parse(session.summary) as SessionSummary) : null;
+    const latestFrame = latestFrameBySession.get(session.id);
     return {
       id: session.id,
       roleTitle: session.roleTitle,
       status: session.status as SessionListItemDTO["status"],
       createdAt: session.createdAt.toISOString(),
+      updatedAt: session.updatedAt.toISOString(),
       overallScore: summary?.overallScore ?? null,
+      scoreBreakdown: summary?.scoreBreakdown ?? null,
+      thumbnailUrl: latestFrame ? `/api/sessions/${session.id}/frames/${latestFrame.id}/image` : null,
     };
   });
 
   res.json(dto);
 });
 
-sessionsRouter.get("/:id", async (req, res) => {
-  const session = await prisma.session.findUnique({ where: { id: req.params.id } });
-  if (!session) {
-    return res.status(404).json({ error: "Session not found." });
-  }
-  res.json(toSessionDTO(session));
+sessionsRouter.get("/:id", requireOwnedSession, (_req, res) => {
+  res.json(toSessionDTO(res.locals.session));
 });

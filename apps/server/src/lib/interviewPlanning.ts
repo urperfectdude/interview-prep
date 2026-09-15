@@ -106,3 +106,28 @@ Base every "spokenQuote" on text that actually appears verbatim in the transcrip
 
   return JSON.parse(raw) as SessionSummary;
 }
+
+export async function generateFrameInsight(imageBase64: string, mimeType: string): Promise<string> {
+  const completion = await openai.chat.completions.create({
+    model: TEXT_MODEL,
+    messages: [
+      {
+        role: "system",
+        content:
+          "You are giving a candidate a brief, kind, informational note about their visible environment and posture " +
+          "from a single still frame taken during a mock interview. This is never a score or pass/fail judgment - " +
+          "just a soft, practical observation (e.g. lighting, framing, posture, background) in 1-2 short sentences. " +
+          "Never comment on appearance, identity, or anything unrelated to environment/posture/presence.",
+      },
+      {
+        role: "user",
+        content: [
+          { type: "text", text: "Give a brief, informational note on the environment and posture in this frame." },
+          { type: "image_url", image_url: { url: `data:${mimeType};base64,${imageBase64}` } },
+        ],
+      },
+    ],
+  });
+
+  return completion.choices[0]?.message?.content?.trim() || "No environment note generated.";
+}

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "project": "interview-prep",
-  "revision": "f1a20b2a23c425d1edd5539ad710d490f7f73084",
-  "sourceHash": "0945f6af4df2bac212a7f0b0e4f11ac88c59f03feffa0997cad28e913809b3e2",
+  "revision": "ea30c857e531468b5d4204f9f44b9f0d76c583b2",
+  "sourceHash": "e6415a0ad6f371f44c06f85b0d6793269570531b50f3a3b5062e47252f547708",
   "provenance": {
     "tool": "genesis-graphizer",
     "method": "static-analysis",
@@ -17,7 +17,17 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "a10b14c84ca4ba62385468689cf408860bfe37ce8e789616e93ffeb08307548c"
+      "contentHash": "ace4e5288e92ca408601afb51a0d0b606a650ad041e846c27f52d5ac48843beb"
+    },
+    {
+      "id": "file:apps/server/src/lib/auth.ts",
+      "type": "file",
+      "label": "apps/server/src/lib/auth.ts",
+      "path": "apps/server/src/lib/auth.ts",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "62d91524f57f161b9e071d00258a1a3827b5bd7668453910ac3b6a5a8b64792d"
     },
     {
       "id": "file:apps/server/src/lib/env.ts",
@@ -27,7 +37,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "287ccf10f910c04da601793e9fc7d8c63143ff27abe031e35442fc2f39b7a9f9"
+      "contentHash": "74af2e23503dd183efa673b8122091aec546c457a28851e2b76d771651142955"
     },
     {
       "id": "file:apps/server/src/lib/extractText.ts",
@@ -47,7 +57,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "fecd5349d6d01bad4ed2a1692d6e64b1396ee645bd373b1ca6537d3f7d7b6c82"
+      "contentHash": "1f833a55675e9280abd73f7f4544efb076bc4a811e933ae3674a771c9be94885"
     },
     {
       "id": "file:apps/server/src/lib/openai.ts",
@@ -77,7 +87,17 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "48f899ab28509bd05963fedca1c037d86529b59bdbb5c400e904b0b7f39c9c82"
+      "contentHash": "9d9743aea2ea78c4530c6d86bd1e11afb8574b281345798cdc8fe48bb5d24395"
+    },
+    {
+      "id": "file:apps/server/src/routes/auth.ts",
+      "type": "file",
+      "label": "apps/server/src/routes/auth.ts",
+      "path": "apps/server/src/routes/auth.ts",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "5660b1c975ba7bbb73259c5bcdcd7eb94feabf13dca6e687c450e1c5a147ebb0"
     },
     {
       "id": "file:apps/server/src/routes/complete.ts",
@@ -87,7 +107,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "e7545013b84eadbd77a2a01bcb282acb3b19a8f404ed55d7eb313c8ddbf69133"
+      "contentHash": "1aa16dfbf68ba0d4c862fc224bf045a40dca588b7abc747cd392994f6ffde36e"
     },
     {
       "id": "file:apps/server/src/routes/frame.ts",
@@ -97,7 +117,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "5f608c9400dd7ff13dc77585ba23e0f8bbdd6396d1647d9e4a73d48f65b42f01"
+      "contentHash": "890ca63abf822f5bdb3299d12d2250532d81e005428dee4ae613346dd5079560"
     },
     {
       "id": "file:apps/server/src/routes/realtimeToken.ts",
@@ -107,7 +127,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "86d5c1be1f447c8c90b47001a562b8e9cf4ef5d04d9be38a0c194e1358c7e88d"
+      "contentHash": "7ece99ae72bfd3e0d3a14a6dfd501a01bb9296364bcea61f898d61b33c31ce09"
     },
     {
       "id": "file:apps/server/src/routes/sessions.ts",
@@ -117,7 +137,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "8671d0f9d70f8a69bab585362ca278f39fa8abbe8c41f057f23f306992d6b6ae"
+      "contentHash": "1ca7a47a39adb06868086fce1b0b4a105e0e0ef69517d06f057b6921b9fd4ce4"
     },
     {
       "id": "file:apps/server/src/routes/transcript.ts",
@@ -127,7 +147,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "971e7df7b3b12b003d62bf00bd5125f018cafe44808cf676d4a261f8ab7a0413"
+      "contentHash": "90da4a132c5b1a13bf1efcf5993daca13feb7a6af4f43d3770dd593b950423de"
     },
     {
       "id": "file:apps/web/eslint.config.mjs",
@@ -147,7 +167,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "0f70629890b72a0a82e91972cc032c04b658b26c265373cb711cf576bfbf8fcc"
+      "contentHash": "1862ac4bbbc5192d4bf562161df66ea547ed3e67173100656ab606ae9797db2b"
     },
     {
       "id": "file:apps/web/next.config.ts",
@@ -177,7 +197,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "059e23e62b44a7cb31bff9d45efa10c459b49ecda8cdc24abdf28c3e17252cb9"
+      "contentHash": "afe90ac7c6e45dfe117174a70d2874bb883834d0363a16fb36d0685d78f3744b"
     },
     {
       "id": "file:apps/web/src/app/layout.tsx",
@@ -187,7 +207,17 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "c25174aa1fcd0066f5f5c927731c098720b22a40ea3f90ea59a88b9dc3a1809a"
+      "contentHash": "2229d68c40f4dd75fb65fba67b1a544711fd29fbf2a698d32560527f079acf2b"
+    },
+    {
+      "id": "file:apps/web/src/app/login/page.tsx",
+      "type": "file",
+      "label": "apps/web/src/app/login/page.tsx",
+      "path": "apps/web/src/app/login/page.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "e252d710c0d653e510f10f76ce64befb42e35e734d3ea2063ba287d0fc634299"
     },
     {
       "id": "file:apps/web/src/app/page.tsx",
@@ -197,7 +227,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "58146f54f52138521ed77a75cdcbb891334907b01c1b6208d4abc1d3a3c184b4"
+      "contentHash": "ebec28e0c5c3269f40f3b2b5d6d1ba1efd7d138843a43d473d087438da25abfb"
     },
     {
       "id": "file:apps/web/src/app/session/[id]/interview/page.tsx",
@@ -207,7 +237,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "24a5887db6d763706a7c8740779612cf13913b0ee88777ff2efa1ffaafba2a4b"
+      "contentHash": "872feaa0b7f7b007be041898f35331f6f1928ca4ad7e87b428b3cfcc505c9ac4"
     },
     {
       "id": "file:apps/web/src/app/session/[id]/permissions/page.tsx",
@@ -227,7 +257,37 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "65668d9cc494a5c7f76078bec613040ce9eb1e4ac8c933dd490bbf688659ef45"
+      "contentHash": "55a4ffe84da54b589402c91280b5a19e51012e8918df2abc3a190882704265ab"
+    },
+    {
+      "id": "file:apps/web/src/app/settings/page.tsx",
+      "type": "file",
+      "label": "apps/web/src/app/settings/page.tsx",
+      "path": "apps/web/src/app/settings/page.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "ac40ca08d7b3428a7d49826e43aa3ff00023555a6f562c852373bdc1b2ec8cae"
+    },
+    {
+      "id": "file:apps/web/src/components/AppHeader.tsx",
+      "type": "file",
+      "label": "apps/web/src/components/AppHeader.tsx",
+      "path": "apps/web/src/components/AppHeader.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "a66231077e96fe9e631b39689abeecca8571818afd0e3254e3a52a25635bc255"
+    },
+    {
+      "id": "file:apps/web/src/components/ui/Avatar.tsx",
+      "type": "file",
+      "label": "apps/web/src/components/ui/Avatar.tsx",
+      "path": "apps/web/src/components/ui/Avatar.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "382eb28a8842086d0f1adb1f92411e71126133f56bdd197637c6b870b2f68c32"
     },
     {
       "id": "file:apps/web/src/components/ui/Button.tsx",
@@ -267,7 +327,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "461bb102df7f9affbdcee6c1832c121bfcdc2654e5e32c0d89df29b8f199c021"
+      "contentHash": "99d8cbcbe0c6d1b92aa95b8beceb2811dd3f7ef929fa517c8d7f2ef8f94b0040"
     },
     {
       "id": "file:apps/web/src/components/ui/Input.tsx",
@@ -287,7 +347,17 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "94fca1749cfb0c19e37a30aa5057e578277f4759555aa4ed5f26903e4e0823f9"
+      "contentHash": "28dd73150587abc6a09e1fad98011600d4de36c1ba11a30490d5a44476651bca"
+    },
+    {
+      "id": "file:apps/web/src/components/ui/Select.tsx",
+      "type": "file",
+      "label": "apps/web/src/components/ui/Select.tsx",
+      "path": "apps/web/src/components/ui/Select.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "bbaab31d06e6be65a812c47131608ad62f9a7abe5c40ba63108bbf19ae06225f"
     },
     {
       "id": "file:apps/web/src/components/ui/StepIndicator.tsx",
@@ -317,7 +387,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "1def643e1c0f1fc08388035f36554a7c0b32be538ddad43b364033510882ef43"
+      "contentHash": "03110c290a30d898074481d48606073aab1f87f8452225a2107458b612505f0a"
     },
     {
       "id": "file:apps/web/src/lib/frameCapture.ts",
@@ -337,7 +407,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "5a1f773fedb74249012498b41e713a934807bb4a5072233d53cb303f91894f94"
+      "contentHash": "f130774f9c6f6cb978a7f7c6bb70eb1dde2287e8f31c2be1d4f79b505ce2d780"
     },
     {
       "id": "package:npm:@prisma/client",
@@ -403,6 +473,15 @@
       "contentHash": "4136311bd46da100cda133c0956cc1793d3dd287cc9ec7f16b6a4c6b35e705f0"
     },
     {
+      "id": "package:npm:google-auth-library",
+      "type": "package",
+      "label": "google-auth-library",
+      "ecosystem": "npm",
+      "confidence": 0.85,
+      "extractor": "import",
+      "contentHash": "e9865bd81aa7cf58f4b54d47cac8f9c9e6954a89ba4af48104c71f5fbad39383"
+    },
+    {
       "id": "package:npm:multer",
       "type": "package",
       "label": "multer",
@@ -437,6 +516,15 @@
       "confidence": 0.85,
       "extractor": "import",
       "contentHash": "5235ef4d5d23a83db39d749bfea92bdc3cac601ea2cfae3a8f15e91d7ee494ff"
+    },
+    {
+      "id": "runtime:javascript:crypto",
+      "type": "runtime",
+      "label": "crypto",
+      "language": "javascript",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "bcebf8b78c52065d0c690b02c10bae42e93eaedd83cf0ff84ab2e88c5b696ee8"
     },
     {
       "id": "runtime:javascript:dns",
@@ -475,13 +563,22 @@
       "contentHash": "9bdfc951f6a3e0da297fef7f4afa15303ef30783c01058103248b470fd2d7207"
     },
     {
+      "id": "runtime:javascript:util",
+      "type": "runtime",
+      "label": "util",
+      "language": "javascript",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "e957e69a37f0b2993f28638865c2294b623dd455227d3eb40e3bcf4ce463a332"
+    },
+    {
       "id": "symbol:apps/server/src/index.ts#variable:__dirname",
       "type": "symbol",
       "kind": "variable",
       "name": "__dirname",
       "label": "__dirname",
       "path": "apps/server/src/index.ts",
-      "line": 13,
+      "line": 15,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "6c6bf3795eaa8f4adab68ba3b6baf373459916d0ba4544d47acb8861287098d3"
@@ -493,7 +590,7 @@
       "name": "app",
       "label": "app",
       "path": "apps/server/src/index.ts",
-      "line": 17,
+      "line": 19,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "92d5b4d930def73dfd4afba63da18baf206c43af2280ea53e286e60fbee4d1c0"
@@ -505,10 +602,178 @@
       "name": "uploadsRoot",
       "label": "uploadsRoot",
       "path": "apps/server/src/index.ts",
-      "line": 14,
+      "line": 16,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "a986512ef72f599a1a00e424be01700c6733d2fba52f077a74303b6557e29112"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/auth.ts#function:clearSessionCookie",
+      "type": "symbol",
+      "kind": "function",
+      "name": "clearSessionCookie",
+      "label": "clearSessionCookie",
+      "path": "apps/server/src/lib/auth.ts",
+      "line": 46,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "9cca95824d283599140b2c2e27186c6f77b5acde3aed1ce747dbff177409ede6"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/auth.ts#function:hashPassword",
+      "type": "symbol",
+      "kind": "function",
+      "name": "hashPassword",
+      "label": "hashPassword",
+      "path": "apps/server/src/lib/auth.ts",
+      "line": 16,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "f843d1a784a5ca2a9960a605d6f62fa1cdda64081d38df6d92e18ebc9b18ab73"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/auth.ts#function:readSessionUserId",
+      "type": "symbol",
+      "kind": "function",
+      "name": "readSessionUserId",
+      "label": "readSessionUserId",
+      "path": "apps/server/src/lib/auth.ts",
+      "line": 50,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "ec17e017d3dd5db6dd2a43b5f6a50635b95f8aa27a78cabfd644151d617370d8"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/auth.ts#function:requireOwnedSession",
+      "type": "symbol",
+      "kind": "function",
+      "name": "requireOwnedSession",
+      "label": "requireOwnedSession",
+      "path": "apps/server/src/lib/auth.ts",
+      "line": 79,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "fc58259449133fd7487082097c637d842b8a59c32ccd09bccb5ebdd30742a522"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/auth.ts#function:requireUser",
+      "type": "symbol",
+      "kind": "function",
+      "name": "requireUser",
+      "label": "requireUser",
+      "path": "apps/server/src/lib/auth.ts",
+      "line": 70,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "5b536d14c2bd3bd58c63e49d3314f8d2d69fee66482d5694c868c6010dc014ec"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/auth.ts#function:setSessionCookie",
+      "type": "symbol",
+      "kind": "function",
+      "name": "setSessionCookie",
+      "label": "setSessionCookie",
+      "path": "apps/server/src/lib/auth.ts",
+      "line": 34,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "d49f83b5b556b677f486712b22927c6ea1a30d4c7a755243f493773aa0798d60"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/auth.ts#function:sign",
+      "type": "symbol",
+      "kind": "function",
+      "name": "sign",
+      "label": "sign",
+      "path": "apps/server/src/lib/auth.ts",
+      "line": 30,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "614dee1352ed3ae8ddc559414606e64b9fd7709f634259f81ae214a6ba9cdf72"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/auth.ts#function:verifyGoogleCredential",
+      "type": "symbol",
+      "kind": "function",
+      "name": "verifyGoogleCredential",
+      "label": "verifyGoogleCredential",
+      "path": "apps/server/src/lib/auth.ts",
+      "line": 89,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "c72e8c3a02f3841f29760792580398e26fc5341eb409bf89679285775b7930ad"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/auth.ts#function:verifyPassword",
+      "type": "symbol",
+      "kind": "function",
+      "name": "verifyPassword",
+      "label": "verifyPassword",
+      "path": "apps/server/src/lib/auth.ts",
+      "line": 22,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "1cfca167fa89fc1f248e242d05626870d87aa41215c8e11206edf79e16716e22"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/auth.ts#variable:COOKIE_NAME",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "COOKIE_NAME",
+      "label": "COOKIE_NAME",
+      "path": "apps/server/src/lib/auth.ts",
+      "line": 10,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "9c5f8da92ebd9202a0235463ba1397dd0e94168a4bd4b25e3adb0acaefb9feb0"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/auth.ts#variable:googleClient",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "googleClient",
+      "label": "googleClient",
+      "path": "apps/server/src/lib/auth.ts",
+      "line": 14,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "41096c7514f6ec1ca3c70e123247456c5a1801ec5852f30ffb7d4fb70ac030f9"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/auth.ts#variable:KEY_LENGTH",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "KEY_LENGTH",
+      "label": "KEY_LENGTH",
+      "path": "apps/server/src/lib/auth.ts",
+      "line": 12,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "61f4a3e8424b95994a07d68f6e92c7561b49a8c981de1a3897099c57a25981bf"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/auth.ts#variable:scrypt",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "scrypt",
+      "label": "scrypt",
+      "path": "apps/server/src/lib/auth.ts",
+      "line": 8,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "9c4948721e14f6f38c697115acf68ebea68157448c187d31a8064a5ee5c86af1"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/auth.ts#variable:SESSION_TTL_SECONDS",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "SESSION_TTL_SECONDS",
+      "label": "SESSION_TTL_SECONDS",
+      "path": "apps/server/src/lib/auth.ts",
+      "line": 11,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "03eeb0eca2ac4f7b141499234fa00d9800573f381a77b8c2b43dbd222154d0b8"
     },
     {
       "id": "symbol:apps/server/src/lib/env.ts#function:required",
@@ -605,6 +870,18 @@
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "3b52ddc85c714f8c4726f4c86c680389fcc989efcc334f07b8c06c29705aa654"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateFrameInsight",
+      "type": "symbol",
+      "kind": "function",
+      "name": "generateFrameInsight",
+      "label": "generateFrameInsight",
+      "path": "apps/server/src/lib/interviewPlanning.ts",
+      "line": 110,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "6f31ff3092d91ef46b542b1f96c37c96286836949f49a07b356b002613f7b529"
     },
     {
       "id": "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateSessionSummary",
@@ -751,28 +1028,124 @@
       "contentHash": "c2a8580de654e902ec75137c8ecb69c96815061223e445640c1364362a263683"
     },
     {
+      "id": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
+      "type": "symbol",
+      "kind": "function",
+      "name": "readCredentials",
+      "label": "readCredentials",
+      "path": "apps/server/src/routes/auth.ts",
+      "line": 37,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "e621d9bb30f43299e9e2e8e91d7b7e8c13076282e4f6ed5b0eaf5e1e4c8f89b8"
+    },
+    {
+      "id": "symbol:apps/server/src/routes/auth.ts#function:toUserDTO",
+      "type": "symbol",
+      "kind": "function",
+      "name": "toUserDTO",
+      "label": "toUserDTO",
+      "path": "apps/server/src/routes/auth.ts",
+      "line": 23,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "6b8ec544953fbe9a1824f3f51c007569e1dd76ec873aa921829666c823cd2606"
+    },
+    {
+      "id": "symbol:apps/server/src/routes/auth.ts#variable:authRouter",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "authRouter",
+      "label": "authRouter",
+      "path": "apps/server/src/routes/auth.ts",
+      "line": 17,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "0b8f5d6c3258da5ff9fdde50ff9cae39dd3529ba1b14d7abd7f09ece2d5a63ce"
+    },
+    {
+      "id": "symbol:apps/server/src/routes/auth.ts#variable:EMAIL_PATTERN",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "EMAIL_PATTERN",
+      "label": "EMAIL_PATTERN",
+      "path": "apps/server/src/routes/auth.ts",
+      "line": 19,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "5b20e8970e17156e1fa1dd10453b3e80fc5a0ee218e8bb117ada3c191b80f5b9"
+    },
+    {
+      "id": "symbol:apps/server/src/routes/auth.ts#variable:MIN_PASSWORD_LENGTH",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "MIN_PASSWORD_LENGTH",
+      "label": "MIN_PASSWORD_LENGTH",
+      "path": "apps/server/src/routes/auth.ts",
+      "line": 20,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "5ab5385b30df85ed85732bac8de0593f8884fa61454ce985944c58c64d653e34"
+    },
+    {
+      "id": "symbol:apps/server/src/routes/auth.ts#variable:upload",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "upload",
+      "label": "upload",
+      "path": "apps/server/src/routes/auth.ts",
+      "line": 21,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "391f5b7d982438eb2d5fb0303f42da530700827749fdaa5652cc48529c658058"
+    },
+    {
+      "id": "symbol:apps/server/src/routes/complete.ts#function:generateLatestFrameInsight",
+      "type": "symbol",
+      "kind": "function",
+      "name": "generateLatestFrameInsight",
+      "label": "generateLatestFrameInsight",
+      "path": "apps/server/src/routes/complete.ts",
+      "line": 16,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "0b7d826bfbfb8466cb73259fe9ca90e8744f4e6b64d07f3f8a087bace0c931e2"
+    },
+    {
+      "id": "symbol:apps/server/src/routes/complete.ts#variable:__dirname",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "__dirname",
+      "label": "__dirname",
+      "path": "apps/server/src/routes/complete.ts",
+      "line": 13,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "6c6bf3795eaa8f4adab68ba3b6baf373459916d0ba4544d47acb8861287098d3"
+    },
+    {
       "id": "symbol:apps/server/src/routes/complete.ts#variable:completeRouter",
       "type": "symbol",
       "kind": "variable",
       "name": "completeRouter",
       "label": "completeRouter",
       "path": "apps/server/src/routes/complete.ts",
-      "line": 6,
+      "line": 11,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "a052975f7e28738eeac02b9cfa0978ab5553e4b6f420eb508e60723b7f5c5a51"
     },
     {
-      "id": "symbol:apps/server/src/routes/frame.ts#function:rejectUnsafeId",
+      "id": "symbol:apps/server/src/routes/complete.ts#variable:uploadsRoot",
       "type": "symbol",
-      "kind": "function",
-      "name": "rejectUnsafeId",
-      "label": "rejectUnsafeId",
-      "path": "apps/server/src/routes/frame.ts",
-      "line": 39,
+      "kind": "variable",
+      "name": "uploadsRoot",
+      "label": "uploadsRoot",
+      "path": "apps/server/src/routes/complete.ts",
+      "line": 14,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
-      "contentHash": "5f1c2192e748747da879d1a93729a2c4a46584e7c74f41e4d50658b514c8bbd3"
+      "contentHash": "a986512ef72f599a1a00e424be01700c6733d2fba52f077a74303b6557e29112"
     },
     {
       "id": "symbol:apps/server/src/routes/frame.ts#variable:__dirname",
@@ -781,7 +1154,7 @@
       "name": "__dirname",
       "label": "__dirname",
       "path": "apps/server/src/routes/frame.ts",
-      "line": 10,
+      "line": 11,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "6c6bf3795eaa8f4adab68ba3b6baf373459916d0ba4544d47acb8861287098d3"
@@ -793,22 +1166,10 @@
       "name": "frameRouter",
       "label": "frameRouter",
       "path": "apps/server/src/routes/frame.ts",
-      "line": 8,
+      "line": 9,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "5b0153ed3a829f038b356ab303b21c75f4b381fb0e3eefc2750c4e98ccd87d87"
-    },
-    {
-      "id": "symbol:apps/server/src/routes/frame.ts#variable:SAFE_ID",
-      "type": "symbol",
-      "kind": "variable",
-      "name": "SAFE_ID",
-      "label": "SAFE_ID",
-      "path": "apps/server/src/routes/frame.ts",
-      "line": 37,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "014a96363bd6664faa20c99ab7bb7e361aebd1fd359dc13fd6c64a1977bca4f7"
     },
     {
       "id": "symbol:apps/server/src/routes/frame.ts#variable:storage",
@@ -817,7 +1178,7 @@
       "name": "storage",
       "label": "storage",
       "path": "apps/server/src/routes/frame.ts",
-      "line": 13,
+      "line": 14,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "2462bdbf4fd0841a321500f58ad6c1e3a9cec51fc9ae64ca38c327a702f7839d"
@@ -829,7 +1190,7 @@
       "name": "upload",
       "label": "upload",
       "path": "apps/server/src/routes/frame.ts",
-      "line": 25,
+      "line": 26,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "391f5b7d982438eb2d5fb0303f42da530700827749fdaa5652cc48529c658058"
@@ -841,7 +1202,7 @@
       "name": "uploadsRoot",
       "label": "uploadsRoot",
       "path": "apps/server/src/routes/frame.ts",
-      "line": 11,
+      "line": 12,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "a986512ef72f599a1a00e424be01700c6733d2fba52f077a74303b6557e29112"
@@ -853,7 +1214,7 @@
       "name": "realtimeTokenRouter",
       "label": "realtimeTokenRouter",
       "path": "apps/server/src/routes/realtimeToken.ts",
-      "line": 7,
+      "line": 9,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "d473fe9ef3e17f98515c7800822e31afc796fe7cd3cc2138fdb9d374cdf4dabb"
@@ -865,7 +1226,7 @@
       "name": "toSessionDTO",
       "label": "toSessionDTO",
       "path": "apps/server/src/routes/sessions.ts",
-      "line": 15,
+      "line": 16,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "1b8b3defd9c70b3ee9c38f08d1b8e0ef3471f3b9b76d0b3814e0881a7aeeaf54"
@@ -877,7 +1238,7 @@
       "name": "sessionsRouter",
       "label": "sessionsRouter",
       "path": "apps/server/src/routes/sessions.ts",
-      "line": 8,
+      "line": 9,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "9fa034357c84d90e8c216c1075353bfd690cb3a51772fb43b57f2d003ee01e07"
@@ -889,7 +1250,7 @@
       "name": "upload",
       "label": "upload",
       "path": "apps/server/src/routes/sessions.ts",
-      "line": 10,
+      "line": 11,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "391f5b7d982438eb2d5fb0303f42da530700827749fdaa5652cc48529c658058"
@@ -901,7 +1262,7 @@
       "name": "transcriptRouter",
       "label": "transcriptRouter",
       "path": "apps/server/src/routes/transcript.ts",
-      "line": 5,
+      "line": 6,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "10e180106b64cbfb0941d532ddc81e2d166da77ee9c6323bf7877eabc3c2708d"
@@ -943,13 +1304,25 @@
       "contentHash": "fa68a46777d18eec059f7f507958c623528d149c73b1b604a076f192cbe108fa"
     },
     {
+      "id": "symbol:apps/web/src/app/dashboard/page.tsx#function:computeMilestones",
+      "type": "symbol",
+      "kind": "function",
+      "name": "computeMilestones",
+      "label": "computeMilestones",
+      "path": "apps/web/src/app/dashboard/page.tsx",
+      "line": 32,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "f42f84a3c7bec054e6925af1c046caf3caec6e099bd744beb24ac85f2c49bcf4"
+    },
+    {
       "id": "symbol:apps/web/src/app/dashboard/page.tsx#function:DashboardPage",
       "type": "symbol",
       "kind": "function",
       "name": "DashboardPage",
       "label": "DashboardPage",
       "path": "apps/web/src/app/dashboard/page.tsx",
-      "line": 13,
+      "line": 53,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "1c70b785f096cd4d803fef52a4bfa6c7969260aaa3a9466e67647595588f68b0"
@@ -967,13 +1340,49 @@
       "contentHash": "1cd7b55d1c149a15028e53026e6eb2c87b63553da93dffb9d77ab818acd72da4"
     },
     {
+      "id": "symbol:apps/web/src/app/dashboard/page.tsx#function:longestDayStreak",
+      "type": "symbol",
+      "kind": "function",
+      "name": "longestDayStreak",
+      "label": "longestDayStreak",
+      "path": "apps/web/src/app/dashboard/page.tsx",
+      "line": 13,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "6f35b350ef8c4333780de57273fa647518d9603eeb9e9ec93aa3bd540f0072e4"
+    },
+    {
+      "id": "symbol:apps/web/src/app/dashboard/page.tsx#variable:SCORE_CHIP_CATEGORIES",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "SCORE_CHIP_CATEGORIES",
+      "label": "SCORE_CHIP_CATEGORIES",
+      "path": "apps/web/src/app/dashboard/page.tsx",
+      "line": 46,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "481e8388b54d2ea41673d9fcd192d7b519272f0d3896ccf9c7ca4a23c3000fe9"
+    },
+    {
+      "id": "symbol:apps/web/src/app/dashboard/page.tsx#variable:SCORE_CHIP_LABELS",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "SCORE_CHIP_LABELS",
+      "label": "SCORE_CHIP_LABELS",
+      "path": "apps/web/src/app/dashboard/page.tsx",
+      "line": 47,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "99991654f3726c3edf2888994889c661d706331c12be70fbfda03bc9a0513d79"
+    },
+    {
       "id": "symbol:apps/web/src/app/layout.tsx#function:RootLayout",
       "type": "symbol",
       "kind": "function",
       "name": "RootLayout",
       "label": "RootLayout",
       "path": "apps/web/src/app/layout.tsx",
-      "line": 15,
+      "line": 16,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "b3f96339ba215ebd6ba503ea8fca4a7c61b3c35014e0d8f3c377caed0cbc1890"
@@ -985,7 +1394,7 @@
       "name": "inter",
       "label": "inter",
       "path": "apps/web/src/app/layout.tsx",
-      "line": 5,
+      "line": 6,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "299f7168670b6c3e98783c66a5ea105fca191a9f5b1f728c6292b3a3036f4bc0"
@@ -997,10 +1406,58 @@
       "name": "metadata",
       "label": "metadata",
       "path": "apps/web/src/app/layout.tsx",
-      "line": 10,
+      "line": 11,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "1c4009dcdeca39fd5c9228279837d6284c5aefaa467126841e57afc26ba65eec"
+    },
+    {
+      "id": "symbol:apps/web/src/app/login/page.tsx#function:LoginPage",
+      "type": "symbol",
+      "kind": "function",
+      "name": "LoginPage",
+      "label": "LoginPage",
+      "path": "apps/web/src/app/login/page.tsx",
+      "line": 27,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "81771f9428fdf29de423bffeb1f01e0ee2ec6079eef3c28dd56b18fd8426ff94"
+    },
+    {
+      "id": "symbol:apps/web/src/app/login/page.tsx#function:readError",
+      "type": "symbol",
+      "kind": "function",
+      "name": "readError",
+      "label": "readError",
+      "path": "apps/web/src/app/login/page.tsx",
+      "line": 22,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "6bad5fa95ab7e185d89b14baf82c69ece4325489a65d21b686a1cdd2ce8630ab"
+    },
+    {
+      "id": "symbol:apps/web/src/app/login/page.tsx#interface:GoogleIdentity",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "GoogleIdentity",
+      "label": "GoogleIdentity",
+      "path": "apps/web/src/app/login/page.tsx",
+      "line": 11,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "2378f900098ba52bb8ea4b391057a7d8aa42574ccb944b77695f9edf83d2c392"
+    },
+    {
+      "id": "symbol:apps/web/src/app/login/page.tsx#variable:GOOGLE_CLIENT_ID",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "GOOGLE_CLIENT_ID",
+      "label": "GOOGLE_CLIENT_ID",
+      "path": "apps/web/src/app/login/page.tsx",
+      "line": 9,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "f4898f0cf11fcc9d25105ba4c7dd06cba43afac117e791dd8adc82073bc94611"
     },
     {
       "id": "symbol:apps/web/src/app/page.tsx#function:Home",
@@ -1009,7 +1466,7 @@
       "name": "Home",
       "label": "Home",
       "path": "apps/web/src/app/page.tsx",
-      "line": 10,
+      "line": 11,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "e1a106fbcc131f9a29bfcc7ca368c0c2e8175b30674f7f2c893aff7089d9e886"
@@ -1021,7 +1478,7 @@
       "name": "STEPS",
       "label": "STEPS",
       "path": "apps/web/src/app/page.tsx",
-      "line": 8,
+      "line": 9,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "77a7e5643707ae6f3fef7f6b3d6494aa118c6219df147e0b944a1c7acffdf1fc"
@@ -1099,13 +1556,25 @@
       "contentHash": "37b3edf5330af4e244212c81cb42546bac0795916a912b8d52859d27f1fd9f8e"
     },
     {
+      "id": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:computeChips",
+      "type": "symbol",
+      "kind": "function",
+      "name": "computeChips",
+      "label": "computeChips",
+      "path": "apps/web/src/app/session/[id]/results/page.tsx",
+      "line": 35,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "60c4fa2ee439ad4da21a480bde0c53f6e437f36ef295cb8517d7f4a5d9eea14c"
+    },
+    {
       "id": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:formatTimestamp",
       "type": "symbol",
       "kind": "function",
       "name": "formatTimestamp",
       "label": "formatTimestamp",
       "path": "apps/web/src/app/session/[id]/results/page.tsx",
-      "line": 9,
+      "line": 11,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "3a565c2871914d3612e918ff0bc348c48d37db91cce856a3e9cac742a4129d50"
@@ -1117,7 +1586,7 @@
       "name": "highlightSpans",
       "label": "highlightSpans",
       "path": "apps/web/src/app/session/[id]/results/page.tsx",
-      "line": 23,
+      "line": 60,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "e7558cea126b20a5cccf51a68f5e243d5d340f89387eb49c8b28696829678c04"
@@ -1129,10 +1598,34 @@
       "name": "ResultsPage",
       "label": "ResultsPage",
       "path": "apps/web/src/app/session/[id]/results/page.tsx",
-      "line": 55,
+      "line": 92,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "511e01e2be44cf8e85f7b593112b1cfab7cc2e5bf7b6b013d30ab29e4af8c919"
+    },
+    {
+      "id": "symbol:apps/web/src/app/session/[id]/results/page.tsx#type:Chip",
+      "type": "symbol",
+      "kind": "type",
+      "name": "Chip",
+      "label": "Chip",
+      "path": "apps/web/src/app/session/[id]/results/page.tsx",
+      "line": 33,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "854e76402e900802a0c734b4095bdb74905bfc6e55a2b6b8c1a5b136a1601227"
+    },
+    {
+      "id": "symbol:apps/web/src/app/session/[id]/results/page.tsx#type:HighlightFilter",
+      "type": "symbol",
+      "kind": "type",
+      "name": "HighlightFilter",
+      "label": "HighlightFilter",
+      "path": "apps/web/src/app/session/[id]/results/page.tsx",
+      "line": 9,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "b0cbc2f02bcca36dce4210ef59e4a0b86ad77a2e0a58251d7a7e21df176e62fd"
     },
     {
       "id": "symbol:apps/web/src/app/session/[id]/results/page.tsx#variable:CATEGORY_LABELS",
@@ -1141,10 +1634,130 @@
       "name": "CATEGORY_LABELS",
       "label": "CATEGORY_LABELS",
       "path": "apps/web/src/app/session/[id]/results/page.tsx",
-      "line": 15,
+      "line": 17,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "24568c2229a2affd9d45dbaa04b0bee1140122a303e20c2ecadff760929d579d"
+    },
+    {
+      "id": "symbol:apps/web/src/app/session/[id]/results/page.tsx#variable:ISSUE_HINTS",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "ISSUE_HINTS",
+      "label": "ISSUE_HINTS",
+      "path": "apps/web/src/app/session/[id]/results/page.tsx",
+      "line": 25,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "53f8295d689156fda91b6da95c23dd7cf6c595d0a0e3a39dd5046832249aa1a9"
+    },
+    {
+      "id": "symbol:apps/web/src/app/settings/page.tsx#function:capitalize",
+      "type": "symbol",
+      "kind": "function",
+      "name": "capitalize",
+      "label": "capitalize",
+      "path": "apps/web/src/app/settings/page.tsx",
+      "line": 12,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "0aca0587452b663c3fecc8fc09d50856de2430e0f76d95419115dad853c272c7"
+    },
+    {
+      "id": "symbol:apps/web/src/app/settings/page.tsx#function:NoticeText",
+      "type": "symbol",
+      "kind": "function",
+      "name": "NoticeText",
+      "label": "NoticeText",
+      "path": "apps/web/src/app/settings/page.tsx",
+      "line": 16,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "fa1dd6b86fb0b8331f54968beddf8f3f3e124c9dd28b191233b84831294c1e59"
+    },
+    {
+      "id": "symbol:apps/web/src/app/settings/page.tsx#function:SettingsPage",
+      "type": "symbol",
+      "kind": "function",
+      "name": "SettingsPage",
+      "label": "SettingsPage",
+      "path": "apps/web/src/app/settings/page.tsx",
+      "line": 23,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "4551cd8a2d421b0d2f2abc31a6baaf59c94b9bfae857eecb300ee5c47cd73c92"
+    },
+    {
+      "id": "symbol:apps/web/src/app/settings/page.tsx#type:Notice",
+      "type": "symbol",
+      "kind": "type",
+      "name": "Notice",
+      "label": "Notice",
+      "path": "apps/web/src/app/settings/page.tsx",
+      "line": 10,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "c6850a0c0e56dd96802d2a31c79f9e116ff9e2e05760c25deb781b278528bfdc"
+    },
+    {
+      "id": "symbol:apps/web/src/app/settings/page.tsx#variable:SENIORITY_LEVELS",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "SENIORITY_LEVELS",
+      "label": "SENIORITY_LEVELS",
+      "path": "apps/web/src/app/settings/page.tsx",
+      "line": 8,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "a64222c1ce39330972b49883f0fa756ba485f8e580975fd5d6a3b0cf3efd92a6"
+    },
+    {
+      "id": "symbol:apps/web/src/components/AppHeader.tsx#function:AppHeader",
+      "type": "symbol",
+      "kind": "function",
+      "name": "AppHeader",
+      "label": "AppHeader",
+      "path": "apps/web/src/components/AppHeader.tsx",
+      "line": 15,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "886806e3bfb1c0210df3734c810b020f6adee0a653b90ffd2a3022d2f8caae9f"
+    },
+    {
+      "id": "symbol:apps/web/src/components/AppHeader.tsx#variable:NAV_LINKS",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "NAV_LINKS",
+      "label": "NAV_LINKS",
+      "path": "apps/web/src/components/AppHeader.tsx",
+      "line": 10,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "9162e42d3f380192694a9a65baa9d219ed686a517b9b45a0d9762c6f49b702bd"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Avatar.tsx#function:Avatar",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Avatar",
+      "label": "Avatar",
+      "path": "apps/web/src/components/ui/Avatar.tsx",
+      "line": 8,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "a4a45b6ad11ebcfcd57a482e9ca7a10bb87b0f586166dd6807b937f3ac30696b"
+    },
+    {
+      "id": "symbol:apps/web/src/components/ui/Avatar.tsx#interface:AvatarProps",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "AvatarProps",
+      "label": "AvatarProps",
+      "path": "apps/web/src/components/ui/Avatar.tsx",
+      "line": 1,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "791fd05c3264af5bdacbad33856d25b5f60c67c55b15420bc660b47a5b8a37e8"
     },
     {
       "id": "symbol:apps/web/src/components/ui/Button.tsx#interface:ButtonProps",
@@ -1267,6 +1880,18 @@
       "contentHash": "a4190870311b27b30d42169cf184c20e9c1e280ed3b2ed1c317be55c4a5d24e5"
     },
     {
+      "id": "symbol:apps/web/src/components/ui/Select.tsx#variable:Select",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "Select",
+      "label": "Select",
+      "path": "apps/web/src/components/ui/Select.tsx",
+      "line": 3,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "19152229a3caf7f8a0624c420f1aaa3bcc01dde553231b83b6ad56df6b78f8f6"
+    },
+    {
       "id": "symbol:apps/web/src/components/ui/StepIndicator.tsx#function:StepIndicator",
       "type": "symbol",
       "kind": "function",
@@ -1313,6 +1938,18 @@
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "f452ae315e204dc2be36ef0e630693ff366aaa17c70a67ba223f2b5f0e8bf44d"
+    },
+    {
+      "id": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
+      "type": "symbol",
+      "kind": "function",
+      "name": "apiFetch",
+      "label": "apiFetch",
+      "path": "apps/web/src/lib/api.ts",
+      "line": 7,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "9840f9779ee5bdad30ecd9cba14cf8150aead3b36281d9e1c7734ba39b0cecf8"
     },
     {
       "id": "symbol:apps/web/src/lib/api.ts#function:apiUrl",
@@ -1381,10 +2018,22 @@
       "name": "FeedbackItem",
       "label": "FeedbackItem",
       "path": "packages/shared/src/index.ts",
-      "line": 38,
+      "line": 60,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "7ed46467025e9df8216276ea245c05f63e71c0b151e808566906eb67516ef172"
+    },
+    {
+      "id": "symbol:packages/shared/src/index.ts#interface:FrameCaptureDTO",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "FrameCaptureDTO",
+      "label": "FrameCaptureDTO",
+      "path": "packages/shared/src/index.ts",
+      "line": 53,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "77df428fabf4181971606cd10c4f3fb8b23a8a362946fc8d014b7d4f04cee973"
     },
     {
       "id": "symbol:packages/shared/src/index.ts#interface:QuestionPlan",
@@ -1429,7 +2078,7 @@
       "name": "SessionListItemDTO",
       "label": "SessionListItemDTO",
       "path": "packages/shared/src/index.ts",
-      "line": 54,
+      "line": 76,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "555a3d3748036a04ca0ed9ade50e6dc07bbac9d7e0420ab15d6e17b116fb5dd9"
@@ -1441,7 +2090,7 @@
       "name": "SessionSummary",
       "label": "SessionSummary",
       "path": "packages/shared/src/index.ts",
-      "line": 47,
+      "line": 69,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "7d3eb1ea0472e1d951895716b78797bf4f7d35227218c482d047cccf40675ed1"
@@ -1459,6 +2108,30 @@
       "contentHash": "e4d16771b3fbc30e4dd1849993b112a5d929de3420a78cfdb6e1f4526548ba30"
     },
     {
+      "id": "symbol:packages/shared/src/index.ts#interface:UserDTO",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "UserDTO",
+      "label": "UserDTO",
+      "path": "packages/shared/src/index.ts",
+      "line": 41,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "8330d6d2de8f38eba8c6642bba23d4c1de8722e659723209a5404ccc9135ee29"
+    },
+    {
+      "id": "symbol:packages/shared/src/index.ts#type:InterviewerVoice",
+      "type": "symbol",
+      "kind": "type",
+      "name": "InterviewerVoice",
+      "label": "InterviewerVoice",
+      "path": "packages/shared/src/index.ts",
+      "line": 39,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "54af97a2695135d2302a4338b9a0ca27e1f4749c20fcc741f14a324d86711537"
+    },
+    {
       "id": "symbol:packages/shared/src/index.ts#type:SessionStatus",
       "type": "symbol",
       "kind": "type",
@@ -1471,20 +2144,32 @@
       "contentHash": "b57bc0d2788d198b10daf466d4178516412c416c52c8accaa6cb6cc4528b738a"
     },
     {
-      "id": "unresolved:apps/web/next-env.d.ts:./.next/dev/types/root-params.d.ts",
-      "type": "unresolved",
-      "label": "./.next/dev/types/root-params.d.ts",
-      "confidence": 0.4,
-      "extractor": "import",
-      "contentHash": "830b7cf1fca05cc7f357231a0a56918fc66e61b685f42aaa2d2e924fe235ebb3"
+      "id": "symbol:packages/shared/src/index.ts#variable:INTERVIEWER_VOICES",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "INTERVIEWER_VOICES",
+      "label": "INTERVIEWER_VOICES",
+      "path": "packages/shared/src/index.ts",
+      "line": 38,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "71f5d107b148ec167dac99146aa301b14b66e35047a12a34323219db0f4f9c06"
     },
     {
-      "id": "unresolved:apps/web/next-env.d.ts:./.next/dev/types/routes.d.ts",
+      "id": "unresolved:apps/web/next-env.d.ts:./.next/types/root-params.d.ts",
       "type": "unresolved",
-      "label": "./.next/dev/types/routes.d.ts",
+      "label": "./.next/types/root-params.d.ts",
       "confidence": 0.4,
       "extractor": "import",
-      "contentHash": "d1d6b95088fe7e476a97de9d565603fd6a60f685290be58f12ca5dd4cb637220"
+      "contentHash": "3754fb2bc42d60cdc0a1e86d5e0116349d514ccd03e951675251677f7cc6b665"
+    },
+    {
+      "id": "unresolved:apps/web/next-env.d.ts:./.next/types/routes.d.ts",
+      "type": "unresolved",
+      "label": "./.next/types/routes.d.ts",
+      "confidence": 0.4,
+      "extractor": "import",
+      "contentHash": "1379fb4e4fd8505e93e87b2da929d6706ded70ee558cf69ac1e06cb405a4a86c"
     },
     {
       "id": "unresolved:apps/web/src/app/layout.tsx:./globals.css",
@@ -1496,6 +2181,51 @@
     }
   ],
   "edges": [
+    {
+      "type": "calls",
+      "source": "symbol:apps/server/src/lib/auth.ts#function:hashPassword",
+      "target": "symbol:apps/server/src/lib/auth.ts#variable:scrypt",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.75,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/server/src/lib/auth.ts#function:readSessionUserId",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:sign",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.75,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/server/src/lib/auth.ts#function:requireUser",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:readSessionUserId",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.75,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/server/src/lib/auth.ts#function:setSessionCookie",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:sign",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.75,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/server/src/lib/auth.ts#function:verifyPassword",
+      "target": "symbol:apps/server/src/lib/auth.ts#variable:scrypt",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.75,
+      "extractor": "conservative-js-calls"
+    },
     {
       "type": "calls",
       "source": "symbol:apps/server/src/lib/env.ts#variable:env",
@@ -1552,7 +2282,79 @@
     },
     {
       "type": "calls",
-      "source": "symbol:apps/server/src/routes/complete.ts#variable:completeRouter",
+      "source": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:clearSessionCookie",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:hashPassword",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:setSessionCookie",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:verifyGoogleCredential",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:verifyPassword",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
+      "target": "symbol:apps/server/src/lib/extractText.ts#function:extractTextFromFile",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
+      "target": "symbol:apps/server/src/routes/auth.ts#function:toUserDTO",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.75,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/server/src/routes/complete.ts#function:generateLatestFrameInsight",
+      "target": "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateFrameInsight",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/server/src/routes/complete.ts#function:generateLatestFrameInsight",
       "target": "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateSessionSummary",
       "tier": "proven",
       "resolved": true,
@@ -1606,11 +2408,83 @@
     },
     {
       "type": "calls",
+      "source": "symbol:apps/web/src/app/dashboard/page.tsx#function:computeMilestones",
+      "target": "symbol:apps/web/src/app/dashboard/page.tsx#function:longestDayStreak",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.75,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/dashboard/page.tsx#function:DashboardPage",
+      "target": "symbol:apps/web/src/app/dashboard/page.tsx#function:computeMilestones",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.75,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
       "source": "symbol:apps/web/src/app/dashboard/page.tsx#function:DashboardPage",
       "target": "symbol:apps/web/src/app/dashboard/page.tsx#function:formatDate",
       "tier": "proven",
       "resolved": true,
       "confidence": 0.75,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/dashboard/page.tsx#function:DashboardPage",
+      "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/dashboard/page.tsx#function:DashboardPage",
+      "target": "symbol:apps/web/src/lib/api.ts#function:apiUrl",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/login/page.tsx#function:LoginPage",
+      "target": "symbol:apps/web/src/app/login/page.tsx#function:readError",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.75,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/login/page.tsx#function:LoginPage",
+      "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/page.tsx#function:Home",
+      "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/session/[id]/interview/page.tsx#function:InterviewPage",
+      "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
       "extractor": "conservative-js-calls"
     },
     {
@@ -1634,6 +2508,15 @@
     {
       "type": "calls",
       "source": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:ResultsPage",
+      "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:computeChips",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.75,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:ResultsPage",
       "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:formatTimestamp",
       "tier": "proven",
       "resolved": true,
@@ -1650,10 +2533,55 @@
       "extractor": "conservative-js-calls"
     },
     {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:ResultsPage",
+      "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:ResultsPage",
+      "target": "symbol:apps/web/src/lib/api.ts#function:apiUrl",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/settings/page.tsx#function:SettingsPage",
+      "target": "symbol:apps/web/src/app/settings/page.tsx#function:capitalize",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.75,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/settings/page.tsx#function:SettingsPage",
+      "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/components/AppHeader.tsx#function:AppHeader",
+      "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
       "type": "defines",
       "source": "file:apps/server/src/index.ts",
       "target": "symbol:apps/server/src/index.ts#variable:__dirname",
-      "line": 13,
+      "line": 15,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -1662,7 +2590,7 @@
       "type": "defines",
       "source": "file:apps/server/src/index.ts",
       "target": "symbol:apps/server/src/index.ts#variable:app",
-      "line": 17,
+      "line": 19,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -1671,7 +2599,133 @@
       "type": "defines",
       "source": "file:apps/server/src/index.ts",
       "target": "symbol:apps/server/src/index.ts#variable:uploadsRoot",
+      "line": 16,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:clearSessionCookie",
+      "line": 46,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:hashPassword",
+      "line": 16,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:readSessionUserId",
+      "line": 50,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:requireOwnedSession",
+      "line": 79,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:requireUser",
+      "line": 70,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:setSessionCookie",
+      "line": 34,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:sign",
+      "line": 30,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:verifyGoogleCredential",
+      "line": 89,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:verifyPassword",
+      "line": 22,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "symbol:apps/server/src/lib/auth.ts#variable:COOKIE_NAME",
+      "line": 10,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "symbol:apps/server/src/lib/auth.ts#variable:googleClient",
       "line": 14,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "symbol:apps/server/src/lib/auth.ts#variable:KEY_LENGTH",
+      "line": 12,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "symbol:apps/server/src/lib/auth.ts#variable:scrypt",
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "symbol:apps/server/src/lib/auth.ts#variable:SESSION_TTL_SECONDS",
+      "line": 11,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -1744,6 +2798,15 @@
       "source": "file:apps/server/src/lib/interviewPlanning.ts",
       "target": "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateCandidateProfileAndPlan",
       "line": 22,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/interviewPlanning.ts",
+      "target": "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateFrameInsight",
+      "line": 110,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -1858,18 +2921,90 @@
     },
     {
       "type": "defines",
-      "source": "file:apps/server/src/routes/complete.ts",
-      "target": "symbol:apps/server/src/routes/complete.ts#variable:completeRouter",
-      "line": 6,
+      "source": "file:apps/server/src/routes/auth.ts",
+      "target": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
+      "line": 37,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
     },
     {
       "type": "defines",
-      "source": "file:apps/server/src/routes/frame.ts",
-      "target": "symbol:apps/server/src/routes/frame.ts#function:rejectUnsafeId",
-      "line": 39,
+      "source": "file:apps/server/src/routes/auth.ts",
+      "target": "symbol:apps/server/src/routes/auth.ts#function:toUserDTO",
+      "line": 23,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/routes/auth.ts",
+      "target": "symbol:apps/server/src/routes/auth.ts#variable:authRouter",
+      "line": 17,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/routes/auth.ts",
+      "target": "symbol:apps/server/src/routes/auth.ts#variable:EMAIL_PATTERN",
+      "line": 19,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/routes/auth.ts",
+      "target": "symbol:apps/server/src/routes/auth.ts#variable:MIN_PASSWORD_LENGTH",
+      "line": 20,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/routes/auth.ts",
+      "target": "symbol:apps/server/src/routes/auth.ts#variable:upload",
+      "line": 21,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/routes/complete.ts",
+      "target": "symbol:apps/server/src/routes/complete.ts#function:generateLatestFrameInsight",
+      "line": 16,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/routes/complete.ts",
+      "target": "symbol:apps/server/src/routes/complete.ts#variable:__dirname",
+      "line": 13,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/routes/complete.ts",
+      "target": "symbol:apps/server/src/routes/complete.ts#variable:completeRouter",
+      "line": 11,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/routes/complete.ts",
+      "target": "symbol:apps/server/src/routes/complete.ts#variable:uploadsRoot",
+      "line": 14,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -1878,7 +3013,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/frame.ts",
       "target": "symbol:apps/server/src/routes/frame.ts#variable:__dirname",
-      "line": 10,
+      "line": 11,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -1887,16 +3022,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/frame.ts",
       "target": "symbol:apps/server/src/routes/frame.ts#variable:frameRouter",
-      "line": 8,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/server/src/routes/frame.ts",
-      "target": "symbol:apps/server/src/routes/frame.ts#variable:SAFE_ID",
-      "line": 37,
+      "line": 9,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -1905,7 +3031,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/frame.ts",
       "target": "symbol:apps/server/src/routes/frame.ts#variable:storage",
-      "line": 13,
+      "line": 14,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -1914,7 +3040,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/frame.ts",
       "target": "symbol:apps/server/src/routes/frame.ts#variable:upload",
-      "line": 25,
+      "line": 26,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -1923,7 +3049,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/frame.ts",
       "target": "symbol:apps/server/src/routes/frame.ts#variable:uploadsRoot",
-      "line": 11,
+      "line": 12,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -1932,7 +3058,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/realtimeToken.ts",
       "target": "symbol:apps/server/src/routes/realtimeToken.ts#variable:realtimeTokenRouter",
-      "line": 7,
+      "line": 9,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -1941,7 +3067,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/sessions.ts",
       "target": "symbol:apps/server/src/routes/sessions.ts#function:toSessionDTO",
-      "line": 15,
+      "line": 16,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -1950,7 +3076,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/sessions.ts",
       "target": "symbol:apps/server/src/routes/sessions.ts#variable:sessionsRouter",
-      "line": 8,
+      "line": 9,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -1959,7 +3085,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/sessions.ts",
       "target": "symbol:apps/server/src/routes/sessions.ts#variable:upload",
-      "line": 10,
+      "line": 11,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -1968,7 +3094,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/transcript.ts",
       "target": "symbol:apps/server/src/routes/transcript.ts#variable:transcriptRouter",
-      "line": 5,
+      "line": 6,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2003,8 +3129,17 @@
     {
       "type": "defines",
       "source": "file:apps/web/src/app/dashboard/page.tsx",
+      "target": "symbol:apps/web/src/app/dashboard/page.tsx#function:computeMilestones",
+      "line": 32,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/dashboard/page.tsx",
       "target": "symbol:apps/web/src/app/dashboard/page.tsx#function:DashboardPage",
-      "line": 13,
+      "line": 53,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2020,9 +3155,36 @@
     },
     {
       "type": "defines",
+      "source": "file:apps/web/src/app/dashboard/page.tsx",
+      "target": "symbol:apps/web/src/app/dashboard/page.tsx#function:longestDayStreak",
+      "line": 13,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/dashboard/page.tsx",
+      "target": "symbol:apps/web/src/app/dashboard/page.tsx#variable:SCORE_CHIP_CATEGORIES",
+      "line": 46,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/dashboard/page.tsx",
+      "target": "symbol:apps/web/src/app/dashboard/page.tsx#variable:SCORE_CHIP_LABELS",
+      "line": 47,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
       "source": "file:apps/web/src/app/layout.tsx",
       "target": "symbol:apps/web/src/app/layout.tsx#function:RootLayout",
-      "line": 15,
+      "line": 16,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2031,7 +3193,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/layout.tsx",
       "target": "symbol:apps/web/src/app/layout.tsx#variable:inter",
-      "line": 5,
+      "line": 6,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2040,7 +3202,43 @@
       "type": "defines",
       "source": "file:apps/web/src/app/layout.tsx",
       "target": "symbol:apps/web/src/app/layout.tsx#variable:metadata",
-      "line": 10,
+      "line": 11,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/login/page.tsx",
+      "target": "symbol:apps/web/src/app/login/page.tsx#function:LoginPage",
+      "line": 27,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/login/page.tsx",
+      "target": "symbol:apps/web/src/app/login/page.tsx#function:readError",
+      "line": 22,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/login/page.tsx",
+      "target": "symbol:apps/web/src/app/login/page.tsx#interface:GoogleIdentity",
+      "line": 11,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/login/page.tsx",
+      "target": "symbol:apps/web/src/app/login/page.tsx#variable:GOOGLE_CLIENT_ID",
+      "line": 9,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2049,7 +3247,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/page.tsx",
       "target": "symbol:apps/web/src/app/page.tsx#function:Home",
-      "line": 10,
+      "line": 11,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2058,7 +3256,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/page.tsx",
       "target": "symbol:apps/web/src/app/page.tsx#variable:STEPS",
-      "line": 8,
+      "line": 9,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2120,8 +3318,17 @@
     {
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
+      "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:computeChips",
+      "line": 35,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:formatTimestamp",
-      "line": 9,
+      "line": 11,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2130,7 +3337,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:highlightSpans",
-      "line": 23,
+      "line": 60,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2139,7 +3346,25 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#function:ResultsPage",
-      "line": 55,
+      "line": 92,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
+      "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#type:Chip",
+      "line": 33,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
+      "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#type:HighlightFilter",
+      "line": 9,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2148,7 +3373,97 @@
       "type": "defines",
       "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
       "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#variable:CATEGORY_LABELS",
+      "line": 17,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/session/[id]/results/page.tsx",
+      "target": "symbol:apps/web/src/app/session/[id]/results/page.tsx#variable:ISSUE_HINTS",
+      "line": 25,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/settings/page.tsx",
+      "target": "symbol:apps/web/src/app/settings/page.tsx#function:capitalize",
+      "line": 12,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/settings/page.tsx",
+      "target": "symbol:apps/web/src/app/settings/page.tsx#function:NoticeText",
+      "line": 16,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/settings/page.tsx",
+      "target": "symbol:apps/web/src/app/settings/page.tsx#function:SettingsPage",
+      "line": 23,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/settings/page.tsx",
+      "target": "symbol:apps/web/src/app/settings/page.tsx#type:Notice",
+      "line": 10,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/settings/page.tsx",
+      "target": "symbol:apps/web/src/app/settings/page.tsx#variable:SENIORITY_LEVELS",
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/AppHeader.tsx",
+      "target": "symbol:apps/web/src/components/AppHeader.tsx#function:AppHeader",
       "line": 15,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/AppHeader.tsx",
+      "target": "symbol:apps/web/src/components/AppHeader.tsx#variable:NAV_LINKS",
+      "line": 10,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Avatar.tsx",
+      "target": "symbol:apps/web/src/components/ui/Avatar.tsx#function:Avatar",
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/ui/Avatar.tsx",
+      "target": "symbol:apps/web/src/components/ui/Avatar.tsx#interface:AvatarProps",
+      "line": 1,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2245,6 +3560,15 @@
     },
     {
       "type": "defines",
+      "source": "file:apps/web/src/components/ui/Select.tsx",
+      "target": "symbol:apps/web/src/components/ui/Select.tsx#variable:Select",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
       "source": "file:apps/web/src/components/ui/StepIndicator.tsx",
       "target": "symbol:apps/web/src/components/ui/StepIndicator.tsx#function:StepIndicator",
       "line": 10,
@@ -2275,6 +3599,15 @@
       "source": "file:apps/web/src/components/ui/Textarea.tsx",
       "target": "symbol:apps/web/src/components/ui/Textarea.tsx#variable:Textarea",
       "line": 3,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/lib/api.ts",
+      "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
+      "line": 7,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2328,7 +3661,16 @@
       "type": "defines",
       "source": "file:packages/shared/src/index.ts",
       "target": "symbol:packages/shared/src/index.ts#interface:FeedbackItem",
-      "line": 38,
+      "line": 60,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:packages/shared/src/index.ts",
+      "target": "symbol:packages/shared/src/index.ts#interface:FrameCaptureDTO",
+      "line": 53,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2364,7 +3706,7 @@
       "type": "defines",
       "source": "file:packages/shared/src/index.ts",
       "target": "symbol:packages/shared/src/index.ts#interface:SessionListItemDTO",
-      "line": 54,
+      "line": 76,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2373,7 +3715,7 @@
       "type": "defines",
       "source": "file:packages/shared/src/index.ts",
       "target": "symbol:packages/shared/src/index.ts#interface:SessionSummary",
-      "line": 47,
+      "line": 69,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -2390,11 +3732,48 @@
     {
       "type": "defines",
       "source": "file:packages/shared/src/index.ts",
+      "target": "symbol:packages/shared/src/index.ts#interface:UserDTO",
+      "line": 41,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:packages/shared/src/index.ts",
+      "target": "symbol:packages/shared/src/index.ts#type:InterviewerVoice",
+      "line": 39,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:packages/shared/src/index.ts",
       "target": "symbol:packages/shared/src/index.ts#type:SessionStatus",
       "line": 1,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:packages/shared/src/index.ts",
+      "target": "symbol:packages/shared/src/index.ts#variable:INTERVIEWER_VOICES",
+      "line": 38,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/index.ts",
+      "target": "file:apps/server/src/lib/auth.ts",
+      "specifier": "./lib/auth.js",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
     },
     {
       "type": "imports",
@@ -2409,9 +3788,19 @@
     {
       "type": "imports",
       "source": "file:apps/server/src/index.ts",
+      "target": "file:apps/server/src/routes/auth.ts",
+      "specifier": "./routes/auth.js",
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/index.ts",
       "target": "file:apps/server/src/routes/complete.ts",
       "specifier": "./routes/complete.js",
-      "line": 11,
+      "line": 13,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -2421,7 +3810,7 @@
       "source": "file:apps/server/src/index.ts",
       "target": "file:apps/server/src/routes/frame.ts",
       "specifier": "./routes/frame.js",
-      "line": 10,
+      "line": 12,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -2431,7 +3820,7 @@
       "source": "file:apps/server/src/index.ts",
       "target": "file:apps/server/src/routes/realtimeToken.ts",
       "specifier": "./routes/realtimeToken.js",
-      "line": 8,
+      "line": 10,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -2441,7 +3830,7 @@
       "source": "file:apps/server/src/index.ts",
       "target": "file:apps/server/src/routes/sessions.ts",
       "specifier": "./routes/sessions.js",
-      "line": 7,
+      "line": 9,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -2451,7 +3840,7 @@
       "source": "file:apps/server/src/index.ts",
       "target": "file:apps/server/src/routes/transcript.ts",
       "specifier": "./routes/transcript.js",
-      "line": 9,
+      "line": 11,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -2502,6 +3891,66 @@
       "target": "runtime:javascript:url",
       "specifier": "node:url",
       "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "file:apps/server/src/lib/env.ts",
+      "specifier": "./env.js",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "file:apps/server/src/lib/prisma.ts",
+      "specifier": "./prisma.js",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "package:npm:express",
+      "specifier": "express",
+      "line": 3,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "package:npm:google-auth-library",
+      "specifier": "google-auth-library",
+      "line": 4,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "runtime:javascript:crypto",
+      "specifier": "node:crypto",
+      "line": 1,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/lib/auth.ts",
+      "target": "runtime:javascript:util",
+      "specifier": "node:util",
+      "line": 2,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -2618,10 +4067,100 @@
     },
     {
       "type": "imports",
+      "source": "file:apps/server/src/routes/auth.ts",
+      "target": "file:apps/server/src/lib/auth.ts",
+      "specifier": "../lib/auth.js",
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/auth.ts",
+      "target": "file:apps/server/src/lib/env.ts",
+      "specifier": "../lib/env.js",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/auth.ts",
+      "target": "file:apps/server/src/lib/extractText.ts",
+      "specifier": "../lib/extractText.js",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/auth.ts",
+      "target": "file:apps/server/src/lib/prisma.ts",
+      "specifier": "../lib/prisma.js",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/auth.ts",
+      "target": "file:packages/shared/src/index.ts",
+      "specifier": "@interview-prep/shared",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/auth.ts",
+      "target": "package:npm:@prisma/client",
+      "specifier": "@prisma/client",
+      "line": 3,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/auth.ts",
+      "target": "package:npm:express",
+      "specifier": "express",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/auth.ts",
+      "target": "package:npm:multer",
+      "specifier": "multer",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/complete.ts",
+      "target": "file:apps/server/src/lib/auth.ts",
+      "specifier": "../lib/auth.js",
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
       "source": "file:apps/server/src/routes/complete.ts",
       "target": "file:apps/server/src/lib/interviewPlanning.ts",
       "specifier": "../lib/interviewPlanning.js",
-      "line": 4,
+      "line": 9,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -2631,7 +4170,7 @@
       "source": "file:apps/server/src/routes/complete.ts",
       "target": "file:apps/server/src/lib/prisma.ts",
       "specifier": "../lib/prisma.js",
-      "line": 3,
+      "line": 7,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -2641,6 +4180,46 @@
       "source": "file:apps/server/src/routes/complete.ts",
       "target": "file:packages/shared/src/index.ts",
       "specifier": "@interview-prep/shared",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/complete.ts",
+      "target": "package:npm:@prisma/client",
+      "specifier": "@prisma/client",
+      "line": 5,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/complete.ts",
+      "target": "package:npm:express",
+      "specifier": "express",
+      "line": 4,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/complete.ts",
+      "target": "runtime:javascript:fs",
+      "specifier": "node:fs/promises",
+      "line": 1,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/complete.ts",
+      "target": "runtime:javascript:path",
+      "specifier": "node:path",
       "line": 2,
       "resolved": true,
       "confidence": 0.85,
@@ -2649,11 +4228,21 @@
     {
       "type": "imports",
       "source": "file:apps/server/src/routes/complete.ts",
-      "target": "package:npm:express",
-      "specifier": "express",
-      "line": 1,
-      "resolved": false,
-      "confidence": 0.5,
+      "target": "runtime:javascript:url",
+      "specifier": "node:url",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/frame.ts",
+      "target": "file:apps/server/src/lib/auth.ts",
+      "specifier": "../lib/auth.js",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.85,
       "extractor": "javascript-imports"
     },
     {
@@ -2719,9 +4308,19 @@
     {
       "type": "imports",
       "source": "file:apps/server/src/routes/realtimeToken.ts",
+      "target": "file:apps/server/src/lib/auth.ts",
+      "specifier": "../lib/auth.js",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/realtimeToken.ts",
       "target": "file:apps/server/src/lib/openai.ts",
       "specifier": "../lib/openai.js",
-      "line": 5,
+      "line": 7,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -2731,7 +4330,7 @@
       "source": "file:apps/server/src/routes/realtimeToken.ts",
       "target": "file:apps/server/src/lib/prisma.ts",
       "specifier": "../lib/prisma.js",
-      "line": 3,
+      "line": 4,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -2741,7 +4340,7 @@
       "source": "file:apps/server/src/routes/realtimeToken.ts",
       "target": "file:apps/server/src/lib/realtime.ts",
       "specifier": "../lib/realtime.js",
-      "line": 4,
+      "line": 6,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -2751,9 +4350,19 @@
       "source": "file:apps/server/src/routes/realtimeToken.ts",
       "target": "file:packages/shared/src/index.ts",
       "specifier": "@interview-prep/shared",
-      "line": 2,
+      "line": 3,
       "resolved": true,
       "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/realtimeToken.ts",
+      "target": "package:npm:@prisma/client",
+      "specifier": "@prisma/client",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
       "extractor": "javascript-imports"
     },
     {
@@ -2769,9 +4378,19 @@
     {
       "type": "imports",
       "source": "file:apps/server/src/routes/sessions.ts",
+      "target": "file:apps/server/src/lib/auth.ts",
+      "specifier": "../lib/auth.js",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/sessions.ts",
       "target": "file:apps/server/src/lib/extractText.ts",
       "specifier": "../lib/extractText.js",
-      "line": 5,
+      "line": 6,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -2781,7 +4400,7 @@
       "source": "file:apps/server/src/routes/sessions.ts",
       "target": "file:apps/server/src/lib/interviewPlanning.ts",
       "specifier": "../lib/interviewPlanning.js",
-      "line": 6,
+      "line": 7,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -2824,6 +4443,16 @@
       "line": 2,
       "resolved": false,
       "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/transcript.ts",
+      "target": "file:apps/server/src/lib/auth.ts",
+      "specifier": "../lib/auth.js",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.85,
       "extractor": "javascript-imports"
     },
     {
@@ -2889,8 +4518,8 @@
     {
       "type": "imports",
       "source": "file:apps/web/next-env.d.ts",
-      "target": "unresolved:apps/web/next-env.d.ts:./.next/dev/types/root-params.d.ts",
-      "specifier": "./.next/dev/types/root-params.d.ts",
+      "target": "unresolved:apps/web/next-env.d.ts:./.next/types/root-params.d.ts",
+      "specifier": "./.next/types/root-params.d.ts",
       "line": 4,
       "resolved": false,
       "confidence": 0.4,
@@ -2899,8 +4528,8 @@
     {
       "type": "imports",
       "source": "file:apps/web/next-env.d.ts",
-      "target": "unresolved:apps/web/next-env.d.ts:./.next/dev/types/routes.d.ts",
-      "specifier": "./.next/dev/types/routes.d.ts",
+      "target": "unresolved:apps/web/next-env.d.ts:./.next/types/routes.d.ts",
+      "specifier": "./.next/types/routes.d.ts",
       "line": 3,
       "resolved": false,
       "confidence": 0.4,
@@ -2969,6 +4598,16 @@
     {
       "type": "imports",
       "source": "file:apps/web/src/app/layout.tsx",
+      "target": "file:apps/web/src/components/AppHeader.tsx",
+      "specifier": "@/components/AppHeader",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/layout.tsx",
       "target": "package:npm:next",
       "specifier": "next",
       "line": 1,
@@ -2991,9 +4630,59 @@
       "source": "file:apps/web/src/app/layout.tsx",
       "target": "unresolved:apps/web/src/app/layout.tsx:./globals.css",
       "specifier": "./globals.css",
-      "line": 3,
+      "line": 4,
       "resolved": false,
       "confidence": 0.4,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/login/page.tsx",
+      "target": "file:apps/web/src/components/ui/index.ts",
+      "specifier": "@/components/ui",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/login/page.tsx",
+      "target": "file:apps/web/src/lib/api.ts",
+      "specifier": "@/lib/api",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/login/page.tsx",
+      "target": "package:npm:next",
+      "specifier": "next/navigation",
+      "line": 4,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/login/page.tsx",
+      "target": "package:npm:next",
+      "specifier": "next/script",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/login/page.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 5,
+      "resolved": false,
+      "confidence": 0.5,
       "extractor": "javascript-imports"
     },
     {
@@ -3001,7 +4690,7 @@
       "source": "file:apps/web/src/app/page.tsx",
       "target": "file:apps/web/src/components/ui/index.ts",
       "specifier": "@/components/ui",
-      "line": 5,
+      "line": 6,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -3011,7 +4700,17 @@
       "source": "file:apps/web/src/app/page.tsx",
       "target": "file:apps/web/src/lib/api.ts",
       "specifier": "@/lib/api",
-      "line": 6,
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/page.tsx",
+      "target": "file:packages/shared/src/index.ts",
+      "specifier": "@interview-prep/shared",
+      "line": 5,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -3168,6 +4867,106 @@
     },
     {
       "type": "imports",
+      "source": "file:apps/web/src/app/settings/page.tsx",
+      "target": "file:apps/web/src/components/ui/index.ts",
+      "specifier": "@/components/ui",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/settings/page.tsx",
+      "target": "file:apps/web/src/lib/api.ts",
+      "specifier": "@/lib/api",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/settings/page.tsx",
+      "target": "file:packages/shared/src/index.ts",
+      "specifier": "@interview-prep/shared",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/settings/page.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/AppHeader.tsx",
+      "target": "file:apps/web/src/components/ui/index.ts",
+      "specifier": "@/components/ui",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/AppHeader.tsx",
+      "target": "file:apps/web/src/lib/api.ts",
+      "specifier": "@/lib/api",
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/AppHeader.tsx",
+      "target": "file:packages/shared/src/index.ts",
+      "specifier": "@interview-prep/shared",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/AppHeader.tsx",
+      "target": "package:npm:next",
+      "specifier": "next/link",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/AppHeader.tsx",
+      "target": "package:npm:next",
+      "specifier": "next/navigation",
+      "line": 4,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/AppHeader.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 5,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
       "source": "file:apps/web/src/components/ui/Button.tsx",
       "target": "package:npm:react",
       "specifier": "react",
@@ -3194,6 +4993,16 @@
       "line": 2,
       "resolved": false,
       "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/index.ts",
+      "target": "file:apps/web/src/components/ui/Avatar.tsx",
+      "specifier": "./Avatar",
+      "line": 9,
+      "resolved": true,
+      "confidence": 0.85,
       "extractor": "javascript-imports"
     },
     {
@@ -3249,6 +5058,16 @@
     {
       "type": "imports",
       "source": "file:apps/web/src/components/ui/index.ts",
+      "target": "file:apps/web/src/components/ui/Select.tsx",
+      "specifier": "./Select",
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/ui/index.ts",
       "target": "file:apps/web/src/components/ui/StepIndicator.tsx",
       "specifier": "./StepIndicator",
       "line": 5,
@@ -3278,6 +5097,16 @@
     },
     {
       "type": "imports",
+      "source": "file:apps/web/src/components/ui/Select.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
       "source": "file:apps/web/src/components/ui/Textarea.tsx",
       "target": "package:npm:react",
       "specifier": "react",
@@ -3289,6 +5118,6 @@
   ],
   "warnings": [],
   "stats": {
-    "unresolvedCalls": 99
+    "unresolvedCalls": 159
   }
 }

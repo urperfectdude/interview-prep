@@ -4,7 +4,7 @@
 
 - workflow: new-product
 - phase: verify
-- plan approval: yourerpcoach@gmail.com at 2026-09-14T03:15:28.291Z
+- plan approval: Prashanta Nayak at 2026-09-15T06:37:01.888Z
 
 ## Tasks
 
@@ -86,5 +86,13 @@
 - requirements: NFR-2
 - scope: not bounded
 - gates: build: npm run build -w apps/web
+- next: Run the task pre-flight.
+
+### T-13 — Sign-in (Google + email/password backup) with per-user session ownership and a Settings page (profile, saved resume, default role/seniority, interviewer voice)
+
+- state/risk: done / high
+- requirements: FR-7, FR-8, AC-6, AC-7, AC-8
+- scope: not bounded
+- gates: typecheck: npm run typecheck, build: npm run build -w apps/web, independent-review: pass
 - next: Run the task pre-flight.
 

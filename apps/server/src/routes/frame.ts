@@ -1,9 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { Router, type Request, type Response, type NextFunction } from "express";
+import { Router } from "express";
 import multer from "multer";
 import { prisma } from "../lib/prisma.js";
+import { requireOwnedSession } from "../lib/auth.js";
 
 export const frameRouter = Router();
 
@@ -34,28 +35,43 @@ const upload = multer({
   },
 });
 
-const SAFE_ID = /^[a-zA-Z0-9]+$/;
-
-function rejectUnsafeId(req: Request, res: Response, next: NextFunction) {
-  if (!SAFE_ID.test(req.params.id)) {
-    return res.status(400).json({ error: "Invalid session id." });
-  }
-  next();
-}
-
-frameRouter.post("/:id/frame", rejectUnsafeId, upload.single("frame"), async (req, res) => {
-  const session = await prisma.session.findUnique({ where: { id: req.params.id } });
-  if (!session) {
-    return res.status(404).json({ error: "Session not found." });
-  }
+// requireOwnedSession must run before multer: the upload directory is built from :id.
+frameRouter.post("/:id/frame", requireOwnedSession, upload.single("frame"), async (req, res) => {
   if (!req.file) {
     return res.status(400).json({ error: "frame file is required." });
   }
 
   const relativePath = path.relative(uploadsRoot, req.file.path);
   await prisma.frameCapture.create({
-    data: { sessionId: session.id, filePath: relativePath },
+    data: { sessionId: req.params.id, filePath: relativePath },
   });
 
   res.status(201).json({ ok: true });
+});
+
+frameRouter.get("/:id/frames", requireOwnedSession, async (req, res) => {
+  const frames = await prisma.frameCapture.findMany({
+    where: { sessionId: req.params.id },
+    orderBy: { capturedAt: "asc" },
+  });
+
+  res.json(
+    frames.map((frame) => ({
+      id: frame.id,
+      capturedAt: frame.capturedAt.toISOString(),
+      note: frame.note,
+      imageUrl: `/api/sessions/${req.params.id}/frames/${frame.id}/image`,
+    }))
+  );
+});
+
+frameRouter.get("/:id/frames/:frameId/image", requireOwnedSession, async (req, res) => {
+  const frame = await prisma.frameCapture.findFirst({
+    where: { id: req.params.frameId, sessionId: req.params.id },
+  });
+  if (!frame) {
+    return res.status(404).json({ error: "Frame not found." });
+  }
+
+  res.sendFile(path.join(uploadsRoot, frame.filePath));
 });
