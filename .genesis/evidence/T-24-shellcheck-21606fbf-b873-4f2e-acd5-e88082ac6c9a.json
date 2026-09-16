@@ -1,0 +1,30 @@
+{
+  "task": "T-24",
+  "gate": "shellcheck",
+  "kind": "command",
+  "attempt": "21606fbf-b873-4f2e-acd5-e88082ac6c9a",
+  "command": "bash -n deploy/setup-vm.sh && bash -n deploy/deploy.sh",
+  "started_at": "2026-09-16T12:19:24.784Z",
+  "observed_at": "2026-09-16T12:19:26.455Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "",
+  "stderr": "",
+  "failure": null,
+  "receipt": null,
+  "revision": {
+    "commit": "d93dd74b6cb241803276d0122b5848e5c8dc8431",
+    "dirty": true
+  },
+  "source_hash": "be5df1876748d3c8ed6cbad80739d046b501baee919b538cceb0196dc670832a",
+  "before_hash": "be5df1876748d3c8ed6cbad80739d046b501baee919b538cceb0196dc670832a",
+  "config_hash": "7e3a58927c75d916cddc7b07cb92a39fce031e23520c3ef639130db6fc5116ca",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "verifier": "358371454f03eb4fdfd3eda3cb1d18cb1dd8fe9445404bb3d3047267b3977eb9",
+    "variables": {}
+  },
+  "hash": "05a0ea91fd0d23676a0b80f620d587f4cb633fb0cddfd5f6745921cd68e7c694"
+}

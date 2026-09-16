@@ -78,27 +78,27 @@ Open `http://localhost:3000`, sign in (or create an email account), and start th
 
 - Email accounts have no email verification, password reset, or login rate limiting. Add those
   before exposing the app beyond localhost.
-- SQLite + local disk storage for uploads/frame captures — works for local dev, but most hosting
-  platforms wipe local disk on redeploy (see "Deploying" below).
+- SQLite + local disk storage for uploads/frame captures — fine on the single VM (see "Deploying"
+  below), but it can't scale past one server.
 - `express@4` pulls in a moderate-severity `qs` advisory transitively; fixing it requires an
   Express 5 major upgrade, deferred for this MVP.
 
 ## Deploying
 
-GitHub only hosts the code — pushing this repo there doesn't run it. A realistic path:
+The app runs on a single free-tier Google Cloud **e2-micro** VM (us-central1, Ubuntu 24.04, 30 GB
+standard disk) at `https://35-202-116-188.sslip.io`. SQLite (`apps/server/prisma/dev.db`) and
+frame captures (`apps/server/uploads/`) stay on the VM disk. Caddy serves HTTPS and sends `/api/*`
+to the Express server (port 4000) and everything else to Next.js (port 3000), so both share one
+origin and the `SameSite=Lax` session cookie works. Both apps run as systemd services
+(`interview-prep-server`, `interview-prep-web`).
 
-- **apps/web** → Vercel (auto-deploys from the GitHub repo on push).
-- **apps/server** → Railway / Render / Fly.io (needs a persistent Node process, not serverless
-  functions, for WebRTC token minting and file uploads).
-- **Database** → swap SQLite for a hosted Postgres (Railway/Render/Neon all offer one) — with
-  Prisma this is a one-line `datasource` change in `apps/server/prisma/schema.prisma`, no
-  application code changes.
-- **File uploads / frame captures** → move from local disk to object storage (S3 or Cloudflare
-  R2), since most PaaS disks are ephemeral.
-- **OPENAI_API_KEY**, **SESSION_SECRET**, **GOOGLE_CLIENT_ID** → set as secrets on the backend host,
-  never committed. Add the production web origin to the Google client's Authorized JavaScript origins.
-- **Cookies** → set `NODE_ENV=production` so the session cookie is `Secure`, and serve web and API
-  from the same site (e.g. `app.example.com` + `api.example.com`) so the `SameSite=Lax` cookie is sent.
+- **First-time VM setup** (swap, Node 24, Caddy, clone, services):
+  `gcloud compute ssh interview-prep --zone us-central1-a --command "sudo bash -s -- \$USER <site-host>" < deploy/setup-vm.sh`,
+  then write `apps/server/.env` (with `CORS_ORIGIN` set to the site URL and a fresh `SESSION_SECRET`)
+  and `apps/web/.env.local` (with `NEXT_PUBLIC_API_URL` set to the site URL) in `/opt/interview-prep`.
+- **Redeploy** after pushing to `main`: `./deploy/deploy.sh` (pulls, installs, runs migrations, builds, restarts).
+- **Logs**: `gcloud compute ssh interview-prep --zone us-central1-a --command "journalctl -u interview-prep-server -n 100"`.
+- **Google sign-in**: add the site URL to the OAuth client's Authorized JavaScript origins.
 
 ## Manual verification checklist
 

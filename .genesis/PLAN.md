@@ -4,7 +4,7 @@
 
 - workflow: new-product
 - phase: verify
-- plan approval: Prashanta Nayak at 2026-09-16T10:05:56.790Z
+- plan approval: Prashanta Nayak at 2026-09-16T11:27:24.530Z
 
 ## Tasks
 
@@ -166,5 +166,21 @@
 - requirements: FR-4
 - scope: not bounded
 - gates: typecheck: npm run typecheck, lint: npm run lint -w apps/web, build: npm run build -w apps/web
+- next: Run the task pre-flight.
+
+### T-23 — App deploys to Railway: API service with a volume holding SQLite and snapshot uploads (UPLOADS_DIR, migrate deploy on start), web service proxying /api to the API over private networking so the session cookie stays first-party
+
+- state/risk: rejected / low
+- requirements: NFR-1
+- scope: not bounded
+- gates: typecheck: npm run typecheck, lint: npm run lint -w apps/web, build: npm run build
+- next: Run the task pre-flight.
+
+### T-24 — App runs on the GCP e2-micro VM at https://35-202-116-188.sslip.io: Caddy serves HTTPS and routes /api to the Express server and everything else to Next.js (same origin, so the lax session cookie works); SQLite and snapshot uploads stay on the VM disk; deploy/setup-vm.sh provisions the VM once and deploy/deploy.sh redeploys main
+
+- state/risk: done / low
+- requirements: NFR-3
+- scope: not bounded
+- gates: shellcheck: bash -n deploy/setup-vm.sh && bash -n deploy/deploy.sh, typecheck: npm run typecheck, live: curl -fsS https://35-202-116-188.sslip.io/health && curl -fsS -o /dev/null https://35-202-116-188.sslip.io/login
 - next: Run the task pre-flight.
 
