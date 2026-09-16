@@ -4,7 +4,7 @@
 
 - workflow: new-product
 - phase: verify
-- plan approval: Prashanta Nayak at 2026-09-15T15:59:53.253Z
+- plan approval: Prashanta Nayak at 2026-09-16T10:05:56.790Z
 
 ## Tasks
 
@@ -153,6 +153,14 @@
 - next: Run the task pre-flight.
 
 ### T-21 — Interview frame capture works in dev and prod: endingRef is reset when the interview page (re)mounts so React Strict Mode's simulated unmount no longer disables capture, and the first frame is captured ~2s after the voice connection opens (then every 20-45s), so every session gets a dashboard thumbnail and results frame note.
+
+- state/risk: done / low
+- requirements: FR-4
+- scope: not bounded
+- gates: typecheck: npm run typecheck, lint: npm run lint -w apps/web, build: npm run build -w apps/web
+- next: Run the task pre-flight.
+
+### T-22 — Every interview frame snapshot (first ~2s after connect, then random 20-45s) is analyzed with OpenAI vision when uploaded, and the results page shows each snapshot with its note
 
 - state/risk: done / low
 - requirements: FR-4

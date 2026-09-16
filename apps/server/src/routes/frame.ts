@@ -5,6 +5,7 @@ import { Router } from "express";
 import multer from "multer";
 import { prisma } from "../lib/prisma.js";
 import { requireOwnedSession } from "../lib/auth.js";
+import { generateFrameInsight } from "../lib/interviewPlanning.js";
 
 export const frameRouter = Router();
 
@@ -42,11 +43,19 @@ frameRouter.post("/:id/frame", requireOwnedSession, upload.single("frame"), asyn
   }
 
   const relativePath = path.relative(uploadsRoot, req.file.path);
-  await prisma.frameCapture.create({
+  const frame = await prisma.frameCapture.create({
     data: { sessionId: req.params.id, filePath: relativePath },
   });
 
   res.status(201).json({ ok: true });
+
+  // Analyze each snapshot as it arrives so the interview isn't slowed and results don't wait on a batch.
+  const { path: filePath, mimetype } = req.file;
+  fs.promises
+    .readFile(filePath)
+    .then((buffer) => generateFrameInsight(buffer.toString("base64"), mimetype))
+    .then((note) => prisma.frameCapture.update({ where: { id: frame.id }, data: { note } }))
+    .catch((err) => console.warn("Failed to analyze frame (non-blocking):", err));
 });
 
 frameRouter.get("/:id/frames", requireOwnedSession, async (req, res) => {

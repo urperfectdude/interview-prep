@@ -157,7 +157,6 @@ export default function ResultsPage() {
   const highlightedFeedback = summary.feedback.filter(
     (item) => highlightFilter === "all" || item.strength === highlightFilter
   );
-  const latestFrame = frames.length > 0 ? frames[frames.length - 1] : null;
 
   return (
     <main className="mx-auto w-full max-w-6xl animate-enter px-4 py-10">
@@ -250,24 +249,31 @@ export default function ResultsPage() {
             </CardContent>
           </Card>
 
-          {latestFrame && (
+          {frames.length > 0 && (
             <Card className="shrink-0">
               <CardHeader>
-                <CardTitle>Environment &amp; presence</CardTitle>
+                <CardTitle>On-camera presence</CardTitle>
                 <CardDescription>
-                  A soft, informational read from a single still frame — never a score or pass/fail signal.
+                  Random webcam snapshots, each read by AI — informational only, never a score or pass/fail signal.
                 </CardDescription>
               </CardHeader>
-              <CardContent className="flex gap-4">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={apiUrl(latestFrame.imageUrl)}
-                  alt="A still frame captured during your interview"
-                  className="h-20 w-28 flex-none rounded-md object-cover ring-1 ring-border"
-                />
-                <p className="text-sm text-muted-foreground">
-                  {latestFrame.note ?? "No environment note generated for this session."}
-                </p>
+              <CardContent className="max-h-72 space-y-4 overflow-y-auto">
+                {frames.map((frame, index) => (
+                  <div key={frame.id} className="flex gap-4">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={apiUrl(frame.imageUrl)}
+                      alt={`Webcam snapshot ${index + 1} from your interview`}
+                      className="h-20 w-28 flex-none rounded-md object-cover ring-1 ring-border"
+                    />
+                    <div className="text-sm">
+                      <p className="text-xs font-medium tabular-nums text-muted-foreground">
+                        Snapshot {index + 1} · {new Date(frame.capturedAt).toLocaleTimeString()}
+                      </p>
+                      <p className="mt-0.5 text-muted-foreground">{frame.note ?? "Analysis not available yet."}</p>
+                    </div>
+                  </div>
+                ))}
               </CardContent>
             </Card>
           )}

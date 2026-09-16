@@ -112,10 +112,7 @@ digraph genesis {
   "symbol:apps/server/src/routes/auth.ts#variable:EMAIL_PATTERN" [label="EMAIL_PATTERN",class="symbol"];
   "symbol:apps/server/src/routes/auth.ts#variable:MIN_PASSWORD_LENGTH" [label="MIN_PASSWORD_LENGTH",class="symbol"];
   "symbol:apps/server/src/routes/auth.ts#variable:upload" [label="upload",class="symbol"];
-  "symbol:apps/server/src/routes/complete.ts#function:generateLatestFrameInsight" [label="generateLatestFrameInsight",class="symbol"];
-  "symbol:apps/server/src/routes/complete.ts#variable:__dirname" [label="__dirname",class="symbol"];
   "symbol:apps/server/src/routes/complete.ts#variable:completeRouter" [label="completeRouter",class="symbol"];
-  "symbol:apps/server/src/routes/complete.ts#variable:uploadsRoot" [label="uploadsRoot",class="symbol"];
   "symbol:apps/server/src/routes/frame.ts#variable:__dirname" [label="__dirname",class="symbol"];
   "symbol:apps/server/src/routes/frame.ts#variable:frameRouter" [label="frameRouter",class="symbol"];
   "symbol:apps/server/src/routes/frame.ts#variable:storage" [label="storage",class="symbol"];
@@ -251,8 +248,8 @@ digraph genesis {
   "symbol:apps/server/src/routes/auth.ts#function:readCredentials" -> "symbol:apps/server/src/lib/auth.ts#function:verifyPassword" [label="calls"];
   "symbol:apps/server/src/routes/auth.ts#function:readCredentials" -> "symbol:apps/server/src/lib/extractText.ts#function:extractTextFromFile" [label="calls"];
   "symbol:apps/server/src/routes/auth.ts#function:readCredentials" -> "symbol:apps/server/src/routes/auth.ts#function:toUserDTO" [label="calls"];
-  "symbol:apps/server/src/routes/complete.ts#function:generateLatestFrameInsight" -> "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateFrameInsight" [label="calls"];
-  "symbol:apps/server/src/routes/complete.ts#function:generateLatestFrameInsight" -> "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateSessionSummary" [label="calls"];
+  "symbol:apps/server/src/routes/complete.ts#variable:completeRouter" -> "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateSessionSummary" [label="calls"];
+  "symbol:apps/server/src/routes/frame.ts#variable:upload" -> "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateFrameInsight" [label="calls"];
   "symbol:apps/server/src/routes/realtimeToken.ts#variable:realtimeTokenRouter" -> "symbol:apps/server/src/lib/realtime.ts#function:buildInterviewerInstructions" [label="calls"];
   "symbol:apps/server/src/routes/realtimeToken.ts#variable:realtimeTokenRouter" -> "symbol:apps/server/src/lib/realtime.ts#function:createRealtimeEphemeralSession" [label="calls"];
   "symbol:apps/server/src/routes/sessions.ts#function:toSessionDTO" -> "symbol:apps/server/src/lib/extractText.ts#function:extractTextFromFile" [label="calls"];
@@ -326,10 +323,7 @@ digraph genesis {
   "file:apps/server/src/routes/auth.ts" -> "symbol:apps/server/src/routes/auth.ts#variable:EMAIL_PATTERN" [label="defines"];
   "file:apps/server/src/routes/auth.ts" -> "symbol:apps/server/src/routes/auth.ts#variable:MIN_PASSWORD_LENGTH" [label="defines"];
   "file:apps/server/src/routes/auth.ts" -> "symbol:apps/server/src/routes/auth.ts#variable:upload" [label="defines"];
-  "file:apps/server/src/routes/complete.ts" -> "symbol:apps/server/src/routes/complete.ts#function:generateLatestFrameInsight" [label="defines"];
-  "file:apps/server/src/routes/complete.ts" -> "symbol:apps/server/src/routes/complete.ts#variable:__dirname" [label="defines"];
   "file:apps/server/src/routes/complete.ts" -> "symbol:apps/server/src/routes/complete.ts#variable:completeRouter" [label="defines"];
-  "file:apps/server/src/routes/complete.ts" -> "symbol:apps/server/src/routes/complete.ts#variable:uploadsRoot" [label="defines"];
   "file:apps/server/src/routes/frame.ts" -> "symbol:apps/server/src/routes/frame.ts#variable:__dirname" [label="defines"];
   "file:apps/server/src/routes/frame.ts" -> "symbol:apps/server/src/routes/frame.ts#variable:frameRouter" [label="defines"];
   "file:apps/server/src/routes/frame.ts" -> "symbol:apps/server/src/routes/frame.ts#variable:storage" [label="defines"];
@@ -488,10 +482,8 @@ digraph genesis {
   "file:apps/server/src/routes/complete.ts" -> "file:packages/shared/src/index.ts" [label="imports"];
   "file:apps/server/src/routes/complete.ts" -> "package:npm:@prisma/client" [label="imports"];
   "file:apps/server/src/routes/complete.ts" -> "package:npm:express" [label="imports"];
-  "file:apps/server/src/routes/complete.ts" -> "runtime:javascript:fs" [label="imports"];
-  "file:apps/server/src/routes/complete.ts" -> "runtime:javascript:path" [label="imports"];
-  "file:apps/server/src/routes/complete.ts" -> "runtime:javascript:url" [label="imports"];
   "file:apps/server/src/routes/frame.ts" -> "file:apps/server/src/lib/auth.ts" [label="imports"];
+  "file:apps/server/src/routes/frame.ts" -> "file:apps/server/src/lib/interviewPlanning.ts" [label="imports"];
   "file:apps/server/src/routes/frame.ts" -> "file:apps/server/src/lib/prisma.ts" [label="imports"];
   "file:apps/server/src/routes/frame.ts" -> "package:npm:express" [label="imports"];
   "file:apps/server/src/routes/frame.ts" -> "package:npm:multer" [label="imports"];

@@ -116,16 +116,17 @@ export async function generateFrameInsight(imageBase64: string, mimeType: string
       {
         role: "system",
         content:
-          "You are giving a candidate a brief, kind, informational note about their visible environment and posture " +
-          "from a single still frame taken during a mock interview. This is never a score or pass/fail judgment - " +
-          "just a soft, practical observation (e.g. lighting, framing, posture, background) in 1-2 short sentences. " +
-          "Never comment on appearance, identity, or anything unrelated to environment/posture/presence. " +
+          "You are giving a candidate a brief, kind, informational note from a single webcam snapshot taken during a " +
+          "mock interview. Observe on-camera presence: eye contact with the camera, posture, apparent engagement and " +
+          "expression, framing, lighting, and background distractions. This is never a score or pass/fail judgment - " +
+          "reply in 1-2 short, practical sentences. " +
+          "Never comment on appearance, identity, or anything unrelated to presence/posture/environment. " +
           "Always respond in English.",
       },
       {
         role: "user",
         content: [
-          { type: "text", text: "Give a brief, informational note on the environment and posture in this frame." },
+          { type: "text", text: "Give a brief note on on-camera presence, posture, and environment in this snapshot." },
           { type: "image_url", image_url: { url: `data:${mimeType};base64,${imageBase64}` } },
         ],
       },
