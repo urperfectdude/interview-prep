@@ -1,11 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { FileText, LogOut } from "lucide-react";
+import { FileText, KeyRound } from "lucide-react";
 import { INTERVIEWER_VOICES, type UserDTO } from "@interview-prep/shared";
 import {
-  Avatar,
-  Badge,
   Button,
   Card,
   CardContent,
@@ -20,7 +18,7 @@ import {
   Select,
   Spinner,
 } from "@/components/ui";
-import { apiFetch, signOut } from "@/lib/api";
+import { apiFetch, getOpenAIKey, setOpenAIKey } from "@/lib/api";
 
 const SENIORITY_LEVELS = ["Intern", "Entry level", "Mid level", "Senior", "Staff / Principal", "Manager", "Director or above"];
 
@@ -41,6 +39,9 @@ export default function SettingsPage() {
   const [preferencesNotice, setPreferencesNotice] = useState<NoticeState>(null);
   const [isUploading, setIsUploading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+  const [openaiKey, setOpenaiKeyInput] = useState("");
+  const [hasOpenaiKey, setHasOpenaiKey] = useState(false);
+  const [keyNotice, setKeyNotice] = useState<NoticeState>(null);
 
   const applyUser = useCallback((next: UserDTO) => {
     setUser(next);
@@ -55,6 +56,7 @@ export default function SettingsPage() {
       .then((res) => (res.ok ? (res.json() as Promise<UserDTO>) : null))
       .then((data) => {
         if (data) applyUser(data);
+        setHasOpenaiKey(Boolean(getOpenAIKey()));
       })
       .catch((err) => console.warn("Failed to load settings:", err));
   }, [applyUser]);
@@ -85,6 +87,13 @@ export default function SettingsPage() {
       setUser(await res.json());
       setResumeNotice({ tone: "success", message: "Saved resume removed." });
     }
+  }
+
+  function saveOpenaiKey(key: string) {
+    setOpenAIKey(key);
+    setHasOpenaiKey(Boolean(key));
+    setOpenaiKeyInput("");
+    setKeyNotice({ tone: "success", message: key ? "API key saved on this device." : "API key removed from this device." });
   }
 
   async function savePreferences() {
@@ -122,26 +131,53 @@ export default function SettingsPage() {
     <main className="mx-auto w-full max-w-2xl animate-enter space-y-6 px-4 py-10">
       <div>
         <h1 className="text-2xl font-semibold tracking-tight">Settings</h1>
-        <p className="mt-1 text-sm text-muted-foreground">Manage your profile, resume, and interview defaults.</p>
+        <p className="mt-1 text-sm text-muted-foreground">Manage your API key, resume, and interview defaults.</p>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Profile</CardTitle>
+          <CardTitle>OpenAI API key</CardTitle>
+          <CardDescription>
+            Interviews and feedback run on your own OpenAI account. Your key is stored only on this device and sent
+            with each request; we never save it.{" "}
+            <a
+              href="https://platform.openai.com/api-keys"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium text-primary underline-offset-4 hover:underline"
+            >
+              Get a key
+            </a>
+          </CardDescription>
         </CardHeader>
-        <CardContent className="flex flex-wrap items-center gap-4">
-          <Avatar name={user.name} email={user.email} picture={user.picture} size="lg" />
-          <div className="min-w-0 flex-1">
-            <p className="font-medium">{user.name ?? "No name set"}</p>
-            <p className="truncate text-sm text-muted-foreground">{user.email}</p>
-            <Badge variant="secondary" className="mt-2">
-              {user.googleLinked ? "Signed in with Google" : "Email and password account"}
-            </Badge>
+        <CardContent className="space-y-4">
+          {hasOpenaiKey && (
+            <div className="flex items-center gap-3 rounded-lg border bg-muted/40 py-1.5 pl-3 pr-1.5">
+              <KeyRound className="size-4 flex-none text-muted-foreground" />
+              <span className="min-w-0 flex-1 truncate text-sm font-medium">Key saved on this device</span>
+              <Button variant="ghost" size="sm" onClick={() => saveOpenaiKey("")}>
+                Remove
+              </Button>
+            </div>
+          )}
+          <div>
+            <Label htmlFor="openaiKey">{hasOpenaiKey ? "Replace key" : "API key"}</Label>
+            <Input
+              id="openaiKey"
+              type="password"
+              autoComplete="off"
+              placeholder="sk-..."
+              value={openaiKey}
+              onChange={(e) => setOpenaiKeyInput(e.target.value)}
+            />
           </div>
-          <Button variant="outline" onClick={signOut}>
-            <LogOut /> Sign out
-          </Button>
         </CardContent>
+        <CardFooter className="flex-wrap justify-between">
+          <div className="min-w-0">{keyNotice && <Notice tone={keyNotice.tone}>{keyNotice.message}</Notice>}</div>
+          <Button onClick={() => saveOpenaiKey(openaiKey.trim())} disabled={!openaiKey.trim()}>
+            Save key
+          </Button>
+        </CardFooter>
       </Card>
 
       <Card>

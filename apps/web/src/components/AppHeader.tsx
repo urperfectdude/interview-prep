@@ -10,8 +10,8 @@ import { Logo } from "@/components/Logo";
 import { UserMenu } from "@/components/UserMenu";
 import { apiFetch } from "@/lib/api";
 
-// Landing and login are public and bring their own minimal chrome; /api/me would 401-redirect them.
-const PUBLIC_PATHS = ["/", "/login"];
+// The landing page brings its own minimal chrome.
+const PUBLIC_PATHS = ["/"];
 
 export function AppHeader() {
   const pathname = usePathname();

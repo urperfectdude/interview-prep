@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "project": "interview-prep",
-  "revision": "d93dd74b6cb241803276d0122b5848e5c8dc8431",
-  "sourceHash": "748b916c86e5539fd7816205328a6c4522e169f36ec2897f69bc048719448772",
+  "revision": "e332ae9ab201dc323c016adf750f44f67b714c3f",
+  "sourceHash": "e7163aab4efdebe2dd509ab5e98d9776225293b49ccd4cbc6b9a46316bd2ffaa",
   "provenance": {
     "tool": "genesis-graphizer",
     "method": "static-analysis",
@@ -27,7 +27,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "62d91524f57f161b9e071d00258a1a3827b5bd7668453910ac3b6a5a8b64792d"
+      "contentHash": "ef4cab081e3d28f359d23ce39bcadda9be5ce2969a22259ca38ea26a06b4bdc7"
     },
     {
       "id": "file:apps/server/src/lib/env.ts",
@@ -37,7 +37,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "74af2e23503dd183efa673b8122091aec546c457a28851e2b76d771651142955"
+      "contentHash": "548ac2e4de0fa287900a65248dd4a235d5092d481777c0321954508081a787bf"
     },
     {
       "id": "file:apps/server/src/lib/extractText.ts",
@@ -57,7 +57,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "40651a1f70426f33f22c710d69236752e6f7b225194797c86725d04237388f7d"
+      "contentHash": "49f395ab144b25cee157f9d3af52657b46d9cd32831f38b1edd872424d366f34"
     },
     {
       "id": "file:apps/server/src/lib/openai.ts",
@@ -67,7 +67,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "ac8b3222afd36fd6086818d2de4f3a164e2fa3dcb4586014f444ca589f19d867"
+      "contentHash": "3c9a9d68429b47cc77ea3d42144cad5c64c37f1a99f793e679e4c00e072d3c76"
     },
     {
       "id": "file:apps/server/src/lib/prisma.ts",
@@ -87,7 +87,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "f1dd41f77260e712b24656debf8e13e095dba302a676c98bebd0dc3d2d202503"
+      "contentHash": "1ee1e416b006e60a21721536889d3bcb45a55e6b7cf5ea33f16c01a7594afae9"
     },
     {
       "id": "file:apps/server/src/routes/auth.ts",
@@ -97,7 +97,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "5660b1c975ba7bbb73259c5bcdcd7eb94feabf13dca6e687c450e1c5a147ebb0"
+      "contentHash": "b9ef2322a8cab46e2435d915905440e11458bbf3598fb87d874cb9c97bdf4362"
     },
     {
       "id": "file:apps/server/src/routes/complete.ts",
@@ -107,7 +107,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "2f8ae8a578ab6f533deecd246925065333291714ac1f74cfcafcc9db10e4e72f"
+      "contentHash": "a93b3f5a1c14570671a0d32ff2239fe13df4993b357724173f67bf1e379aa7df"
     },
     {
       "id": "file:apps/server/src/routes/frame.ts",
@@ -117,7 +117,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "eaebd86ad3f5284f0dba80f77c3541857d0f36200cb34a5248454aae69cb0619"
+      "contentHash": "f5f9f153d681d2ed3ecc4b1661d544305361a44196a844308c0263fe47d9b287"
     },
     {
       "id": "file:apps/server/src/routes/realtimeToken.ts",
@@ -127,7 +127,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "7ece99ae72bfd3e0d3a14a6dfd501a01bb9296364bcea61f898d61b33c31ce09"
+      "contentHash": "55b0ab0afe816e07499271697247ee37f6d26ef0e9c6fa40923774cd4260595e"
     },
     {
       "id": "file:apps/server/src/routes/sessions.ts",
@@ -137,7 +137,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "aa13c9eb91d0002b44bd705888f722c8d2165e0e10eb2233aa73dbe1141eaed8"
+      "contentHash": "ab16d17e29bac3636975807fcbc582b1fa68ed5765d45c236d57af117c70123a"
     },
     {
       "id": "file:apps/server/src/routes/transcript.ts",
@@ -167,7 +167,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "1862ac4bbbc5192d4bf562161df66ea547ed3e67173100656ab606ae9797db2b"
+      "contentHash": "0f70629890b72a0a82e91972cc032c04b658b26c265373cb711cf576bfbf8fcc"
     },
     {
       "id": "file:apps/web/next.config.ts",
@@ -207,17 +207,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "b9353e1cecffec3445187e3a86d2e4a93f0720fdf78c7d68fd9188bc90b9a380"
-    },
-    {
-      "id": "file:apps/web/src/app/login/page.tsx",
-      "type": "file",
-      "label": "apps/web/src/app/login/page.tsx",
-      "path": "apps/web/src/app/login/page.tsx",
-      "language": "javascript",
-      "confidence": 1,
-      "extractor": "filesystem",
-      "contentHash": "f6ca435e1ad675b193fa282f0382bb3f51f332da89e80746cc4b0d041dd8e349"
+      "contentHash": "fad5d016581852a4b1e73ffe7de369971ab992524f48d09d2d43c116126d9487"
     },
     {
       "id": "file:apps/web/src/app/new/page.tsx",
@@ -237,7 +227,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "9a757ecd29196fc65346c33e61097d248af0946443ae65400ad2112e36770855"
+      "contentHash": "cd5717596d98e9f2265a6bcce8281150d66747baabe387795f3b9997f86ce782"
     },
     {
       "id": "file:apps/web/src/app/session/[id]/interview/page.tsx",
@@ -247,7 +237,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "518a42cce4e53dd02a3160f9ac6cfa867e8aa38e0e2b6ba8c4a96e1fcc1885fc"
+      "contentHash": "2512bff8e3b825b89cde28582105034fa45cb471f92a1fa0bd40368c9c9227bc"
     },
     {
       "id": "file:apps/web/src/app/session/[id]/permissions/page.tsx",
@@ -277,7 +267,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "bd5d4b44981b461bfac2df8072fa86e7b3d24c7979eb3e1a8705d81e6ee64f88"
+      "contentHash": "e6e76f40158817c4f8558dcfc81e0ad3eaa6ad2712df856fb6b8b925b46664dc"
     },
     {
       "id": "file:apps/web/src/components/AppHeader.tsx",
@@ -287,7 +277,17 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "e2f427e399b97fb64354179dafa791c2e1ae6d6a8f42ac47764903c3384083df"
+      "contentHash": "d8834c5e00da59d510105dd9411f71681c4da2be1e19f799126949b6d008cdba"
+    },
+    {
+      "id": "file:apps/web/src/components/FeatureSlider.tsx",
+      "type": "file",
+      "label": "apps/web/src/components/FeatureSlider.tsx",
+      "path": "apps/web/src/components/FeatureSlider.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "f9679c2cf1dae5ea6cef3b51a33fcb8749db7d83ea63389a0961e49afa169a6d"
     },
     {
       "id": "file:apps/web/src/components/Logo.tsx",
@@ -298,6 +298,16 @@
       "confidence": 1,
       "extractor": "filesystem",
       "contentHash": "f013f69bdecc4b88d394eb02c66166d16ed7c03ce891d6b881e77e9f0eba72fd"
+    },
+    {
+      "id": "file:apps/web/src/components/OpenAIKeyGate.tsx",
+      "type": "file",
+      "label": "apps/web/src/components/OpenAIKeyGate.tsx",
+      "path": "apps/web/src/components/OpenAIKeyGate.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "5c4580273926d002441064e2015f96b4a9849169e34a4c2799639b2b3164c7a0"
     },
     {
       "id": "file:apps/web/src/components/ThemeToggle.tsx",
@@ -317,7 +327,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "6683777aae514dde930b0cf3e64e712259a2b797d5ce9c6a0f91864d0c9402f6"
+      "contentHash": "56021fa649af7b0c12f83e64fbf198c8ea2b0de09788bb0534ede464cc5bb7ce"
     },
     {
       "id": "file:apps/web/src/components/ui/Badge.tsx",
@@ -457,7 +467,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "79a0db2e6534c6bd07c4146623fe77625e38b8bf4fb7a7abc91e6338df62dcb7"
+      "contentHash": "0aa8d1971fe4e19dcf7a09ead9999ffedf30e592fa9f31a25f45ea62ee1a54be"
     },
     {
       "id": "file:apps/web/src/lib/api.ts",
@@ -467,7 +477,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "bdf7e9d284b6d64ab63ca79ae4c2d0a810370e2bd31ec41d4fedf0cdda4af6ca"
+      "contentHash": "7300386b230393425e295f59ea8949ee4252b0648ab356e6dbc89c1cd082829b"
     },
     {
       "id": "file:apps/web/src/lib/frameCapture.ts",
@@ -487,7 +497,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "f130774f9c6f6cb978a7f7c6bb70eb1dde2287e8f31c2be1d4f79b505ce2d780"
+      "contentHash": "f4feefce1e07d05eb59642712f32c7605e5c1cc9f38346c6c03b80f85ba213ca"
     },
     {
       "id": "package:npm:@prisma/client",
@@ -551,15 +561,6 @@
       "confidence": 0.85,
       "extractor": "import",
       "contentHash": "4136311bd46da100cda133c0956cc1793d3dd287cc9ec7f16b6a4c6b35e705f0"
-    },
-    {
-      "id": "package:npm:google-auth-library",
-      "type": "package",
-      "label": "google-auth-library",
-      "ecosystem": "npm",
-      "confidence": 0.85,
-      "extractor": "import",
-      "contentHash": "e9865bd81aa7cf58f4b54d47cac8f9c9e6954a89ba4af48104c71f5fbad39383"
     },
     {
       "id": "package:npm:lucide-react",
@@ -652,15 +653,6 @@
       "contentHash": "9bdfc951f6a3e0da297fef7f4afa15303ef30783c01058103248b470fd2d7207"
     },
     {
-      "id": "runtime:javascript:util",
-      "type": "runtime",
-      "label": "util",
-      "language": "javascript",
-      "confidence": 0.85,
-      "extractor": "standard-library",
-      "contentHash": "e957e69a37f0b2993f28638865c2294b623dd455227d3eb40e3bcf4ce463a332"
-    },
-    {
       "id": "symbol:apps/server/src/index.ts#variable:__dirname",
       "type": "symbol",
       "kind": "variable",
@@ -697,37 +689,13 @@
       "contentHash": "a986512ef72f599a1a00e424be01700c6733d2fba52f077a74303b6557e29112"
     },
     {
-      "id": "symbol:apps/server/src/lib/auth.ts#function:clearSessionCookie",
-      "type": "symbol",
-      "kind": "function",
-      "name": "clearSessionCookie",
-      "label": "clearSessionCookie",
-      "path": "apps/server/src/lib/auth.ts",
-      "line": 46,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "9cca95824d283599140b2c2e27186c6f77b5acde3aed1ce747dbff177409ede6"
-    },
-    {
-      "id": "symbol:apps/server/src/lib/auth.ts#function:hashPassword",
-      "type": "symbol",
-      "kind": "function",
-      "name": "hashPassword",
-      "label": "hashPassword",
-      "path": "apps/server/src/lib/auth.ts",
-      "line": 16,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "f843d1a784a5ca2a9960a605d6f62fa1cdda64081d38df6d92e18ebc9b18ab73"
-    },
-    {
       "id": "symbol:apps/server/src/lib/auth.ts#function:readSessionUserId",
       "type": "symbol",
       "kind": "function",
       "name": "readSessionUserId",
       "label": "readSessionUserId",
       "path": "apps/server/src/lib/auth.ts",
-      "line": 50,
+      "line": 26,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "ec17e017d3dd5db6dd2a43b5f6a50635b95f8aa27a78cabfd644151d617370d8"
@@ -739,7 +707,7 @@
       "name": "requireOwnedSession",
       "label": "requireOwnedSession",
       "path": "apps/server/src/lib/auth.ts",
-      "line": 79,
+      "line": 62,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "fc58259449133fd7487082097c637d842b8a59c32ccd09bccb5ebdd30742a522"
@@ -751,7 +719,7 @@
       "name": "requireUser",
       "label": "requireUser",
       "path": "apps/server/src/lib/auth.ts",
-      "line": 70,
+      "line": 48,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "5b536d14c2bd3bd58c63e49d3314f8d2d69fee66482d5694c868c6010dc014ec"
@@ -763,7 +731,7 @@
       "name": "setSessionCookie",
       "label": "setSessionCookie",
       "path": "apps/server/src/lib/auth.ts",
-      "line": 34,
+      "line": 14,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "d49f83b5b556b677f486712b22927c6ea1a30d4c7a755243f493773aa0798d60"
@@ -775,34 +743,10 @@
       "name": "sign",
       "label": "sign",
       "path": "apps/server/src/lib/auth.ts",
-      "line": 30,
+      "line": 10,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "614dee1352ed3ae8ddc559414606e64b9fd7709f634259f81ae214a6ba9cdf72"
-    },
-    {
-      "id": "symbol:apps/server/src/lib/auth.ts#function:verifyGoogleCredential",
-      "type": "symbol",
-      "kind": "function",
-      "name": "verifyGoogleCredential",
-      "label": "verifyGoogleCredential",
-      "path": "apps/server/src/lib/auth.ts",
-      "line": 89,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "c72e8c3a02f3841f29760792580398e26fc5341eb409bf89679285775b7930ad"
-    },
-    {
-      "id": "symbol:apps/server/src/lib/auth.ts#function:verifyPassword",
-      "type": "symbol",
-      "kind": "function",
-      "name": "verifyPassword",
-      "label": "verifyPassword",
-      "path": "apps/server/src/lib/auth.ts",
-      "line": 22,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "1cfca167fa89fc1f248e242d05626870d87aa41215c8e11206edf79e16716e22"
     },
     {
       "id": "symbol:apps/server/src/lib/auth.ts#variable:COOKIE_NAME",
@@ -811,46 +755,10 @@
       "name": "COOKIE_NAME",
       "label": "COOKIE_NAME",
       "path": "apps/server/src/lib/auth.ts",
-      "line": 10,
+      "line": 6,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "9c5f8da92ebd9202a0235463ba1397dd0e94168a4bd4b25e3adb0acaefb9feb0"
-    },
-    {
-      "id": "symbol:apps/server/src/lib/auth.ts#variable:googleClient",
-      "type": "symbol",
-      "kind": "variable",
-      "name": "googleClient",
-      "label": "googleClient",
-      "path": "apps/server/src/lib/auth.ts",
-      "line": 14,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "41096c7514f6ec1ca3c70e123247456c5a1801ec5852f30ffb7d4fb70ac030f9"
-    },
-    {
-      "id": "symbol:apps/server/src/lib/auth.ts#variable:KEY_LENGTH",
-      "type": "symbol",
-      "kind": "variable",
-      "name": "KEY_LENGTH",
-      "label": "KEY_LENGTH",
-      "path": "apps/server/src/lib/auth.ts",
-      "line": 12,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "61f4a3e8424b95994a07d68f6e92c7561b49a8c981de1a3897099c57a25981bf"
-    },
-    {
-      "id": "symbol:apps/server/src/lib/auth.ts#variable:scrypt",
-      "type": "symbol",
-      "kind": "variable",
-      "name": "scrypt",
-      "label": "scrypt",
-      "path": "apps/server/src/lib/auth.ts",
-      "line": 8,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "9c4948721e14f6f38c697115acf68ebea68157448c187d31a8064a5ee5c86af1"
     },
     {
       "id": "symbol:apps/server/src/lib/auth.ts#variable:SESSION_TTL_SECONDS",
@@ -859,7 +767,7 @@
       "name": "SESSION_TTL_SECONDS",
       "label": "SESSION_TTL_SECONDS",
       "path": "apps/server/src/lib/auth.ts",
-      "line": 11,
+      "line": 8,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "03eeb0eca2ac4f7b141499234fa00d9800573f381a77b8c2b43dbd222154d0b8"
@@ -967,7 +875,7 @@
       "name": "generateFrameInsight",
       "label": "generateFrameInsight",
       "path": "apps/server/src/lib/interviewPlanning.ts",
-      "line": 112,
+      "line": 113,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "6f31ff3092d91ef46b542b1f96c37c96286836949f49a07b356b002613f7b529"
@@ -1033,16 +941,64 @@
       "contentHash": "621454faba24bbf29f09c5468a75f04c3adc7471ab551ecec349f51872541e06"
     },
     {
-      "id": "symbol:apps/server/src/lib/openai.ts#variable:openai",
+      "id": "symbol:apps/server/src/lib/openai.ts#function:isKeyRejected",
       "type": "symbol",
-      "kind": "variable",
-      "name": "openai",
-      "label": "openai",
+      "kind": "function",
+      "name": "isKeyRejected",
+      "label": "isKeyRejected",
       "path": "apps/server/src/lib/openai.ts",
-      "line": 4,
+      "line": 23,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
-      "contentHash": "4aae77e11dd7fa5ca13bcb2dd3957d52d8fd80ca3c7f5afc5d64963257d1d232"
+      "contentHash": "f5b2645a6baabae718d728105a5c79dc7b281169c91ad7bc6fb9e860589aed43"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/openai.ts#function:openaiClient",
+      "type": "symbol",
+      "kind": "function",
+      "name": "openaiClient",
+      "label": "openaiClient",
+      "path": "apps/server/src/lib/openai.ts",
+      "line": 10,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "67ac2ba039ea418bcf028bbdf835b48f1113a2d6e998ec3d3e72c69075336f2a"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/openai.ts#function:requireOpenAIKey",
+      "type": "symbol",
+      "kind": "function",
+      "name": "requireOpenAIKey",
+      "label": "requireOpenAIKey",
+      "path": "apps/server/src/lib/openai.ts",
+      "line": 14,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "f59fac05692f527eda7a2699c04c8651c243a0c11f1c6d2dccef308302ccde44"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/openai.ts#variable:KEY_REJECTED_MESSAGE",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "KEY_REJECTED_MESSAGE",
+      "label": "KEY_REJECTED_MESSAGE",
+      "path": "apps/server/src/lib/openai.ts",
+      "line": 27,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "c284cc4c064f104266c5a4bb29cd0db63cdef814e1d7150d236337ea10e41de6"
+    },
+    {
+      "id": "symbol:apps/server/src/lib/openai.ts#variable:OPENAI_KEY_HEADER",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "OPENAI_KEY_HEADER",
+      "label": "OPENAI_KEY_HEADER",
+      "path": "apps/server/src/lib/openai.ts",
+      "line": 8,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "74fcaf9748607bbfb4a8b2c02dd8b705b03a8f1cd79dc6bbe3b1a2eab6eb5e69"
     },
     {
       "id": "symbol:apps/server/src/lib/openai.ts#variable:REALTIME_MODEL",
@@ -1051,7 +1007,7 @@
       "name": "REALTIME_MODEL",
       "label": "REALTIME_MODEL",
       "path": "apps/server/src/lib/openai.ts",
-      "line": 7,
+      "line": 5,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "31a4878e29d6ad3e268f38a3cd12b2eaa5ce0df1c0182d6f343da748e91c1db3"
@@ -1063,7 +1019,7 @@
       "name": "TEXT_MODEL",
       "label": "TEXT_MODEL",
       "path": "apps/server/src/lib/openai.ts",
-      "line": 6,
+      "line": 4,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "71d85853b2433dce628b1bd14741d0abab8ee5a2ed3564fe412e0d3b8367172e"
@@ -1087,7 +1043,7 @@
       "name": "buildInterviewerInstructions",
       "label": "buildInterviewerInstructions",
       "path": "apps/server/src/lib/realtime.ts",
-      "line": 5,
+      "line": 4,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "568fddae15bfc697d991ffd78ec2e5d40f8aaf897341309b6f54751350dc4ec5"
@@ -1099,7 +1055,7 @@
       "name": "createRealtimeEphemeralSession",
       "label": "createRealtimeEphemeralSession",
       "path": "apps/server/src/lib/realtime.ts",
-      "line": 37,
+      "line": 36,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "057bfdcf755de6e29a42c8cd78e833928cfa6682f21f8270fedc04245baeea1e"
@@ -1111,22 +1067,10 @@
       "name": "RealtimeClientSecretResponse",
       "label": "RealtimeClientSecretResponse",
       "path": "apps/server/src/lib/realtime.ts",
-      "line": 31,
+      "line": 30,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "c2a8580de654e902ec75137c8ecb69c96815061223e445640c1364362a263683"
-    },
-    {
-      "id": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
-      "type": "symbol",
-      "kind": "function",
-      "name": "readCredentials",
-      "label": "readCredentials",
-      "path": "apps/server/src/routes/auth.ts",
-      "line": 37,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "e621d9bb30f43299e9e2e8e91d7b7e8c13076282e4f6ed5b0eaf5e1e4c8f89b8"
     },
     {
       "id": "symbol:apps/server/src/routes/auth.ts#function:toUserDTO",
@@ -1135,7 +1079,7 @@
       "name": "toUserDTO",
       "label": "toUserDTO",
       "path": "apps/server/src/routes/auth.ts",
-      "line": 23,
+      "line": 13,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "6b8ec544953fbe9a1824f3f51c007569e1dd76ec873aa921829666c823cd2606"
@@ -1147,34 +1091,10 @@
       "name": "authRouter",
       "label": "authRouter",
       "path": "apps/server/src/routes/auth.ts",
-      "line": 17,
+      "line": 9,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "0b8f5d6c3258da5ff9fdde50ff9cae39dd3529ba1b14d7abd7f09ece2d5a63ce"
-    },
-    {
-      "id": "symbol:apps/server/src/routes/auth.ts#variable:EMAIL_PATTERN",
-      "type": "symbol",
-      "kind": "variable",
-      "name": "EMAIL_PATTERN",
-      "label": "EMAIL_PATTERN",
-      "path": "apps/server/src/routes/auth.ts",
-      "line": 19,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "5b20e8970e17156e1fa1dd10453b3e80fc5a0ee218e8bb117ada3c191b80f5b9"
-    },
-    {
-      "id": "symbol:apps/server/src/routes/auth.ts#variable:MIN_PASSWORD_LENGTH",
-      "type": "symbol",
-      "kind": "variable",
-      "name": "MIN_PASSWORD_LENGTH",
-      "label": "MIN_PASSWORD_LENGTH",
-      "path": "apps/server/src/routes/auth.ts",
-      "line": 20,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "5ab5385b30df85ed85732bac8de0593f8884fa61454ce985944c58c64d653e34"
     },
     {
       "id": "symbol:apps/server/src/routes/auth.ts#variable:upload",
@@ -1183,7 +1103,7 @@
       "name": "upload",
       "label": "upload",
       "path": "apps/server/src/routes/auth.ts",
-      "line": 21,
+      "line": 11,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "391f5b7d982438eb2d5fb0303f42da530700827749fdaa5652cc48529c658058"
@@ -1195,7 +1115,7 @@
       "name": "completeRouter",
       "label": "completeRouter",
       "path": "apps/server/src/routes/complete.ts",
-      "line": 8,
+      "line": 9,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "a052975f7e28738eeac02b9cfa0978ab5553e4b6f420eb508e60723b7f5c5a51"
@@ -1207,7 +1127,7 @@
       "name": "__dirname",
       "label": "__dirname",
       "path": "apps/server/src/routes/frame.ts",
-      "line": 12,
+      "line": 13,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "6c6bf3795eaa8f4adab68ba3b6baf373459916d0ba4544d47acb8861287098d3"
@@ -1219,7 +1139,7 @@
       "name": "frameRouter",
       "label": "frameRouter",
       "path": "apps/server/src/routes/frame.ts",
-      "line": 10,
+      "line": 11,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "5b0153ed3a829f038b356ab303b21c75f4b381fb0e3eefc2750c4e98ccd87d87"
@@ -1231,7 +1151,7 @@
       "name": "storage",
       "label": "storage",
       "path": "apps/server/src/routes/frame.ts",
-      "line": 15,
+      "line": 16,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "2462bdbf4fd0841a321500f58ad6c1e3a9cec51fc9ae64ca38c327a702f7839d"
@@ -1243,7 +1163,7 @@
       "name": "upload",
       "label": "upload",
       "path": "apps/server/src/routes/frame.ts",
-      "line": 27,
+      "line": 28,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "391f5b7d982438eb2d5fb0303f42da530700827749fdaa5652cc48529c658058"
@@ -1255,7 +1175,7 @@
       "name": "uploadsRoot",
       "label": "uploadsRoot",
       "path": "apps/server/src/routes/frame.ts",
-      "line": 13,
+      "line": 14,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "a986512ef72f599a1a00e424be01700c6733d2fba52f077a74303b6557e29112"
@@ -1279,7 +1199,7 @@
       "name": "toSessionDTO",
       "label": "toSessionDTO",
       "path": "apps/server/src/routes/sessions.ts",
-      "line": 16,
+      "line": 20,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "1b8b3defd9c70b3ee9c38f08d1b8e0ef3471f3b9b76d0b3814e0881a7aeeaf54"
@@ -1291,7 +1211,7 @@
       "name": "sessionsRouter",
       "label": "sessionsRouter",
       "path": "apps/server/src/routes/sessions.ts",
-      "line": 9,
+      "line": 13,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "9fa034357c84d90e8c216c1075353bfd690cb3a51772fb43b57f2d003ee01e07"
@@ -1303,7 +1223,7 @@
       "name": "upload",
       "label": "upload",
       "path": "apps/server/src/routes/sessions.ts",
-      "line": 11,
+      "line": 15,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "391f5b7d982438eb2d5fb0303f42da530700827749fdaa5652cc48529c658058"
@@ -1435,7 +1355,7 @@
       "name": "RootLayout",
       "label": "RootLayout",
       "path": "apps/web/src/app/layout.tsx",
-      "line": 20,
+      "line": 21,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "b3f96339ba215ebd6ba503ea8fca4a7c61b3c35014e0d8f3c377caed0cbc1890"
@@ -1447,7 +1367,7 @@
       "name": "inter",
       "label": "inter",
       "path": "apps/web/src/app/layout.tsx",
-      "line": 6,
+      "line": 7,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "299f7168670b6c3e98783c66a5ea105fca191a9f5b1f728c6292b3a3036f4bc0"
@@ -1459,7 +1379,7 @@
       "name": "metadata",
       "label": "metadata",
       "path": "apps/web/src/app/layout.tsx",
-      "line": 11,
+      "line": 12,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "1c4009dcdeca39fd5c9228279837d6284c5aefaa467126841e57afc26ba65eec"
@@ -1471,58 +1391,10 @@
       "name": "THEME_SCRIPT",
       "label": "THEME_SCRIPT",
       "path": "apps/web/src/app/layout.tsx",
-      "line": 18,
+      "line": 19,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "39fdb1b47d90c9d8c71e7a56fca7e60ae3ced9ea5be03d836986e87da628f4ce"
-    },
-    {
-      "id": "symbol:apps/web/src/app/login/page.tsx#function:LoginPage",
-      "type": "symbol",
-      "kind": "function",
-      "name": "LoginPage",
-      "label": "LoginPage",
-      "path": "apps/web/src/app/login/page.tsx",
-      "line": 29,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "81771f9428fdf29de423bffeb1f01e0ee2ec6079eef3c28dd56b18fd8426ff94"
-    },
-    {
-      "id": "symbol:apps/web/src/app/login/page.tsx#function:readError",
-      "type": "symbol",
-      "kind": "function",
-      "name": "readError",
-      "label": "readError",
-      "path": "apps/web/src/app/login/page.tsx",
-      "line": 24,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "6bad5fa95ab7e185d89b14baf82c69ece4325489a65d21b686a1cdd2ce8630ab"
-    },
-    {
-      "id": "symbol:apps/web/src/app/login/page.tsx#interface:GoogleIdentity",
-      "type": "symbol",
-      "kind": "interface",
-      "name": "GoogleIdentity",
-      "label": "GoogleIdentity",
-      "path": "apps/web/src/app/login/page.tsx",
-      "line": 13,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "2378f900098ba52bb8ea4b391057a7d8aa42574ccb944b77695f9edf83d2c392"
-    },
-    {
-      "id": "symbol:apps/web/src/app/login/page.tsx#variable:GOOGLE_CLIENT_ID",
-      "type": "symbol",
-      "kind": "variable",
-      "name": "GOOGLE_CLIENT_ID",
-      "label": "GOOGLE_CLIENT_ID",
-      "path": "apps/web/src/app/login/page.tsx",
-      "line": 11,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "f4898f0cf11fcc9d25105ba4c7dd06cba43afac117e791dd8adc82073bc94611"
     },
     {
       "id": "symbol:apps/web/src/app/new/page.tsx#function:NewInterviewPage",
@@ -1567,22 +1439,34 @@
       "name": "LandingPage",
       "label": "LandingPage",
       "path": "apps/web/src/app/page.tsx",
-      "line": 13,
+      "line": 14,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "b7428cf7304f6cf9c0fb96bd27381830924f9af6e9432483d7f19185c34121b4"
     },
     {
-      "id": "symbol:apps/web/src/app/page.tsx#variable:FEATURES",
+      "id": "symbol:apps/web/src/app/page.tsx#variable:DOWNLOADS",
       "type": "symbol",
       "kind": "variable",
-      "name": "FEATURES",
-      "label": "FEATURES",
+      "name": "DOWNLOADS",
+      "label": "DOWNLOADS",
       "path": "apps/web/src/app/page.tsx",
-      "line": 7,
+      "line": 9,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
-      "contentHash": "6b2a442b819e47d88faf9aaead041779705259623f4f9d156218e3f390597404"
+      "contentHash": "2226baf0ba31f81d2ce1aa3496f9a1c4c86c01526c1d3ca3a28c7cf14b29a112"
+    },
+    {
+      "id": "symbol:apps/web/src/app/page.tsx#variable:RELEASE_URL",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "RELEASE_URL",
+      "label": "RELEASE_URL",
+      "path": "apps/web/src/app/page.tsx",
+      "line": 8,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "1b47eff6dbe40015046759e565bbdb427fc66be775c0d0f7a541074b3d8c41a8"
     },
     {
       "id": "symbol:apps/web/src/app/session/[id]/interview/page.tsx#function:InterviewPage",
@@ -1783,7 +1667,7 @@
       "name": "capitalize",
       "label": "capitalize",
       "path": "apps/web/src/app/settings/page.tsx",
-      "line": 29,
+      "line": 27,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "0aca0587452b663c3fecc8fc09d50856de2430e0f76d95419115dad853c272c7"
@@ -1795,7 +1679,7 @@
       "name": "SettingsPage",
       "label": "SettingsPage",
       "path": "apps/web/src/app/settings/page.tsx",
-      "line": 33,
+      "line": 31,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "4551cd8a2d421b0d2f2abc31a6baaf59c94b9bfae857eecb300ee5c47cd73c92"
@@ -1807,7 +1691,7 @@
       "name": "NoticeState",
       "label": "NoticeState",
       "path": "apps/web/src/app/settings/page.tsx",
-      "line": 27,
+      "line": 25,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "46be82cafb7b05186e71c3140afbf3b25e6be40fc0e74d5c78ba89a3b740e32b"
@@ -1819,7 +1703,7 @@
       "name": "SENIORITY_LEVELS",
       "label": "SENIORITY_LEVELS",
       "path": "apps/web/src/app/settings/page.tsx",
-      "line": 25,
+      "line": 23,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "a64222c1ce39330972b49883f0fa756ba485f8e580975fd5d6a3b0cf3efd92a6"
@@ -1849,6 +1733,54 @@
       "contentHash": "9cc4b08f000157dd651c9af0bbcb2aeb5778b83f33ca48a500596071dc4f7742"
     },
     {
+      "id": "symbol:apps/web/src/components/FeatureSlider.tsx#function:FeatureSlider",
+      "type": "symbol",
+      "kind": "function",
+      "name": "FeatureSlider",
+      "label": "FeatureSlider",
+      "path": "apps/web/src/components/FeatureSlider.tsx",
+      "line": 29,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "2860fb9eae7251d04a33d94208aa01ad578f9831f92605e73936736384c321fb"
+    },
+    {
+      "id": "symbol:apps/web/src/components/FeatureSlider.tsx#variable:FEATURES",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "FEATURES",
+      "label": "FEATURES",
+      "path": "apps/web/src/components/FeatureSlider.tsx",
+      "line": 7,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "6b2a442b819e47d88faf9aaead041779705259623f4f9d156218e3f390597404"
+    },
+    {
+      "id": "symbol:apps/web/src/components/FeatureSlider.tsx#variable:LOOP",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "LOOP",
+      "label": "LOOP",
+      "path": "apps/web/src/components/FeatureSlider.tsx",
+      "line": 27,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "97a911783ab292d5e1c785ca636433565911990581caff0a09b84539d53367ae"
+    },
+    {
+      "id": "symbol:apps/web/src/components/FeatureSlider.tsx#variable:N",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "N",
+      "label": "N",
+      "path": "apps/web/src/components/FeatureSlider.tsx",
+      "line": 26,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "738c6c7f9810e2177405f7b42ef5c4cba686c91da1af0ee263178999cdf3995b"
+    },
+    {
       "id": "symbol:apps/web/src/components/Logo.tsx#function:Logo",
       "type": "symbol",
       "kind": "function",
@@ -1859,6 +1791,18 @@
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "7e672d31f5f42cdb7d5ed6434dac2c400875dbb5fc5785d5aeebed6d4cbc538b"
+    },
+    {
+      "id": "symbol:apps/web/src/components/OpenAIKeyGate.tsx#function:OpenAIKeyGate",
+      "type": "symbol",
+      "kind": "function",
+      "name": "OpenAIKeyGate",
+      "label": "OpenAIKeyGate",
+      "path": "apps/web/src/components/OpenAIKeyGate.tsx",
+      "line": 8,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "c51c98568416d03e0b9373e67554bb0163f33b50a4113b83843a9b5e9f73be5e"
     },
     {
       "id": "symbol:apps/web/src/components/ThemeToggle.tsx#function:ThemeToggle",
@@ -1891,7 +1835,7 @@
       "name": "Avatar",
       "label": "Avatar",
       "path": "apps/web/src/components/ui/Avatar.tsx",
-      "line": 8,
+      "line": 7,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "a4a45b6ad11ebcfcd57a482e9ca7a10bb87b0f586166dd6807b937f3ac30696b"
@@ -2323,7 +2267,7 @@
       "name": "UserMenu",
       "label": "UserMenu",
       "path": "apps/web/src/components/UserMenu.tsx",
-      "line": 14,
+      "line": 13,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "f3752139769854757626a89d678673485cf849e6c5cc9285dc83e233d5fa2ae5"
@@ -2335,7 +2279,7 @@
       "name": "itemClass",
       "label": "itemClass",
       "path": "apps/web/src/components/UserMenu.tsx",
-      "line": 11,
+      "line": 10,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "00a3fe35de0df8ee2311f0da2d03d2b3864fb13caee4017035963dc990c5474b"
@@ -2347,7 +2291,7 @@
       "name": "apiFetch",
       "label": "apiFetch",
       "path": "apps/web/src/lib/api.ts",
-      "line": 7,
+      "line": 34,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "9840f9779ee5bdad30ecd9cba14cf8150aead3b36281d9e1c7734ba39b0cecf8"
@@ -2365,16 +2309,40 @@
       "contentHash": "798e8e3561bde4e058d0aba697c3632a4db432b9dd515ffb6305d346cc2abc20"
     },
     {
-      "id": "symbol:apps/web/src/lib/api.ts#function:signOut",
+      "id": "symbol:apps/web/src/lib/api.ts#function:getOpenAIKey",
       "type": "symbol",
       "kind": "function",
-      "name": "signOut",
-      "label": "signOut",
+      "name": "getOpenAIKey",
+      "label": "getOpenAIKey",
       "path": "apps/web/src/lib/api.ts",
-      "line": 15,
+      "line": 11,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
-      "contentHash": "18ecca3930ba750d3608f6c7967dc4ccc5615013851931931d05e5267c7b09cb"
+      "contentHash": "0fb5a5a20586d18d14c3b189ad651b27472850e8f8f470349f0badf9f6efd7b7"
+    },
+    {
+      "id": "symbol:apps/web/src/lib/api.ts#function:onOpenAIKeyChange",
+      "type": "symbol",
+      "kind": "function",
+      "name": "onOpenAIKeyChange",
+      "label": "onOpenAIKeyChange",
+      "path": "apps/web/src/lib/api.ts",
+      "line": 29,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "4f7a9b95b1bbcd7732476022014851fd50fe15537089c8658e0378b3938a44ca"
+    },
+    {
+      "id": "symbol:apps/web/src/lib/api.ts#function:setOpenAIKey",
+      "type": "symbol",
+      "kind": "function",
+      "name": "setOpenAIKey",
+      "label": "setOpenAIKey",
+      "path": "apps/web/src/lib/api.ts",
+      "line": 19,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "9a38802db829649c411d1735d75c13cfc913df3e77fc67a5ad6360faa90fed41"
     },
     {
       "id": "symbol:apps/web/src/lib/api.ts#variable:API_BASE_URL",
@@ -2387,6 +2355,30 @@
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "35523cb0f38590f28d5328735c72b8b941579b225eaff3b365931a07aba4a339"
+    },
+    {
+      "id": "symbol:apps/web/src/lib/api.ts#variable:OPENAI_KEY_CHANGE",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "OPENAI_KEY_CHANGE",
+      "label": "OPENAI_KEY_CHANGE",
+      "path": "apps/web/src/lib/api.ts",
+      "line": 9,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "0669f6afa95c14d01babaea01e88e71c94baf8a0ecbbadf2dc885522ee5d0065"
+    },
+    {
+      "id": "symbol:apps/web/src/lib/api.ts#variable:OPENAI_KEY_STORAGE",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "OPENAI_KEY_STORAGE",
+      "label": "OPENAI_KEY_STORAGE",
+      "path": "apps/web/src/lib/api.ts",
+      "line": 8,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "660171ed8106683b128cb8ff5c8bdfdaff8554ba36c8c5b12c4229693569fb99"
     },
     {
       "id": "symbol:apps/web/src/lib/frameCapture.ts#function:captureFrameBlob",
@@ -2431,7 +2423,7 @@
       "name": "FeedbackItem",
       "label": "FeedbackItem",
       "path": "packages/shared/src/index.ts",
-      "line": 60,
+      "line": 58,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "7ed46467025e9df8216276ea245c05f63e71c0b151e808566906eb67516ef172"
@@ -2443,7 +2435,7 @@
       "name": "FrameCaptureDTO",
       "label": "FrameCaptureDTO",
       "path": "packages/shared/src/index.ts",
-      "line": 53,
+      "line": 51,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "77df428fabf4181971606cd10c4f3fb8b23a8a362946fc8d014b7d4f04cee973"
@@ -2491,7 +2483,7 @@
       "name": "SessionListItemDTO",
       "label": "SessionListItemDTO",
       "path": "packages/shared/src/index.ts",
-      "line": 76,
+      "line": 74,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "555a3d3748036a04ca0ed9ade50e6dc07bbac9d7e0420ab15d6e17b116fb5dd9"
@@ -2503,7 +2495,7 @@
       "name": "SessionSummary",
       "label": "SessionSummary",
       "path": "packages/shared/src/index.ts",
-      "line": 69,
+      "line": 67,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "7d3eb1ea0472e1d951895716b78797bf4f7d35227218c482d047cccf40675ed1"
@@ -2569,20 +2561,20 @@
       "contentHash": "71f5d107b148ec167dac99146aa301b14b66e35047a12a34323219db0f4f9c06"
     },
     {
-      "id": "unresolved:apps/web/next-env.d.ts:./.next/types/root-params.d.ts",
+      "id": "unresolved:apps/web/next-env.d.ts:./.next/dev/types/root-params.d.ts",
       "type": "unresolved",
-      "label": "./.next/types/root-params.d.ts",
+      "label": "./.next/dev/types/root-params.d.ts",
       "confidence": 0.4,
       "extractor": "import",
-      "contentHash": "3754fb2bc42d60cdc0a1e86d5e0116349d514ccd03e951675251677f7cc6b665"
+      "contentHash": "830b7cf1fca05cc7f357231a0a56918fc66e61b685f42aaa2d2e924fe235ebb3"
     },
     {
-      "id": "unresolved:apps/web/next-env.d.ts:./.next/types/routes.d.ts",
+      "id": "unresolved:apps/web/next-env.d.ts:./.next/dev/types/routes.d.ts",
       "type": "unresolved",
-      "label": "./.next/types/routes.d.ts",
+      "label": "./.next/dev/types/routes.d.ts",
       "confidence": 0.4,
       "extractor": "import",
-      "contentHash": "1379fb4e4fd8505e93e87b2da929d6706ded70ee558cf69ac1e06cb405a4a86c"
+      "contentHash": "d1d6b95088fe7e476a97de9d565603fd6a60f685290be58f12ca5dd4cb637220"
     },
     {
       "id": "unresolved:apps/web/src/app/layout.tsx:./globals.css",
@@ -2594,15 +2586,6 @@
     }
   ],
   "edges": [
-    {
-      "type": "calls",
-      "source": "symbol:apps/server/src/lib/auth.ts#function:hashPassword",
-      "target": "symbol:apps/server/src/lib/auth.ts#variable:scrypt",
-      "tier": "proven",
-      "resolved": true,
-      "confidence": 0.75,
-      "extractor": "conservative-js-calls"
-    },
     {
       "type": "calls",
       "source": "symbol:apps/server/src/lib/auth.ts#function:readSessionUserId",
@@ -2623,8 +2606,8 @@
     },
     {
       "type": "calls",
-      "source": "symbol:apps/server/src/lib/auth.ts#function:setSessionCookie",
-      "target": "symbol:apps/server/src/lib/auth.ts#function:sign",
+      "source": "symbol:apps/server/src/lib/auth.ts#function:requireUser",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:setSessionCookie",
       "tier": "proven",
       "resolved": true,
       "confidence": 0.75,
@@ -2632,8 +2615,8 @@
     },
     {
       "type": "calls",
-      "source": "symbol:apps/server/src/lib/auth.ts#function:verifyPassword",
-      "target": "symbol:apps/server/src/lib/auth.ts#variable:scrypt",
+      "source": "symbol:apps/server/src/lib/auth.ts#function:setSessionCookie",
+      "target": "symbol:apps/server/src/lib/auth.ts#function:sign",
       "tier": "proven",
       "resolved": true,
       "confidence": 0.75,
@@ -2686,6 +2669,24 @@
     },
     {
       "type": "calls",
+      "source": "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateCandidateProfileAndPlan",
+      "target": "symbol:apps/server/src/lib/openai.ts#function:openaiClient",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateFrameInsight",
+      "target": "symbol:apps/server/src/lib/openai.ts#function:openaiClient",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
       "source": "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateSessionSummary",
       "target": "symbol:apps/server/src/lib/interviewPlanning.ts#function:truncate",
       "tier": "proven",
@@ -2695,8 +2696,8 @@
     },
     {
       "type": "calls",
-      "source": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
-      "target": "symbol:apps/server/src/lib/auth.ts#function:clearSessionCookie",
+      "source": "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateSessionSummary",
+      "target": "symbol:apps/server/src/lib/openai.ts#function:openaiClient",
       "tier": "proven",
       "resolved": true,
       "confidence": 0.7,
@@ -2704,56 +2705,11 @@
     },
     {
       "type": "calls",
-      "source": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
-      "target": "symbol:apps/server/src/lib/auth.ts#function:hashPassword",
-      "tier": "proven",
-      "resolved": true,
-      "confidence": 0.7,
-      "extractor": "conservative-js-calls"
-    },
-    {
-      "type": "calls",
-      "source": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
-      "target": "symbol:apps/server/src/lib/auth.ts#function:setSessionCookie",
-      "tier": "proven",
-      "resolved": true,
-      "confidence": 0.7,
-      "extractor": "conservative-js-calls"
-    },
-    {
-      "type": "calls",
-      "source": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
-      "target": "symbol:apps/server/src/lib/auth.ts#function:verifyGoogleCredential",
-      "tier": "proven",
-      "resolved": true,
-      "confidence": 0.7,
-      "extractor": "conservative-js-calls"
-    },
-    {
-      "type": "calls",
-      "source": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
-      "target": "symbol:apps/server/src/lib/auth.ts#function:verifyPassword",
-      "tier": "proven",
-      "resolved": true,
-      "confidence": 0.7,
-      "extractor": "conservative-js-calls"
-    },
-    {
-      "type": "calls",
-      "source": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
+      "source": "symbol:apps/server/src/routes/auth.ts#function:toUserDTO",
       "target": "symbol:apps/server/src/lib/extractText.ts#function:extractTextFromFile",
       "tier": "proven",
       "resolved": true,
       "confidence": 0.7,
-      "extractor": "conservative-js-calls"
-    },
-    {
-      "type": "calls",
-      "source": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
-      "target": "symbol:apps/server/src/routes/auth.ts#function:toUserDTO",
-      "tier": "proven",
-      "resolved": true,
-      "confidence": 0.75,
       "extractor": "conservative-js-calls"
     },
     {
@@ -2878,24 +2834,6 @@
     },
     {
       "type": "calls",
-      "source": "symbol:apps/web/src/app/login/page.tsx#function:LoginPage",
-      "target": "symbol:apps/web/src/app/login/page.tsx#function:readError",
-      "tier": "proven",
-      "resolved": true,
-      "confidence": 0.75,
-      "extractor": "conservative-js-calls"
-    },
-    {
-      "type": "calls",
-      "source": "symbol:apps/web/src/app/login/page.tsx#function:LoginPage",
-      "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
-      "tier": "proven",
-      "resolved": true,
-      "confidence": 0.7,
-      "extractor": "conservative-js-calls"
-    },
-    {
-      "type": "calls",
       "source": "symbol:apps/web/src/app/new/page.tsx#function:NewInterviewPage",
       "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
       "tier": "proven",
@@ -2928,6 +2866,15 @@
       "type": "calls",
       "source": "symbol:apps/web/src/app/session/[id]/interview/page.tsx#function:InterviewPage",
       "target": "symbol:apps/web/src/lib/frameCapture.ts#function:captureFrameBlob",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/session/[id]/interview/page.tsx#function:InterviewPage",
+      "target": "symbol:apps/web/src/lib/frameCapture.ts#function:randomJitterMs",
       "tier": "proven",
       "resolved": true,
       "confidence": 0.7,
@@ -2998,6 +2945,24 @@
     },
     {
       "type": "calls",
+      "source": "symbol:apps/web/src/app/settings/page.tsx#function:SettingsPage",
+      "target": "symbol:apps/web/src/lib/api.ts#function:getOpenAIKey",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/app/settings/page.tsx#function:SettingsPage",
+      "target": "symbol:apps/web/src/lib/api.ts#function:setOpenAIKey",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
       "source": "symbol:apps/web/src/components/AppHeader.tsx#function:AppHeader",
       "target": "symbol:apps/web/src/components/ui/Button.tsx#function:buttonVariants",
       "tier": "ambiguous",
@@ -3012,6 +2977,33 @@
       "type": "calls",
       "source": "symbol:apps/web/src/components/AppHeader.tsx#function:AppHeader",
       "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/components/OpenAIKeyGate.tsx#function:OpenAIKeyGate",
+      "target": "symbol:apps/web/src/lib/api.ts#function:getOpenAIKey",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/components/OpenAIKeyGate.tsx#function:OpenAIKeyGate",
+      "target": "symbol:apps/web/src/lib/api.ts#function:onOpenAIKeyChange",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:apps/web/src/components/OpenAIKeyGate.tsx#function:OpenAIKeyGate",
+      "target": "symbol:apps/web/src/lib/api.ts#function:setOpenAIKey",
       "tier": "proven",
       "resolved": true,
       "confidence": 0.7,
@@ -3037,8 +3029,8 @@
     },
     {
       "type": "calls",
-      "source": "symbol:apps/web/src/lib/api.ts#function:signOut",
-      "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
+      "source": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
+      "target": "symbol:apps/web/src/lib/api.ts#function:getOpenAIKey",
       "tier": "proven",
       "resolved": true,
       "confidence": 0.75,
@@ -3074,26 +3066,8 @@
     {
       "type": "defines",
       "source": "file:apps/server/src/lib/auth.ts",
-      "target": "symbol:apps/server/src/lib/auth.ts#function:clearSessionCookie",
-      "line": 46,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/server/src/lib/auth.ts",
-      "target": "symbol:apps/server/src/lib/auth.ts#function:hashPassword",
-      "line": 16,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/server/src/lib/auth.ts",
       "target": "symbol:apps/server/src/lib/auth.ts#function:readSessionUserId",
-      "line": 50,
+      "line": 26,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3102,7 +3076,7 @@
       "type": "defines",
       "source": "file:apps/server/src/lib/auth.ts",
       "target": "symbol:apps/server/src/lib/auth.ts#function:requireOwnedSession",
-      "line": 79,
+      "line": 62,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3111,7 +3085,7 @@
       "type": "defines",
       "source": "file:apps/server/src/lib/auth.ts",
       "target": "symbol:apps/server/src/lib/auth.ts#function:requireUser",
-      "line": 70,
+      "line": 48,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3120,51 +3094,6 @@
       "type": "defines",
       "source": "file:apps/server/src/lib/auth.ts",
       "target": "symbol:apps/server/src/lib/auth.ts#function:setSessionCookie",
-      "line": 34,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/server/src/lib/auth.ts",
-      "target": "symbol:apps/server/src/lib/auth.ts#function:sign",
-      "line": 30,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/server/src/lib/auth.ts",
-      "target": "symbol:apps/server/src/lib/auth.ts#function:verifyGoogleCredential",
-      "line": 89,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/server/src/lib/auth.ts",
-      "target": "symbol:apps/server/src/lib/auth.ts#function:verifyPassword",
-      "line": 22,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/server/src/lib/auth.ts",
-      "target": "symbol:apps/server/src/lib/auth.ts#variable:COOKIE_NAME",
-      "line": 10,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/server/src/lib/auth.ts",
-      "target": "symbol:apps/server/src/lib/auth.ts#variable:googleClient",
       "line": 14,
       "resolved": true,
       "confidence": 0.8,
@@ -3173,8 +3102,8 @@
     {
       "type": "defines",
       "source": "file:apps/server/src/lib/auth.ts",
-      "target": "symbol:apps/server/src/lib/auth.ts#variable:KEY_LENGTH",
-      "line": 12,
+      "target": "symbol:apps/server/src/lib/auth.ts#function:sign",
+      "line": 10,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3182,8 +3111,8 @@
     {
       "type": "defines",
       "source": "file:apps/server/src/lib/auth.ts",
-      "target": "symbol:apps/server/src/lib/auth.ts#variable:scrypt",
-      "line": 8,
+      "target": "symbol:apps/server/src/lib/auth.ts#variable:COOKIE_NAME",
+      "line": 6,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3192,7 +3121,7 @@
       "type": "defines",
       "source": "file:apps/server/src/lib/auth.ts",
       "target": "symbol:apps/server/src/lib/auth.ts#variable:SESSION_TTL_SECONDS",
-      "line": 11,
+      "line": 8,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3273,7 +3202,7 @@
       "type": "defines",
       "source": "file:apps/server/src/lib/interviewPlanning.ts",
       "target": "symbol:apps/server/src/lib/interviewPlanning.ts#function:generateFrameInsight",
-      "line": 112,
+      "line": 113,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3326,8 +3255,44 @@
     {
       "type": "defines",
       "source": "file:apps/server/src/lib/openai.ts",
-      "target": "symbol:apps/server/src/lib/openai.ts#variable:openai",
-      "line": 4,
+      "target": "symbol:apps/server/src/lib/openai.ts#function:isKeyRejected",
+      "line": 23,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/openai.ts",
+      "target": "symbol:apps/server/src/lib/openai.ts#function:openaiClient",
+      "line": 10,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/openai.ts",
+      "target": "symbol:apps/server/src/lib/openai.ts#function:requireOpenAIKey",
+      "line": 14,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/openai.ts",
+      "target": "symbol:apps/server/src/lib/openai.ts#variable:KEY_REJECTED_MESSAGE",
+      "line": 27,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/server/src/lib/openai.ts",
+      "target": "symbol:apps/server/src/lib/openai.ts#variable:OPENAI_KEY_HEADER",
+      "line": 8,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3336,7 +3301,7 @@
       "type": "defines",
       "source": "file:apps/server/src/lib/openai.ts",
       "target": "symbol:apps/server/src/lib/openai.ts#variable:REALTIME_MODEL",
-      "line": 7,
+      "line": 5,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3345,7 +3310,7 @@
       "type": "defines",
       "source": "file:apps/server/src/lib/openai.ts",
       "target": "symbol:apps/server/src/lib/openai.ts#variable:TEXT_MODEL",
-      "line": 6,
+      "line": 4,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3363,7 +3328,7 @@
       "type": "defines",
       "source": "file:apps/server/src/lib/realtime.ts",
       "target": "symbol:apps/server/src/lib/realtime.ts#function:buildInterviewerInstructions",
-      "line": 5,
+      "line": 4,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3372,7 +3337,7 @@
       "type": "defines",
       "source": "file:apps/server/src/lib/realtime.ts",
       "target": "symbol:apps/server/src/lib/realtime.ts#function:createRealtimeEphemeralSession",
-      "line": 37,
+      "line": 36,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3381,16 +3346,7 @@
       "type": "defines",
       "source": "file:apps/server/src/lib/realtime.ts",
       "target": "symbol:apps/server/src/lib/realtime.ts#interface:RealtimeClientSecretResponse",
-      "line": 31,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/server/src/routes/auth.ts",
-      "target": "symbol:apps/server/src/routes/auth.ts#function:readCredentials",
-      "line": 37,
+      "line": 30,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3399,7 +3355,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/auth.ts",
       "target": "symbol:apps/server/src/routes/auth.ts#function:toUserDTO",
-      "line": 23,
+      "line": 13,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3408,25 +3364,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/auth.ts",
       "target": "symbol:apps/server/src/routes/auth.ts#variable:authRouter",
-      "line": 17,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/server/src/routes/auth.ts",
-      "target": "symbol:apps/server/src/routes/auth.ts#variable:EMAIL_PATTERN",
-      "line": 19,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/server/src/routes/auth.ts",
-      "target": "symbol:apps/server/src/routes/auth.ts#variable:MIN_PASSWORD_LENGTH",
-      "line": 20,
+      "line": 9,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3435,7 +3373,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/auth.ts",
       "target": "symbol:apps/server/src/routes/auth.ts#variable:upload",
-      "line": 21,
+      "line": 11,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3444,7 +3382,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/complete.ts",
       "target": "symbol:apps/server/src/routes/complete.ts#variable:completeRouter",
-      "line": 8,
+      "line": 9,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3453,7 +3391,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/frame.ts",
       "target": "symbol:apps/server/src/routes/frame.ts#variable:__dirname",
-      "line": 12,
+      "line": 13,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3462,7 +3400,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/frame.ts",
       "target": "symbol:apps/server/src/routes/frame.ts#variable:frameRouter",
-      "line": 10,
+      "line": 11,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3471,7 +3409,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/frame.ts",
       "target": "symbol:apps/server/src/routes/frame.ts#variable:storage",
-      "line": 15,
+      "line": 16,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3480,7 +3418,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/frame.ts",
       "target": "symbol:apps/server/src/routes/frame.ts#variable:upload",
-      "line": 27,
+      "line": 28,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3489,7 +3427,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/frame.ts",
       "target": "symbol:apps/server/src/routes/frame.ts#variable:uploadsRoot",
-      "line": 13,
+      "line": 14,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3507,7 +3445,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/sessions.ts",
       "target": "symbol:apps/server/src/routes/sessions.ts#function:toSessionDTO",
-      "line": 16,
+      "line": 20,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3516,7 +3454,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/sessions.ts",
       "target": "symbol:apps/server/src/routes/sessions.ts#variable:sessionsRouter",
-      "line": 9,
+      "line": 13,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3525,7 +3463,7 @@
       "type": "defines",
       "source": "file:apps/server/src/routes/sessions.ts",
       "target": "symbol:apps/server/src/routes/sessions.ts#variable:upload",
-      "line": 11,
+      "line": 15,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3624,7 +3562,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/layout.tsx",
       "target": "symbol:apps/web/src/app/layout.tsx#function:RootLayout",
-      "line": 20,
+      "line": 21,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3633,7 +3571,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/layout.tsx",
       "target": "symbol:apps/web/src/app/layout.tsx#variable:inter",
-      "line": 6,
+      "line": 7,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3642,7 +3580,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/layout.tsx",
       "target": "symbol:apps/web/src/app/layout.tsx#variable:metadata",
-      "line": 11,
+      "line": 12,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3651,43 +3589,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/layout.tsx",
       "target": "symbol:apps/web/src/app/layout.tsx#variable:THEME_SCRIPT",
-      "line": 18,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/web/src/app/login/page.tsx",
-      "target": "symbol:apps/web/src/app/login/page.tsx#function:LoginPage",
-      "line": 29,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/web/src/app/login/page.tsx",
-      "target": "symbol:apps/web/src/app/login/page.tsx#function:readError",
-      "line": 24,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/web/src/app/login/page.tsx",
-      "target": "symbol:apps/web/src/app/login/page.tsx#interface:GoogleIdentity",
-      "line": 13,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/web/src/app/login/page.tsx",
-      "target": "symbol:apps/web/src/app/login/page.tsx#variable:GOOGLE_CLIENT_ID",
-      "line": 11,
+      "line": 19,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3723,7 +3625,7 @@
       "type": "defines",
       "source": "file:apps/web/src/app/page.tsx",
       "target": "symbol:apps/web/src/app/page.tsx#function:LandingPage",
-      "line": 13,
+      "line": 14,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3731,8 +3633,17 @@
     {
       "type": "defines",
       "source": "file:apps/web/src/app/page.tsx",
-      "target": "symbol:apps/web/src/app/page.tsx#variable:FEATURES",
-      "line": 7,
+      "target": "symbol:apps/web/src/app/page.tsx#variable:DOWNLOADS",
+      "line": 9,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/page.tsx",
+      "target": "symbol:apps/web/src/app/page.tsx#variable:RELEASE_URL",
+      "line": 8,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3885,24 +3796,6 @@
       "type": "defines",
       "source": "file:apps/web/src/app/settings/page.tsx",
       "target": "symbol:apps/web/src/app/settings/page.tsx#function:capitalize",
-      "line": 29,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/web/src/app/settings/page.tsx",
-      "target": "symbol:apps/web/src/app/settings/page.tsx#function:SettingsPage",
-      "line": 33,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/web/src/app/settings/page.tsx",
-      "target": "symbol:apps/web/src/app/settings/page.tsx#type:NoticeState",
       "line": 27,
       "resolved": true,
       "confidence": 0.8,
@@ -3911,8 +3804,26 @@
     {
       "type": "defines",
       "source": "file:apps/web/src/app/settings/page.tsx",
-      "target": "symbol:apps/web/src/app/settings/page.tsx#variable:SENIORITY_LEVELS",
+      "target": "symbol:apps/web/src/app/settings/page.tsx#function:SettingsPage",
+      "line": 31,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/settings/page.tsx",
+      "target": "symbol:apps/web/src/app/settings/page.tsx#type:NoticeState",
       "line": 25,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/app/settings/page.tsx",
+      "target": "symbol:apps/web/src/app/settings/page.tsx#variable:SENIORITY_LEVELS",
+      "line": 23,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3937,9 +3848,54 @@
     },
     {
       "type": "defines",
+      "source": "file:apps/web/src/components/FeatureSlider.tsx",
+      "target": "symbol:apps/web/src/components/FeatureSlider.tsx#function:FeatureSlider",
+      "line": 29,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/FeatureSlider.tsx",
+      "target": "symbol:apps/web/src/components/FeatureSlider.tsx#variable:FEATURES",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/FeatureSlider.tsx",
+      "target": "symbol:apps/web/src/components/FeatureSlider.tsx#variable:LOOP",
+      "line": 27,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/FeatureSlider.tsx",
+      "target": "symbol:apps/web/src/components/FeatureSlider.tsx#variable:N",
+      "line": 26,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
       "source": "file:apps/web/src/components/Logo.tsx",
       "target": "symbol:apps/web/src/components/Logo.tsx#function:Logo",
       "line": 3,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/components/OpenAIKeyGate.tsx",
+      "target": "symbol:apps/web/src/components/OpenAIKeyGate.tsx#function:OpenAIKeyGate",
+      "line": 8,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3966,7 +3922,7 @@
       "type": "defines",
       "source": "file:apps/web/src/components/ui/Avatar.tsx",
       "target": "symbol:apps/web/src/components/ui/Avatar.tsx#function:Avatar",
-      "line": 8,
+      "line": 7,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -4290,7 +4246,7 @@
       "type": "defines",
       "source": "file:apps/web/src/components/UserMenu.tsx",
       "target": "symbol:apps/web/src/components/UserMenu.tsx#function:UserMenu",
-      "line": 14,
+      "line": 13,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -4299,7 +4255,7 @@
       "type": "defines",
       "source": "file:apps/web/src/components/UserMenu.tsx",
       "target": "symbol:apps/web/src/components/UserMenu.tsx#variable:itemClass",
-      "line": 11,
+      "line": 10,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -4308,7 +4264,7 @@
       "type": "defines",
       "source": "file:apps/web/src/lib/api.ts",
       "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
-      "line": 7,
+      "line": 34,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -4325,8 +4281,26 @@
     {
       "type": "defines",
       "source": "file:apps/web/src/lib/api.ts",
-      "target": "symbol:apps/web/src/lib/api.ts#function:signOut",
-      "line": 15,
+      "target": "symbol:apps/web/src/lib/api.ts#function:getOpenAIKey",
+      "line": 11,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/lib/api.ts",
+      "target": "symbol:apps/web/src/lib/api.ts#function:onOpenAIKeyChange",
+      "line": 29,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/lib/api.ts",
+      "target": "symbol:apps/web/src/lib/api.ts#function:setOpenAIKey",
+      "line": 19,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -4336,6 +4310,24 @@
       "source": "file:apps/web/src/lib/api.ts",
       "target": "symbol:apps/web/src/lib/api.ts#variable:API_BASE_URL",
       "line": 1,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/lib/api.ts",
+      "target": "symbol:apps/web/src/lib/api.ts#variable:OPENAI_KEY_CHANGE",
+      "line": 9,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:apps/web/src/lib/api.ts",
+      "target": "symbol:apps/web/src/lib/api.ts#variable:OPENAI_KEY_STORAGE",
+      "line": 8,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -4371,7 +4363,7 @@
       "type": "defines",
       "source": "file:packages/shared/src/index.ts",
       "target": "symbol:packages/shared/src/index.ts#interface:FeedbackItem",
-      "line": 60,
+      "line": 58,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -4380,7 +4372,7 @@
       "type": "defines",
       "source": "file:packages/shared/src/index.ts",
       "target": "symbol:packages/shared/src/index.ts#interface:FrameCaptureDTO",
-      "line": 53,
+      "line": 51,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -4416,7 +4408,7 @@
       "type": "defines",
       "source": "file:packages/shared/src/index.ts",
       "target": "symbol:packages/shared/src/index.ts#interface:SessionListItemDTO",
-      "line": 76,
+      "line": 74,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -4425,7 +4417,7 @@
       "type": "defines",
       "source": "file:packages/shared/src/index.ts",
       "target": "symbol:packages/shared/src/index.ts#interface:SessionSummary",
-      "line": 69,
+      "line": 67,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -4610,7 +4602,7 @@
       "source": "file:apps/server/src/lib/auth.ts",
       "target": "file:apps/server/src/lib/env.ts",
       "specifier": "./env.js",
-      "line": 5,
+      "line": 3,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4620,7 +4612,7 @@
       "source": "file:apps/server/src/lib/auth.ts",
       "target": "file:apps/server/src/lib/prisma.ts",
       "specifier": "./prisma.js",
-      "line": 6,
+      "line": 4,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4630,17 +4622,7 @@
       "source": "file:apps/server/src/lib/auth.ts",
       "target": "package:npm:express",
       "specifier": "express",
-      "line": 3,
-      "resolved": false,
-      "confidence": 0.5,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/server/src/lib/auth.ts",
-      "target": "package:npm:google-auth-library",
-      "specifier": "google-auth-library",
-      "line": 4,
+      "line": 2,
       "resolved": false,
       "confidence": 0.5,
       "extractor": "javascript-imports"
@@ -4651,16 +4633,6 @@
       "target": "runtime:javascript:crypto",
       "specifier": "node:crypto",
       "line": 1,
-      "resolved": true,
-      "confidence": 0.85,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/server/src/lib/auth.ts",
-      "target": "runtime:javascript:util",
-      "specifier": "node:util",
-      "line": 2,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4718,11 +4690,11 @@
     {
       "type": "imports",
       "source": "file:apps/server/src/lib/openai.ts",
-      "target": "file:apps/server/src/lib/env.ts",
-      "specifier": "./env.js",
+      "target": "package:npm:express",
+      "specifier": "express",
       "line": 2,
-      "resolved": true,
-      "confidence": 0.85,
+      "resolved": false,
+      "confidence": 0.5,
       "extractor": "javascript-imports"
     },
     {
@@ -4748,19 +4720,9 @@
     {
       "type": "imports",
       "source": "file:apps/server/src/lib/realtime.ts",
-      "target": "file:apps/server/src/lib/env.ts",
-      "specifier": "./env.js",
-      "line": 2,
-      "resolved": true,
-      "confidence": 0.85,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/server/src/lib/realtime.ts",
       "target": "file:apps/server/src/lib/openai.ts",
       "specifier": "./openai.js",
-      "line": 3,
+      "line": 2,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4780,17 +4742,7 @@
       "source": "file:apps/server/src/routes/auth.ts",
       "target": "file:apps/server/src/lib/auth.ts",
       "specifier": "../lib/auth.js",
-      "line": 8,
-      "resolved": true,
-      "confidence": 0.85,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/server/src/routes/auth.ts",
-      "target": "file:apps/server/src/lib/env.ts",
-      "specifier": "../lib/env.js",
-      "line": 5,
+      "line": 7,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4800,7 +4752,7 @@
       "source": "file:apps/server/src/routes/auth.ts",
       "target": "file:apps/server/src/lib/extractText.ts",
       "specifier": "../lib/extractText.js",
-      "line": 7,
+      "line": 6,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4810,7 +4762,7 @@
       "source": "file:apps/server/src/routes/auth.ts",
       "target": "file:apps/server/src/lib/prisma.ts",
       "specifier": "../lib/prisma.js",
-      "line": 6,
+      "line": 5,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -4878,6 +4830,16 @@
     {
       "type": "imports",
       "source": "file:apps/server/src/routes/complete.ts",
+      "target": "file:apps/server/src/lib/openai.ts",
+      "specifier": "../lib/openai.js",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/complete.ts",
       "target": "file:apps/server/src/lib/prisma.ts",
       "specifier": "../lib/prisma.js",
       "line": 4,
@@ -4931,6 +4893,16 @@
       "target": "file:apps/server/src/lib/interviewPlanning.ts",
       "specifier": "../lib/interviewPlanning.js",
       "line": 8,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/frame.ts",
+      "target": "file:apps/server/src/lib/openai.ts",
+      "specifier": "../lib/openai.js",
+      "line": 9,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -5070,7 +5042,7 @@
       "source": "file:apps/server/src/routes/sessions.ts",
       "target": "file:apps/server/src/lib/auth.ts",
       "specifier": "../lib/auth.js",
-      "line": 5,
+      "line": 7,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -5080,7 +5052,7 @@
       "source": "file:apps/server/src/routes/sessions.ts",
       "target": "file:apps/server/src/lib/extractText.ts",
       "specifier": "../lib/extractText.js",
-      "line": 6,
+      "line": 8,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -5090,7 +5062,17 @@
       "source": "file:apps/server/src/routes/sessions.ts",
       "target": "file:apps/server/src/lib/interviewPlanning.ts",
       "specifier": "../lib/interviewPlanning.js",
-      "line": 7,
+      "line": 9,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/sessions.ts",
+      "target": "file:apps/server/src/lib/openai.ts",
+      "specifier": "../lib/openai.js",
+      "line": 10,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -5100,7 +5082,17 @@
       "source": "file:apps/server/src/routes/sessions.ts",
       "target": "file:apps/server/src/lib/prisma.ts",
       "specifier": "../lib/prisma.js",
-      "line": 4,
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/sessions.ts",
+      "target": "file:apps/server/src/routes/frame.ts",
+      "specifier": "./frame.js",
+      "line": 11,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -5110,7 +5102,7 @@
       "source": "file:apps/server/src/routes/sessions.ts",
       "target": "file:packages/shared/src/index.ts",
       "specifier": "@interview-prep/shared",
-      "line": 3,
+      "line": 5,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -5120,7 +5112,7 @@
       "source": "file:apps/server/src/routes/sessions.ts",
       "target": "package:npm:express",
       "specifier": "express",
-      "line": 1,
+      "line": 3,
       "resolved": false,
       "confidence": 0.5,
       "extractor": "javascript-imports"
@@ -5130,9 +5122,29 @@
       "source": "file:apps/server/src/routes/sessions.ts",
       "target": "package:npm:multer",
       "specifier": "multer",
-      "line": 2,
+      "line": 4,
       "resolved": false,
       "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/sessions.ts",
+      "target": "runtime:javascript:fs",
+      "specifier": "node:fs",
+      "line": 1,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/server/src/routes/sessions.ts",
+      "target": "runtime:javascript:path",
+      "specifier": "node:path",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
       "extractor": "javascript-imports"
     },
     {
@@ -5208,8 +5220,8 @@
     {
       "type": "imports",
       "source": "file:apps/web/next-env.d.ts",
-      "target": "unresolved:apps/web/next-env.d.ts:./.next/types/root-params.d.ts",
-      "specifier": "./.next/types/root-params.d.ts",
+      "target": "unresolved:apps/web/next-env.d.ts:./.next/dev/types/root-params.d.ts",
+      "specifier": "./.next/dev/types/root-params.d.ts",
       "line": 4,
       "resolved": false,
       "confidence": 0.4,
@@ -5218,8 +5230,8 @@
     {
       "type": "imports",
       "source": "file:apps/web/next-env.d.ts",
-      "target": "unresolved:apps/web/next-env.d.ts:./.next/types/routes.d.ts",
-      "specifier": "./.next/types/routes.d.ts",
+      "target": "unresolved:apps/web/next-env.d.ts:./.next/dev/types/routes.d.ts",
+      "specifier": "./.next/dev/types/routes.d.ts",
       "line": 3,
       "resolved": false,
       "confidence": 0.4,
@@ -5308,6 +5320,16 @@
     {
       "type": "imports",
       "source": "file:apps/web/src/app/layout.tsx",
+      "target": "file:apps/web/src/components/OpenAIKeyGate.tsx",
+      "specifier": "@/components/OpenAIKeyGate",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/layout.tsx",
       "target": "package:npm:next",
       "specifier": "next",
       "line": 1,
@@ -5330,79 +5352,9 @@
       "source": "file:apps/web/src/app/layout.tsx",
       "target": "unresolved:apps/web/src/app/layout.tsx:./globals.css",
       "specifier": "./globals.css",
-      "line": 4,
-      "resolved": false,
-      "confidence": 0.4,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/app/login/page.tsx",
-      "target": "file:apps/web/src/components/Logo.tsx",
-      "specifier": "@/components/Logo",
-      "line": 7,
-      "resolved": true,
-      "confidence": 0.85,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/app/login/page.tsx",
-      "target": "file:apps/web/src/components/ui/index.ts",
-      "specifier": "@/components/ui",
-      "line": 8,
-      "resolved": true,
-      "confidence": 0.85,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/app/login/page.tsx",
-      "target": "file:apps/web/src/lib/api.ts",
-      "specifier": "@/lib/api",
-      "line": 9,
-      "resolved": true,
-      "confidence": 0.85,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/app/login/page.tsx",
-      "target": "package:npm:lucide-react",
-      "specifier": "lucide-react",
-      "line": 6,
-      "resolved": false,
-      "confidence": 0.5,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/app/login/page.tsx",
-      "target": "package:npm:next",
-      "specifier": "next/navigation",
-      "line": 4,
-      "resolved": false,
-      "confidence": 0.5,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/app/login/page.tsx",
-      "target": "package:npm:next",
-      "specifier": "next/script",
-      "line": 2,
-      "resolved": false,
-      "confidence": 0.5,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/app/login/page.tsx",
-      "target": "package:npm:react",
-      "specifier": "react",
       "line": 5,
       "resolved": false,
-      "confidence": 0.5,
+      "confidence": 0.4,
       "extractor": "javascript-imports"
     },
     {
@@ -5468,9 +5420,19 @@
     {
       "type": "imports",
       "source": "file:apps/web/src/app/page.tsx",
+      "target": "file:apps/web/src/components/FeatureSlider.tsx",
+      "specifier": "@/components/FeatureSlider",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/app/page.tsx",
       "target": "file:apps/web/src/components/Logo.tsx",
       "specifier": "@/components/Logo",
-      "line": 4,
+      "line": 3,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -5480,7 +5442,7 @@
       "source": "file:apps/web/src/app/page.tsx",
       "target": "file:apps/web/src/components/ThemeToggle.tsx",
       "specifier": "@/components/ThemeToggle",
-      "line": 5,
+      "line": 4,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -5490,7 +5452,7 @@
       "source": "file:apps/web/src/app/page.tsx",
       "target": "file:apps/web/src/components/ui/index.ts",
       "specifier": "@/components/ui",
-      "line": 3,
+      "line": 2,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -5500,16 +5462,6 @@
       "source": "file:apps/web/src/app/page.tsx",
       "target": "package:npm:lucide-react",
       "specifier": "lucide-react",
-      "line": 2,
-      "resolved": false,
-      "confidence": 0.5,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/app/page.tsx",
-      "target": "package:npm:next",
-      "specifier": "next/link",
       "line": 1,
       "resolved": false,
       "confidence": 0.5,
@@ -5700,7 +5652,7 @@
       "source": "file:apps/web/src/app/settings/page.tsx",
       "target": "file:apps/web/src/lib/api.ts",
       "specifier": "@/lib/api",
-      "line": 23,
+      "line": 21,
       "resolved": true,
       "confidence": 0.85,
       "extractor": "javascript-imports"
@@ -5827,10 +5779,80 @@
     },
     {
       "type": "imports",
+      "source": "file:apps/web/src/components/FeatureSlider.tsx",
+      "target": "file:apps/web/src/components/ui/index.ts",
+      "specifier": "@/components/ui",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/FeatureSlider.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 4,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/FeatureSlider.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
       "source": "file:apps/web/src/components/Logo.tsx",
       "target": "package:npm:lucide-react",
       "specifier": "lucide-react",
       "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/OpenAIKeyGate.tsx",
+      "target": "file:apps/web/src/components/ui/index.ts",
+      "specifier": "@/components/ui",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/OpenAIKeyGate.tsx",
+      "target": "file:apps/web/src/lib/api.ts",
+      "specifier": "@/lib/api",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/OpenAIKeyGate.tsx",
+      "target": "package:npm:next",
+      "specifier": "next/navigation",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:apps/web/src/components/OpenAIKeyGate.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 4,
       "resolved": false,
       "confidence": 0.5,
       "extractor": "javascript-imports"
@@ -6178,16 +6200,6 @@
     {
       "type": "imports",
       "source": "file:apps/web/src/components/UserMenu.tsx",
-      "target": "file:apps/web/src/lib/api.ts",
-      "specifier": "@/lib/api",
-      "line": 9,
-      "resolved": true,
-      "confidence": 0.85,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/components/UserMenu.tsx",
       "target": "file:packages/shared/src/index.ts",
       "specifier": "@interview-prep/shared",
       "line": 6,
@@ -6228,6 +6240,6 @@
   ],
   "warnings": [],
   "stats": {
-    "unresolvedCalls": 169
+    "unresolvedCalls": 171
   }
 }

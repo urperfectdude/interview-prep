@@ -11,8 +11,6 @@ function required(name: string): string {
 export const env = {
   port: Number(process.env.PORT ?? 4000),
   corsOrigin: process.env.CORS_ORIGIN ?? "http://localhost:3000",
-  openaiApiKey: required("OPENAI_API_KEY"),
   sessionSecret: required("SESSION_SECRET"),
-  googleClientId: process.env.GOOGLE_CLIENT_ID ?? "",
   isProduction: process.env.NODE_ENV === "production",
 };

@@ -1,0 +1,30 @@
+{
+  "task": "T-26",
+  "gate": "lint",
+  "kind": "command",
+  "attempt": "005e3b31-e553-46ce-a0ee-6ff8b4a29916",
+  "command": "npm run lint -w apps/web",
+  "started_at": "2026-09-23T10:21:38.772Z",
+  "observed_at": "2026-09-23T10:21:42.634Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "\n> web@0.1.0 lint\n> eslint\n\n",
+  "stderr": "",
+  "failure": null,
+  "receipt": null,
+  "revision": {
+    "commit": "e332ae9ab201dc323c016adf750f44f67b714c3f",
+    "dirty": true
+  },
+  "source_hash": "38b11e9d2478b82536b87108d67eea6ae32cd7b008c8c46ac752de449a07b891",
+  "before_hash": "38b11e9d2478b82536b87108d67eea6ae32cd7b008c8c46ac752de449a07b891",
+  "config_hash": "6f85c995dcb6b015780ce64079c8f13737051cd7583e9d7adf19bd61935fe061",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "verifier": "358371454f03eb4fdfd3eda3cb1d18cb1dd8fe9445404bb3d3047267b3977eb9",
+    "variables": {}
+  },
+  "hash": "bd7ef62cd76458e9fef9968021415fb1a663623fe7c1bfc96c370978fdd960b0"
+}

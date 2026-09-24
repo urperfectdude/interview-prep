@@ -4,7 +4,7 @@
 
 - workflow: new-product
 - phase: verify
-- plan approval: Prashanta Nayak at 2026-09-16T11:27:24.530Z
+- plan approval: Prashanta Nayak at 2026-09-23T10:21:31.076Z
 
 ## Tasks
 
@@ -182,5 +182,21 @@
 - requirements: NFR-3
 - scope: not bounded
 - gates: shellcheck: bash -n deploy/setup-vm.sh && bash -n deploy/deploy.sh, typecheck: npm run typecheck, live: curl -fsS https://35-202-116-188.sslip.io/health && curl -fsS -o /dev/null https://35-202-116-188.sslip.io/login
+- next: Run the task pre-flight.
+
+### T-25 — Tauri v2 desktop app (apps/desktop) that loads the deployed site https://35-202-116-188.sslip.io in a native window with mic/camera permission, buildable as .dmg/.app on macOS and .msi/.exe (NSIS) on Windows
+
+- state/risk: active / low
+- requirements: NFR-3
+- scope: not bounded
+- gates: cargo-check: cd apps/desktop/src-tauri && cargo check
+- next: Run the task pre-flight.
+
+### T-26 — No login: every visitor gets an anonymous account via a signed long-lived cookie (login/signup/Google routes and /login page removed). BYOK: users supply their own OpenAI key in Settings (localStorage, sent as X-OpenAI-Key, never stored server-side); server has no OPENAI_API_KEY. Landing page offers macOS/Windows desktop downloads from GitHub Releases built by .github/workflows/desktop.yml
+
+- state/risk: done / low
+- requirements: NFR-3
+- scope: not bounded
+- gates: typecheck: npm run typecheck, lint: npm run lint -w apps/web
 - next: Run the task pre-flight.
 

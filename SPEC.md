@@ -16,21 +16,21 @@ Candidates preparing for job interviews have no low-friction way to rehearse a r
 - FR-1: A guided 3-step intake wizard (Welcome → Role & JD → Resume) collects a JD file upload, a JD link, and/or a free-text role description (all optional, any combination) and a resume upload (mandatory unless the user has a saved resume in Settings, per FR-8). Submitting extracts text from the provided file(s)/link server-side and makes a single OpenAI call to produce a candidate profile and a tailored interview question plan.
 - FR-2: A permissions + pre-call screen requests microphone and camera access via `getUserMedia`, shows a live camera preview so the candidate can check framing, and gates the "Start" action until both permissions are granted.
 - FR-3: The interview itself runs as a real-time voice session (OpenAI Realtime API over WebRTC, using a short-lived ephemeral token minted by the backend). The AI speaks each question aloud, transcribes both sides of the conversation live, and asks natural follow-up questions driven by the candidate's actual spoken answers. Scope is strictly conversational Q&A (behavioral/role-fit style, answerable on a video call) — no live coding, DSA, or other hands-on tasks, now or planned.
-- FR-4: During the interview, the app captures a single webcam frame at randomized, jittered intervals (roughly every 20–45 seconds) and uploads it to the backend, associated with the session, for a soft/informational read on environment and posture. This is never a pass/fail gate and is not shown as a live feed to anyone else.
+- FR-4: During the interview, the app captures a webcam frame as soon as the camera has a picture, then again at randomized intervals (15–30 seconds), and uploads each one to the backend, associated with the session, for a soft/informational read on environment and posture. This is never a pass/fail gate and is not shown as a live feed to anyone else.
 - FR-5: After the interview ends, a results page shows the full transcript (with clearly highlighted strong vs. weak spans), categorized and timestamped AI feedback (e.g. clarity, filler words, structure, confidence — each with the spoken quote and a suggested rewrite), and an overall score summary. This is generated from the actual persisted transcript via one OpenAI summary call, never hardcoded/sample content.
 - FR-6 (should-have, lower priority than FR-1–FR-5): a dashboard/home view for returning users showing past session history and basic aggregate stats, reusing the same visual system as the rest of the app.
-- FR-7: Users must sign in before using the app: with Google (primary) or with an email and password account (backup, works locally with no Google setup). The backend verifies the Google ID token server-side, or checks the scrypt-hashed password, then issues an httpOnly signed session cookie. A Google sign-in whose verified email matches an existing email account links to that account and removes its password, so an unverified sign-up can't pre-claim someone's address. Every session belongs to the user who created it, and every session route (create, list, fetch, realtime token, transcript, frames, complete, summary) enforces that ownership.
-- FR-8: A Settings page stores per-user data: profile (name, email, avatar from Google, plus sign out), a saved resume the intake wizard reuses when no new resume is uploaded, a default target role and seniority used when the wizard's role description is left blank, and the interviewer voice used for the Realtime session.
+- FR-7: There is no sign-in. The first request creates a device-local guest and a long-lived httpOnly cookie. Every session belongs to that guest, and every session route (create, list, fetch, realtime token, transcript, frames, complete, summary) returns only that guest's sessions.
+- FR-8: A Settings page stores a display name, a saved resume the intake wizard reuses when no new resume is uploaded, a default target role and seniority used when the wizard's role description is left blank, and the interviewer voice used for the Realtime session.
 
 ## Non-functional requirements
 
 - NFR-1: The OpenAI API key is used only in server-side code; the browser only ever receives short-lived Realtime ephemeral tokens, never the underlying API key.
 - NFR-2: All pages are built from one shared UI kit (button, card, input, textarea, file dropzone, step indicator, etc.) so the app reads as one consistent, minimalist design system — no per-page one-off styling. Visual language: off-white/light-neutral backgrounds, white rounded-xl cards with soft shadows, a single indigo/violet accent color used consistently, Inter-style sans-serif typography, generous spacing.
-- NFR-3: The app runs fully on a local machine with no external services beyond OpenAI and Google sign-in — a single root `npm run dev` boots both the frontend and backend, using SQLite so there is no external database to provision.
+- NFR-3: The app runs fully on a local machine with no external services beyond OpenAI — a single root `npm run dev` boots both the frontend and backend, using SQLite so there is no external database to provision.
 
 ## Constraints
 
-- Solo-developer / MVP scope: no team accounts or billing in this release. Individual sign-in uses Google, with email and password as a backup (FR-7).
+- Solo-developer / MVP scope: no team accounts, billing, or sign-in in this release (FR-7).
 - OpenAI is the only third-party AI provider used (for text generation/parsing, the Realtime voice API, and feedback generation).
 - Local file storage (disk) for uploaded resumes/JDs and captured frames is acceptable for this release; no cloud object storage required yet.
 
@@ -39,7 +39,7 @@ Candidates preparing for job interviews have no low-friction way to rehearse a r
 - No live coding, take-home, or whiteboard-style technical assessment features.
 - No interviewer/recruiter-facing views, scoring dashboards for a third party, or candidate ranking.
 - No mobile native app — responsive web only.
-- No identity providers other than Google, and no email verification or password reset in this release.
+- No sign-in, accounts, or identity providers.
 
 ## Acceptance criteria
 
@@ -48,9 +48,9 @@ Candidates preparing for job interviews have no low-friction way to rehearse a r
 - AC-3: During a live session, at least one AI question is audibly spoken (voice output) and at least one corresponding transcript entry is persisted to the backend in real time.
 - AC-4: At least one randomized webcam frame capture is stored on the backend, associated with the session, by the time a session completes.
 - AC-5: The results page renders a transcript and categorized AI feedback that are demonstrably sourced from that session's actual persisted transcript (verified by comparing displayed content against the stored transcript rows), not static/sample content.
-- AC-6: A signed-out request to any session route returns 401, and a signed-in user requesting another user's session id gets 404.
+- AC-6: A request for another device's session id returns 404.
 - AC-7: After saving a resume in Settings, the user can complete the wizard without uploading a resume and still reach the permissions screen.
-- AC-8: With no Google configuration at all, a user can create an email and password account and sign in with it; a wrong password returns 401.
+- AC-8: Opening the app with no cookie creates a guest, and later requests on that device stay on the same guest.
 
 ## Risks
 

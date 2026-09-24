@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import { Router } from "express";
 import multer from "multer";
 import type { CandidateProfile, QuestionPlan, SessionDTO, SessionListItemDTO, SessionSummary } from "@interview-prep/shared";
@@ -5,6 +7,8 @@ import { prisma } from "../lib/prisma.js";
 import { requireOwnedSession } from "../lib/auth.js";
 import { extractTextFromFile, extractTextFromUrl } from "../lib/extractText.js";
 import { generateCandidateProfileAndPlan } from "../lib/interviewPlanning.js";
+import { isKeyRejected, KEY_REJECTED_MESSAGE, requireOpenAIKey } from "../lib/openai.js";
+import { uploadsRoot } from "./frame.js";
 
 export const sessionsRouter = Router();
 
@@ -33,6 +37,7 @@ function toSessionDTO(session: {
 
 sessionsRouter.post(
   "/",
+  requireOpenAIKey,
   upload.fields([
     { name: "resume", maxCount: 1 },
     { name: "jdFile", maxCount: 1 },
@@ -41,7 +46,7 @@ sessionsRouter.post(
     try {
       const user = await prisma.user.findUnique({ where: { id: res.locals.userId } });
       if (!user) {
-        return res.status(401).json({ error: "Sign in required." });
+        return res.status(500).json({ error: "Couldn't start the interview." });
       }
 
       const files = req.files as { [field: string]: Express.Multer.File[] } | undefined;
@@ -72,7 +77,7 @@ sessionsRouter.post(
       const roleDescriptionRaw =
         roleDescription?.trim() || [user.seniority, user.targetRole].filter(Boolean).join(" ");
 
-      const { candidateProfile, questionPlan } = await generateCandidateProfileAndPlan({
+      const { candidateProfile, questionPlan } = await generateCandidateProfileAndPlan(res.locals.openaiKey, {
         resumeText,
         jdText,
         roleDescriptionRaw,
@@ -101,6 +106,7 @@ sessionsRouter.post(
       res.status(201).json({ sessionId: session.id });
     } catch (err) {
       console.error("Failed to create session:", err);
+      if (isKeyRejected(err)) return res.status(400).json({ error: KEY_REJECTED_MESSAGE });
       res.status(500).json({ error: "Failed to create session." });
     }
   }
@@ -115,16 +121,16 @@ sessionsRouter.get("/", async (_req, res) => {
 
   const frames = await prisma.frameCapture.findMany({
     where: { sessionId: { in: sessions.map((s) => s.id) } },
-    orderBy: { capturedAt: "desc" },
+    orderBy: { capturedAt: "asc" },
   });
-  const latestFrameBySession = new Map<string, (typeof frames)[number]>();
+  const firstFrameBySession = new Map<string, (typeof frames)[number]>();
   for (const frame of frames) {
-    if (!latestFrameBySession.has(frame.sessionId)) latestFrameBySession.set(frame.sessionId, frame);
+    if (!firstFrameBySession.has(frame.sessionId)) firstFrameBySession.set(frame.sessionId, frame);
   }
 
   const dto: SessionListItemDTO[] = sessions.map((session) => {
     const summary = session.summary ? (JSON.parse(session.summary) as SessionSummary) : null;
-    const latestFrame = latestFrameBySession.get(session.id);
+    const firstFrame = firstFrameBySession.get(session.id);
     return {
       id: session.id,
       roleTitle: session.roleTitle,
@@ -133,7 +139,7 @@ sessionsRouter.get("/", async (_req, res) => {
       updatedAt: session.updatedAt.toISOString(),
       overallScore: summary?.overallScore ?? null,
       scoreBreakdown: summary?.scoreBreakdown ?? null,
-      thumbnailUrl: latestFrame ? `/api/sessions/${session.id}/frames/${latestFrame.id}/image` : null,
+      thumbnailUrl: firstFrame ? `/api/sessions/${session.id}/frames/${firstFrame.id}/image` : null,
     };
   });
 
@@ -142,4 +148,11 @@ sessionsRouter.get("/", async (_req, res) => {
 
 sessionsRouter.get("/:id", requireOwnedSession, (_req, res) => {
   res.json(toSessionDTO(res.locals.session));
+});
+
+sessionsRouter.delete("/:id", requireOwnedSession, async (req, res) => {
+  // Transcript and frame rows cascade; the snapshot files live on disk under uploads/<id>.
+  await prisma.session.delete({ where: { id: req.params.id } });
+  await fs.promises.rm(path.join(uploadsRoot, req.params.id), { recursive: true, force: true });
+  res.status(204).end();
 });

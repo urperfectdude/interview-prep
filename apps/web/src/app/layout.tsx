@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { AppHeader } from "@/components/AppHeader";
+import { OpenAIKeyGate } from "@/components/OpenAIKeyGate";
 import "./globals.css";
 
 const inter = Inter({
@@ -10,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "InterviewPrep",
-  description: "AI-powered mock interviews tailored to your resume and target role.",
+  description: "Desktop mock interviews for macOS and Windows, tailored to your resume and target role.",
 };
 
 // Applies the saved theme (or the OS preference) to <html> before first paint, so there is no flash.
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="flex min-h-full flex-col font-sans">
         <AppHeader />
+        <OpenAIKeyGate />
         {children}
       </body>
     </html>

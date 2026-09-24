@@ -1,5 +1,5 @@
 import type { CandidateProfile, QuestionPlan, SessionSummary, TranscriptEntryDTO } from "@interview-prep/shared";
-import { openai, TEXT_MODEL } from "./openai.js";
+import { openaiClient, TEXT_MODEL } from "./openai.js";
 
 const MAX_INPUT_CHARS = 12_000;
 
@@ -19,7 +19,7 @@ interface PlanningResult {
   questionPlan: QuestionPlan;
 }
 
-export async function generateCandidateProfileAndPlan(input: PlanningInput): Promise<PlanningResult> {
+export async function generateCandidateProfileAndPlan(apiKey: string, input: PlanningInput): Promise<PlanningResult> {
   const systemPrompt = `You are an expert interview coach preparing a mock interview for a candidate.
 Given a resume, an optional job description, and an optional free-text role description, produce:
 1. A concise candidate profile (role title, seniority, key skills, one-paragraph summary).
@@ -46,7 +46,7 @@ Respond with strict JSON matching this shape:
     truncate(input.jdText) || "(not provided)"
   }\n\nROLE DESCRIPTION (free text from candidate):\n${truncate(input.roleDescriptionRaw) || "(not provided)"}`;
 
-  const completion = await openai.chat.completions.create({
+  const completion = await openaiClient(apiKey).chat.completions.create({
     model: TEXT_MODEL,
     response_format: { type: "json_object" },
     messages: [
@@ -63,6 +63,7 @@ Respond with strict JSON matching this shape:
 }
 
 export async function generateSessionSummary(
+  apiKey: string,
   transcript: TranscriptEntryDTO[],
   roleTitle: string | null
 ): Promise<SessionSummary> {
@@ -94,7 +95,7 @@ Write "headline", "note", and "suggestion" in English regardless of the transcri
     .map((entry) => `[${entry.role}] ${entry.text}`)
     .join("\n");
 
-  const completion = await openai.chat.completions.create({
+  const completion = await openaiClient(apiKey).chat.completions.create({
     model: TEXT_MODEL,
     response_format: { type: "json_object" },
     messages: [
@@ -109,8 +110,8 @@ Write "headline", "note", and "suggestion" in English regardless of the transcri
   return JSON.parse(raw) as SessionSummary;
 }
 
-export async function generateFrameInsight(imageBase64: string, mimeType: string): Promise<string> {
-  const completion = await openai.chat.completions.create({
+export async function generateFrameInsight(apiKey: string, imageBase64: string, mimeType: string): Promise<string> {
+  const completion = await openaiClient(apiKey).chat.completions.create({
     model: TEXT_MODEL,
     messages: [
       {

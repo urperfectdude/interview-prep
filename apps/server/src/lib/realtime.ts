@@ -1,5 +1,4 @@
 import type { CandidateProfile, QuestionPlan } from "@interview-prep/shared";
-import { env } from "./env.js";
 import { REALTIME_MODEL } from "./openai.js";
 
 export function buildInterviewerInstructions(profile: CandidateProfile, plan: QuestionPlan): string {
@@ -35,13 +34,14 @@ interface RealtimeClientSecretResponse {
 }
 
 export async function createRealtimeEphemeralSession(
+  apiKey: string,
   instructions: string,
   voice: string
 ): Promise<RealtimeClientSecretResponse> {
   const response = await fetch("https://api.openai.com/v1/realtime/client_secrets", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${env.openaiApiKey}`,
+      Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
@@ -62,7 +62,9 @@ export async function createRealtimeEphemeralSession(
 
   if (!response.ok) {
     const errorText = await response.text();
-    throw new Error(`Failed to create Realtime client secret: ${response.status} ${errorText}`);
+    throw Object.assign(new Error(`Failed to create Realtime client secret: ${response.status} ${errorText}`), {
+      status: response.status,
+    });
   }
 
   return (await response.json()) as RealtimeClientSecretResponse;

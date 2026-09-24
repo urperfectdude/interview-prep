@@ -4,10 +4,11 @@ import type { TranscriptEntryDTO } from "@interview-prep/shared";
 import { prisma } from "../lib/prisma.js";
 import { requireOwnedSession } from "../lib/auth.js";
 import { generateSessionSummary } from "../lib/interviewPlanning.js";
+import { isKeyRejected, KEY_REJECTED_MESSAGE, requireOpenAIKey } from "../lib/openai.js";
 
 export const completeRouter = Router();
 
-completeRouter.post("/:id/complete", requireOwnedSession, async (_req, res) => {
+completeRouter.post("/:id/complete", requireOwnedSession, requireOpenAIKey, async (_req, res) => {
   const session = res.locals.session as Session;
   try {
     const entries = await prisma.transcriptEntry.findMany({
@@ -22,7 +23,7 @@ completeRouter.post("/:id/complete", requireOwnedSession, async (_req, res) => {
       createdAt: entry.createdAt.toISOString(),
     }));
 
-    const summary = await generateSessionSummary(transcript, session.roleTitle);
+    const summary = await generateSessionSummary(res.locals.openaiKey, transcript, session.roleTitle);
 
     await prisma.session.update({
       where: { id: session.id },
@@ -32,6 +33,7 @@ completeRouter.post("/:id/complete", requireOwnedSession, async (_req, res) => {
     res.json(summary);
   } catch (err) {
     console.error("Failed to complete session:", err);
+    if (isKeyRejected(err)) return res.status(400).json({ error: KEY_REJECTED_MESSAGE });
     res.status(500).json({ error: "Failed to complete session." });
   }
 });

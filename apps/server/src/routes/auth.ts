@@ -2,22 +2,12 @@ import { Router } from "express";
 import multer from "multer";
 import type { User } from "@prisma/client";
 import { INTERVIEWER_VOICES, type InterviewerVoice, type UserDTO } from "@interview-prep/shared";
-import { env } from "../lib/env.js";
 import { prisma } from "../lib/prisma.js";
 import { extractTextFromFile } from "../lib/extractText.js";
-import {
-  clearSessionCookie,
-  hashPassword,
-  requireUser,
-  setSessionCookie,
-  verifyGoogleCredential,
-  verifyPassword,
-} from "../lib/auth.js";
+import { requireUser } from "../lib/auth.js";
 
 export const authRouter = Router();
 
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const MIN_PASSWORD_LENGTH = 8;
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 * 1024 * 1024 } });
 
 function toUserDTO(user: User): UserDTO {
@@ -25,8 +15,6 @@ function toUserDTO(user: User): UserDTO {
     id: user.id,
     email: user.email,
     name: user.name,
-    picture: user.picture,
-    googleLinked: user.googleSub !== null,
     resumeFileName: user.resumeFileName,
     targetRole: user.targetRole,
     seniority: user.seniority,
@@ -34,91 +22,8 @@ function toUserDTO(user: User): UserDTO {
   };
 }
 
-function readCredentials(body: unknown) {
-  const { email, password } = (body ?? {}) as { email?: unknown; password?: unknown };
-  return {
-    email: typeof email === "string" ? email.trim().toLowerCase() : "",
-    password: typeof password === "string" ? password : "",
-  };
-}
-
-authRouter.post("/auth/signup", async (req, res) => {
-  const { email, password } = readCredentials(req.body);
-  if (!EMAIL_PATTERN.test(email)) {
-    return res.status(400).json({ error: "Enter a valid email address." });
-  }
-  if (password.length < MIN_PASSWORD_LENGTH) {
-    return res.status(400).json({ error: `Use at least ${MIN_PASSWORD_LENGTH} characters for your password.` });
-  }
-  if (await prisma.user.findUnique({ where: { email } })) {
-    return res.status(409).json({ error: "An account with this email already exists. Sign in instead." });
-  }
-
-  const user = await prisma.user.create({ data: { email, passwordHash: await hashPassword(password) } });
-  setSessionCookie(res, user.id);
-  res.status(201).json(toUserDTO(user));
-});
-
-// ponytail: no rate limiting or lockout on password attempts; add both before exposing this beyond localhost.
-authRouter.post("/auth/login", async (req, res) => {
-  const { email, password } = readCredentials(req.body);
-  const user = email ? await prisma.user.findUnique({ where: { email } }) : null;
-  if (!user?.passwordHash || !(await verifyPassword(password, user.passwordHash))) {
-    return res.status(401).json({ error: "Incorrect email or password." });
-  }
-  setSessionCookie(res, user.id);
-  res.json(toUserDTO(user));
-});
-
-authRouter.post("/auth/google", async (req, res) => {
-  if (!env.googleClientId) {
-    return res.status(503).json({ error: "Google sign-in isn't configured on the server (GOOGLE_CLIENT_ID)." });
-  }
-  const { credential } = (req.body ?? {}) as { credential?: unknown };
-  if (typeof credential !== "string") {
-    return res.status(400).json({ error: "Missing Google credential." });
-  }
-
-  try {
-    const profile = await verifyGoogleCredential(credential);
-    const linked = await prisma.user.findUnique({ where: { googleSub: profile.sub } });
-    const user = linked
-      ? await prisma.user.update({
-          where: { id: linked.id },
-          data: { name: profile.name ?? undefined, picture: profile.picture ?? undefined },
-        })
-      : await prisma.user.upsert({
-          where: { email: profile.email },
-          // A verified Google email claims an unverified email/password account, so its password is dropped.
-          update: {
-            googleSub: profile.sub,
-            passwordHash: null,
-            name: profile.name ?? undefined,
-            picture: profile.picture ?? undefined,
-          },
-          create: { email: profile.email, googleSub: profile.sub, name: profile.name, picture: profile.picture },
-        });
-
-    setSessionCookie(res, user.id);
-    res.json(toUserDTO(user));
-  } catch (err) {
-    console.warn("Google sign-in failed:", err);
-    res.status(401).json({ error: "Google sign-in failed. Please try again." });
-  }
-});
-
-authRouter.post("/auth/logout", (_req, res) => {
-  clearSessionCookie(res);
-  res.status(204).end();
-});
-
 authRouter.get("/me", requireUser, async (_req, res) => {
-  const user = await prisma.user.findUnique({ where: { id: res.locals.userId } });
-  if (!user) {
-    clearSessionCookie(res);
-    return res.status(401).json({ error: "Sign in required." });
-  }
-  res.json(toUserDTO(user));
+  res.json(toUserDTO(await prisma.user.findUniqueOrThrow({ where: { id: res.locals.userId } })));
 });
 
 authRouter.patch("/me", requireUser, async (req, res) => {

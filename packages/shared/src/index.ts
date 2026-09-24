@@ -42,8 +42,6 @@ export interface UserDTO {
   id: string;
   email: string;
   name: string | null;
-  picture: string | null;
-  googleLinked: boolean;
   resumeFileName: string | null;
   targetRole: string | null;
   seniority: string | null;

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>InterviewPrep listens to your answers during a mock interview.</string>
+  <key>NSCameraUsageDescription</key>
+  <string>InterviewPrep takes webcam snapshots during a mock interview to give feedback on your on-camera presence.</string>
+</dict>
+</plist>

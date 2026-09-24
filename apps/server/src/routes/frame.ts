@@ -6,11 +6,12 @@ import multer from "multer";
 import { prisma } from "../lib/prisma.js";
 import { requireOwnedSession } from "../lib/auth.js";
 import { generateFrameInsight } from "../lib/interviewPlanning.js";
+import { OPENAI_KEY_HEADER } from "../lib/openai.js";
 
 export const frameRouter = Router();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const uploadsRoot = path.resolve(__dirname, "../../uploads");
+export const uploadsRoot = path.resolve(__dirname, "../../uploads");
 
 const storage = multer.diskStorage({
   destination: (req, _file, cb) => {
@@ -50,10 +51,13 @@ frameRouter.post("/:id/frame", requireOwnedSession, upload.single("frame"), asyn
   res.status(201).json({ ok: true });
 
   // Analyze each snapshot as it arrives so the interview isn't slowed and results don't wait on a batch.
+  // Without the user's key the snapshot is still kept, just not analyzed.
+  const apiKey = req.get(OPENAI_KEY_HEADER)?.trim();
+  if (!apiKey) return;
   const { path: filePath, mimetype } = req.file;
   fs.promises
     .readFile(filePath)
-    .then((buffer) => generateFrameInsight(buffer.toString("base64"), mimetype))
+    .then((buffer) => generateFrameInsight(apiKey, buffer.toString("base64"), mimetype))
     .then((note) => prisma.frameCapture.update({ where: { id: frame.id }, data: { note } }))
     .catch((err) => console.warn("Failed to analyze frame (non-blocking):", err));
 });

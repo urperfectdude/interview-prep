@@ -4,11 +4,11 @@ import type { CandidateProfile, QuestionPlan } from "@interview-prep/shared";
 import { prisma } from "../lib/prisma.js";
 import { requireOwnedSession } from "../lib/auth.js";
 import { buildInterviewerInstructions, createRealtimeEphemeralSession } from "../lib/realtime.js";
-import { REALTIME_MODEL } from "../lib/openai.js";
+import { isKeyRejected, KEY_REJECTED_MESSAGE, REALTIME_MODEL, requireOpenAIKey } from "../lib/openai.js";
 
 export const realtimeTokenRouter = Router();
 
-realtimeTokenRouter.post("/:id/realtime-token", requireOwnedSession, async (_req, res) => {
+realtimeTokenRouter.post("/:id/realtime-token", requireOwnedSession, requireOpenAIKey, async (_req, res) => {
   const session = res.locals.session as Session;
   if (!session.candidateProfile || !session.questionPlan) {
     return res.status(400).json({ error: "Session has no question plan yet." });
@@ -20,7 +20,9 @@ realtimeTokenRouter.post("/:id/realtime-token", requireOwnedSession, async (_req
     const plan = JSON.parse(session.questionPlan) as QuestionPlan;
     const instructions = buildInterviewerInstructions(profile, plan);
 
-    const realtimeSession = await createRealtimeEphemeralSession(instructions, user?.interviewerVoice ?? "alloy");
+    const realtimeSession = await createRealtimeEphemeralSession(
+      res.locals.openaiKey,
+      instructions, user?.interviewerVoice ?? "alloy");
 
     await prisma.session.update({
       where: { id: session.id },
@@ -35,6 +37,7 @@ realtimeTokenRouter.post("/:id/realtime-token", requireOwnedSession, async (_req
     });
   } catch (err) {
     console.error("Failed to mint realtime token:", err);
+    if (isKeyRejected(err)) return res.status(400).json({ error: KEY_REJECTED_MESSAGE });
     res.status(500).json({ error: "Failed to start interview session." });
   }
 });

@@ -1,0 +1,71 @@
+# Every push to main builds the Tauri installers and publishes them as the latest GitHub Release.
+# Version is 0.1.<run number>. Installers are also uploaded under fixed names so the landing page can link to
+# releases/latest/download/InterviewPrep-macOS.dmg and InterviewPrep-Windows-setup.exe.
+name: Desktop release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: desktop-release
+  cancel-in-progress: false
+
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GH_REPO: ${{ github.repository }}
+  VERSION: 0.1.${{ github.run_number }}
+
+jobs:
+  # Draft first, so releases/latest never points at a release with missing installers.
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh release create "desktop-v$VERSION" --draft --target "$GITHUB_SHA" --title "InterviewPrep v$VERSION" --notes "Desktop app for macOS and Windows. Bring your own OpenAI API key (Settings)."
+
+  build:
+    needs: draft
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-latest
+            args: --target universal-apple-darwin --bundles dmg
+            src: apps/desktop/src-tauri/target/universal-apple-darwin/release/bundle/dmg/*.dmg
+            name: InterviewPrep-macOS.dmg
+          - os: windows-latest
+            args: --bundles nsis
+            src: apps/desktop/src-tauri/target/release/bundle/nsis/*-setup.exe
+            name: InterviewPrep-Windows-setup.exe
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.os == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
+      - uses: swatinem/rust-cache@v2
+        with:
+          workspaces: apps/desktop/src-tauri
+      - run: npm ci -w apps/desktop
+      - name: Stamp version
+        run: node -e 'const f="apps/desktop/src-tauri/tauri.conf.json",fs=require("fs"),c=JSON.parse(fs.readFileSync(f));c.version=process.env.VERSION;fs.writeFileSync(f,JSON.stringify(c,null,2))'
+      - run: npm run tauri -w apps/desktop -- build ${{ matrix.args }}
+      - run: |
+          cp ${{ matrix.src }} "${{ matrix.name }}"
+          gh release upload "desktop-v$VERSION" "${{ matrix.name }}" --clobber
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh release edit "desktop-v$VERSION" --draft=false --latest

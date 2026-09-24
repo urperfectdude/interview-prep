@@ -2,7 +2,7 @@
 
 import { useParams, useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { Mic, PhoneOff } from "lucide-react";
+import { Mic, PhoneOff, Trash2 } from "lucide-react";
 import { Badge, Button, Card, Spinner } from "@/components/ui";
 import { apiFetch } from "@/lib/api";
 import { captureFrameBlob, randomJitterMs } from "@/lib/frameCapture";
@@ -37,6 +37,7 @@ export default function InterviewPage() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [transcript, setTranscript] = useState<TranscriptLine[]>([]);
   const [isAssistantSpeaking, setIsAssistantSpeaking] = useState(false);
+  const [confirmingDelete, setConfirmingDelete] = useState(false);
 
   const postTranscript = useCallback(
     (role: "assistant" | "user", text: string) => {
@@ -52,12 +53,14 @@ export default function InterviewPage() {
   );
 
   const scheduleNextFrameCapture = useCallback(() => {
-    function tick(delayMs: number) {
+    function tick(delayMs: number, waitingForFirst: boolean) {
       frameTimerRef.current = setTimeout(async () => {
         const video = videoRef.current;
+        let captured = false;
         if (video && !endingRef.current) {
           const blob = await captureFrameBlob(video);
           if (blob) {
+            captured = true;
             const formData = new FormData();
             formData.append("frame", blob, "frame.jpg");
             apiFetch(`/api/sessions/${id}/frame`, { method: "POST", body: formData }).catch((err) =>
@@ -65,11 +68,14 @@ export default function InterviewPage() {
             );
           }
         }
-        if (!endingRef.current) tick(randomJitterMs(20, 45));
+        if (!endingRef.current) {
+          const stillWaiting = waitingForFirst && !captured;
+          tick(stillWaiting ? 250 : randomJitterMs(15, 30), stillWaiting);
+        }
       }, delayMs);
     }
-    // First frame right after connecting (short delay skips camera warm-up frames) so every session gets a thumbnail.
-    tick(2000);
+    // First snapshot as soon as the camera has a frame; then a random 15–30s gap.
+    tick(0, true);
   }, [id]);
 
   useEffect(() => {
@@ -178,6 +184,22 @@ export default function InterviewPage() {
     return cleanup;
   }, [cleanup]);
 
+  async function handleDeleteInterview() {
+    if (!confirmingDelete) {
+      setConfirmingDelete(true);
+      return;
+    }
+    setState("ending");
+    cleanup();
+    const res = await apiFetch(`/api/sessions/${id}`, { method: "DELETE" }).catch(() => null);
+    if (res?.ok) {
+      router.push("/dashboard");
+    } else {
+      setErrorMessage("Couldn't delete this interview. Please try again.");
+      setState("error");
+    }
+  }
+
   async function handleEndInterview() {
     setState("ending");
     cleanup();
@@ -266,7 +288,7 @@ export default function InterviewPage() {
           </div>
         )}
 
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Button
             variant="outline"
             size="lg"
@@ -275,6 +297,17 @@ export default function InterviewPage() {
           >
             {state === "ending" ? <Spinner /> : <PhoneOff />}
             End interview
+          </Button>
+          <Button
+            variant="ghost"
+            size="lg"
+            onClick={handleDeleteInterview}
+            onBlur={() => setConfirmingDelete(false)}
+            disabled={state === "ending"}
+            className="text-destructive hover:text-destructive"
+          >
+            <Trash2 />
+            {confirmingDelete ? "Click again to delete" : "Delete interview"}
           </Button>
         </div>
       </div>
