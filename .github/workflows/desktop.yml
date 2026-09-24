@@ -25,7 +25,8 @@ jobs:
   draft:
     runs-on: ubuntu-latest
     steps:
-      - run: gh release create "desktop-v$VERSION" --draft --target "$GITHUB_SHA" --title "InterviewPrep v$VERSION" --notes "Desktop app for macOS and Windows. Unsigned: on macOS right-click the app and choose Open; on Windows click More info, then Run anyway. On first launch, add your OpenAI API key."
+      - run: >-
+          gh release create "desktop-v$VERSION" --draft --target "$GITHUB_SHA" --title "InterviewPrep v$VERSION" --notes "Desktop app for macOS and Windows. Unsigned: on macOS right-click the app and choose Open; on Windows click More info, then Run anyway. On first launch, add your OpenAI API key."
 
   build:
     needs: draft
