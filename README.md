@@ -41,11 +41,10 @@ npm run dev
 ```
 
 This starts the backend on `http://localhost:4000` and the frontend on `http://localhost:3000`.
-Open `http://localhost:3000`, add your OpenAI API key in Settings, and start the intake wizard.
+Run `npm run dev -w apps/desktop` to open the app window on that local UI (`apps/web` is the app's UI, not a website).
 
 ## How it works
 
-0. **Landing** (`/`) — download the macOS/Windows app, with steps for the unsigned-publisher OS warnings.
 1. **No sign-in** — the first API request creates an anonymous user and sets a long-lived httpOnly signed
    cookie; every session route only returns sessions owned by that user. Clearing cookies starts fresh.
 1. **Intake** (`/new`) — a 3-step wizard: Welcome → Role & JD (JD file/link/free text, all optional)
@@ -111,5 +110,6 @@ npm run build -w apps/desktop   # local build for this machine (.app/.dmg on mac
 
 Release installers for both platforms: every push to `main` runs `.github/workflows/desktop.yml`, which builds a
 universal `.dmg` and a Windows `-setup.exe`, versions them `0.1.<run number>`, and publishes them as the latest GitHub
-Release. The landing page links to `releases/latest/download/InterviewPrep-macOS.dmg` and
-`InterviewPrep-Windows-setup.exe`, so it always serves the newest build with no code change.
+Release. Stable download links always serve the newest build:
+`https://github.com/urperfectdude/interview-prep/releases/latest/download/InterviewPrep-macOS.dmg` and
+`.../InterviewPrep-Windows-setup.exe`.

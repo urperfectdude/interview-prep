@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "project": "interview-prep",
-  "revision": "e332ae9ab201dc323c016adf750f44f67b714c3f",
-  "sourceHash": "e7163aab4efdebe2dd509ab5e98d9776225293b49ccd4cbc6b9a46316bd2ffaa",
+  "revision": "f7a70316cfa74319b8d4e5895373c2eb2e9f3f57",
+  "sourceHash": "d5ff4375c5fb262fd3f89cee52105cfd2007c558c5cd9aa0824fd1479fb2e3f0",
   "provenance": {
     "tool": "genesis-graphizer",
     "method": "static-analysis",
@@ -227,7 +227,7 @@
       "language": "javascript",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "cd5717596d98e9f2265a6bcce8281150d66747baabe387795f3b9997f86ce782"
+      "contentHash": "9b6da18ca2cbff0885dba7b1b70022ee9eab125f479c77e12135fa6b400d71a0"
     },
     {
       "id": "file:apps/web/src/app/session/[id]/interview/page.tsx",
@@ -278,16 +278,6 @@
       "confidence": 1,
       "extractor": "filesystem",
       "contentHash": "d8834c5e00da59d510105dd9411f71681c4da2be1e19f799126949b6d008cdba"
-    },
-    {
-      "id": "file:apps/web/src/components/FeatureSlider.tsx",
-      "type": "file",
-      "label": "apps/web/src/components/FeatureSlider.tsx",
-      "path": "apps/web/src/components/FeatureSlider.tsx",
-      "language": "javascript",
-      "confidence": 1,
-      "extractor": "filesystem",
-      "contentHash": "f9679c2cf1dae5ea6cef3b51a33fcb8749db7d83ea63389a0961e49afa169a6d"
     },
     {
       "id": "file:apps/web/src/components/Logo.tsx",
@@ -1433,40 +1423,16 @@
       "contentHash": "77a7e5643707ae6f3fef7f6b3d6494aa118c6219df147e0b944a1c7acffdf1fc"
     },
     {
-      "id": "symbol:apps/web/src/app/page.tsx#function:LandingPage",
+      "id": "symbol:apps/web/src/app/page.tsx#function:Home",
       "type": "symbol",
       "kind": "function",
-      "name": "LandingPage",
-      "label": "LandingPage",
+      "name": "Home",
+      "label": "Home",
       "path": "apps/web/src/app/page.tsx",
-      "line": 14,
+      "line": 4,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
-      "contentHash": "b7428cf7304f6cf9c0fb96bd27381830924f9af6e9432483d7f19185c34121b4"
-    },
-    {
-      "id": "symbol:apps/web/src/app/page.tsx#variable:DOWNLOADS",
-      "type": "symbol",
-      "kind": "variable",
-      "name": "DOWNLOADS",
-      "label": "DOWNLOADS",
-      "path": "apps/web/src/app/page.tsx",
-      "line": 9,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "2226baf0ba31f81d2ce1aa3496f9a1c4c86c01526c1d3ca3a28c7cf14b29a112"
-    },
-    {
-      "id": "symbol:apps/web/src/app/page.tsx#variable:RELEASE_URL",
-      "type": "symbol",
-      "kind": "variable",
-      "name": "RELEASE_URL",
-      "label": "RELEASE_URL",
-      "path": "apps/web/src/app/page.tsx",
-      "line": 8,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "1b47eff6dbe40015046759e565bbdb427fc66be775c0d0f7a541074b3d8c41a8"
+      "contentHash": "e1a106fbcc131f9a29bfcc7ca368c0c2e8175b30674f7f2c893aff7089d9e886"
     },
     {
       "id": "symbol:apps/web/src/app/session/[id]/interview/page.tsx#function:InterviewPage",
@@ -1731,54 +1697,6 @@
       "confidence": 0.8,
       "extractor": "conservative-js-symbols",
       "contentHash": "9cc4b08f000157dd651c9af0bbcb2aeb5778b83f33ca48a500596071dc4f7742"
-    },
-    {
-      "id": "symbol:apps/web/src/components/FeatureSlider.tsx#function:FeatureSlider",
-      "type": "symbol",
-      "kind": "function",
-      "name": "FeatureSlider",
-      "label": "FeatureSlider",
-      "path": "apps/web/src/components/FeatureSlider.tsx",
-      "line": 29,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "2860fb9eae7251d04a33d94208aa01ad578f9831f92605e73936736384c321fb"
-    },
-    {
-      "id": "symbol:apps/web/src/components/FeatureSlider.tsx#variable:FEATURES",
-      "type": "symbol",
-      "kind": "variable",
-      "name": "FEATURES",
-      "label": "FEATURES",
-      "path": "apps/web/src/components/FeatureSlider.tsx",
-      "line": 7,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "6b2a442b819e47d88faf9aaead041779705259623f4f9d156218e3f390597404"
-    },
-    {
-      "id": "symbol:apps/web/src/components/FeatureSlider.tsx#variable:LOOP",
-      "type": "symbol",
-      "kind": "variable",
-      "name": "LOOP",
-      "label": "LOOP",
-      "path": "apps/web/src/components/FeatureSlider.tsx",
-      "line": 27,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "97a911783ab292d5e1c785ca636433565911990581caff0a09b84539d53367ae"
-    },
-    {
-      "id": "symbol:apps/web/src/components/FeatureSlider.tsx#variable:N",
-      "type": "symbol",
-      "kind": "variable",
-      "name": "N",
-      "label": "N",
-      "path": "apps/web/src/components/FeatureSlider.tsx",
-      "line": 26,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols",
-      "contentHash": "738c6c7f9810e2177405f7b42ef5c4cba686c91da1af0ee263178999cdf3995b"
     },
     {
       "id": "symbol:apps/web/src/components/Logo.tsx#function:Logo",
@@ -2843,18 +2761,6 @@
     },
     {
       "type": "calls",
-      "source": "symbol:apps/web/src/app/page.tsx#function:LandingPage",
-      "target": "symbol:apps/web/src/components/ui/Button.tsx#function:buttonVariants",
-      "tier": "ambiguous",
-      "candidates": [
-        "symbol:apps/web/src/components/ui/Button.tsx#function:buttonVariants"
-      ],
-      "resolved": false,
-      "confidence": 0.3,
-      "extractor": "conservative-js-calls"
-    },
-    {
-      "type": "calls",
       "source": "symbol:apps/web/src/app/session/[id]/interview/page.tsx#function:InterviewPage",
       "target": "symbol:apps/web/src/lib/api.ts#function:apiFetch",
       "tier": "proven",
@@ -3624,26 +3530,8 @@
     {
       "type": "defines",
       "source": "file:apps/web/src/app/page.tsx",
-      "target": "symbol:apps/web/src/app/page.tsx#function:LandingPage",
-      "line": 14,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/web/src/app/page.tsx",
-      "target": "symbol:apps/web/src/app/page.tsx#variable:DOWNLOADS",
-      "line": 9,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/web/src/app/page.tsx",
-      "target": "symbol:apps/web/src/app/page.tsx#variable:RELEASE_URL",
-      "line": 8,
+      "target": "symbol:apps/web/src/app/page.tsx#function:Home",
+      "line": 4,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -3842,42 +3730,6 @@
       "source": "file:apps/web/src/components/AppHeader.tsx",
       "target": "symbol:apps/web/src/components/AppHeader.tsx#variable:PUBLIC_PATHS",
       "line": 14,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/web/src/components/FeatureSlider.tsx",
-      "target": "symbol:apps/web/src/components/FeatureSlider.tsx#function:FeatureSlider",
-      "line": 29,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/web/src/components/FeatureSlider.tsx",
-      "target": "symbol:apps/web/src/components/FeatureSlider.tsx#variable:FEATURES",
-      "line": 7,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/web/src/components/FeatureSlider.tsx",
-      "target": "symbol:apps/web/src/components/FeatureSlider.tsx#variable:LOOP",
-      "line": 27,
-      "resolved": true,
-      "confidence": 0.8,
-      "extractor": "conservative-js-symbols"
-    },
-    {
-      "type": "defines",
-      "source": "file:apps/web/src/components/FeatureSlider.tsx",
-      "target": "symbol:apps/web/src/components/FeatureSlider.tsx#variable:N",
-      "line": 26,
       "resolved": true,
       "confidence": 0.8,
       "extractor": "conservative-js-symbols"
@@ -5420,48 +5272,8 @@
     {
       "type": "imports",
       "source": "file:apps/web/src/app/page.tsx",
-      "target": "file:apps/web/src/components/FeatureSlider.tsx",
-      "specifier": "@/components/FeatureSlider",
-      "line": 5,
-      "resolved": true,
-      "confidence": 0.85,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/app/page.tsx",
-      "target": "file:apps/web/src/components/Logo.tsx",
-      "specifier": "@/components/Logo",
-      "line": 3,
-      "resolved": true,
-      "confidence": 0.85,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/app/page.tsx",
-      "target": "file:apps/web/src/components/ThemeToggle.tsx",
-      "specifier": "@/components/ThemeToggle",
-      "line": 4,
-      "resolved": true,
-      "confidence": 0.85,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/app/page.tsx",
-      "target": "file:apps/web/src/components/ui/index.ts",
-      "specifier": "@/components/ui",
-      "line": 2,
-      "resolved": true,
-      "confidence": 0.85,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/app/page.tsx",
-      "target": "package:npm:lucide-react",
-      "specifier": "lucide-react",
+      "target": "package:npm:next",
+      "specifier": "next/navigation",
       "line": 1,
       "resolved": false,
       "confidence": 0.5,
@@ -5773,36 +5585,6 @@
       "target": "package:npm:react",
       "specifier": "react",
       "line": 5,
-      "resolved": false,
-      "confidence": 0.5,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/components/FeatureSlider.tsx",
-      "target": "file:apps/web/src/components/ui/index.ts",
-      "specifier": "@/components/ui",
-      "line": 5,
-      "resolved": true,
-      "confidence": 0.85,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/components/FeatureSlider.tsx",
-      "target": "package:npm:lucide-react",
-      "specifier": "lucide-react",
-      "line": 4,
-      "resolved": false,
-      "confidence": 0.5,
-      "extractor": "javascript-imports"
-    },
-    {
-      "type": "imports",
-      "source": "file:apps/web/src/components/FeatureSlider.tsx",
-      "target": "package:npm:react",
-      "specifier": "react",
-      "line": 2,
       "resolved": false,
       "confidence": 0.5,
       "extractor": "javascript-imports"
@@ -6240,6 +6022,6 @@
   ],
   "warnings": [],
   "stats": {
-    "unresolvedCalls": 171
+    "unresolvedCalls": 161
   }
 }

@@ -9,7 +9,7 @@
     "non_goals": [],
     "trust_boundary": "local repository",
     "created_at": "2026-09-10T19:32:17.553Z",
-    "updated_at": "2026-09-24T13:55:05.998Z"
+    "updated_at": "2026-09-24T14:00:11.468Z"
   },
   "policy": {
     "ponytail": "full",
@@ -267,6 +267,16 @@
       "status": "accepted",
       "source": ".github/workflows/desktop.yml",
       "recorded_at": "2026-09-24T13:55:04.999Z",
+      "paths": [],
+      "tags": []
+    },
+    {
+      "id": "DECISION-1560d7c8",
+      "title": "No landing page; apps/web is only the desktop app UI",
+      "text": "User directed (2026-09-24): delete the web product, ship downloadable apps only. Removed the landing page and FeatureSlider; / redirects to /dashboard. apps/web stays because tauri.conf.json loads the hosted /dashboard, so deleting it would break the installers. Install steps moved to the release notes in desktop.yml. Supersedes the landing half of DECISION-ddce52ae.",
+      "status": "accepted",
+      "source": "apps/web/src/app/page.tsx",
+      "recorded_at": "2026-09-24T14:00:10.492Z",
       "paths": [],
       "tags": []
     }
@@ -4987,11 +4997,11 @@
   "incidents": [],
   "discovery": null,
   "checkpoint": {
-    "at": "2026-09-24T13:55:05.954Z",
+    "at": "2026-09-24T14:00:11.430Z",
     "revision": {
-      "commit": "e332ae9ab201dc323c016adf750f44f67b714c3f",
+      "commit": "f7a70316cfa74319b8d4e5895373c2eb2e9f3f57",
       "dirty": true,
-      "source_hash": "c954c8b50a597ba1c959f530d07e82ea43a8fecd526d446ba795634deabed395"
+      "source_hash": "84b200357cc2c394a20ae62380f1eb42c755447e555aa49dc4e66646054df8b5"
     },
     "active_task": null,
     "next_action": "Review completed work and choose the next bounded outcome."

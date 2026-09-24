@@ -1,5 +1,5 @@
 # Every push to main builds the Tauri installers and publishes them as the latest GitHub Release.
-# Version is 0.1.<run number>. Installers are also uploaded under fixed names so the landing page can link to
+# Version is 0.1.<run number>. Installers are also uploaded under fixed names so these links always serve the newest build:
 # releases/latest/download/InterviewPrep-macOS.dmg and InterviewPrep-Windows-setup.exe.
 name: Desktop release
 
@@ -25,7 +25,7 @@ jobs:
   draft:
     runs-on: ubuntu-latest
     steps:
-      - run: gh release create "desktop-v$VERSION" --draft --target "$GITHUB_SHA" --title "InterviewPrep v$VERSION" --notes "Desktop app for macOS and Windows. Bring your own OpenAI API key (Settings)."
+      - run: gh release create "desktop-v$VERSION" --draft --target "$GITHUB_SHA" --title "InterviewPrep v$VERSION" --notes "Desktop app for macOS and Windows. Unsigned: on macOS right-click the app and choose Open; on Windows click More info, then Run anyway. On first launch, add your OpenAI API key."
 
   build:
     needs: draft

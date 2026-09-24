@@ -28,7 +28,6 @@ digraph genesis {
   "file:apps/web/src/app/session/[id]/results/page.tsx" [label="apps/web/src/app/session/[id]/results/page.tsx",class="file"];
   "file:apps/web/src/app/settings/page.tsx" [label="apps/web/src/app/settings/page.tsx",class="file"];
   "file:apps/web/src/components/AppHeader.tsx" [label="apps/web/src/components/AppHeader.tsx",class="file"];
-  "file:apps/web/src/components/FeatureSlider.tsx" [label="apps/web/src/components/FeatureSlider.tsx",class="file"];
   "file:apps/web/src/components/Logo.tsx" [label="apps/web/src/components/Logo.tsx",class="file"];
   "file:apps/web/src/components/OpenAIKeyGate.tsx" [label="apps/web/src/components/OpenAIKeyGate.tsx",class="file"];
   "file:apps/web/src/components/ThemeToggle.tsx" [label="apps/web/src/components/ThemeToggle.tsx",class="file"];
@@ -132,9 +131,7 @@ digraph genesis {
   "symbol:apps/web/src/app/new/page.tsx#function:NewInterviewPage" [label="NewInterviewPage",class="symbol"];
   "symbol:apps/web/src/app/new/page.tsx#variable:CHECKLIST" [label="CHECKLIST",class="symbol"];
   "symbol:apps/web/src/app/new/page.tsx#variable:STEPS" [label="STEPS",class="symbol"];
-  "symbol:apps/web/src/app/page.tsx#function:LandingPage" [label="LandingPage",class="symbol"];
-  "symbol:apps/web/src/app/page.tsx#variable:DOWNLOADS" [label="DOWNLOADS",class="symbol"];
-  "symbol:apps/web/src/app/page.tsx#variable:RELEASE_URL" [label="RELEASE_URL",class="symbol"];
+  "symbol:apps/web/src/app/page.tsx#function:Home" [label="Home",class="symbol"];
   "symbol:apps/web/src/app/session/[id]/interview/page.tsx#function:InterviewPage" [label="InterviewPage",class="symbol"];
   "symbol:apps/web/src/app/session/[id]/interview/page.tsx#interface:RealtimeTokenResponse" [label="RealtimeTokenResponse",class="symbol"];
   "symbol:apps/web/src/app/session/[id]/interview/page.tsx#interface:TranscriptLine" [label="TranscriptLine",class="symbol"];
@@ -157,10 +154,6 @@ digraph genesis {
   "symbol:apps/web/src/app/settings/page.tsx#variable:SENIORITY_LEVELS" [label="SENIORITY_LEVELS",class="symbol"];
   "symbol:apps/web/src/components/AppHeader.tsx#function:AppHeader" [label="AppHeader",class="symbol"];
   "symbol:apps/web/src/components/AppHeader.tsx#variable:PUBLIC_PATHS" [label="PUBLIC_PATHS",class="symbol"];
-  "symbol:apps/web/src/components/FeatureSlider.tsx#function:FeatureSlider" [label="FeatureSlider",class="symbol"];
-  "symbol:apps/web/src/components/FeatureSlider.tsx#variable:FEATURES" [label="FEATURES",class="symbol"];
-  "symbol:apps/web/src/components/FeatureSlider.tsx#variable:LOOP" [label="LOOP",class="symbol"];
-  "symbol:apps/web/src/components/FeatureSlider.tsx#variable:N" [label="N",class="symbol"];
   "symbol:apps/web/src/components/Logo.tsx#function:Logo" [label="Logo",class="symbol"];
   "symbol:apps/web/src/components/OpenAIKeyGate.tsx#function:OpenAIKeyGate" [label="OpenAIKeyGate",class="symbol"];
   "symbol:apps/web/src/components/ThemeToggle.tsx#function:ThemeToggle" [label="ThemeToggle",class="symbol"];
@@ -257,7 +250,6 @@ digraph genesis {
   "symbol:apps/web/src/app/dashboard/page.tsx#function:DashboardPage" -> "symbol:apps/web/src/lib/api.ts#function:apiFetch" [label="calls"];
   "symbol:apps/web/src/app/dashboard/page.tsx#function:DashboardPage" -> "symbol:apps/web/src/lib/api.ts#function:apiUrl" [label="calls"];
   "symbol:apps/web/src/app/new/page.tsx#function:NewInterviewPage" -> "symbol:apps/web/src/lib/api.ts#function:apiFetch" [label="calls"];
-  "symbol:apps/web/src/app/page.tsx#function:LandingPage" -> "symbol:apps/web/src/components/ui/Button.tsx#function:buttonVariants" [label="calls"];
   "symbol:apps/web/src/app/session/[id]/interview/page.tsx#function:InterviewPage" -> "symbol:apps/web/src/lib/api.ts#function:apiFetch" [label="calls"];
   "symbol:apps/web/src/app/session/[id]/interview/page.tsx#function:InterviewPage" -> "symbol:apps/web/src/lib/frameCapture.ts#function:captureFrameBlob" [label="calls"];
   "symbol:apps/web/src/app/session/[id]/interview/page.tsx#function:InterviewPage" -> "symbol:apps/web/src/lib/frameCapture.ts#function:randomJitterMs" [label="calls"];
@@ -343,9 +335,7 @@ digraph genesis {
   "file:apps/web/src/app/new/page.tsx" -> "symbol:apps/web/src/app/new/page.tsx#function:NewInterviewPage" [label="defines"];
   "file:apps/web/src/app/new/page.tsx" -> "symbol:apps/web/src/app/new/page.tsx#variable:CHECKLIST" [label="defines"];
   "file:apps/web/src/app/new/page.tsx" -> "symbol:apps/web/src/app/new/page.tsx#variable:STEPS" [label="defines"];
-  "file:apps/web/src/app/page.tsx" -> "symbol:apps/web/src/app/page.tsx#function:LandingPage" [label="defines"];
-  "file:apps/web/src/app/page.tsx" -> "symbol:apps/web/src/app/page.tsx#variable:DOWNLOADS" [label="defines"];
-  "file:apps/web/src/app/page.tsx" -> "symbol:apps/web/src/app/page.tsx#variable:RELEASE_URL" [label="defines"];
+  "file:apps/web/src/app/page.tsx" -> "symbol:apps/web/src/app/page.tsx#function:Home" [label="defines"];
   "file:apps/web/src/app/session/[id]/interview/page.tsx" -> "symbol:apps/web/src/app/session/[id]/interview/page.tsx#function:InterviewPage" [label="defines"];
   "file:apps/web/src/app/session/[id]/interview/page.tsx" -> "symbol:apps/web/src/app/session/[id]/interview/page.tsx#interface:RealtimeTokenResponse" [label="defines"];
   "file:apps/web/src/app/session/[id]/interview/page.tsx" -> "symbol:apps/web/src/app/session/[id]/interview/page.tsx#interface:TranscriptLine" [label="defines"];
@@ -368,10 +358,6 @@ digraph genesis {
   "file:apps/web/src/app/settings/page.tsx" -> "symbol:apps/web/src/app/settings/page.tsx#variable:SENIORITY_LEVELS" [label="defines"];
   "file:apps/web/src/components/AppHeader.tsx" -> "symbol:apps/web/src/components/AppHeader.tsx#function:AppHeader" [label="defines"];
   "file:apps/web/src/components/AppHeader.tsx" -> "symbol:apps/web/src/components/AppHeader.tsx#variable:PUBLIC_PATHS" [label="defines"];
-  "file:apps/web/src/components/FeatureSlider.tsx" -> "symbol:apps/web/src/components/FeatureSlider.tsx#function:FeatureSlider" [label="defines"];
-  "file:apps/web/src/components/FeatureSlider.tsx" -> "symbol:apps/web/src/components/FeatureSlider.tsx#variable:FEATURES" [label="defines"];
-  "file:apps/web/src/components/FeatureSlider.tsx" -> "symbol:apps/web/src/components/FeatureSlider.tsx#variable:LOOP" [label="defines"];
-  "file:apps/web/src/components/FeatureSlider.tsx" -> "symbol:apps/web/src/components/FeatureSlider.tsx#variable:N" [label="defines"];
   "file:apps/web/src/components/Logo.tsx" -> "symbol:apps/web/src/components/Logo.tsx#function:Logo" [label="defines"];
   "file:apps/web/src/components/OpenAIKeyGate.tsx" -> "symbol:apps/web/src/components/OpenAIKeyGate.tsx#function:OpenAIKeyGate" [label="defines"];
   "file:apps/web/src/components/ThemeToggle.tsx" -> "symbol:apps/web/src/components/ThemeToggle.tsx#function:ThemeToggle" [label="defines"];
@@ -532,11 +518,7 @@ digraph genesis {
   "file:apps/web/src/app/new/page.tsx" -> "package:npm:lucide-react" [label="imports"];
   "file:apps/web/src/app/new/page.tsx" -> "package:npm:next" [label="imports"];
   "file:apps/web/src/app/new/page.tsx" -> "package:npm:react" [label="imports"];
-  "file:apps/web/src/app/page.tsx" -> "file:apps/web/src/components/FeatureSlider.tsx" [label="imports"];
-  "file:apps/web/src/app/page.tsx" -> "file:apps/web/src/components/Logo.tsx" [label="imports"];
-  "file:apps/web/src/app/page.tsx" -> "file:apps/web/src/components/ThemeToggle.tsx" [label="imports"];
-  "file:apps/web/src/app/page.tsx" -> "file:apps/web/src/components/ui/index.ts" [label="imports"];
-  "file:apps/web/src/app/page.tsx" -> "package:npm:lucide-react" [label="imports"];
+  "file:apps/web/src/app/page.tsx" -> "package:npm:next" [label="imports"];
   "file:apps/web/src/app/session/[id]/interview/page.tsx" -> "file:apps/web/src/components/ui/index.ts" [label="imports"];
   "file:apps/web/src/app/session/[id]/interview/page.tsx" -> "file:apps/web/src/lib/api.ts" [label="imports"];
   "file:apps/web/src/app/session/[id]/interview/page.tsx" -> "file:apps/web/src/lib/frameCapture.ts" [label="imports"];
@@ -568,9 +550,6 @@ digraph genesis {
   "file:apps/web/src/components/AppHeader.tsx" -> "package:npm:next" [label="imports"];
   "file:apps/web/src/components/AppHeader.tsx" -> "package:npm:next" [label="imports"];
   "file:apps/web/src/components/AppHeader.tsx" -> "package:npm:react" [label="imports"];
-  "file:apps/web/src/components/FeatureSlider.tsx" -> "file:apps/web/src/components/ui/index.ts" [label="imports"];
-  "file:apps/web/src/components/FeatureSlider.tsx" -> "package:npm:lucide-react" [label="imports"];
-  "file:apps/web/src/components/FeatureSlider.tsx" -> "package:npm:react" [label="imports"];
   "file:apps/web/src/components/Logo.tsx" -> "package:npm:lucide-react" [label="imports"];
   "file:apps/web/src/components/OpenAIKeyGate.tsx" -> "file:apps/web/src/components/ui/index.ts" [label="imports"];
   "file:apps/web/src/components/OpenAIKeyGate.tsx" -> "file:apps/web/src/lib/api.ts" [label="imports"];
