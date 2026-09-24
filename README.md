@@ -113,3 +113,6 @@ universal `.dmg` and a Windows `-setup.exe`, versions them `0.1.<run number>`, a
 Release. Stable download links always serve the newest build:
 `https://github.com/urperfectdude/interview-prep/releases/latest/download/InterviewPrep-macOS.dmg` and
 `.../InterviewPrep-Windows-setup.exe`.
+
+Landing page: `site/index.html`, published to https://urperfectdude.github.io/interview-prep/ by
+`.github/workflows/pages.yml` when `site/` changes.

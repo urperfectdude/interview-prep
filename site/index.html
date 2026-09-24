@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InterviewPrep</title>
+<meta name="description" content="A Mac and Windows app that runs a spoken mock interview from your resume and the job description.">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --background: oklch(0.985 0.003 286); --foreground: oklch(0.21 0.02 286);
+    --card: oklch(1 0 0); --muted-foreground: oklch(0.53 0.02 286);
+    --border: oklch(0.925 0.006 286); --primary: oklch(0.55 0.2 285); --primary-foreground: oklch(0.99 0.005 286);
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: oklch(0.15 0.008 286); --foreground: oklch(0.97 0.004 286);
+      --card: oklch(0.185 0.01 286); --muted-foreground: oklch(0.7 0.015 286);
+      --border: oklch(1 0 0 / 9%); --primary: oklch(0.62 0.19 285);
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--background); color: var(--foreground); line-height: 1.5;
+    font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 48rem; margin: 0 auto; padding: 0 16px; }
+  header { height: 4rem; display: flex; align-items: center; gap: .5rem; font-weight: 600; letter-spacing: -.01em; }
+  header img { width: 28px; height: 28px; }
+  main { padding: 4rem 0 5rem; }
+  h1 { font-size: clamp(2.25rem, 6vw, 3rem); line-height: 1.1; letter-spacing: -.025em; font-weight: 600;
+    text-align: center; text-wrap: balance; margin: 0; }
+  .lead { max-width: 32rem; margin: 1rem auto 0; text-align: center; color: var(--muted-foreground); text-wrap: balance; }
+  .downloads { margin-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; }
+  .btn { display: inline-flex; align-items: center; gap: .5rem; height: 2.5rem; padding: 0 1rem; border-radius: .5rem;
+    background: var(--primary); color: var(--primary-foreground); font-weight: 500; font-size: .9rem; text-decoration: none; }
+  .btn:hover { filter: brightness(1.08); }
+  .btn:focus-visible, a:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+  .btn svg { width: 16px; height: 16px; }
+  .small { margin-top: .5rem; text-align: center; font-size: .75rem; color: var(--muted-foreground); }
+  .small a { color: inherit; text-underline-offset: 4px; }
+  .features { margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: .75rem; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: .75rem; padding: 1.25rem; }
+  .card h2, .card h3 { margin: 0; font-size: .95rem; font-weight: 600; }
+  .card p, .card li { font-size: .875rem; color: var(--muted-foreground); }
+  .card p { margin: .35rem 0 0; }
+  .setup { margin-top: 3.5rem; padding: 1.5rem; }
+  .setup h3 { margin-top: 1.5rem; font-weight: 500; }
+  .setup ol { margin: .5rem 0 0; padding-left: 1.25rem; }
+  .setup li + li { margin-top: .35rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><img src="icon.svg" alt="">InterviewPrep</header>
+  <main>
+    <h1>Practice the interview you’ll actually have.</h1>
+    <p class="lead">A Mac and Windows app that runs a spoken mock interview from your resume and the job description, then shows you what to fix before the real one.</p>
+
+    <!-- .github/workflows/desktop.yml uploads these fixed names to the latest release on every push to main. -->
+    <div class="downloads">
+      <a class="btn" href="https://github.com/urperfectdude/interview-prep/releases/latest/download/InterviewPrep-macOS.dmg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 10l5 5 5-5M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>
+        Download for macOS
+      </a>
+      <a class="btn" href="https://github.com/urperfectdude/interview-prep/releases/latest/download/InterviewPrep-Windows-setup.exe">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 10l5 5 5-5M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>
+        Download for Windows
+      </a>
+    </div>
+    <p class="small"><a href="https://github.com/urperfectdude/interview-prep/releases">All releases</a></p>
+
+    <section class="features" aria-label="Features">
+      <div class="card"><h2>Questions from your materials</h2><p>Paste a job description and upload your resume. The interviewer is built from those, not a generic question bank.</p></div>
+      <div class="card"><h2>Spoken interview, with follow-ups</h2><p>Talk out loud. The interviewer asks, listens, and pushes on what you actually said.</p></div>
+      <div class="card"><h2>Feedback you can reuse</h2><p>Transcript, scores, highlighted strong and weak moments, and rewritten answers to practice next time.</p></div>
+      <div class="card"><h2>Your key, on your machine</h2><p>No account. You add an OpenAI API key in Settings. It stays on the device and is never stored on the server.</p></div>
+    </section>
+
+    <section class="card setup">
+      <h2>First launch</h2>
+      <p>The installers are not signed with Apple or Microsoft publisher certificates, so the OS will warn that the developer is unknown. That is expected. On first open, the app asks for your OpenAI API key if you have not added one. It stays on this device.</p>
+      <h3>macOS</h3>
+      <ol>
+        <li>Open the .dmg and drag InterviewPrep to Applications.</li>
+        <li>Right-click the app and choose Open (a double-click is blocked the first time).</li>
+        <li>Confirm Open. If you already double-clicked: System Settings → Privacy &amp; Security → Open Anyway.</li>
+      </ol>
+      <h3>Windows</h3>
+      <ol>
+        <li>Run the installer. SmartScreen may say “Windows protected your PC” because there is no publisher.</li>
+        <li>Click More info, then Run anyway.</li>
+      </ol>
+    </section>
+  </main>
+</div>
+</body>
+</html>
