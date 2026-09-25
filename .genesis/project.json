@@ -9,7 +9,7 @@
     "non_goals": [],
     "trust_boundary": "local repository",
     "created_at": "2026-09-10T19:32:17.553Z",
-    "updated_at": "2026-09-24T14:06:59.917Z"
+    "updated_at": "2026-09-25T17:57:19.138Z"
   },
   "policy": {
     "ponytail": "full",
@@ -277,6 +277,16 @@
       "status": "accepted",
       "source": "apps/web/src/app/page.tsx",
       "recorded_at": "2026-09-24T14:00:10.492Z",
+      "paths": [],
+      "tags": []
+    },
+    {
+      "id": "DECISION-2ca1a6b7",
+      "title": "Landing page on GitHub Pages",
+      "text": "User directed (2026-09-24) a cleaner landing URL; org route abandoned (org creation blocked). site/index.html (static, links releases/latest fixed-name installers) is published to https://urperfectdude.github.io/interview-prep/ by .github/workflows/pages.yml. desktop.yml ignores site-only pushes. Supersedes the no-landing part of DECISION-1560d7c8.",
+      "status": "accepted",
+      "source": "site/index.html",
+      "recorded_at": "2026-09-24T15:01:28.511Z",
       "paths": [],
       "tags": []
     }
@@ -4997,11 +5007,11 @@
   "incidents": [],
   "discovery": null,
   "checkpoint": {
-    "at": "2026-09-24T14:06:59.863Z",
+    "at": "2026-09-25T17:57:19.076Z",
     "revision": {
-      "commit": "3cc1021e7d2624dace62108319f81d4fa855dc8b",
-      "dirty": false,
-      "source_hash": "015013540e636d096ba5fb0e171dd72cef83521cabff7f788495eba88ec0137d"
+      "commit": "36729844b6401b3b3f55e43384dbaf2e5e0ddf68",
+      "dirty": true,
+      "source_hash": "38daa37f08391101f9edf5a9669e63392b405a46dc0ced68d8b8ded52c2cef85"
     },
     "active_task": null,
     "next_action": "Review completed work and choose the next bounded outcome."

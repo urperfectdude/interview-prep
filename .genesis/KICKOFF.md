@@ -15,9 +15,9 @@ Load Genesis and official Ponytail full, then run `genesis brief .` for the curr
 Fetch full records with `genesis context . --id ID` only when needed. Do not load project.json or historical proof wholesale.
 Ask the index before reading code: `genesis query . search|scope|callers|callees|impact|path` (`--json` for parsing). Run `genesis query . impact PATH` before editing shared code. Answers are advisory static analysis; `ambiguous` means candidates were not ruled out, so confirm in source.
 Run `genesis serve .` for a live map of the repository when structure is unclear; it reindexes on save and is read-only. Run `genesis index .` if the index is stale and nothing is watching.
-Context fingerprint: e6b9526e7ee5d6d30537951b06a093cf1a20ec38538ed7968a670c98d7bf0a52. Use --since only after receiving that full packet; kickoff is not the packet.
+Context fingerprint: f453365aeb2ed0d0295ce98256559fe690c0efb596811f1e0d513b67add78b30. Use --since only after receiving that full packet; kickoff is not the packet.
+- DECISION-2ca1a6b7: Landing page on GitHub Pages
 - DECISION-1560d7c8: No landing page; apps/web is only the desktop app UI
 - DECISION-ddce52ae: Desktop release on every push to main; landing links releases/latest
-- DECISION-fe3af8dd: tauri dev loads the local site
 Applicable invariants, active rules, authorization and proof references are in the packet. Truncated summaries are retrieval pointers, not the full evidence.
 Reuse fresh gates with --reuse. Reconcile interrupted attempts before replaying commands. Report state → evidence → blocker → next action; checkpoint before stopping.
